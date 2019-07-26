@@ -39,7 +39,7 @@
                     <li  ><a href="#">Snake bite</a><br></li>
                     <li><a href="#">Scorpion bite</a><br></li>
                     <li><a href="#">Jellyfish</a><br></li>
-                    <li><a href="#">Bee sting</a><br></li>
+                    <li><a href="{{ url('/form') }}">Bee sting</a><br></li>
                     <li><a href="#">Hornet sting</a><br></li>
                     <li><a href="#">Wasp sting</a><br></li>
                     <li><a href="#">Black widow spider</a><br></li>
