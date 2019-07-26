@@ -20,6 +20,8 @@ USE `PIMS` ;
 CREATE TABLE IF NOT EXISTS `PIMS`.`Patients` (
   `PHN` INT NOT NULL,
   `Patient_Name` VARCHAR(60) NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`PHN`))
 ENGINE = InnoDB;
 
@@ -33,6 +35,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Doctors` (
   `Username` VARCHAR(45) NULL,
   `Password` VARCHAR(45) NULL,
   `User_Type` VARCHAR(20) NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Doctors_Id`))
 ENGINE = InnoDB;
 
@@ -50,6 +54,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Managements` (
   `Renal_Rep_Theraphy` TINYINT NULL,
   `Invasive_Ventilation` TINYINT NULL,
   `Stinger_Scrapped` TINYINT NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Managements_Id`))
 ENGINE = InnoDB;
 
@@ -76,6 +82,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Clinicals` (
   `Malaise` TINYINT NULL,
   `Facial_Odema` TINYINT NULL,
   `Seizure` TINYINT NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Clinicals_Id`))
 ENGINE = InnoDB;
 
@@ -91,6 +99,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Sites` (
   `Abdomen` TINYINT NULL,
   `Lower_Limb` TINYINT NULL,
   `Others` VARCHAR(100) NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Sites_Id`))
 ENGINE = InnoDB;
 
@@ -108,7 +118,9 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Records` (
   `Site_Id` INT NULL,
   `Instance_Area` VARCHAR(45) NULL,
   `Instance_Date` VARCHAR(45) NULL,
-  `Record_Time` DATETIME NULL,  
+  `Record_Time` DATETIME NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,  
   PRIMARY KEY (`Records_Id`),
   CONSTRAINT `Record_Patient_fk`
     FOREIGN KEY (`PHN`)
@@ -140,6 +152,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Doctor_Records` (
   `Record_Id` INT NOT NULL,
   `Doctor_Id` INT NOT NULL,
   `Edit_Time` VARCHAR(45) NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Record_Id`, `Doctor_Id`),
   CONSTRAINT `Doctor_Record_Record_fk`
     FOREIGN KEY (`Record_Id`)
@@ -163,6 +177,8 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Bee_Stings` (
   `Place_of_Sting` VARCHAR(45) NULL,
   `Sting_Time` VARCHAR(45) NULL,
   `Cirmustance` TINYINT NULL,
+  `created_at` VARCHAR(45) NULL,
+  `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`Bee_Stings_Id`))
 ENGINE = InnoDB;
 
