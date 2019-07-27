@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,15 +116,9 @@
                 </ul>
         </div>
 
-<<<<<<< HEAD
-        <div class="column" style="background-color:rgb(235, 235, 235);">
-
-                <h3>Flora</h3>
-=======
         <div class="column" style="background-color:rgb(235, 235, 235);">
 
                 <h3>Fungal Poison</h3>
->>>>>>> ccab955fc91daa5094b0734d7f3c2124a83f8439
                  <ul class="font">
                     <li><a href="#">Mushroom</a></li>
                  </ul>
@@ -153,4 +145,4 @@
 
 </body>
 </html>
-@endsection
+
