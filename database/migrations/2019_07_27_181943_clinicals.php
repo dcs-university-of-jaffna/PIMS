@@ -32,7 +32,9 @@ class Clinicals extends Migration
             $table->tinyInteger('Diarrhoea');
             $table->tinyInteger('Malaise');
             $table->tinyInteger('Facial_Odema');
-            $table->tinyInteger('Seizure');    
+            $table->tinyInteger('Seizure'); 
+            $table->string('Clinicals_Others');
+            $table->tinyInteger('Anaphylaxis');
             $table->timestamps();
          });
     }
