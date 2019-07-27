@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -9,7 +8,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="form">
-	<h2>Bee Sting</h2>
+	<h2 style="text-align: center">Bee Sting Patient Detail</h2>
 	
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
@@ -80,7 +79,7 @@
             
             <label> 04) Sting site :</label><br><br>
          
-                <table>  
+                <table>  <tr>
                          <td>  
                         <input type="checkbox" name = "checkboxS1"   > Head and Neck </td>
                          
@@ -89,15 +88,18 @@
                           
                           <td style="text-align: center;  position: relative ; left:40%"> 
                         <input type="checkbox" name = "checkboxS3"   > Chest </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:60%"> 
+                          <tr>
+                         </table>
+            <br>
+            <table> <tr>
+                             <td style="text-align: center;  position: relative ; left:12%"> 
                         <input type="checkbox" name = "checkboxS4"   > Abdomen    </td>
                           
-                              <td style="text-align: center;  position: relative ; left:80%"> 
+                              <td style="text-align: center;  position: relative ; left:53%"> 
                         <input type="checkbox" name = "checkboxS5"   > Lower_Limb   </td>
-                            
-                              
-               </table>
+                           
+                </tr></table>           
+               
             <br>
                         <label> Others <br> 
                             <input type="text" name = "text" size="55">
@@ -106,7 +108,7 @@
                 </label>
            
             <br><br>
-  <br>
+  
         
                 <label>05) Circumstances of Stings : 
                    <span class = "select">
@@ -132,59 +134,67 @@
                             <td style="text-align:center">
                         <input type="checkbox" name = "checkboxC1"   > Burning pain</td>
                          
-                         <td style="text-align: center;  position:relative ; left:25%"> 
+                         <td style="text-align: center;  position:relative ; left:20%"> 
                         <input type="checkbox" name = "checkboxC2"   >  Pruritus </td>
                           
-                          <td style="text-align: center;  position: relative ; left:50%"> 
+                          <td style="text-align: center;  position: relative ; left:40%"> 
                         <input type="checkbox" name = "checkboxC3"   > Vomiting </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:75%"> 
+                            </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                         
+                          <tr>  
+                         <td style="text-align:center">
                         <input type="checkbox" name = "checkboxC4"   >  Brochospasm </td>
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                         
-                           <tr>   <td style="text-align:center">
+                        
+                        <td style="text-align: center;  position: relative ; left:20%"> 
                         <input type="checkbox" name = "checkboxC5"   >  Renal failure </td>
-                           <td style="text-align: center;  position: relative ; left:25%"> 
+                          
+                        <td style="text-align: center;  position: relative ; left:40%"> 
                         <input type="checkbox" name = "checkboxC6"   >  Tightness of chest  </td>
-                              <td style="text-align: center;  position: relative ; left:50%"> 
+                                                   </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr> 
+                             
+                            <tr>
+                            <td style="text-align:center">
                         <input type="checkbox" name = "checkboxC3"   > Urteacaria </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:75%"> 
+
+                             <td style="text-align: center;  position: relative ; left:20%"> 
                         <input type="checkbox" name = "checkboxC4"   >  Rhabdomyolysis </td>
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                          <tr>   <td style="text-align:center">
+       
+                             <td style="text-align: center;  position: relative ; left:40%"> 
                         <input type="checkbox" name = "checkboxC5"   >  Swelling </td>
-                           <td style="text-align: center;  position: relative ; left:25%"> 
+                           
+                             </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>     
+                              
+                            <tr>  <td style="text-align:center">
                         <input type="checkbox" name = "checkboxC6"   >  Nausea  </td>
-                              <td style="text-align: center;  position: relative ; left:50%"> 
+                              
+                                <td style="text-align: center;  position: relative ; left:20%"> 
                         <input type="checkbox" name = "checkboxC3"   > Hypotension </td>
                            
-                             <td style="text-align: center;  position: relative ; left:75%"> 
+                             <td style="text-align: center;  position: relative ; left:40%"> 
                         <input type="checkbox" name = "checkboxC4"   >  Oliguria </td>
                          </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
-                           <tr>  <td style="text-align:center">
+                               <tr>  <td style="text-align:center">
                         <input type="checkbox" name = "checkboxC5"   > Diarrhoea </td>
-                           <td style="text-align: center;  position: relative ; left:25%"> 
-                        <input type="checkbox" name = "checkboxC6"   >  Malaise  </td>
-                              <td style="text-align: center;  position: relative ; left:50%"> 
-                        <input type="checkbox" name = "checkboxC3"   > Facial odema </td>
                            
-                             <td style="text-align: center;  position: relative ; left:75%"> 
-                        <input type="checkbox" name = "checkboxC4"   >  Seizure </td>
+                                   <td style="text-align: center;  position: relative ; left:20%"> 
+                        <input type="checkbox" name = "checkboxC6"   >  Malaise  </td>
+                              
+                                   <td style="text-align: center;  position: relative ; left:40%"> 
+                        <input type="checkbox" name = "checkboxC3"   > Facial odema </td>
                          </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
-                          <tr>   <td>
+                          <tr>  
+                              <td style="text-align:center">
+                        <input type="checkbox" name = "checkboxC4"   >  Seizure </td>
+                                 <td style="text-align: center;  position: relative ; left:20%"> 
                         <input type="checkbox" name = "checkboxC5"   >  Laryngeal odema </td>
                         
                          </tr>
@@ -216,27 +226,31 @@
                             <td style="text-align:center">
                         <input type="checkbox" name = "checkboxM1"   > Apply ice</td>
                          
-                         <td style="text-align: center;  position:relative ; left:25%"> 
+                         <td style="text-align: center;  position:relative ; left:5%"> 
                         <input type="checkbox" name = "checkboxM2"   > Antiistamine </td>
                           
-                          <td style="text-align: center;  position: relative ; left:50%"> 
-                        <input type="checkbox" name = "checkboxM3"   > Adrenalin(IM) </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:75%"> 
-                        <input type="checkbox" name = "checkboxM4"   >  ICU care </td>
-                         </tr>
+                          <td style="text-align: center;  position: relative ; left:10%"> 
+                        <input type="checkbox" name = "checkboxM3"   >  Need Renal Replacement Theraphy  </td>
+                           </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
-                         
-                           <tr>   <td style="text-align:center">
+                           <tr>
+                            <td style="text-align:center">
+                        <input type="checkbox" name = "checkboxM4"   >  ICU care </td>
+                        
+                           <td style="text-align: center;  position: relative ; left:5%"> 
                         <input type="checkbox" name = "checkboxM5"   >  Steroids </td>
-                           <td style="text-align: center;  position: relative ; left:25%"> 
-                        <input type="checkbox" name = "checkboxM6"   >  Need Renal Replacement Theraphy  </td>
-                              <td style="text-align: center;  position: relative ; left:50%"> 
-                        <input type="checkbox" name = "checkboxM7"   > Need invasive ventiliation </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:75%"> 
+                           <td style="text-align: center;  position: relative ; left:10%"> 
+                                <input type="checkbox" name = "checkboxM7"   > Need invasive ventiliation </td>
+                             </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                              
+                        <tr>
+                            <td style="text-align:center">     
+                        <input type="checkbox" name = "checkboxM6"   > Adrenalin(IM) </td>
+                    
+                             <td style="text-align: center;  position: relative ; left:5%"> 
                         <input type="checkbox" name = "checkboxM8"   >  Stinger scrapped </td>
                          </tr>
                         </table>
