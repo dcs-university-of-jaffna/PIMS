@@ -24,10 +24,13 @@ class Managements extends Migration
             $table->tinyInteger('Renal_Rep_Theraphy');
             $table->tinyInteger('Invasive_Ventilation');
             $table->tinyInteger('Stinger_Scrapped');
+            $table->string('Managements_Others');
             $table->timestamps();
 
         });
     }
+    
+
 
     /**
      * Reverse the migrations.
