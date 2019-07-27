@@ -28,13 +28,15 @@
     
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" required>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
 
       <ul class="nav navbar-nav navbar-right">
+      @if(Auth::user()->position  =='Admin') 
         <li><a href="#">Admin</a></li>
+        @endif  
         <li class="nav-item"><a href="{{ route('logout') }}"  class="nav-link"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -115,7 +117,7 @@
 
         <div class="column" style="background-color:rgb(235, 235, 235);">  
                
-                <h3>Flora</h3>
+                <h3>Fungal Poison</h3>
                  <ul class="font">
                     <li><a href="#">Mushroom</a></li>
                  </ul>
