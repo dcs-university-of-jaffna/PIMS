@@ -9,10 +9,51 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/poisonStyles.css">
+    
+    
 </head>
 <body>
   <br>
-  
+
+<div class="container">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PHIN</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+      @if(Auth::user()->position  =='Admin') 
+        <li><a href="#">Admin</a></li>
+        @endif  
+        <li class="nav-item"><a href="{{ route('logout') }}"  class="nav-link"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+
   <div class="container">
       
     <h1 >Poison Details</h1>
@@ -76,7 +117,7 @@
 
         <div class="column" style="background-color:rgb(235, 235, 235);">  
                
-                <h3>Flora</h3>
+                <h3>Fungal Poison</h3>
                  <ul class="font">
                     <li><a href="#">Mushroom</a></li>
                  </ul>

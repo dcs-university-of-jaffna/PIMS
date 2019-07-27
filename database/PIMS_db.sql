@@ -26,19 +26,7 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Patients` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `PIMS`.`Doctors`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PIMS`.`Doctors` (
-  `Doctors_Id` INT NOT NULL,
-  `Doctor_Name` VARCHAR(60) NULL,
-  `Username` VARCHAR(45) NULL,
-  `Password` VARCHAR(45) NULL,
-  `User_Type` VARCHAR(20) NULL,
-  `created_at` VARCHAR(45) NULL,
-  `updated_at` VARCHAR(45) NULL,
-  PRIMARY KEY (`Doctors_Id`))
-ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------
@@ -159,12 +147,7 @@ CREATE TABLE IF NOT EXISTS `PIMS`.`Doctor_Records` (
     FOREIGN KEY (`Record_Id`)
     REFERENCES `PIMS`.`Records` (`Records_Id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `Doctor_Record_Doctor_fk`
-    FOREIGN KEY (`Doctor_Id`)
-    REFERENCES `PIMS`.`Doctors` (`Doctors_Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION)  
 ENGINE = InnoDB;
 
 
