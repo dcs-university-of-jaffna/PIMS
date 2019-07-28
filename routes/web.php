@@ -9,6 +9,9 @@ Route::get('/form', function () {
     return view('form');
 });
 
+//bee string search record
+Route::post('/phnsearch','RecordSearch@phnsearch');
+
 
 Auth::routes();
 
