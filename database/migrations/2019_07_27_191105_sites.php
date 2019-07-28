@@ -13,14 +13,14 @@ class Sites extends Migration
      */
     public function up()
     {
-        Schema::create('Sites', function (Blueprint $table) {
-           
-            $table->bigIncrements('Sites_Id');
-            $table->tinyInteger('Head_Neck');
-            $table->tinyInteger('Upper_Limb');
-            $table->tinyInteger('Chest');
-            $table->tinyInteger('Lower_Limb');
-            $table->tinyInteger('Sites_Others');
+        Schema::create('sites', function (Blueprint $table) {
+            $table->bigIncrements('sites_id');
+            $table->boolean('head_neck')->default(0);
+            $table->boolean('upper_limb')->default(0);
+            $table->boolean('chest')->default(0);
+            $table->boolean('lower_limb')->default(0);
+            $table->string('sites_others')->nullable();
+            $table->timestamps();
 
         });
     }
@@ -32,6 +32,6 @@ class Sites extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Sites');
+        Schema::dropIfExists('sites');
     }
 }

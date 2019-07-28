@@ -13,20 +13,24 @@ class Records extends Migration
      */
     public function up()
     {
-        Schema::create('Records', function (Blueprint $table) {
-           
-            $table->bigIncrements('Records_Id');
-            $table->bigInteger('Doctor_ID');
-            $table->integer('PHN');
-            $table->bigInteger('Clinical_Id');
-            $table->bigInteger('Management_Id');
-            $table->string('Toxicity_Type');
-            $table->bigInteger('Toxicity_Id');
-            $table->bigInteger('Site_Id');
-            $table->string('Instance_Area');
-            $table->date('Instance_Date');
-            $table->tinyInteger('Editable');
+        Schema::create('records', function (Blueprint $table) {
+
+            $table->bigIncrements('records_id');
+            $table->integer('phn');
+            $table->bigInteger('clinicals_id')->nullable()->unsigned();
+            $table->bigInteger('managements_id')->nullable()->unsigned();
+            $table->string('toxicity_type')->nullable();
+            $table->bigInteger('toxicity_id')->nullable()->unsigned();
+            $table->bigInteger('sites_id')->nullable()->unsigned();
+            $table->string('instance_area')->nullable();
+            $table->date('instance_date')->nullable();
+            $table->boolean('is_submited')->default(0);
             $table->timestamps();
+            $table->foreign('clinicals_id')->references('clinicals_id')->on('clinicals');
+            $table->foreign('managements_id')->references('managements_id')->on('managements');
+            $table->foreign('sites_id')->references('sites_id')->on('sites');
+
+
 
         });
     }
@@ -38,6 +42,6 @@ class Records extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Records');
+        Schema::dropIfExists('records');
     }
 }
