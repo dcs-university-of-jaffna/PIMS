@@ -77,19 +77,23 @@
       </div>
       
     </header>
-
+   
+    
     <div class="unit-5 overlay" style="">
       <div class="container text-center">
         <h2 class="mb-0">Patient Details</h2>
-        <p class="mb-0 unit-6"><a href="index.html">PHN</a> <span class="sep">></span> <span>Patient name</span></p>
+        @foreach($patient as $value)
+        <p class="mb-0 unit-6"><a>{{$value->PHN}}</a> <span class="sep">> {{$value->Patient_Name}}</span> <span></span></p>
+        @endforeach
       </div>
     </div>
-
+ 
     
     
-
+  
     <div class="site-section bg-light">
       <div class="container">
+      @foreach($data as $value)
         <div class="row" data-aos="fade">
          <div class="col-md-12">
 
@@ -97,15 +101,15 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Bee String</h2>
+                 <h2 class="mr-3 text-black h4">{{$value -> Toxicity_Type}}</h2>
                  <div class="badge-wrap">
-                 <span class="bg-success text-white badge py-2 px-4">Instance Date</span>
-                  <span class="bg-info text-white badge py-2 px-4">Doctor Name</span>
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->Instance_Date}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">{{$value->name}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>Location</span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> Instance_Area}}</span></div>
                </div>
               </div>
 
@@ -117,7 +121,7 @@
 
          </div>
         </div>
-
+@endforeach
         <div class="row" data-aos="fade">
          <div class="col-md-12">
            <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
