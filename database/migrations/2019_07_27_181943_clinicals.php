@@ -33,7 +33,7 @@ class Clinicals extends Migration
             $table->boolean('malaise')->default(0);
             $table->boolean('facial_odema')->default(0);
             $table->boolean('seizure')->default(0);
-            $table->boolean('anaphylaxis')->default(0);
+            $table->string('anaphylaxis')->nullable();
             $table->string('clinicals_others')->nullable();
             $table->timestamps();
          });

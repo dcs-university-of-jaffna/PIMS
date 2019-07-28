@@ -17,6 +17,7 @@ class BeeStings extends Migration
         $table->bigIncrements('bee_stings_id');
         $table->tinyInteger('number_of_stings')->nullable()->unsigned();
         $table->string('place_of_sting')->nullable();
+        $table->string('other_places')->nullable();
         $table->time('sting_time')->nullable();
         $table->string('cirmustance')->nullable();
         $table->string('comments')->nullable();
