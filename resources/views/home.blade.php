@@ -26,9 +26,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
-      <form class="navbar-form navbar-left">
+      <form  action="/phnsearch" class="navbar-form navbar-left" method="POST">
+      {{csrf_field()}}
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" required>
+          <input type="number" min="0" class="form-control" placeholder="Search" name = "phn" required>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
