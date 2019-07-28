@@ -36,12 +36,16 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                text-align: center;
+                margin-top: 300px; 
+                /*right: 10px;
+                top: 18px;*/
             }
 
             .content {
-                text-align: center;
+                text-align: center;               
+                position: absolute;
+                top: 200px;
             }
 
             .title {
@@ -50,9 +54,10 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                margin-top: 300px;
+                padding: 0 100px;
+                font-size: 60px;
+                font-weight: 10000;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -81,18 +86,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                Poison Information Management System
+                </div>
+                <div class="title m-b-md">
+                (PIMS)
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+ 
             </div>
         </div>
     </body>

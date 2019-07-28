@@ -17,6 +17,11 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
+<<<<<<< HEAD
+=======
+            $table->string('position') ->default('user');
+            $table->integer('verify') ->default(0);
+>>>>>>> master
             $table->timestamp('email_verified_at')->nullable();
             $table->string('position') ->default('user');
             $table->integer('verify')->default(0);
