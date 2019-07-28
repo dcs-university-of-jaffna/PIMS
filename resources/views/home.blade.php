@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +25,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      <form class="navbar-form navbar-left">
+      <form  action="/phnsearch" class="navbar-form navbar-left" method="POST">
+      {{csrf_field()}}
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" required>
+          <input type="number" min="0" class="form-control" placeholder="Search" name = "phn" required>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
@@ -118,15 +115,9 @@
                 </ul>
         </div>
 
-<<<<<<< HEAD
-        <div class="column" style="background-color:rgb(235, 235, 235);">
-
-                <h3>Flora</h3>
-=======
         <div class="column" style="background-color:rgb(235, 235, 235);">
 
                 <h3>Fungal Poison</h3>
->>>>>>> ccab955fc91daa5094b0734d7f3c2124a83f8439
                  <ul class="font">
                     <li><a href="#">Mushroom</a></li>
                  </ul>
@@ -153,4 +144,3 @@
 
 </body>
 </html>
-@endsection
