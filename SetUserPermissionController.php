@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\AuthenticateMiddleware;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Controllers\Hash;
 use Illuminate\Support\Facades\Validator;
 use Gate;
-use Session;
 
 class SetUserPermissionController extends Controller
 {
