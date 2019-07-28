@@ -13,12 +13,14 @@ class BeeStings extends Migration
      */
     public function up()
     {
-    Schema::create('Bee_Stings', function (Blueprint $table) {
-        $table->bigIncrements('Bee_Stings_Id');
-        $table->tinyInteger('Number_of_Stings');
-        $table->string('Place_of_Sting');
-        $table->time('Sting_Time');
-        $table->tinyInteger('Cirmustance');
+    Schema::create('bee_stings', function (Blueprint $table) {
+        $table->bigIncrements('bee_stings_id');
+        $table->tinyInteger('number_of_stings')->nullable()->unsigned();
+        $table->string('place_of_sting')->nullable();
+        $table->string('other_places')->nullable();
+        $table->time('sting_time')->nullable();
+        $table->string('cirmustance')->nullable();
+        $table->string('comments')->nullable();
         $table->timestamps();
      });
     }
@@ -30,6 +32,6 @@ class BeeStings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Bee_Stings');
+        Schema::dropIfExists('bee_stings');
     }
 }
