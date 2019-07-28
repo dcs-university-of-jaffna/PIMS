@@ -12,7 +12,5 @@ function doclick() {
 
 	$('.form input[type="radio"]:nth-of-type(' + selectedIndex + ')').prop('checked', true);
 
-	if (selectedIndex == 6) {
-		$('button').html('Submit');
-	}
+	
 }

@@ -29,35 +29,39 @@
 	<span class="progress"><span></span></span>
 
 	<div class="panels">
-
+   <form action="/submit" method="post">	
+            @csrf
             <div data-panel="one">
-			
-                     
 			<h4>Personal deatail</h4>
+                     
                         <label>PHN Number :</label>
-			<input type="number" name="PHN" />
+                        <input type="number" name="PHN" required="true"/>
                           
                     
 		</div>
             
+                    
+
+            
 		<div data-panel="two">
 			<h4>Sting detail</h4>
-                        
+                             
+
                 <label> 01) Time of Sting : 
-                    <span class = "input"><input type = "time" name = "time" ></span>
+                    <span class = "input"><input type = "time" name = "Sting_Time" ></span>
                 </label>
            
             <br><br>
           
                <label> 02) Number of Sting :
-                    <span class = "input"><input type = "number" name = "number" min = "0" required></span>
+                    <input type = "number" name = "Number_of_Sting" >
                 </label>
          
             <br><br>
         
                 <label> 03) Place of Sting :
                     <span class = "select">
-                        <select name = "Places">
+                        <select name = "Place_of_Sting">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Home"> Home </option>
                             <option value = "Garden">Garden  </option>
@@ -67,13 +71,14 @@
                             
                         </select>
                     </span>
+
                 <br><br>
                         <label> Others <br> 
-                            <input type="text" name = "text" size="55">
+                            <input type="text" name = "Place_of_StingSS" size="55">
                         </label>
                 
                 </label>
-           
+                                
             <br><br>
            
             
@@ -112,7 +117,7 @@
         
                 <label>05) Circumstances of Stings : 
                    <span class = "select">
-                        <select name = "provoke">
+                        <select name = "Cirmustance">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = " Provoked  ">  Provoked   </option>
                             <option value = "Unprovoked "> Unprovoked  </option>
@@ -125,7 +130,8 @@
             <br>
             <br>
                      </div>
-        
+                  
+
             
 		<div data-panel="three">
 			<h4>Clinical Features</h4>
@@ -208,10 +214,10 @@
                 
           <label> <b>Features of anaphylaxis : </b>
                    <span class = "select">
-                        <select name = "anaphylaxis">
+                        <select name = "anaphylaxis_Features">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = " Provoked  "> Present   </option>
-                            <option value = "Unprovoked "> Absent  </option>
+                            <option value = " Present  "> Present   </option>
+                            <option value = "Absent "> Absent  </option>
                                            
                         </select>
                    </span><br><br>
@@ -219,7 +225,9 @@
                 </label>
 
 		</div>
-		<div data-panel="four">
+		
+            
+            <div data-panel="four">
 			<h4>Managemnt</h4>
                 <table>  
                         <tr>
@@ -266,7 +274,9 @@
 		</div>
 		<div data-panel="six">
 			<h4>Stage 6</h4>
+                        
 			<input type="text" placeholder="Comment" />
+                        <button type="submit">Submit</button> 
 		</div>
                     </form>
 
