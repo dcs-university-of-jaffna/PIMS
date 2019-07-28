@@ -16,7 +16,7 @@ class Records extends Migration
         Schema::create('Records', function (Blueprint $table) {
            
             $table->bigIncrements('Records_Id');
-            $table->bigInteger('id');
+            $table->bigInteger('Doctor_ID');
             $table->integer('PHN');
             $table->bigInteger('Clinical_Id');
             $table->bigInteger('Management_Id');

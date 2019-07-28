@@ -11,7 +11,7 @@ Route::get('/form', function () {
 
 //bee string search record
 Route::post('/phnsearch','RecordSearch@phnsearch');
-
+Route::get('/record','RecordSearch@phnsearch');
 
 Auth::routes();
 
