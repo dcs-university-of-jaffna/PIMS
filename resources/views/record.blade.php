@@ -82,9 +82,9 @@
     <div class="unit-5 overlay" style="">
       <div class="container text-center">
         <h2 class="mb-0">Patient Details</h2>
-        @foreach($patient as $value)
-        <p class="mb-0 unit-6"><a>{{$value->PHN}}</a> <span class="sep">> {{$value->Patient_Name}}</span> <span></span></p>
-        @endforeach
+       
+        <p class="mb-0 unit-6"><a>phn</a> <span class="sep">> number</span> <span></span></p>
+     
       </div>
     </div>
  
@@ -101,56 +101,61 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">{{$value -> Toxicity_Type}}</h2>
+                 <h2 class="mr-3 text-black h4">{{$value -> toxicity_type}}</h2>
                  <div class="badge-wrap">
-                 <span class="bg-success text-white badge py-2 px-4">{{$value->Instance_Date}}</span>
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->instance_date}}</span>
                   <span class="bg-info text-white badge py-2 px-4">{{$value->name}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> Instance_Area}}</span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> instance_area}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="#" class="btn btn-primary py-2">More</a>
+                <a href="#" class="btn btn-danger py-2">update</a>
+                <a href="/recordview" class="btn btn-warning py-2">view</a>
               </div>
            </div>
 
          </div>
         </div>
 @endforeach
-        <div class="row" data-aos="fade">
+
+
+@foreach($submitdata as $value)
+    <div class="row" data-aos="fade">
          <div class="col-md-12">
+
            <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Snake Bite</h2>
+                 <h2 class="mr-3 text-black h4">{{$value -> toxicity_type}}</h2>
                  <div class="badge-wrap">
-                 
-                  <span class="bg-success text-white badge py-2 px-4">Instance Date</span>
-                  <span class="bg-info text-white badge py-2 px-4">Doctor Name</span>
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->instance_date}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">{{$value->name}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"> <p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>Location</span></div>
+                 <div class="mr-3"><p>Site.</p></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> instance_area}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-danger rounded-circle btn-favorite active"><span class="icon-heart"></span></a>
-                <a href="#" class="btn btn-primary py-2">More</a>
+                <a href="#" class="btn btn-danger py-2">update</a>
+                <a href="/recordview" class="btn btn-warning py-2">view</a>
               </div>
-
            </div>
+
          </div>
         </div>
 
-
+        @endforeach
        
 
         
