@@ -309,7 +309,7 @@
                         </label>
                         
 		</div>
-             </form>
+             
 		<div data-panel="five">
 			<h4>laboratory detail</h4>
 			<input type="text" placeholder="laboratory detail" />
@@ -320,7 +320,7 @@
 			<input type="text" placeholder="Comment" />
                          <button type="submit">Save</button>  
 		</div>
-
+</form>
 	</div>
 
 	<button onclick="doclick()">Next</button>
