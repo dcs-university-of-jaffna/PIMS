@@ -16,6 +16,7 @@ class DoctorRecord extends Migration
 
         //doctor_record schema
         Schema::create('doctor_records', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->bigInteger('records_id')->unsigned();
             $table->bigInteger('doctors_id')->unsigned();
             $table->string('comments')->nullable();
