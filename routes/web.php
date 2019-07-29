@@ -13,27 +13,20 @@ Route::get('/form', function () {
     return view('form');
 });
 
-<<<<<<< HEAD
-
 Route::post('/submit', 'BeeStringController@submit');
 
 Route::get('/recordview', function () {
     return view('recordview');
 });
 
-
-=======
 Route::get('/beestring_record_update', function () {
     return view('beestring_record_update');
 });
 
 
-
-
 //show bee sting details fill the bee stirng form
 Route::get('/bee_String_view{records_id}{phn}','RecordSearch@show_bee_sting_details');
 
->>>>>>> master
 
 //bee string search record
 Route::post('/phnsearch','RecordSearch@phnsearch');

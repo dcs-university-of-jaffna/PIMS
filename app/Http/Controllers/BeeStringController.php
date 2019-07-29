@@ -76,6 +76,7 @@ class BeeStringController extends Controller
        $record->toxicity_type="bee_stings";
        $record->toxicity_id=DB::getPdo()->lastInsertId('bee_stings');
        $record->sites_id=DB::getPdo()->lastInsertId('sites');
+       $record->is_submited=0;
        $record->save();
       
        $doctor_record=new doctor_record;
