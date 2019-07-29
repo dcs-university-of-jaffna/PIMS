@@ -5,28 +5,25 @@ use App\bee_sting;
 use App\site;
 use App\clinical;
 use App\management;
+use App\doctor_record;
 use Illuminate\Http\Request;
+use DB;
 
 class BeeStringController extends Controller
 {
    function submit(Request $request){
-       $record = new record;
-       $record->PHN = $request->PHN;
-       $record->instance_date = $request->instance_date;
-       $record->instance_area = $request->instance_area;
-       $record->save();
-       	
-       
+       	 
        $bee_sting = new bee_sting;
        $bee_sting->sting_time=$request->Sting_Time;
        $bee_sting->number_of_stings=$request->number_of_stings;
        $bee_sting->cirmustance=$request->Cirmustance;
        $bee_sting->place_of_sting=$request->Place_of_Sting;
-       $bee_sting->other_places=$request-> other_places;
-    
+       $bee_sting->other_places=$request->other_places;
+       $bee_sting->comments=$request->comments;
        $bee_sting->save();
        
        $site = new site;
+       
        $site->head_neck=$request->head_neck;
        $site->upper_limb=$request->upper_limb;
        $site->chest=$request->chest;
@@ -36,6 +33,7 @@ class BeeStringController extends Controller
        $site->save();
       
        $clinical = new clinical;
+       
        $clinical->anaphylaxis=$request->anaphylaxis;
        $clinical->burning_pain=$request->burning_pain;
        $clinical->pruritus=$request->pruritus;
@@ -57,6 +55,7 @@ class BeeStringController extends Controller
        $clinical->save();
        
        $management = new management;
+     
        $management->managements_others=$request->managements_others;
        $management->ice_packs=$request->ice_packs;
        $management->antihistamine=$request->antihistamine;
@@ -66,8 +65,24 @@ class BeeStringController extends Controller
        $management->renal_rep_theraphy=$request->renal_rep_theraphy;
        $management->invasive_ventilation=$request->invasive_ventilation;
        $management->stinger_scrapped=$request->stinger_scrapped;
-       
        $management->save();
+       
+       $record = new record;
+       $record->phn = $request->PHN;
+       $record->instance_date = $request->instance_date;
+       $record->instance_area = $request->instance_area;
+       $record->clinicals_id=DB::getPdo()->lastInsertId('clinicals');
+       $record->managements_id=DB::getPdo()->lastInsertId('managements');
+       $record->toxicity_type="bee_stings";
+       $record->toxicity_id=DB::getPdo()->lastInsertId('bee_stings');
+       $record->sites_id=DB::getPdo()->lastInsertId('sites');
+       $record->save();
+      
+       $doctor_record=new doctor_record;
+       $doctor_record->records_id=DB::getPdo()->lastInsertId('records');
+       $doctor_record->doctors_id=1;
+       $doctor_record->save();
+       
        return back();
       
    }
