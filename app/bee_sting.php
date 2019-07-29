@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class bee_sting extends Model
 {
-     protected $fillable = ['Number_of_Stings','Sting_Time','Place_of_Sting','Cirmustance','anaphylaxis_Features'];
+     protected $fillable = ['number_of_stings','sting_time','cirmustance','instance_area','place_of_sting','other_places', 'abdomen'];
 }
