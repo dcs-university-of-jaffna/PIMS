@@ -5,13 +5,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/bee_String_view', function () {
+    return view('bee_String_view');
+});
+
 Route::get('/form', function () {
     return view('form');
 });
 
-Route::get('/recordview', function () {
-    return view('recordview');
-});
+//show bee sting details fill the bee stirng form
+Route::get('/bee_String_view{records_id}{phn}','RecordSearch@show_bee_sting_details');
 
 
 //bee string search record
