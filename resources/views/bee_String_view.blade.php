@@ -14,13 +14,13 @@
  <div class="container">
     <br><br>
  <form class="needs-validation" novalidate>
-
+  @foreach($data as $value)
    
  <div class="row"> 
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Name : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="" required>
+        <input type="text" class="form-control" id="validationCustom01" value="" readonly>
       
         </div>
    </div>
@@ -29,7 +29,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">PHN : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="" required>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$value->phn}}" readonly>
    
         </div>
    </div>
@@ -44,7 +44,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Time of Sting : </label>
-        <input type="text" class="form-control" id="validationCustom04" required>
+        <input type="text" class="form-control" value ="{{$value->sting_time}}" readonly>
          </div>
    </div>
     
@@ -52,7 +52,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Number of Sting</label>
-      <input type="text" class="form-control" id="validationCustom02"  value="" required>
+      <input type="text" class="form-control"  value="{{$value->number_of_stings}}" readonly>
    
         </div>
    </div>
@@ -63,7 +63,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Place of Sting : </label>
-        <input type="text" class="form-control" id="validationCustom04"  required>
+        <input type="text" class="form-control" value="{{$value->place_of_sting}}"  readonly>
          </div>
    </div>
     
@@ -71,7 +71,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstances of Stings</label>
-      <input type="text" class="form-control" id="validationCustom02"  value="" required>
+      <input type="text" class="form-control" value="{{$value->cirmustance}}" readonly>
    
         </div>
    </div>
@@ -292,7 +292,7 @@
 <br>
 <div class="form-group">
   <label for="comment">Others:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea class="form-control" rows="5" id="comment" readonly>{{$value->clinicals_others}}</textarea>
 </div> 
 
 
@@ -305,7 +305,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <input class="form-check-input" type="checkbox" id="gridCheck" readonly>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Apply ice
             </label>
@@ -316,7 +316,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <input class="form-check-input" type="checkbox" id="gridCheck" readonly>
             <label class="form-check-label" for="gridCheck">
             &nbsp; Antiistamine 
             </label>
@@ -407,7 +407,7 @@
 <br>
 <div class="form-group">
   <label for="comment">Others:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea class="form-control" value=""rows="5" autofocus readonly>{{$value->managements_others}}</textarea>
 </div> 
 
 
@@ -418,7 +418,7 @@
  
  <div class="form-group">
  
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea class="form-control" rows="5" readonly></textarea>
 </div> 
 
 
@@ -428,10 +428,10 @@
  
  <div class="form-group">
  
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+  <textarea class="form-control"  rows="5" readonly>{{$value->comments}} </textarea>
 </div> 
 
-
+@endforeach
 </form>
 
 <script>

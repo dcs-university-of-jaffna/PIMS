@@ -41,15 +41,16 @@ class RecordSearch extends Controller
    
    public function show_bee_sting_details($record_id,$phn){
 
-      $table = DB::table('records')
-               ->where('record_id','=',$record_id)
-               ->select('toxicity_type')
-               ->get();
-       dd($table);
 
-      // $data = DB::table('records')
-      //       ->join('bee_stings','bee_stings.bee_stings_id','=','records')
-
+      $data = DB::table('records')
+            ->join('bee_stings','bee_stings.bee_stings_id','=','records.toxicity_id')
+            ->join('clinicals','clinicals.clinicals_id','=','records.clinicals_id')
+            ->join('managements','managements.managements_id','=','records.managements_id')
+            ->join('sites','sites.sites_id','=','records.sites_id')
+            ->where('records.records_id','=',$record_id)
+            ->get();
+      
+       return view('bee_String_view',compact('data'));
    }
 
 
