@@ -19,6 +19,7 @@ class Sites extends Migration
             $table->boolean('upper_limb')->default(0);
             $table->boolean('chest')->default(0);
             $table->boolean('lower_limb')->default(0);
+            $table->boolean('abdomen')->default(0);
             $table->string('sites_others')->nullable();
             $table->timestamps();
 
