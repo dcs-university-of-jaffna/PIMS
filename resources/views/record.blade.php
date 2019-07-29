@@ -115,7 +115,7 @@
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="#" class="btn btn-danger py-2">update</a>
+                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
                 <a href="{{('/bee_String_view'.$value->records_id.$value->phn)}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
@@ -147,7 +147,7 @@
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-danger rounded-circle btn-favorite active"><span class="icon-heart"></span></a>
-                <a href="#" class="btn btn-danger py-2">update</a>
+                <a href="/" class="btn btn-danger py-2">update</a>
                 <a href="/bee_String_view" class="btn btn-warning py-2">view</a>
               </div>
            </div>
