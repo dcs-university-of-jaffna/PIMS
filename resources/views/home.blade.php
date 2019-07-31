@@ -19,7 +19,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">PHIN</a>
+      <a class="navbar-brand" href="#">PHN</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,8 +34,8 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-      @if(Auth::user()->position  =='Admin')
-        <li><a href="#">Admin</a></li>
+      @if(Auth::user()->userType   =='Admin')
+        <li><a href="{{ url('/userPermission') }}">Admin</a></li>
         @endif
         <li class="nav-item"><a href="{{ route('logout') }}"  class="nav-link"
                                             onclick="event.preventDefault();
