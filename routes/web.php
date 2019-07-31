@@ -13,11 +13,15 @@ Route::get('/form', function () {
     return view('form');
 });
 
+Route::post('/submit', 'BeeStringController@submit');
+
+Route::get('/recordview', function () {
+    return view('recordview');
+});
+
 Route::get('/beestring_record_update', function () {
     return view('beestring_record_update');
 });
-
-
 
 
 //show bee sting details fill the bee stirng form

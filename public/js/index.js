@@ -11,6 +11,7 @@ function doclick() {
 	selectedIndex = selectedIndex + 2;
 
 	$('.form input[type="radio"]:nth-of-type(' + selectedIndex + ')').prop('checked', true);
-
+        
+        
 
 }

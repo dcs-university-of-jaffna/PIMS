@@ -315,15 +315,17 @@
 			<input type="text" placeholder="laboratory detail" />
 		</div>
 		<div data-panel="six">
-			<h4>Stage 6</h4>
+			<h4>Save/submit</h4>
                         
-			<input type="text" placeholder="Comment" />
-                         <button type="submit">Save</button>  
+			<input type="text" name="comments" placeholder="Enter Comments here" />
+                         <button type="submit">save</button>  
+                         <button type="submit"class="btn btn-danger" title="Delete Atts 1S" onclick="return confirm(&quot;Submit the data?&quot;)">submit</button> 
 		</div>
 </form>
+              
 	</div>
-
-	<button onclick="doclick()">Next</button>
+        
+	<button onclick="doclick()" name="next">next</button>
 
 </div>
 <!-- partial -->
