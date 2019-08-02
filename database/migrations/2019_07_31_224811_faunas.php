@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BeeStings extends Migration
+class Faunas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class BeeStings extends Migration
      */
     public function up()
     {
-    Schema::create('bee_stings', function (Blueprint $table) {
-        $table->bigIncrements('bee_stings_id');
-        $table->tinyInteger('number_of_stings')->nullable()->unsigned();
-        $table->string('place_of_sting')->nullable();
+    Schema::create('faunas', function (Blueprint $table) {
+        $table->bigIncrements('faunas_id');
+        $table->string('fauna_type')->nullable();
+        $table->tinyInteger('number_of_incidents')->nullable()->unsigned();
+        $table->string('place_of_incident')->nullable();
         $table->string('other_places')->nullable();
-        $table->time('sting_time')->nullable();
+        $table->time('incident_time')->nullable();
         $table->string('cirmustance')->nullable();
         $table->string('comments')->nullable();
         $table->timestamps();
@@ -32,6 +33,6 @@ class BeeStings extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bee_stings');
+        Schema::dropIfExists('faunas');
     }
 }
