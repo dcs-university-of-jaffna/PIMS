@@ -158,18 +158,9 @@
         @endforeach
        
 
-        
-
-      
-
-
       </div>
     </div>    
 
-
-    
-
-    
 
    
   </div>

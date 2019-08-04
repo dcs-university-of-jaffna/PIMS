@@ -13,9 +13,31 @@
     <title>PIMS</title>
     <meta name="description" content="Multi level hover dropdown Navbar for bootstrap 4">
     <meta name="keywords" content="Multi level hover dropdown Navbar for bootstrap 4">
+ 
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="/record_details/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/record_details/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/record_details/css/magnific-popup.css">
+    <link rel="stylesheet" href="/record_details/css/jquery-ui.css">
+    <link rel="stylesheet" href="/record_details/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/record_details/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/record_details/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/record_details/css/animate.css">
+    
+    
+    <link rel="stylesheet" href="/record_details/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/record_details/css/fl-bigmug-line.css">
+  
+  
+
+    <link rel="stylesheet" href="/record_details/css/style.css">
+  
+
 </head>
 
 <body>
+  
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
         <a class="navbar-brand" href="#">PIMS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -192,6 +214,48 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </nav>
     
+<br><br><br><br><br>
+<!------ start record ----------->
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-start text-left mb-5">
+          <div class="col-md-9" data-aos="fade">
+            <h2 class="font-weight-bold text-black">Current Record</h2>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade">
+         <div class="col-md-12">
+
+           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+
+              <div class="mb-4 mb-md-0 mr-5">
+               <div class="job-post-item-header d-flex align-items-center">
+                 <h2 class="mr-3 text-black h4">Frontend Development</h2>
+                 <div class="badge-wrap">
+                  <span class="bg-primary text-white badge py-2 px-4">Partime</span>
+                 </div>
+               </div>
+               <div class="job-post-item-body d-block d-md-flex">
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">Facebook, Inc.</a></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>New York City, USA</span></div>
+               </div>
+              </div>
+
+              <div class="ml-auto">
+                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
+                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+              </div>
+           </div>
+
+         </div>
+        </div>
+</div>
+</div>
+
+<!------ end record ----------->
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -201,6 +265,28 @@
             $('#main_navbar').bootnavbar();
         })
     </script>
+
+
+  
+ 
+  
+  
+
+  
+
+  <script src="/record_details/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/record_details/js/jquery-ui.js"></script>
+  <script src="/record_details/js/popper.min.js"></script>
+  <script src="/record_details/js/owl.carousel.min.js"></script>
+  <script src="/record_details/js/jquery.stellar.min.js"></script>
+  <script src="/record_details/js/jquery.countdown.min.js"></script>
+  <script src="/record_details/js/jquery.magnific-popup.min.js"></script>
+  <script src="/record_details/js/bootstrap-datepicker.min.js"></script>
+  <script src="/record_details/js/aos.js"></script>
+  
+
+
+
 </body>
 
 </html>
