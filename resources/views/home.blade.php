@@ -216,6 +216,7 @@
     
 <br><br><br><br><br>
 <!------ start record ----------->
+ 
     <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-start text-left mb-5">
@@ -223,7 +224,7 @@
             <h2 class="font-weight-bold text-black">Current Record</h2>
           </div>
         </div>
-
+        @foreach($data as $value)
         <div class="row" data-aos="fade">
          <div class="col-md-12">
 
@@ -231,25 +232,26 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Frontend Development</h2>
+                 <h2 class="mr-3 text-black h4">{{$value->toxicity_type}}</h2>
                  <div class="badge-wrap">
-                  <span class="bg-primary text-white badge py-2 px-4">Partime</span>
+                  <span class="bg-primary text-white badge py-2 px-4">{{$value->phn}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">Facebook, Inc.</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>New York City, USA</span></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->instance_date}}</a></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->instance_area }}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+                
+                <a href="job-single.html" class="btn btn-primary py-2">Update</a>
               </div>
            </div>
 
          </div>
         </div>
+        @endforeach
 </div>
 </div>
 
