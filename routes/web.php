@@ -13,6 +13,7 @@ Route::get('/form', function () {
     return view('form');
 });
 
+
 Route::post('/submit', 'BeeStringController@submit');
 
 Route::get('/recordview', function () {
