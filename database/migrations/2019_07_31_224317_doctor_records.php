@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DoctorRecord extends Migration
+class DoctorRecords extends Migration
 {
     /**
      * Run the migrations.
@@ -16,17 +16,13 @@ class DoctorRecord extends Migration
 
         //doctor_record schema
         Schema::create('doctor_records', function (Blueprint $table) {
+            $table->bigIncrements('doctor_records_id');
             $table->bigInteger('records_id')->unsigned();
             $table->bigInteger('doctors_id')->unsigned();
             $table->string('comments')->nullable();
             $table->timestamps();
-<<<<<<< HEAD
-            $table->foreign('records_id')->references('records_id')->on('records');
-            $table->foreign('doctors_id')->references('id')->on('users');
-=======
             $table->foreign('records_id')->references('records_id')->on('records')->onUpdate('cascade');
             $table->foreign('doctors_id')->references('id')->on('users')->onUpdate('cascade');
->>>>>>> master
 
         });
     }

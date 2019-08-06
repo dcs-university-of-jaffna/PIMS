@@ -5,13 +5,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/bee_String_view', function () {
+    return view('bee_String_view');
+});
+
 Route::get('/form', function () {
     return view('form');
 });
 
+Route::get('/summary', function () {
+    return view('summaries/summary');
+});
+
+Route::post('/submit', 'BeeStringController@submit');
+
 Route::get('/recordview', function () {
     return view('recordview');
 });
+
+Route::get('/beestring_record_update', function () {
+    return view('beestring_record_update');
+});
+
+
+//show bee sting details fill the bee stirng form
+Route::get('/bee_String_view{records_id}{phn}','RecordSearch@show_bee_sting_details');
 
 
 //bee string search record
@@ -21,6 +39,9 @@ Route::get('/record','RecordSearch@phnsearch');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//show the not submit record details
+Route::get('/home', 'FrontController@show_save_record');
 
 Route::post('/submit', 'BeeStringController@submit');
 
