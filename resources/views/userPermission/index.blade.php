@@ -55,10 +55,10 @@
                                                 <a href = '/notActive/{{$item->id}}' class="btn btn-success" >Activated</a>
                                             @endif
 
-                                            @if($item->userType)
-                                                <a href = '/Admin/{{$item->id}}' class="btn btn-warning" >Doctor</a>
+                                            @if($item->userType == "Doctor")
+                                                <a href = '/Admin/{{$item->id}}' class="btn btn-warning">Admin</a>
                                             @else
-                                                <a href = '/notAdmin/{{$item->id}}' class="btn btn-success" >Admin</a>
+                                                <a href = '/Doctor/{{$item->id}}' class="btn btn-success">Doctor</a>
                                             @endif
                                             
                                             <form method="POST" action="{{ url('userPermission' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
