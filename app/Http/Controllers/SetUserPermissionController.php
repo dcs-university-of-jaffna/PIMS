@@ -122,15 +122,15 @@ class SetUserPermissionController extends Controller
     public function Admin($id)
     {
         $data=User::find($id);
-        $data->userType='Admin';
+        $data->userType="Admin";
         $data->save();
         return redirect()->back()->with('flash_message', 'set as Admin User!');
            
     }
-    public function notAdmin($id)
+    public function Doctor($id)
     {
         $data=User::find($id);
-        $data->userType='Doctor';
+        $data->userType="Doctor";
         $data->save();
         return redirect()->back()->with('warning_message', 'set as Not Admin User!');
            
