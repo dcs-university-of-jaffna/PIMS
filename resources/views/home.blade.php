@@ -61,7 +61,7 @@
                                      Fauna &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="{{ url('/form') }}">Bee Sting</a></li>
+                                    <li><a class="dropdown-item" href="#">Bee Sting</a></li>
                                     <li><a class="dropdown-item" href="#">Black widow spider</a></li>  
                                     <li><a class="dropdown-item" href="#">Blister beetle</a></li> 
                                     <li><a class="dropdown-item" href="#">Centipede</a></li> 
@@ -83,7 +83,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                                     <li><a class="dropdown-item" href="#">Allary</a></li>
-                                    <li><a class="dropdown-item" href="#">Aththana</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/form') }}">Aththana</a></li>
                                     <li><a class="dropdown-item" href="#">Aththe</a></li>
                                     <li><a class="dropdown-item" href="#">Diya Kadunu</a></li>
                                     <li><a class="dropdown-item" href="#">Endana</a></li>
