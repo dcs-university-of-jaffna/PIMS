@@ -325,7 +325,7 @@
               
 	</div>
         
-	<button onclick="doclick()" name="next">next</button>
+	<button onclick="doclick()" name="next" id="btn_hide" >next</button>
 
 </div>
 <!-- partial -->
@@ -334,4 +334,3 @@
 
 </body>
 </html>
-
