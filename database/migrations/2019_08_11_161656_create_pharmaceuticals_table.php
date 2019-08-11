@@ -16,6 +16,10 @@ class CreatePharmaceuticalsTable extends Migration
         Schema::create('pharmaceuticals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
+            $table->foreign('id')
+            ->references('id')->on('toxicities')
+            ->onUpdate('cascade');
         });
     }
 

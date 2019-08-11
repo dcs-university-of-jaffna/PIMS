@@ -16,6 +16,10 @@ class CreateOtherToxicitiesTable extends Migration
         Schema::create('other_toxicities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
+            $table->foreign('id')
+            ->references('id')->on('toxicities')
+            ->onUpdate('cascade');
         });
     }
 

@@ -46,6 +46,10 @@ class CreateFlorasTable extends Migration
                 $table->string('circumstance')->nullable();
                 $table->string('poisoning_mode')->nullable();
                 $table->timestamps();
+
+                $table->foreign('id')
+                    ->references('id')->on('naturals')
+                    ->onUpdate('cascade');
             }
         );
     }

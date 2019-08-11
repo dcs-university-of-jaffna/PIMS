@@ -46,6 +46,10 @@ class CreateFaunasTable extends Migration
                 $table->string('cirmustance')->nullable();
                 $table->string('comments')->nullable();
                 $table->timestamps();
+
+                $table->foreign('id')
+                    ->references('id')->on('naturals')
+                    ->onUpdate('cascade');
             }
         );
     }

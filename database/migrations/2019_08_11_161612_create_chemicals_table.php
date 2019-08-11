@@ -16,6 +16,10 @@ class CreateChemicalsTable extends Migration
         Schema::create('chemicals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
+            $table->foreign('id')
+            ->references('id')->on('toxicities')
+            ->onUpdate('cascade');
         });
     }
 

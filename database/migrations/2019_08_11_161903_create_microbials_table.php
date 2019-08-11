@@ -16,6 +16,10 @@ class CreateMicrobialsTable extends Migration
         Schema::create('microbials', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
+            $table->foreign('id')
+                ->references('id')->on('naturals')
+                ->onUpdate('cascade');
         });
     }
 

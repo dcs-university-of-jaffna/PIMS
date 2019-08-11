@@ -16,6 +16,10 @@ class CreateFungalsTable extends Migration
         Schema::create('fungals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+
+            $table->foreign('id')
+                ->references('id')->on('naturals')
+                ->onUpdate('cascade');
         });
     }
 

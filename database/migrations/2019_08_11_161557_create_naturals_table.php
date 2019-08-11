@@ -42,6 +42,10 @@ class CreateNaturalsTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('natural_type')->nullable();
                 $table->timestamps();
+
+                $table->foreign('id')
+                    ->references('id')->on('toxicities')
+                    ->onUpdate('cascade');
             }
         );
     }

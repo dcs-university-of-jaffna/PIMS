@@ -43,8 +43,8 @@ class CreateToxicitySymptomsTable extends Migration
             'toxicity_symptoms',
             function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->unsignedBigInteger('patient_id');
                 $table->unsignedBigInteger('toxicity_id');
+                $table->unsignedBigInteger('symptom_id');
                 $table->timestamps();
 
                 $table->foreign('toxicity_id')
