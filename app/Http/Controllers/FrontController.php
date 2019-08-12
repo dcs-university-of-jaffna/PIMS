@@ -11,9 +11,6 @@ class FrontController extends Controller
     
     public function show_save_record(){
 
-       
-
-
           $data = DB::table('doctor_records')
                   ->join('users','users.id','=','doctor_records.doctors_id')
                   ->join('records','records.records_id','=','doctor_records.records_id')
