@@ -19,7 +19,7 @@ $factory->define(
     Patient::class,
     function (Faker $faker) {
         return [
-            'phn' => $faker->numerify('###########'),
+            'phn' => $faker->numerify('1#########5'),
             'name' => $faker->name,
             'nic' => $faker->unique()->numerify('9########V'),
         ];
