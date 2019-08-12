@@ -28,7 +28,7 @@ use Illuminate\Database\Migrations\Migration;
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
 
-class CreatePrescriptionsTable extends Migration
+class CreatePrescriptionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -38,7 +38,7 @@ class CreatePrescriptionsTable extends Migration
     public function up()
     {
         Schema::create(
-            'prescriptions',
+            'prescription',
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('incident_id');
@@ -68,6 +68,7 @@ class CreatePrescriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prescriptions');
+        Schema::dropIfExists('prescription');
+
     }
 }

@@ -36,6 +36,6 @@ class PatientsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Patient::class, 50)->save();
+        factory(App\Patient::class, 50)->create();
     }
 }

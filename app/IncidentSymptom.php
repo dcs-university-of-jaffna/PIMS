@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Incident_Symptom extends Pivot
+class IncidentSymptom extends Pivot
 {
     public $incrementing = true;
 }

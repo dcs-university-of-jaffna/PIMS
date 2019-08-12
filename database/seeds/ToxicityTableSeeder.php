@@ -35,7 +35,7 @@ class ToxicityTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert(
+        DB::table('toxicities')->insert(
             [
                 ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Aththana',],
                 ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Aththana',],
