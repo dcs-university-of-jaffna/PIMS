@@ -47,7 +47,6 @@ class CreateIncidentsTable extends Migration
                 $table->unsignedBigInteger('toxicity_id');
                 $table->date('date')->nullable();
                 $table->time('time')->nullable();
-                $table->string('venue')->nullable();
                 $table->string('area')->nullable();
                 $table->boolean('is_submited')->default(0);
                 $table->timestamps();

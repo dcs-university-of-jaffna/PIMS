@@ -45,6 +45,7 @@ class CreateFaunasTable extends Migration
                 $table->string('other_places')->nullable();
                 $table->string('cirmustance')->nullable();
                 $table->string('comments')->nullable();
+                $table->string('venue')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

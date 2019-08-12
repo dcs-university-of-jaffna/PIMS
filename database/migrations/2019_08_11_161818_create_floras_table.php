@@ -45,6 +45,7 @@ class CreateFlorasTable extends Migration
                 $table->integer('amount')->nullable()->unsigned();
                 $table->string('circumstance')->nullable();
                 $table->string('poisoning_mode')->nullable();
+                $table->string('antidote')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

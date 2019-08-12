@@ -5,8 +5,13 @@
 use App\Prescription;
 use Faker\Generator as Faker;
 
-$factory->define(Prescription::class, function (Faker $faker) {
-    return [
-        //
-    ];
-});
+$factory->define(
+    Prescription::class,
+    function (Faker $faker) {
+        return [
+            'incident_id' => $faker-> numberBetween(1, 100),
+            'doctor_id' => $faker-> numberBetween(1, 20),
+            'management_id' => $faker-> numberBetween(1, 29),
+        ];
+    }
+);
