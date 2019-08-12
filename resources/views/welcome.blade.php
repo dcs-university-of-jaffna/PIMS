@@ -48,7 +48,7 @@
             }
 
             .content {
-                text-align: center;*/               
+                text-align: center;
                 position: absolute;
                 top: 200px;
                 
