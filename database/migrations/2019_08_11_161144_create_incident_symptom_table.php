@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Migration file for creating incident_symptoms table
+ * Migration file for creating incident_symptom table
  * php version 7.2.19
  *
- * @category Incident_Symptoms_Migration_Class
+ * @category Incident_Symptom_Migration_Class
  * @package  Migrations
  * @author   Group7s <dcs@jfn.ac.lk>
  * @license  GNU General Public License (GPL)
@@ -16,19 +16,19 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class for creating incident_symptoms table
+ * Class for creating incident_symptom table
  * php version 7.2.19
  *
- * You may add fields to incident_symptoms table here
+ * You may add fields to incident_symptom table here
  *
- * @category Incident_Symptoms_Migration_Class
+ * @category Incident_Symptom_Migration_Class
  * @package  Migrations
  * @author   Group7s <dcs@jfn.ac.lk>
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
 
-class CreateIncidentSymptomsTable extends Migration
+class CreateIncidentSymptomTable extends Migration
 {
     /**
      * Run the migrations.
@@ -38,7 +38,7 @@ class CreateIncidentSymptomsTable extends Migration
     public function up()
     {
         Schema::create(
-            'incident_symptoms',
+            'incident_symptom',
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('incident_id');
@@ -63,6 +63,6 @@ class CreateIncidentSymptomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('incident_symptoms');
+        Schema::dropIfExists('incident_symptom');
     }
 }
