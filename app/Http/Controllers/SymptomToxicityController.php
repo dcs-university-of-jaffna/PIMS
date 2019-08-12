@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class IncidentController extends Controller
+class SymptomToxicityController extends Controller
 {
     //
 }

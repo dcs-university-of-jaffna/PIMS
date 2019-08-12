@@ -45,6 +45,48 @@ class Incident extends Model
      */
     public function toxicity()
     {
-        return $this->belongsTo('App\Patient');
+        return $this->belongsTo('App\Toxicity');
+    }
+
+    /**
+     * Incident has many Symptoms
+     *
+     * @return belongsToMany()->result
+     */
+    public function symptoms()
+    {
+        return $this->belongsToMany('App\Symptom')
+            ->using('App\Incident_Symptom')
+            ->withTimestamps();
+    }
+
+    /**
+     * Incident has many Managements
+     *
+     * @return belongsToMany()->result
+     */
+    public function managements()
+    {
+        return $this->belongsToMany(
+            'App\Management', 'prescriptions', 'incident_id', 'management_id'
+        )
+            ->using('App\Prescription')
+            ->withPivot('doctor_id')
+            ->withTimestamps();
+    }
+
+    /**
+     * Incident has many Users
+     *
+     * @return belongsToMany()->result
+     */
+    public function users()
+    {
+        return $this->belongsToMany(
+            'App\User', 'prescriptions', 'incident_id', 'doctor_id'
+        )
+            ->using('App\Prescription')
+            ->withPivot('management_id')
+            ->withTimestamps();
     }
 }

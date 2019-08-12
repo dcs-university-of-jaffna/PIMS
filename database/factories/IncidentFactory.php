@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\incident;
+use App\Incident;
 use Faker\Generator as Faker;
 
-$factory->define(incident::class, function (Faker $faker) {
+$factory->define(Incident::class, function (Faker $faker) {
     return [
         //
     ];

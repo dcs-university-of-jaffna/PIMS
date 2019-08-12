@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\fauna;
+use App\Fauna;
 use Faker\Generator as Faker;
 
-$factory->define(fauna::class, function (Faker $faker) {
+$factory->define(Fauna::class, function (Faker $faker) {
     return [
         //
     ];

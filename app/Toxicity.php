@@ -37,4 +37,16 @@ class Toxicity extends Model
     {
         return $this->hasMany('App\Incident');
     }
+
+    /**
+     * Toxicity has many Symptoms
+     *
+     * @return belongsToMany()->result
+     */
+    public function symptoms()
+    {
+        return $this->belongsToMany('App\Symptom')
+            ->using('App\Symptom_Toxicity')
+            ->withTimestamps();
+    }
 }

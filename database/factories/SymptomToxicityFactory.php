@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Microbial;
+use App\Symptom_Toxicity;
 use Faker\Generator as Faker;
 
-$factory->define(Microbial::class, function (Faker $faker) {
+$factory->define(Symptom_Toxicity::class, function (Faker $faker) {
     return [
         //
     ];

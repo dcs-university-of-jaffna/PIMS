@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Incident_Symptom extends Model
+class Incident_Symptom extends Pivot
 {
-    //
+    public $incrementing = true;
 }

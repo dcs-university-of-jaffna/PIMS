@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\other_toxicity;
+use App\Other_Toxicity;
 use Faker\Generator as Faker;
 
-$factory->define(other_toxicity::class, function (Faker $faker) {
+$factory->define(Other_Toxicity::class, function (Faker $faker) {
     return [
         //
     ];

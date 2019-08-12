@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\symptom;
+use App\Symptom;
 use Faker\Generator as Faker;
 
-$factory->define(symptom::class, function (Faker $faker) {
+$factory->define(Symptom::class, function (Faker $faker) {
     return [
         //
     ];

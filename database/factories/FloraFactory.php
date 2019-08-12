@@ -2,10 +2,10 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\flora;
+use App\Flora;
 use Faker\Generator as Faker;
 
-$factory->define(flora::class, function (Faker $faker) {
+$factory->define(Flora::class, function (Faker $faker) {
     return [
         //
     ];
