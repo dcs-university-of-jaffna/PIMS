@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class flora extends Model
+class Pharmaceutical extends Model
 {
     //
 }

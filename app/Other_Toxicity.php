@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class natural extends Model
+class Other_Toxicity extends Model
 {
     //
 }

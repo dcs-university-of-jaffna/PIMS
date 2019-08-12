@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class prescription extends Model
+class Incident_Symptom extends Model
 {
     //
 }

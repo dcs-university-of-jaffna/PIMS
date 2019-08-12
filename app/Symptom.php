@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class toxicity extends Model
+class Symptom extends Model
 {
     //
 }
