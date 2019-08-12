@@ -6,9 +6,11 @@
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+     <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</button></a>
+
 <!-- partial:index.partial.html -->
 <div class="form">
-	<h2 style="text-align: center">Bee Sting Patient Detail</h2>
+	<h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
 	
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
@@ -18,12 +20,12 @@
 	<input id="six" type="radio" name="stage" />
 
 	<div class="stages">
-		<label for="one">1</label>
-		<label for="two">2</label>
-		<label for="three">3</label>
-		<label for="four">4</label>
-		<label for="five">5</label>
-		<label for="six">6</label>
+		<label for="one" title="Personal Deatil" >1</label>
+		<label for="two" title="Poison Detail">2</label>
+		<label for="three" title="Clinical Features">3</label>
+		<label for="four" title="Managemnt Detail">4</label>
+		<label for="five" title="Laboratory Detail">5</label>
+		<label for="six" title="Save/Submit">6</label>
 	</div>
 
 	<span class="progress"><span></span></span>
@@ -32,247 +34,157 @@
    <form action="/submit" method="post">	
             @csrf
             
-            <div data-panel="one">
-			<h4>Personal deatail</h4>
+    <div data-panel="one">
+			<h4>Personal Detail</h4>
                      
                         <label>PHN Number :</label>
-                        <input type="number" name="PHN" required="true" min="0"/>
+                        <input type="number" name="PHN" required="true" min="0" maxlength="11"/>
                            
-	    </div>
+    </div>
             
                   
-	    <div data-panel="two">
-			<h4>Sting detail</h4>
+    <div data-panel="two">
+			<h4>Poison Detail</h4>
                              
-                 <label> 01) Date of Sting : 
-                    <span class = "input"><input type = "date" name = "instance_date" ></span>
+                 <label> 01) Date of poisoning : 
+                    <span class = "input"><input type = "date" name = "" ></span>
                 </label>  
                  <br><br>        
                      
-                <label> 02) Time of Sting : 
-                    <span class = "input"><input type = "time" name = "Sting_Time" ></span>
+                <label> 02) Time of poisoning : 
+                    <span class = "input"><input type = "time" name = "" ></span>
                 </label>
                <br><br>
-                  
+               
+               
+                <label>03)Region of poisoning :
+                        <input type="text" name="instance_area" />
+             </label>  
+            <br><br>
+  
                                           
-            <label> 03) Number of Sting :
-                    <input type = "number" name = "number_of_stings" min="0"  >
+            <label> 04) Type of plant :
+                     <input type="text" name="" />
                 </label>
          
             <br><br>
             
-              <label>04) Circumstances of Stings : 
+            <label> 05) Part of plant :
+                     <input type="text" name="" />
+                </label>
+            <br><br>
+             
+            <label> 06) Amount :
+                     <input type="text" name="" />
+                </label>
+         
+            <br><br>
+            
+             <label> 07) Time of ingestion : 
+                    <span class = "input"><input type = "text" name = "" ></span>
+                </label>
+            <br><br>
+            
+              <label>08) Circumstance : 
                    <span class = "select">
                         <select name = "Cirmustance">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = " Provoked  ">  Provoked   </option>
-                            <option value = "Unprovoked "> Unprovoked  </option>
-                                           
+                            <option value = "Accidental">  Accidental   </option>
+                            <option value = "Sucidal"> Suicidal  </option>
+                            <option value = "Homicidal"> Homicidal </option>
+                             <option value = "Occupational"> Occupational </option>
                         </select>
                     </span>
                     
                 </label>
             <br><br>
-<br>        
-
-  
-             <label>05)Region of sting :
-                        <input type="text" name="instance_area" />
-             </label>  
-<br><br>
-  
-               
-            <label> 06) Place of Sting :
-                    <span class = "select">
-                        <select name = "Place_of_Sting">
+        <br>        
+         
+                 <label>09) Mode of poisoning : 
+                   <span class = "select">
+                        <select name = "mode">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "Home"> Home </option>
-                            <option value = "Garden">Garden  </option>
-                            <option value = "Paddyfield"> Paddy field </option>
-                            <option value = "Forest"> Forest</option>
-                            
-                            
+                            <option value = "Contact">  Contact   </option>
+                            <option value = "Ingestion"> Ingestion  </option>
+                            <option value = "Inhalation"> Inhalation </option>
+                             <option value = "Others"> Others </option>
                         </select>
                     </span>
-
-                <br><br>
-                        <label> Others <br> 
-                            <input type="text" name = "other_places" size="55">
-                        </label>
-                
-                </label>
-                                
-            <br><br>
-           
-            
-            <label> 07) Sting site :</label><br><br>
-         
-                <table>  <tr>
-                         <td>
-                        <input type="hidden" name = "head_neck" value="0"   >    
-                        <input type="checkbox" name = "head_neck" value="1"   > Head and Neck </td>
-                         
-                         <td style="text-align: center;  position: relative ; left:20%"> 
-                             <input type="hidden" name = "upper_limb" value="0"  >
-                             <input type="checkbox" name = "upper_limb" value="1"  >  Upper_Limb </td>
-                          
-                          <td style="text-align: center;  position: relative ; left:40%">
-                        <input type="hidden" name = "chest"  value="0" >    
-                        <input type="checkbox" name = "chest"  value="1" > Chest </td>
-                          <tr>
-                         </table>
-            <br>
-            <table> <tr>
-                             <td style="text-align: center;  position: relative ; left:12%"> 
-                        <input type="hidden" name = "abdomen" value="0"  >         
-                        <input type="checkbox" name = "abdomen" value="1"  > Abdomen    </td>
-                          
-                              <td style="text-align: center;  position: relative ; left:53%"> 
-                         <input type="hidden" name = "lower_limb" value="0"  >      
-                        <input type="checkbox" name = "lower_limb" value="1"  > Lower_Limb   </td>
-                           
-                </tr></table>           
-               
-            <br>
-                        <label> Others <br> 
-                            <input type="text" name = "sites_others" >
-                        </label>
-                
-                </label>
-      
-                     </div>
+                    
+                </label>  
+   </div>
                   
 
             
-		<div data-panel="three">
+    <div data-panel="three">
 			<h4>Clinical Features</h4>
 			<table>  
                         <tr>
                             <td style="text-align:center">
-                                <input type="hidden" name = "burning_pain"  value="0" >
-                        <input type="checkbox" name = "burning_pain"  value="1" > Burning pain</td>
+                                <input type="hidden" name = "Mydriasis"  value="0" >
+                        <input type="checkbox" name = "Mydriasis"  value="1" > Mydriasis</td>
                          
                          <td style="text-align: center;  position:relative ; left:20%"> 
-                              <input type="hidden" name = "pruritus"  value="0" > 
-                        <input type="checkbox" name = "pruritus"  value="1" >  Pruritus </td>
+                              <input type="hidden" name = "Cycloplegia"  value="0" > 
+                        <input type="checkbox" name = "Cycloplegia"  value="1" >  Cycloplegia </td>
                           
                           <td style="text-align: center;  position: relative ; left:40%"> 
-                              <input type="hidden" name = "vomiting"  value="0" >
-                        <input type="checkbox" name = "vomiting"  value="1" > Vomiting </td>
+                              <input type="hidden" name = "Dry mouth"  value="0" >
+                        <input type="checkbox" name = "Dry mouth"  value="1" > Dry mouth </td>
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                             <input type="hidden" name = "bronchospasm"  value="0" >
-                        <input type="checkbox" name = "bronchospasm"  value="1" >  Brochospasm </td>
+                             <input type="hidden" name = "Tacycarclia"  value="0" >
+                        <input type="checkbox" name = "Tacycarclia"  value="1" >  Tachycardia </td>
                         
                         <td style="text-align: center;  position: relative ; left:20%"> 
-                             <input type="hidden" name = "renal_failure" value="0"  >
-                        <input type="checkbox" name = "renal_failure" value="1"  >  Renal failure </td>
+                             <input type="hidden" name = "Fever" value="0"  >
+                        <input type="checkbox" name = "Fever" value="1"  >  Fever </td>
                           
                         <td style="text-align: center;  position: relative ; left:40%">
-                             <input type="hidden" name = "tightness_of_chest" value="0"  >
-                        <input type="checkbox" name = "tightness_of_chest" value="1"  >  Tightness of chest  </td>
+                             <input type="hidden" name = "Erythema" value="0"  >
+                        <input type="checkbox" name = "Erythema" value="1"  >  Erythema  </td>
                                                    </tr>
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr> 
-                             
-                            <tr>
-                            <td style="text-align:center">
-                                 <input type="hidden" name = "urticaria" value="0"  >
-                        <input type="checkbox" name = "urticaria" value="1"  > Urteacaria </td>
-
-                             <td style="text-align: center;  position: relative ; left:20%"> 
-                                  <input type="hidden" name = "rhabdomyolysis" value="0"  >
-                        <input type="checkbox" name = "rhabdomyolysis" value="1"  >  Rhabdomyolysis </td>
-       
-                             <td style="text-align: center;  position: relative ; left:40%">
-                                  <input type="hidden" name = "swelling" value="0"  >
-                        <input type="checkbox" name = "swelling" value="1"  >  Swelling </td>
-                           
-                             </tr>
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>     
-                              
-                            <tr>  <td style="text-align:center">
-                                    <input type="hidden" name = "nausea" value="0"  >
-                        <input type="checkbox" name = "nausea" value="1"  >  Nausea  </td>
-                              
-                                <td style="text-align: center;  position: relative ; left:20%"> 
-                                     <input type="hidden" name = "hypotension" value="0"  > 
-                        <input type="checkbox" name = "hypotension" value="1"  > Hypotension </td>
-                           
-                             <td style="text-align: center;  position: relative ; left:40%"> 
-                                  <input type="hidden" name = "oliguria"  value="0" >
-                        <input type="checkbox" name = "oliguria"  value="1" >  Oliguria </td>
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                               <tr>  <td style="text-align:center">
-                             <input type="hidden" name = "diarrhoea" value="0"  >           
-                        <input type="checkbox" name = "diarrhoea" value="1"  > Diarrhoea </td>
-                           
-                                   <td style="text-align: center;  position: relative ; left:20%"> 
-                                        <input type="hidden" name = "malaise"  value="0" >
-                        <input type="checkbox" name = "malaise"  value="1" >  Malaise  </td>
-                              
-                                   <td style="text-align: center;  position: relative ; left:40%"> 
-                                       <input type="hidden" name = "facial_odema" value="0"  > 
-                        <input type="checkbox" name = "facial_odema" value="1"  > Facial odema </td>
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                          <tr>  
-                              <td style="text-align:center">
-                                  <input type="hidden" name = "seizure" value="0"  >
-                                  <input type="checkbox" name = "seizure" value="1"  >  Seizure </td>
-                                
-                              <td style="text-align: center;  position: relative ; left:20%"> 
-                                     <input type="hidden" name = "laryngeal_odema" value="0"  >
-                                     <input type="checkbox" name = "laryngeal_odema" value="1"  >  Laryngeal odema </td>
-                        
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-               </table>
-                         <label> Others <br> 
-                            <input type="text" name = "clinicals_others" >
-                         </label><br><br>
-                
-          <label> <b>Features of anaphylaxis : </b>
-                   <span class = "select">
-                        <select name = "anaphylaxis">
+                        </table><br><br>
+                            
+                        <label> CNS effects : </label>
+                                 <span class = "select">
+                        <select name = "CNS effects">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = " Present  "> Present   </option>
-                            <option value = "Absent "> Absent  </option>
-                                           
+                            <option value = "Agitation">  Agitation   </option>
+                            <option value = "Combative"> Combative  </option>
+                            <option value = "Confusion"> Confusion </option>
+                             <option value = "Others">disorientation </option>
                         </select>
-                   </span><br><br>
-                    
-                </label>
+                    </span>  
+                          <br><br>
+              
+                         <label> If others <br> 
+                            <input type="text" name = "clinicals_others" >
+                         </label>
 
-		</div>
+    </div>
 		
                    
             
             <div data-panel="four">
-			<h4>Managemnt</h4>
-                <table>  
+			<h4> Managemnt Detail</h4>
+                                       <table>  
                         <tr>
                             <td style="text-align:center">
-                                <input type="hidden" name = "ice_packs" value="0" >        
-                        <input type="checkbox" name = "ice_packs" value="1"  > Apply ice</td>
+                                <input type="hidden" name = "Resucitation" value="0" >        
+                        <input type="checkbox" name = "Resucitation" value="1"  > Resuscitation</td>
                          
                          <td style="text-align: center;  position:relative ; left:5%"> 
                              
-                             <input type="hidden" name = "antihistamine" value="0"  >
-                             <input type="checkbox" name = "antihistamine" value="1"  > Antiistamine </td>
+                             <input type="hidden" name = "Supportive therapy" value="0"  >
+                             <input type="checkbox" name = "Supportive therapy" value="1"  > Supportive therapy </td>
                           
                           <td style="text-align: center;  position: relative ; left:10%">
                               <input type="hidden" name = "renal_rep_theraphy" value="0"  >
-                        <input type="checkbox" name = "renal_rep_theraphy" value="1"  >  Need Renal Replacement Theraphy  </td>
+                        <input type="checkbox" name = "renal_rep_theraphy" value="1"  > Anticonvulsants given  </td>
                            </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
@@ -280,44 +192,119 @@
                            <tr>
                             <td style="text-align:center">
                                 
-                                <input type="hidden" name = "icu_care" value="0"  > 
-                        <input type="checkbox" name = "icu_care" value="1"  >  ICU care </td>
+                                <input type="hidden" name = "Atropine Given" value="0"  > 
+                        <input type="checkbox" name = "Atropine Given" value="1"  >  Atropine given </td>
                         
                            <td style="text-align: center;  position: relative ; left:5%"> 
-                        <input type="hidden" name = "steroids" value="0"> 
-                               <input type="checkbox" name = "steroids" value="1"   >  Steroids </td>
+                        <input type="hidden" name = "Dialysis" value="0"> 
+                               <input type="checkbox" name = "Dialysis" value="1"   > Dialysis</td>
                            <td style="text-align: center;  position: relative ; left:10%"> 
-                                <input type="hidden" name = "invasive_ventilation" value="0"  >
-                               <input type="checkbox" name = "invasive_ventilation" value="1"  > Need invasive ventiliation </td>
+                                <input type="hidden" name = "Alkalinzation" value="0"  >
+                               <input type="checkbox" name = "Alkalinzation" value="1"  >  Alkalinization </td>
                              </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                               
                         <tr>
                             <td style="text-align:center">     
-                       <input type="hidden" name = "adrenaline" value="0"  >         
-                        <input type="checkbox" name = "adrenaline" value="1"  > Adrenalin(IM) </td>
+                       <input type="hidden" name = "Blood translation" value="0"  >         
+                        <input type="checkbox" name = "Blood translation" value="1"  > Blood translation/Plasma expanders </td>
                     
                              <td style="text-align: center;  position: relative ; left:5%">
-                                 <input type="hidden" name = "stinger_scrapped" value="0"  >
-                        <input type="checkbox" name = "stinger_scrapped" value="1"  >  Stinger scrapped </td>
+                                 <input type="hidden" name = "NaHCO3 given" value="0"  >
+                        <input type="checkbox" name = "NaHCO3 given" value="1"  >  NaHCO3 given </td>
+                             
+                                <td style="text-align: center;  position: relative ; left:10%">
+                                 <input type="hidden" name = "Dopamine " value="0"  >
+                        <input type="checkbox" name = "Dopamine " value="1"  >  Dopamine given </td>
                          </tr>
+                         
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                         
+                           <tr>
+                            <td style="text-align:center">
+                                
+                                <input type="hidden" name = "Analgesics given" value="0"  > 
+                        <input type="checkbox" name = "Analgesics given" value="1"  >  Analgesics given </td>
+                        
+                           <td style="text-align: center;  position: relative ; left:5%"> 
+                        <input type="hidden" name = "Calcium given" value="0"> 
+                               <input type="checkbox" name = "Calcium given" value="1"   > Calcium given</td>
+                           <td style="text-align: center;  position: relative ; left:10%"> 
+                                <input type="hidden" name = "Antibiotics given" value="0"  >
+                               <input type="checkbox" name = "Antibiotics given" value="1"  > Antibiotics given </td>
+                             </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                              
+                        <tr>
+                            <td style="text-align:center">     
+                       <input type="hidden" name = "prednisalone given" value="0"  >         
+                        <input type="checkbox" name = "prednisalone given" value="1"  > prednisolone given </td>
+                    
+                             <td style="text-align: center;  position: relative ; left:5%">
+                                 <input type="hidden" name = "NaCl given" value="0"  >
+                        <input type="checkbox" name = "NaCl given" value="1"  >  NaCl given </td>
+                             
+                               <td style="text-align: center;  position: relative ; left:10%">
+                                 <input type="hidden" name = "methylprednisolone" value="0"  >
+                        <input type="checkbox" name = "methylprednisolone" value="1"  >  methylprednisolone/corticosteroids </td>
+                         </tr>
+                         
                         </table>
                         
                         <br><br>
                         <label> If others <br> 
                             <input type="text" name = "managements_others" size="55">
-                        </label>
+                        </label><br><br>
+                        
+                        <label> <b> Gastrointestinal decontamination : </b></label><br><br>
+                         <label>  Gastric aspiration & lavage : </label>
+                                 <span class = "select">
+                        <select name = "Gastric aspiration">
+                            <option value = " "> ..Please choose one option.. </option>
+                            <option value = "Agitation">  yes   </option>
+                            <option value = "Combative"> no </option>
+                        </select>
+                    </span><br><br>
+                         
+                         
+                         <label>  Activated chracol : </label>
+                                 <span class = "select">
+                        <select name = "charcoal">
+                            <option value = " "> ..Please choose one option.. </option>
+                            <option value = "Agitation">  yes   </option>
+                            <option value = "Combative"> no </option>
+                        </select>
+                    </span><br><br>
+                        <label> If yes, no of does  <br> 
+                            <input type="number" name = "clinicals_others" >
+                         </label>
+                         <br><br>
+                         
+                         <label> <b> Antidote given :</b> </label>
+                                 <span class = "select">
+                        <select name = "Antidote">
+                            <option value = " "> ..Please choose one option.. </option>
+                            <option value = "Agitation">  yes   </option>
+                            <option value = "Combative"> no </option>
+                        </select>
+                    </span><br><br>
+                          <label> If yes, type of antidote  <br> 
+                            <input type="number" name = "clinicals_others" >
+                         </label>
+                         
+
                         
 		</div>
              
 		<div data-panel="five">
-			<h4>laboratory detail</h4>
+			<h4>Laboratory Detail</h4>
 			<input type="text" placeholder="laboratory detail" />
 		</div>
 		<div data-panel="six">
-			<h4>Save/submit</h4>
-                        
+			<h4>Save/Submit</h4>
+                         <label> Comment: <br> 
 			<input type="text" name="comments" placeholder="Enter Comments here" />
+                         </label>
                          <button type="submit">save</button>  
                          <button type="submit"class="btn btn-danger" title="Delete Atts 1S" onclick="return confirm(&quot;Submit the data?&quot;)">submit</button> 
 		</div>
@@ -325,7 +312,7 @@
               
 	</div>
         
-	<button onclick="doclick()" name="next">next</button>
+	<button onclick="doclick()" name="next" id="btn_hide" >next</button>
 
 </div>
 <!-- partial -->
@@ -334,4 +321,3 @@
 
 </body>
 </html>
-
