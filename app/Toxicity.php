@@ -49,4 +49,5 @@ class Toxicity extends Model
             ->using('App\Symptom_Toxicity')
             ->withTimestamps();
     }
+
 }
