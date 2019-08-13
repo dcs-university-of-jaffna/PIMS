@@ -2,7 +2,7 @@
 
 /**
  * Migration file for creating incident_symptom table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Incident_Symptom_Migration_Class
  * @package  Migrations
@@ -17,7 +17,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating incident_symptom table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to incident_symptom table here
  *

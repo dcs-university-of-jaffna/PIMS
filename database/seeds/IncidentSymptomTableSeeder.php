@@ -2,7 +2,7 @@
 
 /**
  * Seeder for incident_symptom table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Seeder
  * @package  Database/seeders
@@ -14,7 +14,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for incident_symptom table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * Use this seeder to seed incident_symptom table
  *

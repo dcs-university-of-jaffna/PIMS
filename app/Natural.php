@@ -3,7 +3,7 @@
 
 /**
  * Model representing naturals table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model
  * @package  App
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class representing attributes of Natural
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model->Class
  * @package  App

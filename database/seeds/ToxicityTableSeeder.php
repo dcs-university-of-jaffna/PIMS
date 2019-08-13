@@ -2,7 +2,8 @@
 
 /**
  * Seeder for toxicities table
- * php version 7.2.19
+ *
+ * PHP version 7.2.19
  *
  * @category Seeder
  * @package  Database/seeders
@@ -15,7 +16,8 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for toxicities table
- * php version 7.2.19
+ *
+ * PHP version 7.2.19
  *
  * Use this seeder to seed toxicities table
  *
@@ -37,52 +39,52 @@ class ToxicityTableSeeder extends Seeder
     {
         DB::table('toxicities')->insert(
             [
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Aththana',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Aththana',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Aththana',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Divikaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Divikaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Diyakaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Diyakaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Diyakaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Diyakaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Endaru_Ingestion',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Godakaduru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Hondala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Hondala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Hondala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala_Eye_Contact',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala_Eye_Contact',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala_Eye_Contact',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala_Eye_Contact',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Habarala_Eye_Contact',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Endaru_Inhalation',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Endaru_Inhalation',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Kaneru',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Kepunkiriya',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Niyagala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Niyagala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Floras', 'name' => 'Niyagala',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Bee_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Jellyfish',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Scorpion_Bite',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Snake_Bite',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Hornet_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Wasp_Sting',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Black_Widow_Spider',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Blister_Beetle',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Turtle_Fish',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Faunas', 'name' => 'Centipede',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Fungal', 'name' => 'Mushroom',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Microbial', 'name' => 'Batlism',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Microbial', 'name' => 'Food_Poisoning',],
-                ['main_group' => 'Naturals', 'sub_group' => 'Microbial', 'name' => 'Food_Poisoning',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Aththana',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Aththana',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Aththana',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Divikaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Divikaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Diyakaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Diyakaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Diyakaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Diyakaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Endaru_Ingestion',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Godakaduru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Hondala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Hondala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Hondala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala_Eye_Contact',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala_Eye_Contact',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala_Eye_Contact',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala_Eye_Contact',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Habarala_Eye_Contact',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Endaru_Inhalation',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Endaru_Inhalation',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Kaneru',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Kepunkiriya',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Niyagala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Niyagala',],
+                ['main_group' => 'naturals', 'sub_group' => 'floras', 'name' => 'Niyagala',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Bee_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Jellyfish',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Scorpion_Bite',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Snake_Bite',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Hornet_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Wasp_Sting',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Black_Widow_Spider',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Blister_Beetle',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Turtle_Fish',],
+                ['main_group' => 'naturals', 'sub_group' => 'faunas', 'name' => 'Centipede',],
+                ['main_group' => 'naturals', 'sub_group' => 'fungals', 'name' => 'Mushroom',],
+                ['main_group' => 'naturals', 'sub_group' => 'microbials', 'name' => 'Batlism',],
+                ['main_group' => 'naturals', 'sub_group' => 'microbials', 'name' => 'Food_Poisoning',],
+                ['main_group' => 'naturals', 'sub_group' => 'microbials', 'name' => 'Food_Poisoning',],
             ]
         );
     }

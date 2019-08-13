@@ -1,7 +1,7 @@
 <?php
 /**
  * File for creating patients table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Patients_Migration
  * @package  Migrations
@@ -16,7 +16,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating patients table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to patients table here
  *

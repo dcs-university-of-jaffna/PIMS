@@ -3,7 +3,8 @@
 
 /**
  * Seeder for prescription table
- * php version 7.2.19
+ *
+ * PHP version 7.2.19
  *
  * @category Seeder
  * @package  Database/seeders
@@ -16,7 +17,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for prescription table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * Use this seeder to seed prescription table
  *
@@ -37,6 +38,6 @@ class PrescriptionTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Prescription::class, 120)->create();
+        factory(App\Prescription::class, 120)->Create();
     }
 }

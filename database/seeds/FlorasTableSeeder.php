@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Seeder for patients table
+ * Seeder for floras table
+ *
  * PHP version 7.2.19
  *
  * @category Seeder
@@ -14,12 +15,13 @@
 use Illuminate\Database\Seeder;
 
 /**
- * Seeder class for patients table
+ * Seeder class for floras table
+ *
  * PHP version 7.2.19
  *
- * Use this seeder to seed patients table
+ * Use this seeder to seed floras table
  *
- *           Using PatientFactory
+ *           **** Using NaturalFactory ****
  *
  * @category Seeder
  * @package  Database/seeders
@@ -27,7 +29,7 @@ use Illuminate\Database\Seeder;
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
-class PatientsTableSeeder extends Seeder
+class FlorasTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -36,6 +38,6 @@ class PatientsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Patient::class, 50)->create();
+        factory(App\Flora::class, 27)->create();
     }
 }

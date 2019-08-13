@@ -2,7 +2,7 @@
 
   /**
    * Factory seeding the patients table
-   * php version 7.2.19
+   * PHP version 7.2.19
    *
    * @var      \Illuminate\Database\Eloquent\Factory $factory
    * @category Factory

@@ -2,7 +2,7 @@
 
 /**
  * Migration file for creating prescriptions table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Prescriptions_Migration_Class
  * @package  Migrations
@@ -17,7 +17,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating prescriptions table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to prescriptions table here
  *
