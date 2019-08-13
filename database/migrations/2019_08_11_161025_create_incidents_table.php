@@ -2,7 +2,7 @@
 
 /**
  * Migration file for creating incidents table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to incidents table here
  *
@@ -19,7 +19,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating incidents table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to incidents table here
  *
@@ -47,7 +47,6 @@ class CreateIncidentsTable extends Migration
                 $table->unsignedBigInteger('toxicity_id');
                 $table->date('date')->nullable();
                 $table->time('time')->nullable();
-                $table->string('venue')->nullable();
                 $table->string('area')->nullable();
                 $table->boolean('is_submited')->default(0);
                 $table->timestamps();

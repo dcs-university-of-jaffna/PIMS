@@ -2,7 +2,7 @@
 
 /**
  * Class for creating fauna table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Fauna_Migration
  * @package  Migrations
@@ -17,7 +17,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating fauna table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to fauna table here
  *
@@ -45,6 +45,7 @@ class CreateFaunasTable extends Migration
                 $table->string('other_places')->nullable();
                 $table->string('cirmustance')->nullable();
                 $table->string('comments')->nullable();
+                $table->string('venue')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

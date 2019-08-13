@@ -2,7 +2,7 @@
 
 /**
  * Migration file for creating flora table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Flora_Migration
  * @package  Migrations
@@ -17,7 +17,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating flora table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to flora table here
  *
@@ -45,6 +45,7 @@ class CreateFlorasTable extends Migration
                 $table->integer('amount')->nullable()->unsigned();
                 $table->string('circumstance')->nullable();
                 $table->string('poisoning_mode')->nullable();
+                $table->string('antidote')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')
