@@ -224,34 +224,7 @@
             <h2 class="font-weight-bold text-black">Current Record</h2>
           </div>
         </div>
-        @foreach($data as $value)
-        <div class="row" data-aos="fade">
-         <div class="col-md-12">
-
-           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
-
-              <div class="mb-4 mb-md-0 mr-5">
-               <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">{{$value->toxicity_type}}</h2>
-                 <div class="badge-wrap">
-                  <span class="bg-primary text-white badge py-2 px-4">{{$value->phn}}</span>
-                 </div>
-               </div>
-               <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->instance_date}}</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->instance_area }}</span></div>
-               </div>
-              </div>
-
-              <div class="ml-auto">
-                
-                <a href="job-single.html" class="btn btn-primary py-2">Update</a>
-              </div>
-           </div>
-
-         </div>
-        </div>
-        @endforeach
+      
 </div>
 </div>
 
