@@ -5,23 +5,26 @@ use App\Incident;
 use App\Toxicity;
 use App\Natural;
 use App\Flora;
-
+use App\Symptom;
+use App\IncidentSymptom;
 use Illuminate\Http\Request;
 use DB;
 
+
 class BeeStringController extends Controller
 {
+    
    function submit(Request $request){
-     
+  
+       $patient = new patient;
+       $patient->phn = $request->PHN;
+       $patient->save();
+       
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
        $toxicity->sub_group ='flora';
        $toxicity->name ='aththana';   
        $toxicity->save();
-       
-       $patient = new patient;
-       $patient->phn = $request->PHN;
-       $patient->save();
        
        $natural = new Natural;
        $natural->id = $toxicity->id ;
@@ -42,9 +45,34 @@ class BeeStringController extends Controller
        $flora->amount = $request-> amount;
        $flora->circumstance = $request-> circumstance;
        $flora->poisoning_mode  = $request-> poisoning_mode;     
-       $flora->save(); 
-       
-       return back();
+       $flora->save();
+        
       
+       $symptom = $request->AththanaClinical;
+        if (is_null($symptom)){
+            
+        }
+       else{
+            foreach ($symptom as $value){
+                $incidentSymptom=new IncidentSymptom;
+                $r =Symptom::select('id')->where('name',$value)->first();
+                $incidentSymptom->symptom_id=$r->id;
+                $incidentSymptom->incident_id = $incident->id;
+                $incidentSymptom->save();
+            }
+       }
+      
+       $symptom1 = $request->CNSeffects;
+        if (is_null($symptom)){
+            
+        }
+        else{
+            $incidentSymptom=new IncidentSymptom;
+            $r =Symptom::select('id')->where('name',$symptom1)->first();
+            $incidentSymptom->symptom_id=$r->id;
+            $incidentSymptom->incident_id = $incident->id;
+            $incidentSymptom->save();
+        }
+      return back();
    }
 }

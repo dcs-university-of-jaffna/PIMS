@@ -101,52 +101,48 @@
                     </span>
                     
                 </label> 
-        <button type="submit">save</button>     
+         
    </div>
                   
-  </form>  
+ 
             
     <div data-panel="three">
 			<h4>Clinical Features</h4>
 			<table>  
                         <tr>
                             <td style="text-align:center">
-                                <input type="hidden" name = "Mydriasis"  value="0" >
-                        <input type="checkbox" name = "Mydriasis"  value="1" > Mydriasis</td>
+                           
+                        <input type="checkbox" name = "AththanaClinical[]"  value="mydriasis" > Mydriasis</td>
                          
-                         <td style="text-align: center;  position:relative ; left:20%"> 
-                              <input type="hidden" name = "Cycloplegia"  value="0" > 
-                        <input type="checkbox" name = "Cycloplegia"  value="1" >  Cycloplegia </td>
+                         <td style="text-align: center;  position:relative ; left:20%">  
+                        <input type="checkbox" name = "AththanaClinical[]"  value="cycloplegia" >  Cycloplegia </td>
                           
                           <td style="text-align: center;  position: relative ; left:40%"> 
-                              <input type="hidden" name = "Dry mouth"  value="0" >
-                        <input type="checkbox" name = "Dry mouth"  value="1" > Dry mouth </td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="dry_mouth" > Dry mouth </td>
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                             <input type="hidden" name = "Tacycarclia"  value="0" >
-                        <input type="checkbox" name = "Tacycarclia"  value="1" >  Tachycardia </td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="tachycardia" >  Tachycardia </td>
                         
                         <td style="text-align: center;  position: relative ; left:20%"> 
-                             <input type="hidden" name = "Fever" value="0"  >
-                        <input type="checkbox" name = "Fever" value="1"  >  Fever </td>
+                        <input type="checkbox" name = "AththanaClinical[]" value="fever"  >  Fever </td>
                           
                         <td style="text-align: center;  position: relative ; left:40%">
-                             <input type="hidden" name = "Erythema" value="0"  >
-                        <input type="checkbox" name = "Erythema" value="1"  >  Erythema  </td>
+                        <input type="checkbox" name ="AththanaClinical[]" value=erythema  >  Erythema  </td>
                                                    </tr>
                         </table><br><br>
                             
                         <label> CNS effects : </label>
                                  <span class = "select">
-                        <select name = "CNS effects">
+                        <select name = "CNSeffects">
+                            
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Agitation">  Agitation   </option>
                             <option value = "Combative"> Combative  </option>
                             <option value = "Confusion"> Confusion </option>
-                             <option value = "Others">disorientation </option>
+                             <option value = "disorientation">disorientation </option>
                         </select>
                     </span>  
                           <br><br>
@@ -154,9 +150,10 @@
                          <label> If others <br> 
                             <input type="text" name = "clinicals_others" >
                          </label>
+                          <button type="submit">save</button>    
 
     </div>
-		
+	  </form> 	
                    
             
             <div data-panel="four">
