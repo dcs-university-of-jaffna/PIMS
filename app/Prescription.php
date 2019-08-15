@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PivotModel representing prescriptions table
+ * PivotModel representing prescription table
  * PHP version 7.2.19
  *
  * @category Model
@@ -16,7 +16,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
- * Class representing attributes of Prescription
+ * Class representing attributes of Prescription pivot table
  * PHP version 7.2.19
  *
  * @category PivotModel->Class
