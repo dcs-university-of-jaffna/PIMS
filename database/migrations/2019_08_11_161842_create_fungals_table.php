@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -33,3 +34,4 @@ class CreateFungalsTable extends Migration
         Schema::dropIfExists('fungals');
     }
 }
+

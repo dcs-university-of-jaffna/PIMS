@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * Model representing users table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model
  * @package  App
@@ -20,7 +21,7 @@ use Illuminate\Contracts\Auth\CanResetPassword;
 
 /**
  * Class representing attributes of User
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model->Class
  * @package  App
@@ -60,6 +61,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Whoever make this function please write this doc comment
+     *
+     * @return void
+     */
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));

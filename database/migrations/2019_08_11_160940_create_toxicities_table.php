@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * Migration file for creating toxicities table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Toxicities_Migration
  * @package  Migrations
@@ -17,7 +18,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating toxicities table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to toxicities table here
  *
@@ -59,3 +60,4 @@ class CreateToxicitiesTable extends Migration
         Schema::dropIfExists('toxicities');
     }
 }
+

@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * PivotModel representing prescriptions table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model
  * @package  App
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
  * Class representing attributes of Prescription
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category PivotModel->Class
  * @package  App
@@ -30,3 +31,4 @@ class Prescription extends Pivot
 {
     public $incrementing = true;
 }
+

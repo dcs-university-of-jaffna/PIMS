@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * Migration file for creating managements table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Managements_Migration_Class
  * @package  Migrations
@@ -17,7 +18,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating managements table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to managements table here
  *
@@ -57,3 +58,4 @@ class CreateManagementsTable extends Migration
         Schema::dropIfExists('managements');
     }
 }
+

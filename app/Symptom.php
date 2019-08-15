@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * Model representing symptoms table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model
  * @package  App
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class representing relations on Symptom
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Model->Class
  * @package  App
@@ -52,3 +53,4 @@ class Symptom extends Model
             ->withTimestamps();
     }
 }
+

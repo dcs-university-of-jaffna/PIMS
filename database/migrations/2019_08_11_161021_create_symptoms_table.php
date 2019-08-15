@@ -1,8 +1,9 @@
+
 <?php
 
 /**
  * Migration file for creating symptoms table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * @category Symptoms_Migration_Class
  * @package  Migrations
@@ -17,7 +18,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating symptoms table
- * php version 7.2.19
+ * PHP version 7.2.19
  *
  * You may add fields to symptoms table here
  *
