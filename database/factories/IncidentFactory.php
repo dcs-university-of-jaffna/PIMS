@@ -23,6 +23,9 @@ $factory->define(
             'toxicity_id' => $faker->numberBetween(1, 45),
             'date' => $faker->date('Y-m-d', 'now'),
             'time' => $faker->time('H:i:s', 'now'),
+            'area' => $faker->city(),
+            'symptom_others' => $faker->realText(120, 2),
+            'management_others' => $faker->realText(100, 2),
             'is_submited' => $faker->randomElement(array('0','1')),
         ];
     }

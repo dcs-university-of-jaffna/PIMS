@@ -48,6 +48,8 @@ class CreateIncidentsTable extends Migration
                 $table->date('date')->nullable();
                 $table->time('time')->nullable();
                 $table->string('area')->nullable();
+                $table->text('symptom_others')->nullable();
+                $table->text('management_others')->nullable();
                 $table->boolean('is_submited')->default(0);
                 $table->timestamps();
 
