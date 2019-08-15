@@ -39,55 +39,44 @@
                      
                         <label>PHN Number :</label>
                         <input type="number" name="PHN" required="true" min="0" maxlength="11"/>
-                           
+                      
     </div>
-            
+        
                   
     <div data-panel="two">
 			<h4>Poison Detail</h4>
                              
-                 <label> 01) Date of poisoning : 
-                    <span class = "input"><input type = "date" name = "" ></span>
+                 <label> 01) Date of ingestion : 
+                    <span class = "input"><input type = "date" name = "date" ></span>
                 </label>  
                  <br><br>        
                      
-                <label> 02) Time of poisoning : 
-                    <span class = "input"><input type = "time" name = "" ></span>
+                <label> 02) Time of ingestion : 
+                    <span class = "input"><input type = "time" name = "time" ></span>
                 </label>
                <br><br>
                
                
-                <label>03)Region of poisoning :
-                        <input type="text" name="instance_area" />
+                <label>03)Region of ingestion :
+                        <input type="text" name="area" />
              </label>  
             <br><br>
   
-                                          
-            <label> 04) Type of plant :
-                     <input type="text" name="" />
-                </label>
-         
-            <br><br>
             
-            <label> 05) Part of plant :
-                     <input type="text" name="" />
+            <label> 04) Part of plant :
+                     <input type="text" name="plant_part" />
                 </label>
             <br><br>
              
-            <label> 06) Amount :
-                     <input type="text" name="" />
+            <label> 05) Amount :
+                     <input type="text" name="amount" />
                 </label>
          
             <br><br>
-            
-             <label> 07) Time of ingestion : 
-                    <span class = "input"><input type = "text" name = "" ></span>
-                </label>
-            <br><br>
-            
-              <label>08) Circumstance : 
+              
+              <label>06) Circumstance : 
                    <span class = "select">
-                        <select name = "Cirmustance">
+                        <select name = "circumstance">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Accidental">  Accidental   </option>
                             <option value = "Sucidal"> Suicidal  </option>
@@ -100,9 +89,9 @@
             <br><br>
         <br>        
          
-                 <label>09) Mode of poisoning : 
+                 <label>07) Mode of poisoning : 
                    <span class = "select">
-                        <select name = "mode">
+                        <select name = "poisoning_mode">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Contact">  Contact   </option>
                             <option value = "Ingestion"> Ingestion  </option>
@@ -111,10 +100,11 @@
                         </select>
                     </span>
                     
-                </label>  
+                </label> 
+        <button type="submit">save</button>     
    </div>
                   
-
+  </form>  
             
     <div data-panel="three">
 			<h4>Clinical Features</h4>
@@ -305,10 +295,10 @@
                          <label> Comment: <br> 
 			<input type="text" name="comments" placeholder="Enter Comments here" />
                          </label>
-                         <button type="submit">save</button>  
+                           
                          <button type="submit"class="btn btn-danger" title="Delete Atts 1S" onclick="return confirm(&quot;Submit the data?&quot;)">submit</button> 
 		</div>
-</form>
+
               
 	</div>
         
