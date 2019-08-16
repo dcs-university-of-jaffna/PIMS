@@ -39,7 +39,7 @@ class ManagementsTableSeeder extends Seeder
     {
         DB::table('managements')->insert(
             [
-                ['name' =>  'activated_chracol_doses'],
+                ['name' =>  'activated_chracol'],
                 ['name' =>  'adrenaline'],
                 ['name' =>  'alkalinization'],
                 ['name' =>  'analgesics_given'],
