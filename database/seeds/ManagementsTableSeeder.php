@@ -47,7 +47,7 @@ class ManagementsTableSeeder extends Seeder
                 ['name' =>  'anticonvulsants_given'],
                 ['name' =>  'antidote_given'],
                 ['name' =>  'antihistamine'],
-                ['name' =>  'antropine_given'],
+                ['name' =>  'atropine_given'],
                 ['name' =>  'blood_transfusion'],
                 ['name' =>  'calcium_gluconate_given'],
                 ['name' =>  'corticosteroids'],
