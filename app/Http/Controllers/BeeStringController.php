@@ -6,7 +6,10 @@ use App\Toxicity;
 use App\Natural;
 use App\Flora;
 use App\Symptom;
+use App\Prescription;
 use App\IncidentSymptom;
+use App\Management;
+use Auth;
 use Illuminate\Http\Request;
 use DB;
 
@@ -29,30 +32,33 @@ class BeeStringController extends Controller
        $natural = new Natural;
        $natural->id = $toxicity->id ;
        $natural->natural_type = 'flora';
-       $natural->save();   
+       $natural->save(); 
        
        $incident=new Incident;
        $incident->patient_id=$patient->id;
        $incident->toxicity_id=$toxicity->id;
        $incident->date=$request->date;
        $incident->time=$request->time;
-       $incident->area=$request->area;       
+       $incident->area=$request->area; 
+       $incident->symptom_others=$request->clinicals_others;
+       $incident->management_others=$request->managements_others;
        $incident->save();
-       
+         
        $flora = new Flora;
        $flora->id=$natural->id;   
        $flora->plant_part = $request-> plant_part;
        $flora->amount = $request-> amount;
        $flora->circumstance = $request-> circumstance;
        $flora->poisoning_mode  = $request-> poisoning_mode;     
+       $flora->antidote = $request->antidote;  
        $flora->save();
         
       
-       $symptom = $request->AththanaClinical;
+        $symptom = $request->AththanaClinical;
         if (is_null($symptom)){
             
         }
-       else{
+        else{
             foreach ($symptom as $value){
                 $incidentSymptom=new IncidentSymptom;
                 $r =Symptom::select('id')->where('name',$value)->first();
@@ -62,7 +68,8 @@ class BeeStringController extends Controller
             }
        }
       
-       $symptom1 = $request->CNSeffects;
+       
+        $symptom1 = $request->CNSeffects;
         if (is_null($symptom)){
             
         }
@@ -73,6 +80,62 @@ class BeeStringController extends Controller
             $incidentSymptom->incident_id = $incident->id;
             $incidentSymptom->save();
         }
+        
+        
+        $management =$request->management;
+        if (is_null($management)){
+            
+        }
+        else{
+            foreach ($management as $value){
+                $prescription=new Prescription;
+                $r =Management::select('id')->where('name',$value)->first();
+                $prescription->management_id=$r->id;
+                $prescription->incident_id = $incident->id;
+                $prescription->doctor_id = Auth::id();
+                $prescription->save();
+            }
+       }
+        
+       $management1 = $request->antidote_given;
+       if (is_null($management1)){
+         
+        }
+        else{
+         $prescription=new Prescription;
+            $r =Management::select('id')->where('name',$management1)->first();
+                $prescription->management_id=$r->id;
+                $prescription->incident_id = $incident->id;
+                $prescription->doctor_id = Auth::id();
+                $prescription->save();    
+        }
+       
+        $management2 = $request->charcoal;
+        if (is_null($management2)){
+         
+        }
+        else{
+         $prescription=new Prescription;
+            $r =Management::select('id')->where('name',$management2)->first();
+                $prescription->management_id=$r->id;
+                $prescription->incident_id = $incident->id;
+                $prescription->doctor_id = Auth::id();
+                $prescription->save();    
+        }
+       $management3 = $request->Gastric_aspiration;
+         if (is_null($management3)){
+         
+        }
+        else{
+         $prescription=new Prescription;
+            $r =Management::select('id')->where('name',$management3)->first();
+                $prescription->management_id=$r->id;
+                $prescription->incident_id = $incident->id;
+                $prescription->doctor_id = Auth::id();
+                $prescription->save();    
+        } 
+        
+       
       return back();
    }
 }
