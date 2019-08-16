@@ -26,6 +26,7 @@ $factory->define(
             'area' => $faker->city(),
             'symptom_others' => $faker->realText(120, 2),
             'management_others' => $faker->realText(100, 2),
+            'comments' => $faker->realText(50, 2),
             'is_submited' => $faker->randomElement(array('0','1')),
         ];
     }
