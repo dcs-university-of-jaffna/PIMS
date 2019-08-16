@@ -40,3 +40,4 @@ class Natural extends Model
         return $this->belongsTo('App\Toxicity');
     }
 }
+

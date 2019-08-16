@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -74,3 +75,4 @@ class CreateIncidentsTable extends Migration
         Schema::dropIfExists('incidents');
     }
 }
+

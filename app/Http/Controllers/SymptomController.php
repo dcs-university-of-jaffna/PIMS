@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Controllers;
@@ -8,3 +9,4 @@ class SymptomController extends Controller
 {
     //
 }
+

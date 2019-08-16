@@ -1,3 +1,4 @@
+
 <?php
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
@@ -10,3 +11,4 @@ $factory->define(Fauna::class, function (Faker $faker) {
         //
     ];
 });
+

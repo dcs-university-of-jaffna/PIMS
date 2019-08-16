@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -33,3 +34,4 @@ class CreateOtherToxicitiesTable extends Migration
         Schema::dropIfExists('other_toxicities');
     }
 }
+

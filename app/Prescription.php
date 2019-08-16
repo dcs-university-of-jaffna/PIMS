@@ -30,3 +30,4 @@ class Prescription extends Pivot
 {
     public $incrementing = true;
 }
+

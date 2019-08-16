@@ -52,3 +52,4 @@ class Symptom extends Model
             ->withTimestamps();
     }
 }
+

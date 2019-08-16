@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Migration file for creating naturals table

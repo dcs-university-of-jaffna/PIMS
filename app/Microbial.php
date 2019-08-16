@@ -16,3 +16,4 @@ class Microbial extends Model
         return $this->belongsTo('App\Natural');
     }
 }
+

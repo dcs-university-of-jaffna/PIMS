@@ -58,3 +58,4 @@ class Management extends Model
             ->withTimestamps();
     }
 }
+

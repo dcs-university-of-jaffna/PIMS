@@ -16,3 +16,4 @@ class Chemical extends Model
         return $this->belongsTo('App\Toxicity');
     }
 }
+

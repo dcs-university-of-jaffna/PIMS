@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -57,3 +58,4 @@ class CreateManagementsTable extends Migration
         Schema::dropIfExists('managements');
     }
 }
+

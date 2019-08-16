@@ -39,55 +39,44 @@
                      
                         <label>PHN Number :</label>
                         <input type="number" name="PHN" required="true" min="0" maxlength="11"/>
-                           
+                      
     </div>
-            
+        
                   
     <div data-panel="two">
 			<h4>Poison Detail</h4>
                              
-                 <label> 01) Date of poisoning : 
-                    <span class = "input"><input type = "date" name = "" ></span>
+                 <label> 01) Date of ingestion : 
+                    <span class = "input"><input type = "date" name = "date" ></span>
                 </label>  
                  <br><br>        
                      
-                <label> 02) Time of poisoning : 
-                    <span class = "input"><input type = "time" name = "" ></span>
+                <label> 02) Time of ingestion : 
+                    <span class = "input"><input type = "time" name = "time" ></span>
                 </label>
                <br><br>
                
                
-                <label>03)Region of poisoning :
-                        <input type="text" name="instance_area" />
+                <label>03)Region of ingestion :
+                        <input type="text" name="area" />
              </label>  
             <br><br>
   
-                                          
-            <label> 04) Type of plant :
-                     <input type="text" name="" />
-                </label>
-         
-            <br><br>
             
-            <label> 05) Part of plant :
-                     <input type="text" name="" />
+            <label> 04) Part of plant :
+                     <input type="text" name="plant_part" />
                 </label>
             <br><br>
              
-            <label> 06) Amount :
-                     <input type="text" name="" />
+            <label> 05) Amount :
+                     <input type="text" name="amount" />
                 </label>
          
             <br><br>
-            
-             <label> 07) Time of ingestion : 
-                    <span class = "input"><input type = "text" name = "" ></span>
-                </label>
-            <br><br>
-            
-              <label>08) Circumstance : 
+              
+              <label>06) Circumstance : 
                    <span class = "select">
-                        <select name = "Cirmustance">
+                        <select name = "circumstance">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Accidental">  Accidental   </option>
                             <option value = "Sucidal"> Suicidal  </option>
@@ -100,9 +89,9 @@
             <br><br>
         <br>        
          
-                 <label>09) Mode of poisoning : 
+                 <label>07) Mode of poisoning : 
                    <span class = "select">
-                        <select name = "mode">
+                        <select name = "poisoning_mode">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Contact">  Contact   </option>
                             <option value = "Ingestion"> Ingestion  </option>
@@ -111,52 +100,49 @@
                         </select>
                     </span>
                     
-                </label>  
+                </label> 
+         
    </div>
                   
-
+ 
             
     <div data-panel="three">
 			<h4>Clinical Features</h4>
 			<table>  
                         <tr>
                             <td style="text-align:center">
-                                <input type="hidden" name = "Mydriasis"  value="0" >
-                        <input type="checkbox" name = "Mydriasis"  value="1" > Mydriasis</td>
+                           
+                        <input type="checkbox" name = "AththanaClinical[]"  value="mydriasis" > Mydriasis</td>
                          
-                         <td style="text-align: center;  position:relative ; left:20%"> 
-                              <input type="hidden" name = "Cycloplegia"  value="0" > 
-                        <input type="checkbox" name = "Cycloplegia"  value="1" >  Cycloplegia </td>
+                         <td style="text-align: center;  position:relative ; left:20%">  
+                        <input type="checkbox" name = "AththanaClinical[]"  value="cycloplegia" >  Cycloplegia </td>
                           
                           <td style="text-align: center;  position: relative ; left:40%"> 
-                              <input type="hidden" name = "Dry mouth"  value="0" >
-                        <input type="checkbox" name = "Dry mouth"  value="1" > Dry mouth </td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="dry_mouth" > Dry mouth </td>
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                             <input type="hidden" name = "Tacycarclia"  value="0" >
-                        <input type="checkbox" name = "Tacycarclia"  value="1" >  Tachycardia </td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="tachycardia" >  Tachycardia </td>
                         
                         <td style="text-align: center;  position: relative ; left:20%"> 
-                             <input type="hidden" name = "Fever" value="0"  >
-                        <input type="checkbox" name = "Fever" value="1"  >  Fever </td>
+                        <input type="checkbox" name = "AththanaClinical[]" value="fever"  >  Fever </td>
                           
                         <td style="text-align: center;  position: relative ; left:40%">
-                             <input type="hidden" name = "Erythema" value="0"  >
-                        <input type="checkbox" name = "Erythema" value="1"  >  Erythema  </td>
+                        <input type="checkbox" name ="AththanaClinical[]" value=erythema  >  Erythema  </td>
                                                    </tr>
                         </table><br><br>
                             
                         <label> CNS effects : </label>
                                  <span class = "select">
-                        <select name = "CNS effects">
+                        <select name = "CNSeffects">
+                            
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Agitation">  Agitation   </option>
                             <option value = "Combative"> Combative  </option>
                             <option value = "Confusion"> Confusion </option>
-                             <option value = "Others">disorientation </option>
+                             <option value = "disorientation">disorientation </option>
                         </select>
                     </span>  
                           <br><br>
@@ -164,9 +150,10 @@
                          <label> If others <br> 
                             <input type="text" name = "clinicals_others" >
                          </label>
+                          <button type="submit">save</button>    
 
     </div>
-		
+	  </form> 	
                    
             
             <div data-panel="four">
@@ -305,10 +292,10 @@
                          <label> Comment: <br> 
 			<input type="text" name="comments" placeholder="Enter Comments here" />
                          </label>
-                         <button type="submit">save</button>  
+                           
                          <button type="submit"class="btn btn-danger" title="Delete Atts 1S" onclick="return confirm(&quot;Submit the data?&quot;)">submit</button> 
 		</div>
-</form>
+
               
 	</div>
         

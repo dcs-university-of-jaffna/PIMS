@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -65,3 +66,4 @@ class CreateFlorasTable extends Migration
         Schema::dropIfExists('floras');
     }
 }
+

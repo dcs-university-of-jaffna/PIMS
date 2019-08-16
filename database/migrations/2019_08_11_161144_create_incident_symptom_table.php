@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -66,3 +67,4 @@ class CreateIncidentSymptomTable extends Migration
         Schema::dropIfExists('incident_symptom');
     }
 }
+

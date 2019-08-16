@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -59,3 +60,4 @@ class CreateToxicitiesTable extends Migration
         Schema::dropIfExists('toxicities');
     }
 }
+

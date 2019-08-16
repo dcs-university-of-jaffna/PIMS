@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App;
@@ -16,3 +17,4 @@ class Pharmaceutical extends Model
         return $this->belongsTo('App\Toxicity');
     }
 }
+

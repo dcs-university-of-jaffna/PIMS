@@ -1,3 +1,4 @@
+
 <?php
 /**
  * File for creating patients table
@@ -58,3 +59,4 @@ class CreatePatientsTable extends Migration
         Schema::dropIfExists('patients');
     }
 }
+
