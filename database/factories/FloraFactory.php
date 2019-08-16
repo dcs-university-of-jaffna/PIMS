@@ -24,6 +24,7 @@ $factory->define(
             'circumstance' => $faker->randomElement(array('accidental', 'suicidal', 'homocidal', 'occupational')),
             'poisoning_mode' => $faker->randomElement(array('contact', 'ingestion', 'inhalation', 'other')),
             'antidote' => $faker->userName,
+            'activated_chracol_doses' => $faker->numberBetween(1, 100),
         ];
     }
 );

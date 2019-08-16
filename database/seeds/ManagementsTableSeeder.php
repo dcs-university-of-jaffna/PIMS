@@ -39,7 +39,7 @@ class ManagementsTableSeeder extends Seeder
     {
         DB::table('managements')->insert(
             [
-                ['name' =>  'activated_chracol_doses'],
+                ['name' =>  'activated_chracol'],
                 ['name' =>  'adrenaline'],
                 ['name' =>  'alkalinization'],
                 ['name' =>  'analgesics_given'],
@@ -47,7 +47,7 @@ class ManagementsTableSeeder extends Seeder
                 ['name' =>  'anticonvulsants_given'],
                 ['name' =>  'antidote_given'],
                 ['name' =>  'antihistamine'],
-                ['name' =>  'antropine_given'],
+                ['name' =>  'atropine_given'],
                 ['name' =>  'blood_transfusion'],
                 ['name' =>  'calcium_gluconate_given'],
                 ['name' =>  'corticosteroids'],
