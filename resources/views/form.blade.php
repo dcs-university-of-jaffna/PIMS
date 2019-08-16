@@ -242,12 +242,12 @@
                                  <span class = "select">
                         <select name = "charcoal">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "activated_chracol_doses">  yes   </option>
+                            <option value = "activated_chracol">  yes   </option>
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
                         <label> If yes, no of does  <br> 
-                            <input type="number" name = "" >
+                            <input type="number" name = "activated_chracol_doses" >
                          </label>
                          <br><br>
                          
@@ -263,10 +263,10 @@
                             <input type="text" name = "antidote" >
                          </label>
                          
-<button type="submit">save</button>    
+  
                           
 		</div>
-             </form> 
+             
 		<div data-panel="five">
 			<h4>Laboratory Detail</h4>
 			<input type="text" placeholder="laboratory detail" />
@@ -276,10 +276,10 @@
                          <label> Comment: <br> 
 			<input type="text" name="comments" placeholder="Enter Comments here" />
                          </label>
-                           
+                           <button type="submit">save</button>  
                          <button type="submit"class="btn btn-danger" title="Delete Atts 1S" onclick="return confirm(&quot;Submit the data?&quot;)">submit</button> 
 		</div>
-
+</form> 
               
 	</div>
         
