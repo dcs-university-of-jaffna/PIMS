@@ -9,12 +9,16 @@ Route::get('/bee_String_view', function () {
     return view('bee_String_view');
 });
 
-Route::get('/form', function () {
-    return view('form');
+Route::get('/Aththana_detail_form', function () {
+    return view('Detail_Forms.AththanaForm');
 });
 
+Route::get('/Aththana_detail_form1', function () {
+    return view('Detail_Forms.AththanaFirst');
+});
 
-Route::post('/submit', 'BeeStringController@submit');
+Route::post('/submitAththana', 'FloraController@submitAththana');
+Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
 
 Route::get('/recordview', function () {
     return view('recordview');

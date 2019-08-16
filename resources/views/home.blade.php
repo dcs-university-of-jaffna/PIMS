@@ -83,7 +83,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                                     <li><a class="dropdown-item" href="#">Allary</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/form') }}">Aththana</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana</a></li>
                                     <li><a class="dropdown-item" href="#">Aththe</a></li>
                                     <li><a class="dropdown-item" href="#">Diya Kadunu</a></li>
                                     <li><a class="dropdown-item" href="#">Endana</a></li>
