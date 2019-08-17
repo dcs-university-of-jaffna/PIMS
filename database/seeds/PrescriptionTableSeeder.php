@@ -17,6 +17,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for prescription table
+ *
  * PHP version 7.2.19
  *
  * Use this seeder to seed prescription table

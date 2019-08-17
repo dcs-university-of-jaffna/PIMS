@@ -28,7 +28,7 @@ use Illuminate\Database\Seeder;
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
 
-class ToxicityTableSeeder extends Seeder
+class ToxicitiesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
