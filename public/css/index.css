@@ -163,6 +163,20 @@ input {
 	width: 100%;
 }
 
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
 button {
 	background-color: #0cc39f;
 	border: 0;
@@ -176,3 +190,4 @@ button {
 button:hover {
 	opacity: 0.8;
 }
+
