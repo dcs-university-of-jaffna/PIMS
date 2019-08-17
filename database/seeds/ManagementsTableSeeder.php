@@ -39,7 +39,7 @@ class ManagementsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('managements')->insert(
+        DB::table('managements')->updateOrInsert(
             [
                 ['name' =>  'activated_chracol'],
                 ['name' =>  'adrenaline'],

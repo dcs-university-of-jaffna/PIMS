@@ -39,7 +39,7 @@ class SymptomsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('symptoms')->insert(
+        DB::table('symptoms')->updateOrInsert(
             [
                 ['name' => 'abdominal_pain'],
                 ['name' => 'acute_renal_failure'],
