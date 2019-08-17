@@ -18,8 +18,13 @@
 <h2> Connet the MySql Database</h2>
 
 
-     -> create a database name PIMS
-     -> php artisan migrate:refresh
+    -> create a database name PIMS
+    -> php artisan migrate:fresh
+
+    <h4> If you test data for testing</h4>
+
+    -> composer dump-autoload
+    -> php artisan db:seed
      
 
     

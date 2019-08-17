@@ -11,9 +11,12 @@
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
+
+use App\Flora;
 use App\Management;
 use App\Incident;
 use App\IncidentSymptom;
+use App\Natural;
 use App\Patient;
 use App\Prescription;
 use App\Symptom;
@@ -53,15 +56,19 @@ class DatabaseSeeder extends Seeder
         Incident::unguard();
         IncidentSymptom::unguard();
         Prescription::unguard();
+        Natural::unguard();
+        Flora::unguard();
 
         $this->call(ManagementsTableSeeder::class);
         $this->call(SymptomsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(PatientsTableSeeder::class);
-        $this->call(ToxicityTableSeeder::class);
+        $this->call(ToxicitiesTableSeeder::class);
         $this->call(IncidentsTableSeeder::class);
         $this->call(IncidentSymptomTableSeeder::class);
         $this->call(PrescriptionTableSeeder::class);
+        $this->call(NaturalsTableSeeder::class);
+        $this->call(FlorasTableSeeder::class);
 
 
         Management::reguard();
@@ -72,6 +79,8 @@ class DatabaseSeeder extends Seeder
         Incident::reguard();
         IncidentSymptom::reguard();
         Prescription::reguard();
+        Natural::reguard();
+        Flora::reguard();
 
     }
 }
