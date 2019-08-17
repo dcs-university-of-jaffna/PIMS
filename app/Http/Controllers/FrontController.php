@@ -19,7 +19,7 @@ class FrontController extends Controller
                   ->join('records','records.records_id','=','doctor_records.records_id')
                   ->where('records.is_submited','=',0)
                   ->latest('doctor_records.updated_at')->distinct()
-                  ->select('records.toxicity_type','records.phn','records.instance_date','records.instance_area')
+                  ->select('records.toxicity_type','records.phn','records.instance_date','records.instance_area','users.name')
                   ->get();
 
         return view('home',compact('data'));

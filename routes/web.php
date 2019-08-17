@@ -29,7 +29,10 @@ Route::get('/beestring_record_update', function () {
 
 
 //show bee sting details fill the bee stirng form
-Route::get('/bee_String_view{records_id}{phn}','RecordSearch@show_bee_sting_details');
+Route::get('/bee_String_view', function () {
+    return view('bee_record_update');
+});
+
 
 
 //bee string search record
