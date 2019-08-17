@@ -14,6 +14,11 @@ class RecordSearch extends Controller
 
     $phn = $request->phn;
     
+    $toxytype = DB::table('records')
+                ->where('phn','=',$phn)
+               ->select('toxicity_type','toxicity_id')
+               ->get();
+
     $data =   DB::table('doctor_records')
                ->join('records','records.records_id','=','doctor_records.records_id')
                ->join('users','users.id','=','doctor_records.doctors_id')

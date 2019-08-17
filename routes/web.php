@@ -9,16 +9,15 @@ Route::get('/bee_String_view', function () {
     return view('bee_String_view');
 });
 
-Route::get('/Aththana_detail_form', function () {
-    return view('Detail_Forms.AththanaForm');
+Route::get('/form', function () {
+    return view('form');
 });
 
-Route::get('/Aththana_detail_form1', function () {
-    return view('Detail_Forms.AththanaFirst');
+Route::get('/summary', function () {
+    return view('summaries/summary');
 });
 
-Route::post('/submitAththana', 'FloraController@submitAththana');
-Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
+Route::post('/submit', 'BeeStringController@submit');
 
 Route::get('/recordview', function () {
     return view('recordview');
@@ -30,12 +29,15 @@ Route::get('/beestring_record_update', function () {
 
 
 //show bee sting details fill the bee stirng form
-Route::get('/bee_String_view{records_id}{phn}', 'RecordSearch@show_bee_sting_details');
+Route::get('/bee_String_view', function () {
+    return view('bee_record_update');
+});
+
 
 
 //bee string search record
-Route::post('/phnsearch', 'RecordSearch@phnsearch');
-Route::get('/record', 'RecordSearch@phnsearch');
+Route::post('/phnsearch','RecordSearch@phnsearch');
+Route::get('/record','RecordSearch@phnsearch');
 
 Auth::routes();
 
@@ -49,12 +51,12 @@ Route::post('/submit', 'BeeStringController@submit');
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
-    Route::get('/Active/{id}', 'SetUserPermissionController@Active')->middleware('AuthenticateMiddleware');
-    Route::get('/notActive/{id}', 'SetUserPermissionController@notActive')->middleware('AuthenticateMiddleware');
-    Route::get('/Admin/{id}', 'SetUserPermissionController@Admin')->middleware('AuthenticateMiddleware');
-    Route::get('/Doctor/{id}', 'SetUserPermissionController@Doctor')->middleware('AuthenticateMiddleware');
-    Route::get('/userPermission/addnew', 'SetUserPermissionController@create')->middleware('AuthenticateMiddleware');
-    Route::post('/userPermission', 'SetUserPermissionController@store')->middleware('AuthenticateMiddleware');
-    Route::delete('/userPermission/{id}', 'SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
-    Route::resource('/userPermission', 'SetUserPermissionController')->middleware('AuthenticateMiddleware');
+    Route::get('/Active/{id}','SetUserPermissionController@Active')->middleware('AuthenticateMiddleware');
+    Route::get('/notActive/{id}','SetUserPermissionController@notActive')->middleware('AuthenticateMiddleware');
+    Route::get('/Admin/{id}','SetUserPermissionController@Admin')->middleware('AuthenticateMiddleware');
+    Route::get('/notAdmin/{id}','SetUserPermissionController@notAdmin')->middleware('AuthenticateMiddleware');
+    Route::get('/userPermission/addnew','SetUserPermissionController@create')->middleware('AuthenticateMiddleware');
+    Route::post('/userPermission','SetUserPermissionController@store')->middleware('AuthenticateMiddleware');
+    Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
+    Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
