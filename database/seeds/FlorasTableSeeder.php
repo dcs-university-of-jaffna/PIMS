@@ -38,6 +38,6 @@ class FlorasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Flora::class, 27)->create();
+        factory(App\Flora::class, 20)->create();
     }
 }

@@ -22,9 +22,40 @@ $factory->define(
     Natural::class,
     function (Faker $faker) {
         return [
-
-            'natural_type' => 'floras',
+            'natural_type' => $faker->randomElement(array('floras', 'faunas', 'microbials', 'fungals')),
         ];
     }
+);
+
+$factory->state(
+    Natural::class,
+    'floras',
+    [
+        'natural_type' => 'floras',
+    ]
+);
+
+$factory->state(
+    Natural::class,
+    'faunas',
+    [
+        'natural_type' => 'faunas',
+    ]
+);
+
+$factory->state(
+    Natural::class,
+    'microbials',
+    [
+        'natural_type' => 'microbials',
+    ]
+);
+
+$factory->state(
+    Natural::class,
+    'fungals',
+    [
+        'natural_type' => 'fungals',
+    ]
 );
 

@@ -20,8 +20,8 @@ $factory->define(
     Incident::class,
     function (Faker $faker) {
         return [
-            'patient_id' => $faker-> numberBetween(1, 50),
-            'toxicity_id' => $faker->numberBetween(1, 45),
+            'patient_id' => $faker-> numberBetween(1, 70),
+            'toxicity_id' => $faker-> unique()->numberBetween(1, 100),
             'date' => $faker->date('Y-m-d', 'now'),
             'time' => $faker->time('H:i:s', 'now'),
             'area' => $faker->city(),

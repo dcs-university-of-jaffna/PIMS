@@ -41,9 +41,11 @@ class CreateSymptomsTable extends Migration
         Schema::create(
             'symptoms',
             function (Blueprint $table) {
-                $table->bigIncrements('id');
+                $table->bigInteger('id');
                 $table->string('name');
                 $table->timestamps();
+
+                $table->index('id');
             }
         );
     }
