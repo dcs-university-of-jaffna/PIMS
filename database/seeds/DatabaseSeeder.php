@@ -12,6 +12,7 @@
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
 
+use App\Fauna;
 use App\Flora;
 use App\Management;
 use App\Incident;
@@ -56,8 +57,10 @@ class DatabaseSeeder extends Seeder
         Incident::unguard();
         IncidentSymptom::unguard();
         Prescription::unguard();
+        Toxicity::unguard();
         Natural::unguard();
         Flora::unguard();
+        Fauna::unguard();
 
         $this->call(ManagementsTableSeeder::class);
         $this->call(SymptomsTableSeeder::class);
@@ -67,8 +70,11 @@ class DatabaseSeeder extends Seeder
         $this->call(IncidentsTableSeeder::class);
         $this->call(IncidentSymptomTableSeeder::class);
         $this->call(PrescriptionTableSeeder::class);
+        $this->call(ToxicityTableSeeder::class);
         $this->call(NaturalsTableSeeder::class);
         $this->call(FlorasTableSeeder::class);
+        $this->call(FaunasTableSeeder::class);
+
 
 
         Management::reguard();
@@ -79,8 +85,10 @@ class DatabaseSeeder extends Seeder
         Incident::reguard();
         IncidentSymptom::reguard();
         Prescription::reguard();
+        Toxicity::reguard();
         Natural::reguard();
         Flora::reguard();
+        Fauna::reguard();
 
     }
 }
