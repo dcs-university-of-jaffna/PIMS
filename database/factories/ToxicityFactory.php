@@ -57,9 +57,11 @@ $factory->state(
         [
             'sub_group' => 'floras',
             'name' => $faker-> randomElement(
-                array('Aththana', 'Divikaduru','Diyakaduru',
-                 'Endaru_Ingestion', 'Godakaduru','Habarala',
-                  'Hondala', 'Endaru', 'Kaneru', 'Kepunkiriya', 'Niyagala')
+                array(
+                    'Aththana', 'Divikaduru','Diyakaduru',
+                    'Endaru_Ingestion', 'Godakaduru','Habarala',
+                    'Hondala', 'Endaru', 'Kaneru', 'Kepunkiriya', 'Niyagala'
+                    )
             ),
 
         ];
@@ -86,10 +88,15 @@ $factory->state(
 $factory->state(
     Toxicity::class,
     'microbials',
-    [
-        'sub_group' => 'microbials',
-        'name' =>'Botalism', 'Food Poisoning',
-    ]
+    function ($faker) {
+        return
+        [
+            'sub_group' => 'microbials',
+            'name' => $faker-> randomElement(
+                array('Botalism', 'Food Poisoning')
+            ),
+        ];
+    }
 );
 
 $factory->state(
