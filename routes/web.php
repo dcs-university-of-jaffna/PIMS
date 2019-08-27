@@ -43,8 +43,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//show the not submit record details
-Route::get('/home', 'FrontController@show_save_record');
+
 
 Route::post('/submit', 'BeeStringController@submit');
 

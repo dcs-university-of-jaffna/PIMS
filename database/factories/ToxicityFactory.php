@@ -52,28 +52,35 @@ $factory->state(
 $factory->state(
     Toxicity::class,
     'floras',
-    [
-        'sub_group' => 'floras',
-        'name' => $faker-> randomElement(
-            array('Aththana', 'Divikaduru',
-             'Diyakaduru', 'Endaru_Ingestion', 'Godakaduru',
-              'Habarala', 'Hondala', 'Endaru', 'Kaneru', 'Kepunkiriya', 'Niyagala')
-        ),
-    ]
+    function ($faker) {
+        return
+        [
+            'sub_group' => 'floras',
+            'name' => $faker-> randomElement(
+                array('Aththana', 'Divikaduru','Diyakaduru',
+                 'Endaru_Ingestion', 'Godakaduru','Habarala',
+                  'Hondala', 'Endaru', 'Kaneru', 'Kepunkiriya', 'Niyagala')
+            ),
+
+        ];
+    }
 );
 
 $factory->state(
     Toxicity::class,
     'faunas',
-    [
-        'sub_group' => 'faunas',
-        'name' => $faker-> randomElement(
-            array('Bee_Sting', 'Jellyfish',
-             'Scorpion_Bite', 'Snake_Bite', 'Hornet_Sting',
-              'Wasp_Sting', 'Black_Widow_Spider', 'Blister_Beetle',
-               'Turtle_Fish', 'Centipede')
-        ),
-    ]
+    function ($faker) {
+        return
+        [
+            'sub_group' => 'faunas',
+            'name' => $faker-> randomElement(
+                array('Bee_Sting', 'Jellyfish',
+                'Scorpion_Bite', 'Snake_Bite', 'Hornet_Sting',
+                'Wasp_Sting', 'Black_Widow_Spider', 'Blister_Beetle',
+                'Turtle_Fish', 'Centipede')
+            ),
+        ];
+    }
 );
 
 $factory->state(
