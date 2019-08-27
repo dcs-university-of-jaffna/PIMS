@@ -11,6 +11,6 @@ class FaunasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Fauna::class, 20)->create();
+        factory(App\Fauna::class, 30)->create();
     }
 }

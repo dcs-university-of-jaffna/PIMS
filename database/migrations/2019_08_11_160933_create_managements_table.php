@@ -41,11 +41,10 @@ class CreateManagementsTable extends Migration
         Schema::create(
             'managements',
             function (Blueprint $table) {
-                $table->bigInteger('id');
+                $table->bigIncrements('id');
                 $table->string('name');
                 $table->timestamps();
 
-                $table->index('id');
             }
         );
     }

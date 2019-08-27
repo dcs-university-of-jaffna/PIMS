@@ -24,7 +24,7 @@ $factory->define(
         return [
             'incident_id' => $faker-> numberBetween(1, 100),
             'doctor_id' => $faker-> numberBetween(1, 20),
-            'management_id' => $faker-> numberBetween(1, 29),
+            'management_id' => $faker-> numberBetween(1, 28),
         ];
     }
 );
