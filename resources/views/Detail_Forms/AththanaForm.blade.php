@@ -143,7 +143,7 @@
                         <input type="checkbox" name = "AththanaClinical[]" value="fever"  >  Fever </td>
                           
                         <td style="text-align: center;  position: relative ; left:40%">
-                        <input type="checkbox" name ="AththanaClinical[]" value=erythema  >  Erythema  </td>
+                        <input type="checkbox" name ="AththanaClinical[]" value="erythema"  >  Erythema  </td>
                                                    </tr>
                         </table><br><br>
                             
