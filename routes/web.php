@@ -1,9 +1,7 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/bee_String_view', function () {
     return view('bee_String_view');
@@ -48,11 +46,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/submit', 'BeeStringController@submit');
 
 
-//Rayan
+//--------------------------------------Rayan--------------------------------------
 
 
 
-//Thushangi Route
+//--------------------------------------Thushangi-----------------------------------
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
@@ -66,13 +64,20 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
-//chamikara
+//------------------------------------------chamikara--------------------------------
 
 
 
-//chathuranga
+//------------------------------------------chathuranga------------------------------
 
 
 
-//Dilshan Route
+//------------------------------------------Dilshan ---------------------------------
 
+//show is_submit = 0 details in /home page
+Route::get('/home', 'FrontController@show_save_record');
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
