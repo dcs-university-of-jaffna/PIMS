@@ -48,6 +48,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/submit', 'BeeStringController@submit');
 
 
+//Rayan
+
+
+
+//Thushangi Route
+
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
     Route::get('/Active/{id}','SetUserPermissionController@Active')->middleware('AuthenticateMiddleware');
@@ -59,3 +65,14 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
+
+//chamikara
+
+
+
+//chathuranga
+
+
+
+//Dilshan Route
+
