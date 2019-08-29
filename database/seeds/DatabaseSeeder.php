@@ -53,7 +53,6 @@ class DatabaseSeeder extends Seeder
         Symptom::unguard();
         User::unguard();
         Patient::unguard();
-        Toxicity::unguard();
         Incident::unguard();
         IncidentSymptom::unguard();
         Prescription::unguard();
@@ -67,21 +66,17 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(PatientsTableSeeder::class);
         $this->call(ToxicitiesTableSeeder::class);
-        $this->call(IncidentsTableSeeder::class);
-        $this->call(IncidentSymptomTableSeeder::class);
-        $this->call(PrescriptionTableSeeder::class);
-        $this->call(ToxicityTableSeeder::class);
         $this->call(NaturalsTableSeeder::class);
         $this->call(FlorasTableSeeder::class);
         $this->call(FaunasTableSeeder::class);
-
-
+        $this->call(IncidentsTableSeeder::class);
+        $this->call(IncidentSymptomTableSeeder::class);
+        $this->call(PrescriptionTableSeeder::class);
 
         Management::reguard();
         Symptom::reguard();
         User::reguard();
         Patient::reguard();
-        Toxicity::reguard();
         Incident::reguard();
         IncidentSymptom::reguard();
         Prescription::reguard();

@@ -40,16 +40,5 @@ class Symptom extends Model
             ->withTimestamps();
     }
 
-    /**
-     * Symptom has many Toxicities
-     *
-     * @return belongsToMany()->result
-     */
-    public function toxicities()
-    {
-        return $this->belongsToMany('App\Toxicity')
-            ->using('App\Symptom_Toxicity')
-            ->withTimestamps();
-    }
 }
 

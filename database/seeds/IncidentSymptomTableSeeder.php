@@ -36,6 +36,6 @@ class IncidentSymptomTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\IncidentSymptom::class, 300)->create();
+        factory(App\IncidentSymptom::class, 800)->create();
     }
 }
