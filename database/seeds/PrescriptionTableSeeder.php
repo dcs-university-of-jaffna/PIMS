@@ -39,6 +39,6 @@ class PrescriptionTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Prescription::class, 120)->Create();
+        factory(App\Prescription::class, 600)->Create();
     }
 }

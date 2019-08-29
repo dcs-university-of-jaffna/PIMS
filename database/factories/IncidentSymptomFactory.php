@@ -10,8 +10,8 @@ $factory->define(
     IncidentSymptom::class,
     function (Faker $faker) {
         return [
-            'incident_id' => $faker-> numberBetween(1, 100),
-            'symptom_id' => $faker->numberBetween(1, 147),
+            'incident_id' => $faker-> numberBetween($min = 1, $max = 100),
+            'symptom_id' => $faker->numberBetween($min = 1, $max = 147),
         ];
     }
 );

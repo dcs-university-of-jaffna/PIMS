@@ -18,8 +18,8 @@ $factory->define(
     Fauna::class,
     function (Faker $faker) {
         return [
-            'id' => $faker-> unique()-> numberBetween(51, 80),
-            'number_of_stings' => $faker-> numberBetween(1, 20),
+            'id' => $faker-> unique()-> numberBetween($min = 51, $max = 80),
+            'number_of_stings' => $faker-> numberBetween($min = 1, $max = 20),
             'place_of_sting' => $faker-> randomElement(array('indoor', 'garden', 'paddyfield', 'road', 'forest', 'unutilized land', 'other')),
             'sting_site' => $faker-> randomElement(array('head&neck', 'upperlimb', 'leg', 'foot&ankle', 'abdomen', 'other')),
             'circumstance' => $faker-> randomElement(array('provoked', 'unprovoked')),
