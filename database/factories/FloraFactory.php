@@ -20,11 +20,11 @@ $factory->define(
     function (Faker $faker) {
         return [
             'plant_part' => $faker-> randomElement(array('leaf', 'branch', 'root', 'flover', 'fruit', 'cover')),
-            'amount' => $faker->numberBetween(1, 100),
+            'amount' => $faker->numberBetween($min = 1, $max = 100),
             'circumstance' => $faker->randomElement(array('accidental', 'suicidal', 'homocidal', 'occupational')),
             'poisoning_mode' => $faker->randomElement(array('contact', 'ingestion', 'inhalation', 'other')),
             'antidote' => $faker->userName,
-            'activated_chracol_doses' => $faker->numberBetween(1, 100),
+            'activated_chracol_doses' => $faker->numberBetween($min = 1, $max = 100),
         ];
     }
 );

@@ -16,10 +16,15 @@
 
 
 <h2> Connet the MySql Database</h2>
+    
+    ->Please refer Database_Structure.pdf for database detatils.
 
+    -> create a database name PIMS
+    -> php artisan migrate:fresh
 
-     -> create a database name PIMS
-     -> php artisan migrate:refresh
+    **If you need test data for testing**
+    -> composer dump-autoload
+    -> php artisan db:seed
      
 
     

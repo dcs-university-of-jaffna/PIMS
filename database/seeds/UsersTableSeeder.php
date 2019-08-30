@@ -2,6 +2,7 @@
 
 /**
  * Seeder for users table
+ *
  * PHP version 7.2.19
  *
  * @category Seeder
@@ -15,6 +16,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for users table
+ *
  * PHP version 7.2.19
  *
  * Use this seeder to seed users table

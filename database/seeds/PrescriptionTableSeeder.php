@@ -17,6 +17,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for prescription table
+ *
  * PHP version 7.2.19
  *
  * Use this seeder to seed prescription table
@@ -38,6 +39,6 @@ class PrescriptionTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Prescription::class, 120)->Create();
+        factory(App\Prescription::class, 600)->Create();
     }
 }

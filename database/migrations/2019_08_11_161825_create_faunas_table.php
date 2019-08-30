@@ -42,11 +42,11 @@ class CreateFaunasTable extends Migration
             'faunas',
             function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->tinyInteger('number_of_incidents')->nullable()->unsigned();
-                $table->string('other_places')->nullable();
-                $table->string('cirmustance')->nullable();
+                $table->tinyInteger('number_of_stings')->nullable()->unsigned();
+                $table->string('place_of_sting')->nullable();
+                $table->string('sting_site')->nullable();
+                $table->string('circumstance')->nullable();
                 $table->string('comments')->nullable();
-                $table->string('venue')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

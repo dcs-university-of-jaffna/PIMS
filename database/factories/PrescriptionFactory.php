@@ -22,9 +22,9 @@ $factory->define(
     Prescription::class,
     function (Faker $faker) {
         return [
-            'incident_id' => $faker-> numberBetween(1, 100),
-            'doctor_id' => $faker-> numberBetween(1, 20),
-            'management_id' => $faker-> numberBetween(1, 29),
+            'incident_id' => $faker-> numberBetween($min = 1, $max = 100),
+            'doctor_id' => $faker-> numberBetween($min = 1, $max = 20),
+            'management_id' => $faker-> numberBetween($min = 1, $max = 29),
         ];
     }
 );

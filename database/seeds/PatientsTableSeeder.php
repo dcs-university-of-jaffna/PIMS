@@ -2,6 +2,7 @@
 
 /**
  * Seeder for patients table
+ *
  * PHP version 7.2.19
  *
  * @category Seeder
@@ -15,6 +16,7 @@ use Illuminate\Database\Seeder;
 
 /**
  * Seeder class for patients table
+ *
  * PHP version 7.2.19
  *
  * Use this seeder to seed patients table
@@ -36,6 +38,6 @@ class PatientsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Patient::class, 50)->create();
+        factory(App\Patient::class, 70)->create();
     }
 }

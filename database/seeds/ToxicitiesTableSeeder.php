@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Seeder for incidents table
+ * Seeder for toxicities table
  *
  * PHP version 7.2.19
  *
@@ -15,13 +15,11 @@
 use Illuminate\Database\Seeder;
 
 /**
- * Seeder class for incidents table
+ * Seeder class for toxicities table
  *
  * PHP version 7.2.19
  *
- * Use this seeder to seed incidents table
- *
- *           **** Using IncidentFactory ****
+ * Use this seeder to seed toxicities table
  *
  * @category Seeder
  * @package  Database/seeders
@@ -30,7 +28,7 @@ use Illuminate\Database\Seeder;
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
 
-class IncidentsTableSeeder extends Seeder
+class ToxicitiesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -39,6 +37,9 @@ class IncidentsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Incident::class, 100)->create();
+        factory(App\Toxicity::class, 50)->states('naturals', 'floras')->create();
+        factory(App\Toxicity::class, 30)->states('naturals', 'faunas')->create();
+        factory(App\Toxicity::class, 15)->states('naturals', 'microbials')->create();
+        factory(App\Toxicity::class, 5)->states('naturals', 'fungals')->create();
     }
 }

@@ -3,6 +3,7 @@
 
 /**
  * Migration file for creating incidents table
+ *
  * PHP version 7.2.19
  *
  * You may add fields to incidents table here
@@ -20,6 +21,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating incidents table
+ *
  * PHP version 7.2.19
  *
  * You may add fields to incidents table here

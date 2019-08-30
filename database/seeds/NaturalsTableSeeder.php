@@ -38,6 +38,10 @@ class NaturalsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Natural::class, 27)->create();
+        factory(App\Natural::class, 50)->states('floras')->create();
+        factory(App\Natural::class, 30)->states('faunas')->create();
+        factory(App\Natural::class, 15)->states('microbials')->create();
+        factory(App\Natural::class, 5)->states('fungals')->create();
+
     }
 }

@@ -2,6 +2,7 @@
 <?php
 /**
  * Migration file for creating naturals table
+ *
  * PHP version 7.2.19
  *
  * @category Naturals_Migration
@@ -17,6 +18,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Class for creating naturals table
+ *
  * PHP version 7.2.19
  *
  * You may add fields to naturals table here
