@@ -39,7 +39,12 @@ Route::get('/GodaKaduru_detail_form', function () {
 Route::get('/GodaKaduru_detail_form1', function () {
     return view('Detail_Forms.GodaKaduruFirst');
 });
-
+Route::get('/Habarala_detail_form', function () {
+    return view('Detail_Forms.HabaralaForm');
+});
+Route::get('/Habarala_detail_form1', function () {
+    return view('Detail_Forms.HabaralaFirst');
+});
 
 Route::post('/submitAththana', 'FloraController@submitAththana');
 Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
@@ -51,6 +56,8 @@ Route::post('/submitEndaru', 'FloraController@submitEndaru');
 Route::post('/submitEndaru1', 'FloraController@submitEndaruPHN');
 Route::post('/submitGodaKaduru', 'FloraController@submitGodaKaduru');
 Route::post('/submitGodaKaduru1', 'FloraController@submitGodaKaduruPHN');
+Route::post('/submitHabarala', 'FloraController@submitHabarala');
+Route::post('/submitHabarala1', 'FloraController@submitHabaralaPHN');
 
 Route::get('/form', function () {
     return view('form');

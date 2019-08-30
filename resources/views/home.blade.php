@@ -88,7 +88,7 @@
                                     <li><a class="dropdown-item" href="{{ url('/Diyakaduru_detail_form1') }}">Diya Kaduru (Cerebra manghas)</a></li>
                                     <li><a class="dropdown-item" href="{{ url('/Endaru_detail_form1') }}">Endaru (Ricinus communis)</a></li>
                                     <li><a class="dropdown-item" href="{{ url('/GodaKaduru_detail_form1') }}">Goda Kaduru (Stvychnos nuxvomica )</a></li>
-                                    <li><a class="dropdown-item" href="#">Habarala (Alocasia macromhiza)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Habarala_detail_form1') }}">Habarala (Alocasia macromhiza)</a></li>
                                     <li><a class="dropdown-item" href="#">Hondala(Adenia Hondola)</a></li>
                                     <li><a class="dropdown-item" href="#">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
                                     <li><a class="dropdown-item" href="#">Kepunkiriya (Euphorbia hirita)</a></li>
