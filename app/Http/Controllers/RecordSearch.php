@@ -14,31 +14,13 @@ class RecordSearch extends Controller
 
     $phn = $request->phn;
     
-    $toxytype = DB::table('records')
-                ->where('phn','=',$phn)
-               ->select('toxicity_type','toxicity_id')
-               ->get();
-
-    $data =   DB::table('doctor_records')
-               ->join('records','records.records_id','=','doctor_records.records_id')
-               ->join('users','users.id','=','doctor_records.doctors_id')
-               ->where('records.phn','=',$phn)
-               ->where('records.is_submited','=',0)
-               ->select('records.records_id','records.phn','records.toxicity_type','records.instance_date','records.instance_area','users.name')
-               ->get();
-
-    
-    $submitdata =   DB::table('doctor_records')
-               ->join('records','records.records_id','=','doctor_records.records_id')
-               ->join('users','users.id','=','doctor_records.doctors_id')
-               ->where('records.phn','=',$phn)
-               ->where('records.is_submited','=',1)
-               ->select('records.records_id','records.phn','records.toxicity_type','records.instance_date','records.instance_area','users.name')
-               ->get();
-            
-
-
-    return view('record',compact('data','submitdata'));
+    $data = DB::table('incidents')
+            ->join('patients','patients.id','=','incidents.patient_id')
+            ->join('toxicities','toxicities.id','=','incidents.toxicity_id')
+            ->where('patients.phn','=',$phn)   
+            ->get();
+         //   dd($data);
+    return view('record',compact('data'));
 
      
    }

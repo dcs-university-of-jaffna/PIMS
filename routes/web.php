@@ -35,9 +35,6 @@ Route::get('/bee_String_view', function () {
 
 
 
-//bee string search record
-Route::post('/phnsearch','RecordSearch@phnsearch');
-Route::get('/record','RecordSearch@phnsearch');
 
 Auth::routes();
 
@@ -47,6 +44,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/submit', 'BeeStringController@submit');
 
+
+//--------------------------------------Rayan--------------------------------------
+
+
+
+//--------------------------------------Thushangi-----------------------------------
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
@@ -59,3 +62,21 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
+
+//------------------------------------------chamikara--------------------------------
+
+
+
+//------------------------------------------chathuranga------------------------------
+
+
+
+//------------------------------------------Dilshan ---------------------------------
+
+//show is_submit = 0 details in /home page
+Route::get('/home', 'FrontController@show_save_record');
+
+//serch phn number in home blade  & show all record in record blade
+Route::post('/phnsearch','RecordSearch@phnsearch');
+Route::get('/record','RecordSearch@phnsearch');
+

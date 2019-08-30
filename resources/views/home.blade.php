@@ -214,19 +214,81 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </nav>
     
-<br><br><br><br><br>
+<br><br><br><br>
 <!------ start record ----------->
  
+
     <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-start text-left mb-5">
           <div class="col-md-9" data-aos="fade">
-            <h2 class="font-weight-bold text-black">Current Record</h2>
+            <h2 class="font-weight-bold text-black">Recent Records</h2>
+          </div>
+         
+        </div>
+
+    @foreach($data as $value)
+        <div class="row" data-aos="fade">
+         <div class="col-md-12">
+
+           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+
+              <div class="mb-4 mb-md-0 mr-5">
+               <div class="job-post-item-header d-flex align-items-center">
+                 <h2 class="mr-3 text-black h4">{{$value->name}}</h2>
+                 <div class="badge-wrap">
+                  <span class="bg-primary text-white badge py-2 px-4">{{$value->phn}}</span>
+                 </div>
+               </div>
+               <div class="job-post-item-body d-block d-md-flex">
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->name}}.</a></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
+               </div>
+              </div>
+
+              <div class="ml-auto">
+                <a href="#" class="btn btn-dark py-2">Update</a>
+              </div>
+           </div>
+          @endforeach
+         </div>
+        </div>
+    
+      
+
+        
+      
+
+
+      
+        
+
+      
+
+     
+
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <div class="site-block-27">
+              <ul>
+                <li><a href="#"><i class="icon-keyboard_arrow_left h5"></i></a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><i class="icon-keyboard_arrow_right h5"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      
-</div>
-</div>
+
+
+      </div>
+    </div>    
+
+
+    
 
 <!------ end record ----------->
 
