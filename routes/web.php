@@ -1,7 +1,9 @@
 <?php
 
 
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/bee_String_view', function () {
     return view('bee_String_view');
@@ -33,9 +35,6 @@ Route::get('/bee_String_view', function () {
 
 
 
-//bee string search record
-Route::post('/phnsearch','RecordSearch@phnsearch');
-Route::get('/record','RecordSearch@phnsearch');
 
 Auth::routes();
 
@@ -77,7 +76,7 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 //show is_submit = 0 details in /home page
 Route::get('/home', 'FrontController@show_save_record');
 
+//serch phn number in home blade  & show all record in record blade
+Route::post('/phnsearch','RecordSearch@phnsearch');
+Route::get('/record','RecordSearch@phnsearch');
 
-Route::get('/', function () {
-    return view('welcome');
-});
