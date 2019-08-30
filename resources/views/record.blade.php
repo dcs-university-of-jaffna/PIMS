@@ -181,4 +181,6 @@
   <script src="/record_details/js/main.js"></script>
     
   </body>
+
 </html>
+
