@@ -9,6 +9,41 @@ Route::get('/bee_String_view', function () {
     return view('bee_String_view');
 });
 
+Route::get('/Aththana_detail_form', function () {
+    return view('Detail_Forms.AththanaForm');
+});
+Route::get('/Aththana_detail_form1', function () {
+    return view('Detail_Forms.AththanaFirst');
+});
+Route::get('/Divikaduru_detail_form', function () {
+    return view('Detail_Forms.DivikaduruForm');
+});
+Route::get('/Divikaduru_detail_form1', function () {
+    return view('Detail_Forms.DivikaduruFirst');
+});
+Route::get('/Diyakaduru_detail_form', function () {
+    return view('Detail_Forms.DiyakaduruForm');
+});
+Route::get('/Diyakaduru_detail_form1', function () {
+    return view('Detail_Forms.DiyakaduruFirst');
+});
+Route::get('/Endaru_detail_form', function () {
+    return view('Detail_Forms.EndaruForm');
+});
+Route::get('/Endaru_detail_form1', function () {
+    return view('Detail_Forms.EndaruFirst');
+});
+
+
+Route::post('/submitAththana', 'FloraController@submitAththana');
+Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
+Route::post('/submitDivikaduru', 'FloraController@submitDivikaduru');
+Route::post('/submitDivikaduru1', 'FloraController@submitDivikaduruPHN');
+Route::post('/submitDiyakaduru', 'FloraController@submitDiyakaduru');
+Route::post('/submitDiyakaduru1', 'FloraController@submitDiyakaduruPHN');
+Route::post('/submitEndaru', 'FloraController@submitEndaru');
+Route::post('/submitEndaru1', 'FloraController@submitEndaruPHN');
+
 Route::get('/form', function () {
     return view('form');
 });
@@ -35,6 +70,9 @@ Route::get('/bee_String_view', function () {
 
 
 
+//bee string search record
+Route::post('/phnsearch','RecordSearch@phnsearch');
+Route::get('/record','RecordSearch@phnsearch');
 
 Auth::routes();
 
@@ -44,12 +82,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/submit', 'BeeStringController@submit');
 
-
-//--------------------------------------Rayan--------------------------------------
-
-
-
-//--------------------------------------Thushangi-----------------------------------
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
@@ -62,21 +94,3 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
-
-//------------------------------------------chamikara--------------------------------
-
-
-
-//------------------------------------------chathuranga------------------------------
-
-
-
-//------------------------------------------Dilshan ---------------------------------
-
-//show is_submit = 0 details in /home page
-Route::get('/home', 'FrontController@show_save_record');
-
-//serch phn number in home blade  & show all record in record blade
-Route::post('/phnsearch','RecordSearch@phnsearch');
-Route::get('/record','RecordSearch@phnsearch');
-

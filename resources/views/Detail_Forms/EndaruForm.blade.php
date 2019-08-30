@@ -25,7 +25,7 @@
     
     <!-- partial:index.partial.html -->
 <div class="form">
-	<h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
+	<h2 style="text-align: center">Patient Detail(Endaru Poison)</h2>
 	
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
