@@ -21,7 +21,7 @@ $factory->define(
     function (Faker $faker) {
         return [
             'phn' => $faker->numerify('1#########5'),
-            'patient_name' => $faker->name,
+            'name' => $faker->name,
             'nic' => $faker->unique()->numerify('9########V'),
         ];
     }
