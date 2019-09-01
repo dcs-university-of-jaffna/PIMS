@@ -16,7 +16,7 @@
             @csrf
                 <label><b>PHN Number :</b></label>
                 <input type="text" name="PHN" required="true" required pattern="[0-9]{11}" >       
-                    <a href="{{ url('/home') }}"><button >next</button></a>
+                    <button >next</button>
             </form>
  
                           
