@@ -25,7 +25,7 @@
     
     <!-- partial:index.partial.html -->
 <div class="form">
-	<h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
+	<h2 style="text-align: center">Patient Detail(Divi kaduru Poison)</h2>
 	
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
@@ -54,7 +54,7 @@
                                   
     </div>
         
-             <form action="/submitAththana" method="post">	
+             <form action="/submitDivikaduru" method="post">	
             @csrf      
     <div data-panel="two">
 			<h4>Poison Detail</h4>
@@ -82,7 +82,7 @@
             <br><br>
              
             <label> 05) Amount :
-                   <input type="number" min="0" name="amount" />
+                    <input type="number" min="0" name="amount" />
                 </label>
          
             <br><br>
@@ -124,42 +124,62 @@
 			<table>  
                         <tr>
                             <td style="text-align:center">
-                           
-                        <input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis</td>
+                        <input type="checkbox" name = "DivikaduruClinical[]" value="43"  >  Dryness of mucous membrane </td>        
+
                          
-                         <td style="text-align: center;  position:relative ; left:20%">  
-                        <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </td>
+                         <td style="text-align: center;  position:relative ; left:5%">  
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="32" >  Delirium </td>
                           
-                          <td style="text-align: center;  position: relative ; left:40%"> 
-                        <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </td>
+                          <td style="text-align: center;  position: relative ; left:10%"> 
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="37" > Dilation of pupils </td>
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                        <input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </td>
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="39" > Disturbance of consciousness </td>
                         
-                        <td style="text-align: center;  position: relative ; left:20%"> 
-                        <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </td>
+                        <td style="text-align: center;  position: relative ; left:5%"> 
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="25" > Convulsion</td>
                           
-                        <td style="text-align: center;  position: relative ; left:40%">
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema  </td>
-                                                   </tr>
+                        <td style="text-align: center;  position: relative ; left:10%">
+                        <input type="checkbox" name ="DivikaduruClinical[]" value="51"  > Eye inflammation  </td>
+                          </tr>
+                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                          
+                            <tr>
+                            <td style="text-align:center">
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="57" > Flushing of face</td>
+                         
+                         <td style="text-align: center;  position:relative ; left:5%">  
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="55" >Fits </td>
+                          
+                          <td style="text-align: center;  position: relative ; left:10%"> 
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="56" > Fits of crying </td>
+                            </tr>
+                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                         
+                          <tr>  
+                         <td style="text-align:center">
+                        <input type="checkbox" name = "DivikaduruClinical[]"  value="63" > Hallucinogenic_effects </td>
+                        
+                        <td style="text-align: center;  position: relative ; left:5%"> 
+                         <input type="checkbox" name = "DivikaduruClinical[]"  value="133" > Talkativeness </td>  
+                          
+                        <td style="text-align: center;  position: relative ; left:10%">
+                        <input type="checkbox" name ="DivikaduruClinical[]" value="136"  > Thirst  </td>
+                          </tr>
+                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                         
+                        <tr>  
+                         <td style="text-align:center">
+                        <input type="checkbox" name = "DivikaduruClinical[]" value="111"  >  Psychomotor_disturbances </td>      
+                       
+                        </tr>  
+                         
                         </table><br><br>
-                            
-                        <label> CNS effects : </label>
-                                 <span class = "select">
-                        <select name = "CNSeffects">
-                            
-                            <option value = " "> ..Please choose one option.. </option>
-                            <option value = "3">  Agitation   </option>
-                            <option value = "22"> Combative  </option>
-                            <option value = "23"> Confusion </option>
-                             <option value = "38">disorientation </option>
-                        </select>
-                    </span>  
-                          <br><br>
-              
+                            	
+
                          <label> If others <br> 
                             <input type="text" name = "clinicals_others" >
                          </label>
@@ -171,7 +191,7 @@
             
             <div data-panel="four">
 			<h4> Managemnt Detail</h4>
-                                       <table>  
+                                          <table>  
                            <tr>
                                  <td style="text-align:center">       
                                 <input type="checkbox" name = "management[]" value="26"  > Resuscitation</td>

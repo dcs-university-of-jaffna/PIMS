@@ -82,17 +82,18 @@
                                      Flora &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">Allary</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana</a></li>
-                                    <li><a class="dropdown-item" href="#">Aththe</a></li>
-                                    <li><a class="dropdown-item" href="#">Diya Kadunu</a></li>
-                                    <li><a class="dropdown-item" href="#">Endana</a></li>
-                                    <li><a class="dropdown-item" href="#">Goda Kaduru</a></li>
-                                    <li><a class="dropdown-item" href="#">Habarala</a></li>
-                                    <li><a class="dropdown-item" href="#">Hondala</a></li>
-                                    <li><a class="dropdown-item" href="#">Karththigai</a></li>
-                                    <li><a class="dropdown-item" href="#">Kepunkiriya</a></li>
-                                    <li><a class="dropdown-item" href="#">Others</a></li>
+                                      <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana (Datura stramonium)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Divikaduru_detail_form1') }}">Divi kaduru (Tabernaemantana dichotoma)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Diyakaduru_detail_form1') }}">Diya Kaduru (Cerebra manghas)</a></li>
+                                    <li><a class="dropdown-item" href="#">Endaru (Ricinus communis)</a></li>
+                                    <li><a class="dropdown-item" href="#">Goda Kaduru (Stvychnos nuxvomica )</a></li>
+                                    <li><a class="dropdown-item" href="#">Habarala (Alocasia macromhiza)</a></li>
+                                    <li><a class="dropdown-item" href="#">Hondala(Adenia Hondola)</a></li>
+                                    <li><a class="dropdown-item" href="#">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
+                                    <li><a class="dropdown-item" href="#">Kepunkiriya (Euphorbia hirita)</a></li>
+                                    <li><a class="dropdown-item" href="#">Niyagala (Gloriosa superba)</a></li>
+                                     <li><a class="dropdown-item" href="#">Olinda (Abrus precatorius)</a></li>
+                                     <li><a class="dropdown-item" href="#">Unknown plant poisoning</a></li>
                    
                                 </ul>
                             </li>
