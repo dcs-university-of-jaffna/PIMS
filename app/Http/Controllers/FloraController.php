@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\patient;
+use App\Patient;
 use App\Incident;
 use App\Toxicity;
 use App\Natural;
@@ -18,7 +18,7 @@ class FloraController extends Controller
     //------------------------------Aththana----------------------------------------------------------
     
     function submitAththanaPHN(Request $request){
-       $patient = new patient;
+       $patient = new Patient;
        $patient->phn = $request->PHN;
        $back=0;
        $patient->save();
@@ -28,8 +28,8 @@ class FloraController extends Controller
     }
 
    function submitAththana(Request $request){
-       $patient1=patient::pluck('phn')->last();
-       $patient2=patient::pluck('id')->last();
+       $patient1=Patient::pluck('phn')->last();
+       $patient2=Patient::pluck('id')->last();
        
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
@@ -157,7 +157,7 @@ class FloraController extends Controller
    
    
    function submitDivikaduruPHN(Request $request){
-       $patient = new patient;
+       $patient = new Patient;
        $patient->phn = $request->PHN;
        $back=0;
        $patient->save();
@@ -167,8 +167,8 @@ class FloraController extends Controller
     }
 
    function submitDivikaduru(Request $request){
-       $patient1=patient::pluck('phn')->last();
-       $patient2=patient::pluck('id')->last();
+       $patient1=Patient::pluck('phn')->last();
+       $patient2=Patient::pluck('id')->last();
        
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
@@ -282,7 +282,7 @@ class FloraController extends Controller
    
    
    function submitDiyakaduruPHN(Request $request){
-       $patient = new patient;
+       $patient = new Patient;
        $patient->phn = $request->PHN;
        $back=0;
        $patient->save();
@@ -292,8 +292,8 @@ class FloraController extends Controller
     }
 
    function submitDiyakaduru(Request $request){
-       $patient1=patient::pluck('phn')->last();
-       $patient2=patient::pluck('id')->last();
+       $patient1=Patient::pluck('phn')->last();
+       $patient2=Patient::pluck('id')->last();
        
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
