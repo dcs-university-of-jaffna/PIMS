@@ -54,6 +54,9 @@ Route::get('/Aththana_detail_form1', function () {
     return view('Detail_Forms.AththanaFirst');
 });
 
+Route::get('/separateuser{id}','HomeController@separate');
+
+
 Route::get('/Divikaduru_detail_form', function () {
     return view('Detail_Forms.DivikaduruForm');
 });

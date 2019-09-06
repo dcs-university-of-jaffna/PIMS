@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\patient;
+use App\Patient;
 use App\Incident;
 use App\Toxicity;
 use App\Natural;
