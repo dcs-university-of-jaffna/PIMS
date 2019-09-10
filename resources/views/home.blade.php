@@ -200,7 +200,7 @@
 
        <ul class="nav navbar-nav navbar-right">
             @if(Auth::user()->userType   =='Admin')
-              <li><a href="{{ url('/userPermission') }}">Admin</a></li>
+              <li><a class ="btn btn-outline-primary my-2 my-sm-0" href="{{ url('/userPermission') }}">Admin</a></li>&nbsp;
               @endif
               <li class="nav-item"><button class="btn btn-outline-primary my-2 my-sm-0" href="{{ route('logout') }}"  class="nav-link"
                                                   onclick="event.preventDefault();
