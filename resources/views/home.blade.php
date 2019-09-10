@@ -242,13 +242,13 @@
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->name}}.</a></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->id}}.</a></div>
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
-                <a href="{{URL('/separateuser'.$value->id)}}" class="btn btn-dark py-2">Update</a>
+                <a href="{{URL('/separateuser/'.$value->id)}}" class="btn btn-dark py-2">Update</a>
               </div>
            </div>
           @endforeach
