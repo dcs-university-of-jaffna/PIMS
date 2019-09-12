@@ -10,18 +10,16 @@
      <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-home" aria-hidden="true"></i>Back</button></a>
 
 <div class="form">
-	<h2 style="text-align: center">  New Patient [Poison-Divi kaduru] </h2>
+	<h2 style="text-align: center">  New Patient [Poison-Diya kaduru]</h2>
         
-            <form action="/submitDivikaduru1" method="post">	
+            <form action="/submitDiyakaduru1" method="post">	
             @csrf
                 <label><b>PHN Number :</b></label>
                 <input type="text" name="PHN" required="true" required pattern="[0-9]{11}" >       
-                    <button>next</button></a>
+                    <button >next</button>
             </form>
  
                           
             
 </body>
 </html>
-
-

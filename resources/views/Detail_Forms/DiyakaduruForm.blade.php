@@ -25,8 +25,8 @@
     
     <!-- partial:index.partial.html -->
 <div class="form">
-	<h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
-	
+	<h2 style="text-align: center">Patient Detail(Diya kaduru Poison)</h2>
+	 
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
 	<input id="three" type="radio" name="stage" />
@@ -54,7 +54,7 @@
                                   
     </div>
         
-             <form action="/submitAththana" method="post">	
+             <form action="/submitDiyakaduru" method="post">	
             @csrf      
     <div data-panel="two">
 			<h4>Poison Detail</h4>
@@ -82,7 +82,7 @@
             <br><br>
              
             <label> 05) Amount :
-                   <input type="number" min="0" name="amount" />
+                     <input type="number" min="0" name="amount" />
                 </label>
          
             <br><br>
@@ -125,41 +125,70 @@
                         <tr>
                             <td style="text-align:center">
                            
-                        <input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis</td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="1"> Abdominal_pain</td>
                          
-                         <td style="text-align: center;  position:relative ; left:20%">  
-                        <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </td>
+                         <td style="text-align: center;  position:relative ; left:5%">  
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="34" >  Diarrhoea </td>
                           
-                          <td style="text-align: center;  position: relative ; left:40%"> 
-                        <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </td>
+                          <td style="text-align: center;  position: relative ; left:10%">
+                           <input type="checkbox" name = "DiyakaduruClinical[]" value="93">Numbness and burning of mouth </td>         
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                        <input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </td>
+                          <input type="checkbox" name = "DiyakaduruClinical[]"  value="46"> Electrolytes imbalance </td>    
+                        
+                       
+                        
+                        <td style="text-align: center;  position: relative ; left:5%"> 
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="89" >  Nausea </td>
+                          
+                        <td style="text-align: center;  position: relative ; left:10%">     
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="144"  >  Vomiting  </td>
+                                                   </tr>
+                        </table><br>
+                            
+                        <h5>CVS :</h5>
+                         <table>
+                          <tr>  
+                         <td style="text-align:center">
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="128">Sinus bradycardia </td>     
+                       
                         
                         <td style="text-align: center;  position: relative ; left:20%"> 
-                        <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="129" >Slow pulse </td>
                           
-                        <td style="text-align: center;  position: relative ; left:40%">
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema  </td>
-                                                   </tr>
-                        </table><br><br>
-                            
-                        <label> CNS effects : </label>
-                                 <span class = "select">
-                        <select name = "CNSeffects">
-                            
-                            <option value = " "> ..Please choose one option.. </option>
-                            <option value = "3">  Agitation   </option>
-                            <option value = "22"> Combative  </option>
-                            <option value = "23"> Confusion </option>
-                             <option value = "38">disorientation </option>
-                        </select>
-                    </span>  
-                          <br><br>
-              
+                        <td style="text-align: center;  position: relative ; left:40%">     
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="74"  > Hypotension </td>
+                                                   </tr> </table>
+ 
+                          <br>
+                          
+                           <h5>Cardiac Dysrrhythmias :</h5>
+                           <table>
+                          <tr>  
+                         <td style="text-align:center">
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="80">Junctional rhythms </td>     
+                       
+                        
+                        <td style="text-align: center;  position: relative ; left:5%"> 
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="352" > 1st Degree HB </td>
+                          
+                        <td style="text-align: center;  position: relative ; left:10%">     
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="9"> Atrial and ventricular ectopics </td>
+                                                   </tr> 
+  <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+             <td style="text-align:center">
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="127">Sinoatrial_block </td>     
+                       
+                        
+                        <td style="text-align: center;  position: relative ; left:5%"> 
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="143" >Ventricular fibrillation </td> 
+                        
+                          <td style="text-align: center;  position: relative ; left:10%"> 
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="353" > 2nd Degree HB </td>
+      </table>        <br><br>
                          <label> If others <br> 
                             <input type="text" name = "clinicals_others" >
                          </label>
@@ -307,3 +336,4 @@
 
 </body>
 </html>
+
