@@ -56,7 +56,7 @@ class Incident extends Model
     public function symptoms()
     {
         return $this->belongsToMany('App\Symptom')
-            ->using('App\Incident_Symptom')
+            ->using('App\IncidentSymptom')
             ->withTimestamps();
     }
 
@@ -68,7 +68,7 @@ class Incident extends Model
     public function managements()
     {
         return $this->belongsToMany(
-            'App\Management', 'prescriptions', 'incident_id', 'management_id'
+            'App\Management', 'prescription', 'incident_id', 'management_id'
         )
             ->using('App\Prescription')
             ->withPivot('doctor_id')
@@ -83,7 +83,7 @@ class Incident extends Model
     public function users()
     {
         return $this->belongsToMany(
-            'App\User', 'prescriptions', 'incident_id', 'doctor_id'
+            'App\User', 'prescription', 'incident_id', 'doctor_id'
         )
             ->using('App\Prescription')
             ->withPivot('management_id')
