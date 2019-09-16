@@ -64,11 +64,7 @@ class RegisterController extends Controller
      */
 
 
-    protected function Registered(Request $request, $user)
-    {
-        $this->guard()->logout();
-        return redirect('/');
-    }
+    
 
     
     protected function create(array $data)
@@ -80,5 +76,9 @@ class RegisterController extends Controller
         ]);
     }
 
-   
+    protected function registered(Request $request, $user)
+    {
+        $this->guard()->logout();
+        return redirect('/');
+    }
 }
