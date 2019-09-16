@@ -82,7 +82,7 @@
             <br><br>
              
             <label> 05) Amount :
-                     <input type="number" min="0" name="amount" />
+                     <input type="text" name="amount" />
                 </label>
          
             <br><br>
@@ -125,27 +125,27 @@
                         <tr>
                             <td style="text-align:center">
                            
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="1"> Abdominal_pain</td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="abdominal_pain"> Abdominal_pain</td>
                          
                          <td style="text-align: center;  position:relative ; left:5%">  
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="34" >  Diarrhoea </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="diarrhoea" >  Diarrhoea </td>
                           
                           <td style="text-align: center;  position: relative ; left:10%">
-                           <input type="checkbox" name = "DiyakaduruClinical[]" value="93">Numbness and burning of mouth </td>         
+                           <input type="checkbox" name = "DiyakaduruClinical[]" value="numbness_and_burning_of_mouth">Numbness and burning of mouth </td>         
                             </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                           <tr>  
                          <td style="text-align:center">
-                          <input type="checkbox" name = "DiyakaduruClinical[]"  value="46"> Electrolytes imbalance </td>    
+                          <input type="checkbox" name = "DiyakaduruClinical[]"  value="electrolytes_imbalance"> Electrolytes imbalance </td>    
                         
                        
                         
                         <td style="text-align: center;  position: relative ; left:5%"> 
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="89" >  Nausea </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="nausea" >  Nausea </td>
                           
                         <td style="text-align: center;  position: relative ; left:10%">     
-                        <input type="checkbox" name ="DiyakaduruClinical[]" value="144"  >  Vomiting  </td>
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="vomiting"  >  Vomiting  </td>
                                                    </tr>
                         </table><br>
                             
@@ -153,14 +153,14 @@
                          <table>
                           <tr>  
                          <td style="text-align:center">
-                         <input type="checkbox" name = "DiyakaduruClinical[]" value="128">Sinus bradycardia </td>     
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="sinus_bradycardia">Sinus bradycardia </td>     
                        
                         
                         <td style="text-align: center;  position: relative ; left:20%"> 
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="129" >Slow pulse </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="slow_pulse" >Slow pulse </td>
                           
                         <td style="text-align: center;  position: relative ; left:40%">     
-                        <input type="checkbox" name ="DiyakaduruClinical[]" value="74"  > Hypotension </td>
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="hypotension"  > Hypotension </td>
                                                    </tr> </table>
  
                           <br>
@@ -169,25 +169,22 @@
                            <table>
                           <tr>  
                          <td style="text-align:center">
-                         <input type="checkbox" name = "DiyakaduruClinical[]" value="80">Junctional rhythms </td>     
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="junctional_rhythms">Junctional rhythms </td>     
                        
                         
                         <td style="text-align: center;  position: relative ; left:5%"> 
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="352" > 1st Degree HB </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="hb" >1st & 2nd degree HB </td>
                           
                         <td style="text-align: center;  position: relative ; left:10%">     
-                        <input type="checkbox" name ="DiyakaduruClinical[]" value="9"> Atrial and ventricular ectopics </td>
+                        <input type="checkbox" name ="DiyakaduruClinical[]" value="atrial_and_venticular_ectopics"> Atrial and venticular ectopics </td>
                                                    </tr> 
   <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
              <td style="text-align:center">
-                         <input type="checkbox" name = "DiyakaduruClinical[]" value="127">Sinoatrial_block </td>     
+                         <input type="checkbox" name = "DiyakaduruClinical[]" value="sinoatrial_block">Sinoatrial_block </td>     
                        
                         
                         <td style="text-align: center;  position: relative ; left:5%"> 
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="143" >Ventricular fibrillation </td> 
-                        
-                          <td style="text-align: center;  position: relative ; left:10%"> 
-                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="353" > 2nd Degree HB </td>
+                        <input type="checkbox" name = "DiyakaduruClinical[]"  value="ventricular_fibrillation" >Ventricular fibrillation </td>             
       </table>        <br><br>
                          <label> If others <br> 
                             <input type="text" name = "clinicals_others" >
@@ -203,70 +200,70 @@
                                        <table>  
                            <tr>
                                  <td style="text-align:center">       
-                                <input type="checkbox" name = "management[]" value="26"  > Resuscitation</td>
+                                <input type="checkbox" name = "management[]" value="resuscitation"  > Resuscitation</td>
                          
                                 <td style="text-align: center;  position:relative ; left:5%">
-                                <input type="checkbox" name = "management[]" value="29"  > Supportive therapy </td>
+                                <input type="checkbox" name = "management[]" value="supportive_therapy"  > Supportive therapy </td>
                           
                                 <td style="text-align: center;  position: relative ; left:10%">
-                                <input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given  </td>
+                                <input type="checkbox" name = "management[]" value="anticonvulsants_given"  > Anticonvulsants given  </td>
                            </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                            <tr>
                                <td style="text-align:center">
-                               <input type="checkbox" name = "management[]" value="9"  >  Atropine given </td>
+                               <input type="checkbox" name = "management[]" value="atropine_given"  >  Atropine given </td>
                         
                                <td style="text-align: center;  position: relative ; left:5%"> 
-                               <input type="checkbox" name = "management[]" value="13"   > Dialysis</td>
+                               <input type="checkbox" name = "management[]" value="dialysis"   > Dialysis</td>
                            
                                <td style="text-align: center;  position: relative ; left:10%"> 
-                               <input type="checkbox" name = "management[]" value="3"  >  Alkalinization </td>
+                               <input type="checkbox" name = "management[]" value="alkalinization"  >  Alkalinization </td>
                            </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                               
                         <tr>
                             <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="10"  > Blood transfusion/Plasma expanders </td>
+                            <input type="checkbox" name = "management[]" value="blood_transfusion"  > Blood transfusion/Plasma expanders </td>
                     
                             <td style="text-align: center;  position: relative ; left:5%">
-                            <input type="checkbox" name = "management[]" value="22"  >  NaHCO3 given </td>
+                            <input type="checkbox" name = "management[]" value="nahco3_given"  >  NaHCO3 given </td>
                              
                             <td style="text-align: center;  position: relative ; left:10%">
-                            <input type="checkbox" name = "management[]" value="14"  >  Dopamine given </td>
+                            <input type="checkbox" name = "management[]" value="dopamine"  >  Dopamine given </td>
                          </tr>
                          
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                          
                          <tr>
                             <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="4"  >  Analgesics given </td>
+                            <input type="checkbox" name = "management[]" value="analgesics_given"  >  Analgesics given </td>
                         
                             <td style="text-align: center;  position: relative ; left:5%"> 
-                            <input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given</td>
+                            <input type="checkbox" name = "management[]" value="calcium_gluconate_given"   > Calcium gluconate given</td>
                         
                             <td style="text-align: center;  position: relative ; left:10%"> 
-                            <input type="checkbox" name = "management[]" value="5"  > Antibiotics given </td>
+                            <input type="checkbox" name = "management[]" value="antibiotics_given"  > Antibiotics given </td>
                         </tr>
                          <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
                               
                         <tr>
                             <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="24"  > Prednisalone given </td>
+                            <input type="checkbox" name = "management[]" value="prednisalone_given"  > prednisalone given </td>
                     
                             <td style="text-align: center;  position: relative ; left:5%">
-                            <input type="checkbox" name = "management[]" value="21">  NaCl given </td>
+                            <input type="checkbox" name = "management[]" value="nacl_given">  NaCl given </td>
                              
                             <td style="text-align: center;  position: relative ; left:10%">
-                             <input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids </td>
+                             <input type="checkbox" name = "management[]" value="methylprednisalone"  >  methylprednisolone/corticosteroids </td>
                          </tr>
                          
                         </table>
                         
                         <br><br>
                         <label> If others <br> 
-                            <input type="text" name = "managements others" size="55">
+                            <input type="text" name = "managements_others" size="55">
                         </label><br><br>
                         
                         <label> <b> Gastrointestinal decontamination : </b></label><br><br>
@@ -274,7 +271,7 @@
                                  <span class = "select">
                         <select name = "Gastric_aspiration">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "15">  yes   </option>
+                            <option value = "gastric_aspiration">  yes   </option>
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
@@ -284,7 +281,7 @@
                                  <span class = "select">
                         <select name = "charcoal">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "1">  yes   </option>
+                            <option value = "activated_chracol">  yes   </option>
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
@@ -297,7 +294,7 @@
                                  <span class = "select">
                         <select name = "antidote_given">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "7">  yes   </option>
+                            <option value = "antidote_given">  yes   </option>
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
@@ -336,4 +333,3 @@
 
 </body>
 </html>
-
