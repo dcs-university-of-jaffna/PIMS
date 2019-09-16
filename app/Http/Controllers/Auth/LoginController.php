@@ -34,16 +34,19 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
 
-    protected function credentials(Request $request){
+    protected function Credentials(Request $request){
         //return $request->{$this->username()} ?'email'=> $request->email ,'password'=>$request->password,'IsConfirmed'=>'1'];
         $credentials = $request->only('email','password');
         $credentials = array_add($credentials,'IsConfirmed','1');
         return $credentials;
 
     }
+    
 }

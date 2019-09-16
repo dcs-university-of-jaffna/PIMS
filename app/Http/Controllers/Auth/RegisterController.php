@@ -62,6 +62,15 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
+
+    protected function Registered(Request $request, $user)
+    {
+        $this->guard()->logout();
+        return redirect('/');
+    }
+
+    
     protected function create(array $data)
     {
         return User::create([
@@ -71,9 +80,5 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function registered(Request $request, $user)
-    {
-        $this->guard()->logout();
-        return redirect('/');
-    }
+   
 }
