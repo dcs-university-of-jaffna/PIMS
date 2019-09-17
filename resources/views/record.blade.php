@@ -116,7 +116,7 @@
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
+   
                 <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
                 <a href="{{('/View_Bee_Sting')}}" class="btn btn-warning py-2">view</a>
               </div>
@@ -149,8 +149,10 @@
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-             
+           
+                @if(Auth::user()->userType   =='Admin')
+                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                @endif
                 <a href="{{('/View_Bee_Sting')}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
