@@ -136,13 +136,13 @@
                                     Pesticides
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">carbamate insecticides</a></li>
-                                    <li><a class="dropdown-item" href="#">chlorophenoxy compounds</a></li>   
-                                    <li><a class="dropdown-item" href="#">coumarins</a></li>   
-                                    <li><a class="dropdown-item" href="#">dithiocarbamate</a></li>   
-                                    <li><a class="dropdown-item" href="#">diuron</a></li>   
-                                    <li><a class="dropdown-item" href="#">fipronil</a></li>   
-                                    <li><a class="dropdown-item" href="#">glyphosate</a></li>   
+                                    <li><a class="dropdown-item" href="#">Carbamate Insecticides</a></li>
+                                    <li><a class="dropdown-item" href="#">Chlorophenoxy Compounds</a></li>   
+                                    <li><a class="dropdown-item" href="#">Coumarins</a></li>   
+                                    <li><a class="dropdown-item" href="#">Dithiocarbamate</a></li>   
+                                    <li><a class="dropdown-item" href="#">Diuron</a></li>   
+                                    <li><a class="dropdown-item" href="#">Fipronil</a></li>   
+                                    <li><a class="dropdown-item" href="#">Glyphosate</a></li>   
                                     <li><a class="dropdown-item" href="#">Imidacloprid</a></li>   
                                     <li><a class="dropdown-item" href="#">Metaldehyde</a></li>   
                                     <li><a class="dropdown-item" href="#">Methyl Bromide</a></li>   
