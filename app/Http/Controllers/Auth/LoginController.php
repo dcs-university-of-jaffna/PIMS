@@ -48,8 +48,5 @@ class LoginController extends Controller
         return $credentials;
 
     }
-<<<<<<< HEAD
-=======
     
->>>>>>> fa6dd043fbbcb9656969db714bcf6ae0e3df3602
 }

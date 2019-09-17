@@ -75,7 +75,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-
     protected function registered(Request $request, $user)
     {
         $this->guard()->logout();
