@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <title>PIMS</title>
  
-    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index1.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
             <form action="/submitAththana1" method="post">	
             @csrf
                 <label><b>PHN Number :</b></label>
-                <input type="text" name="PHN" required="true" required pattern="[0-9]{11}" >       
+                 <input type="text" name="PHN" required="true" required pattern="[0-9]{11}" >       
                     <button >next</button>
             </form>
  

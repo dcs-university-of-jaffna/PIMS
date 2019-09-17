@@ -11,7 +11,7 @@
         <button onclick="myFunction()" class="btn"><i class="fa fa-home"></i>Back</button>        
             <script>
                 function myFunction() {
-                    alert("Please save your detail before go to main menue");
+                    alert("Please save your detail before go to previous page");
                 }
             </script> 
  
@@ -22,10 +22,11 @@
     
     <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn" onclick="return confirm(&quot;Close the form..? unsaved data will be lost&quot;)"><i class="fa fa-close"></i>Close</button></a>
 
-    
+    <h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
     <!-- partial:index.partial.html -->
 <div class="form">
-	<h2 style="text-align: center">Patient Detail(Aththana Poison)</h2>
+    
+	
 	
 	<input id="one" type="radio" name="stage" checked="checked" />
 	<input id="two" type="radio" name="stage" />
@@ -59,35 +60,37 @@
     <div data-panel="two">
 			<h4>Poison Detail</h4>
                              
-                 <label> 01) Date of ingestion : 
-                    <span class = "input"><input type = "date" name = "date" ></span>
-                </label>  
-                 <br><br>        
+                 <label1> 01) Date : 
+                   <input type = "date" name = "date" >
+                </label1>  
+                      
                      
-                <label> 02) Time of ingestion : 
-                    <span class = "input"><input type = "time" name = "time" ></span>
-                </label>
-               <br><br>
+                <label2> 02) Time  : 
+                   <input type = "time" name = "time" >
+                </label2>
+             
                
                
-                <label>03)Region of ingestion :
+                <label3>03) Region :
                         <input type="text" name="area" />
-             </label>  
-            <br><br>
+             </label3>  
+         
   
             
-            <label> 04) Part of plant :
+            <label4> 04) Part of plant :
                      <input type="text" name="plant_part" />
-                </label>
-            <br><br>
+                </label4>
+                        <br><br>
+           
              
-            <label> 05) Amount :
+            <label5> 05) Amount :
                    <input type="number" min="0" name="amount" />
-                </label>
+                </label5>
+                         <br><br>
          
             <br><br>
               
-              <label>06) Circumstance : 
+              <label6>06) Circumstance : 
                    <span class = "select">
                         <select name = "circumstance">
                             <option value = " "> ..Please choose one option.. </option>
@@ -98,11 +101,11 @@
                         </select>
                     </span>
                     
-                </label>
+                </label6>
             <br><br>
         <br>        
          
-                 <label>07) Mode of poisoning : 
+                 <label7>07) Mode of poisoning : 
                    <span class = "select">
                         <select name = "poisoning_mode">
                             <option value = " "> ..Please choose one option.. </option>
@@ -113,7 +116,7 @@
                         </select>
                     </span>
                     
-                </label> 
+                </label7> 
          
    </div>
                   
@@ -122,32 +125,30 @@
     <div data-panel="three">
 			<h4>Clinical Features</h4>
 			<table>  
-                        <tr>
-                            <td style="text-align:center">
-                           
-                        <input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis</td>
-                         
-                         <td style="text-align: center;  position:relative ; left:20%">  
-                        <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </td>
+                       
+                         <tr><td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia</td></tr>
                           
-                          <td style="text-align: center;  position: relative ; left:40%"> 
-                        <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </td>
-                            </tr>
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                          <tr>  
-                         <td style="text-align:center">
-                        <input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </td>
+                         <tr><td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth</td> </tr> 
+                                    
+                        <tr><td>
+                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema</td> </tr>
                         
-                        <td style="text-align: center;  position: relative ; left:20%"> 
-                        <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </td>
-                          
-                        <td style="text-align: center;  position: relative ; left:40%">
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema  </td>
-                                                   </tr>
+                        <tr><td>
+                        <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever</td> </tr>
+                        
+                        <tr> <td>
+                            <input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis</td>
+                         </tr>
+                                     
+                        <tr><td>
+                        <input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia</td></tr>
+                                      
                         </table><br><br>
                             
-                        <label> CNS effects : </label>
+                         <label4> 
+                              CNS effects : 
                                  <span class = "select">
                         <select name = "CNSeffects">
                             
@@ -157,12 +158,16 @@
                             <option value = "23"> Confusion </option>
                              <option value = "38">disorientation </option>
                         </select>
-                    </span>  
+                    </span> 
+                         </label4>
+                        
+                        
+                        <label8>If others :
+                            <input type="text" name = "clinicals_others" >
+                        </label8>
                           <br><br>
               
-                         <label> If others <br> 
-                            <input type="text" name = "clinicals_others" >
-                         </label>
+                        
                           
 
     </div>
@@ -171,68 +176,59 @@
             
             <div data-panel="four">
 			<h4> Managemnt Detail</h4>
-                                       <table>  
-                           <tr>
-                                 <td style="text-align:center">       
-                                <input type="checkbox" name = "management[]" value="26"  > Resuscitation</td>
-                         
-                                <td style="text-align: center;  position:relative ; left:5%">
-                                <input type="checkbox" name = "management[]" value="29"  > Supportive therapy </td>
-                          
-                                <td style="text-align: center;  position: relative ; left:10%">
-                                <input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given  </td>
-                           </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                           <tr>
-                               <td style="text-align:center">
-                               <input type="checkbox" name = "management[]" value="9"  >  Atropine given </td>
-                        
-                               <td style="text-align: center;  position: relative ; left:5%"> 
-                               <input type="checkbox" name = "management[]" value="13"   > Dialysis</td>
-                           
-                               <td style="text-align: center;  position: relative ; left:10%"> 
+                                       <table> 
+                                           
+                                             <tr>  <td > 
                                <input type="checkbox" name = "management[]" value="3"  >  Alkalinization </td>
                            </tr>
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                              
-                        <tr>
-                            <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="10"  > Blood transfusion/Plasma expanders </td>
+                           
+                           <tr>   <td >     
+                            <input type="checkbox" name = "management[]" value="4"  >  Analgesics given </td></tr>
+                      
+                           <tr> <td> 
+                            <input type="checkbox" name = "management[]" value="5"  > Antibiotics given </td></tr>
                     
-                            <td style="text-align: center;  position: relative ; left:5%">
-                            <input type="checkbox" name = "management[]" value="22"  >  NaHCO3 given </td>
-                             
-                            <td style="text-align: center;  position: relative ; left:10%">
+                           <tr>   <td >
+                                <input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given  </td></tr>
+                         
+                            <tr>
+                               <td >
+                               <input type="checkbox" name = "management[]" value="9"  >  Atropine given </td></tr>
+                           
+                             <tr>
+                            <td >     
+                            <input type="checkbox" name = "management[]" value="10"  > Blood transfusion/Plasma expanders </td></tr>
+                           
+                             <tr>  <td > 
+                            <input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given</td></tr>
+                     
+                              <tr>    <td > 
+                               <input type="checkbox" name = "management[]" value="13"   > Dialysis</td></tr>
+                           
+                               <tr>  <td style="position:absolute ; left:40% ;top:35%" >
                             <input type="checkbox" name = "management[]" value="14"  >  Dopamine given </td>
-                         </tr>
-                         
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                         
-                         <tr>
-                            <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="4"  >  Analgesics given </td>
-                        
-                            <td style="text-align: center;  position: relative ; left:5%"> 
-                            <input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given</td>
-                        
-                            <td style="text-align: center;  position: relative ; left:10%"> 
-                            <input type="checkbox" name = "management[]" value="5"  > Antibiotics given </td>
-                        </tr>
-                         <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                              
-                        <tr>
-                            <td style="text-align:center">     
-                            <input type="checkbox" name = "management[]" value="24"  > Prednisalone given </td>
-                    
-                            <td style="text-align: center;  position: relative ; left:5%">
-                            <input type="checkbox" name = "management[]" value="21">  NaCl given </td>
+                             </tr>
                              
-                            <td style="text-align: center;  position: relative ; left:10%">
+                              <tr>  <td style="position:absolute ; left:40% ;top:39%">
                              <input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids </td>
-                         </tr>
+                             </tr>
+                             
+                              <tr>   <td style="position:absolute ; left:40% ;top:43%">
+                            <input type="checkbox" name = "management[]" value="21">  NaCl given </td></tr>
+                             
+                              <tr>  <td style="position:absolute ; left:40% ;top:47%">
+                            <input type="checkbox" name = "management[]" value="22"  >  NaHCO3 given </td></tr>
+                             
+                              <td style="position:absolute ; left:40% ;top:51%">     
+                            <input type="checkbox" name = "management[]" value="24"  > Prednisalone given </td></tr>
+                              
+                           <tr>
+                                 <td style="position:absolute ; left:40% ;top:55%">       
+                                <input type="checkbox" name = "management[]" value="26"  > Resuscitation</td></tr>
                          
+                           <tr>     <td style="position:absolute ; left:40% ;top:59%">
+                                <input type="checkbox" name = "management[]" value="29"  > Supportive therapy </td></tr>
+                          
                         </table>
                         
                         <br><br>
@@ -240,7 +236,7 @@
                             <input type="text" name = "managements others" size="55">
                         </label><br><br>
                         
-                        <label> <b> Gastrointestinal decontamination : </b></label><br><br>
+                        <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
                          <label>  Gastric aspiration & lavage : </label>
                                  <span class = "select">
                         <select name = "Gastric_aspiration">
@@ -250,8 +246,8 @@
                         </select>
                     </span><br><br>
                          
-                         
-                         <label>  Activated chracol : </label>
+                        <label> 
+                          Activated chracol : 
                                  <span class = "select">
                         <select name = "charcoal">
                             <option value = " "> ..Please choose one option.. </option>
@@ -259,10 +255,10 @@
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
-                        <label> If yes, no of does  <br> 
+                        If yes, no of does :  <br>
                             <input type="number" min="0" name = "activated_chracol_doses" >
-                         </label>
-                         <br><br>
+                        </label>
+                         <br><br><br>
                          
                          <label> <b> Antidote given :</b> </label>
                                  <span class = "select">
@@ -272,9 +268,9 @@
                             <option value = ""> no </option>
                         </select>
                     </span><br><br>
-                          <label> If yes, type of antidote  <br> 
+                          <label> If yes, type of antidote :  <br> 
                             <input type="text" name = "antidote" >
-                         </label>
+                         </label9>
                          
   
                           
@@ -282,13 +278,17 @@
              
 		<div data-panel="five">
 			<h4>Laboratory Detail</h4>
-			<input type="text" placeholder="laboratory detail" />
+                         <textarea rows = "13" cols = "150" name = "description"  placeholder="laboratory detail">
+         </textarea>
+         
 		</div>
 		<div data-panel="six">
 			<h4>Save/Submit</h4>
                          <label> Comment: <br> 
-			<input type="text" name="comments" placeholder="Enter Comments here" />
+			<textarea rows = "13" cols = "150" name = "description"  placeholder="Enter comments">
+         </textarea>
                          </label>
+                        <br><br>
                         <input type="hidden" name="PHNid" value="{{$patient2}}">
                            <button type="submit" name ="save" value="save">save</button>  
                            
@@ -298,7 +298,7 @@
               
 	</div>
         
-	<button onclick="doclick()" name="next" id="btn_hide" >next</button>
+	<button onclick="doclick()" name="next" id="btn_hide" style="position: absolute ; top:85%" >next</button>
 
 </div>
 <!-- partial -->
