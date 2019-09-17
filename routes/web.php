@@ -121,3 +121,8 @@ Route::get('/View_Bee_Sting', function () {
 Route::get('/View_Aththana', function () {
     return view('View_Aththana');
 });
+
+//Divi kaduru view
+Route::get('/View_Divi_kaduru', function () {
+    return view('View_Divi_kaduru');
+});
