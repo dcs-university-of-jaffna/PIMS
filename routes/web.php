@@ -5,9 +5,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bee_String_view', function () {
-    return view('bee_String_view');
-});
+
 
 Route::get('/form', function () {
     return view('form');
@@ -28,10 +26,10 @@ Route::get('/beestring_record_update', function () {
 });
 
 
-//show bee sting details fill the bee stirng form
-Route::get('/bee_String_view', function () {
-    return view('bee_record_update');
-});
+// //show bee sting details fill the bee stirng form
+// Route::get('/bee_String_view', function () {
+//     return view('bee_record_update');
+// });
 
 
 
@@ -114,3 +112,12 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
+//bee string view
+Route::get('/View_Bee_Sting', function () {
+    return view('View_Bee_Sting');
+});
+
+//Aththana view
+Route::get('/View_Aththana', function () {
+    return view('View_Aththana');
+});
