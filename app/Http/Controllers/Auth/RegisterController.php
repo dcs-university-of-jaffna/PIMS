@@ -62,6 +62,11 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
+
+    
+
+    
     protected function create(array $data)
     {
         return User::create([
