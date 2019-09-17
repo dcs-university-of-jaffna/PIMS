@@ -126,3 +126,8 @@ Route::get('/View_Aththana', function () {
 Route::get('/View_Divi_kaduru', function () {
     return view('View_Divi_kaduru');
 });
+
+//Diya kaduru view
+Route::get('/View_Diya_Kaduru', function () {
+    return view('View_Diya_Kaduru');
+});
