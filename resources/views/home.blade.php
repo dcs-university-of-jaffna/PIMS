@@ -131,14 +131,32 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       
                         <li class="nav-item dropdown">
-                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                     chemical
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">chemical</a></li>
-                                    <li><a class="dropdown-item" href="#">chemical</a></li>   
-                                </ul>
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Pesticides
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="#">Carbamate Insecticides</a></li>
+                            <li><a class="dropdown-item" href="#">Chlorophenoxy Compounds</a></li>   
+                            <li><a class="dropdown-item" href="#">Coumarins</a></li>   
+                            <li><a class="dropdown-item" href="#">Dithiocarbamate</a></li>   
+                            <li><a class="dropdown-item" href="#">Diuron</a></li>   
+                            <li><a class="dropdown-item" href="#">Fipronil</a></li>   
+                            <li><a class="dropdown-item" href="#">Glyphosate</a></li>   
+                            <li><a class="dropdown-item" href="#">Imidacloprid</a></li>   
+                            <li><a class="dropdown-item" href="#">Metaldehyde</a></li>   
+                            <li><a class="dropdown-item" href="#">Methyl Bromide</a></li>   
+                            <li><a class="dropdown-item" href="#">Nitrophends and Nitro Cresols</a></li>   
+                            <li><a class="dropdown-item" href="#">Organochlorines</a></li>   
+                            <li><a class="dropdown-item" href="#">Organophosphates</a></li>   
+                            <li><a class="dropdown-item" href="#">Phosphides</a></li>   
+                            <li><a class="dropdown-item" href="#">Propanil </a></li>   
+                            <li><a class="dropdown-item" href="#">Pyrethrum and related compounds</a></li>   
+                            <li><a class="dropdown-item" href="#">Thallium</a></li>   
+                            <li><a class="dropdown-item" href="#">Thiocarbamates</a></li>   
+                            <li><a class="dropdown-item" href="#">Triazenes and Triazoles</a></li>   
+                            <li><a class="dropdown-item" href="#">Other pesticide poisoning</a></li>   
+                        </ul>
                             </li>
                     </ul>
                 </li>
