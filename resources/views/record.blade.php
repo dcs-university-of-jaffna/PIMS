@@ -83,7 +83,7 @@
       <div class="container text-center">
         <h2 class="mb-0">Patient Details</h2>
        
-        <p class="mb-0 unit-6"><a>phn</a> <span class="sep">> number</span> <span></span></p>
+        <p class="mb-0 unit-6"><a>phn</a> <span class="sep">> {{$phn}}</span> <span></span></p>
      
       </div>
     </div>
@@ -93,6 +93,8 @@
   
     <div class="site-section bg-light">
       <div class="container">
+         <h3>Pending</h3>
+          <br>
       @foreach($data as $value)
         <div class="row" data-aos="fade">
          <div class="col-md-12">
@@ -114,8 +116,43 @@
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
+   
                 <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                <a href="{{('/View_Bee_Sting')}}" class="btn btn-warning py-2">view</a>
+              </div>
+           </div>
+           @endforeach
+         </div>
+        </div>
+        <div class="site-section bg-light">
+      <div class="container">
+         <h3>Submit</h3>
+          <br>
+      @foreach($submitdata as $value)
+        <div class="row" data-aos="fade">
+         <div class="col-md-12">
+
+           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+
+              <div class="mb-4 mb-md-0 mr-5">
+               <div class="job-post-item-header d-flex align-items-center">
+                 <h2 class="mr-3 text-black h4">{{$value -> sub_group}}</h2>
+                 <div class="badge-wrap">
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->date}} : {{$value->time}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">{{$value->name}}</span>
+                 </div>
+               </div>
+               <div class="job-post-item-body d-block d-md-flex">
+                 <div class="mr-3"><p>Site.</p></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> area}}</span></div>
+               </div>
+              </div>
+
+              <div class="ml-auto">
+           
+                @if(Auth::user()->userType   =='Admin')
+                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                @endif
                 <a href="{{('/View_Bee_Sting')}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
