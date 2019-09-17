@@ -17,10 +17,20 @@ class RecordSearch extends Controller
     $data = DB::table('incidents')
             ->join('patients','patients.id','=','incidents.patient_id')
             ->join('toxicities','toxicities.id','=','incidents.toxicity_id')
-            ->where('patients.phn','=',$phn)   
+            //->join('prescription','prescription.incident_id','=','incidents.')
+            ->where('patients.phn','=',$phn)  
+            ->where('is_submited','=',0) 
             ->get();
-         //   dd($data);
-    return view('record',compact('data'));
+
+    $submitdata = DB::table('incidents')
+            ->join('patients','patients.id','=','incidents.patient_id')
+            ->join('toxicities','toxicities.id','=','incidents.toxicity_id')
+            //->join('prescription','prescription.incident_id','=','incidents.')
+            ->where('patients.phn','=',$phn)  
+            ->where('is_submited','=',1) 
+            ->get();
+
+    return view('record',compact('data','submitdata','phn'));
    }
 
 
