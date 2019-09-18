@@ -248,7 +248,7 @@
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-dark py-2">Update</a>
+                <a href="/incidents/{{$value->id}}" class="btn btn-dark py-2">Update</a>
               </div>
            </div>
           @endforeach

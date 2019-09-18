@@ -34,12 +34,30 @@ class Natural extends Model
 {
     /**
      * Natural is a subclass of Toxicity
-     *
-     * @return belongsTo()->result
      */
     public function toxicity()
     {
-        return $this->belongsTo('App\Toxicity');
+        return $this->belongsTo('App\Toxicity','id');
+    }
+
+    public function flora()
+    {
+        return $this->hasOne('App\Flora','id');
+    }
+
+    public function fauna()
+    {
+        return $this->hasOne('App\Fauna','id');
+    }
+
+    public function microbial()
+    {
+        return $this->hasOne('App\Microbial','id');
+    }
+
+    public function fungal()
+    {
+        return $this->hasOne('App\Fungal','id');
     }
 }
 
