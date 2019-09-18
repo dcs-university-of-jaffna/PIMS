@@ -82,18 +82,18 @@
                                      Flora &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                      <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana (Datura stramonium)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Divikaduru_detail_form1') }}">Divi kaduru (Tabernaemantana dichotoma)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Diyakaduru_detail_form1') }}">Diya Kaduru (Cerebra manghas)</a></li>
-                                    <li><a class="dropdown-item" href="#">Endaru (Ricinus communis)</a></li>
-                                    <li><a class="dropdown-item" href="#">Goda Kaduru (Stvychnos nuxvomica )</a></li>
-                                    <li><a class="dropdown-item" href="#">Habarala (Alocasia macromhiza)</a></li>
-                                    <li><a class="dropdown-item" href="#">Hondala(Adenia Hondola)</a></li>
-                                    <li><a class="dropdown-item" href="#">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
-                                    <li><a class="dropdown-item" href="#">Kepunkiriya (Euphorbia hirita)</a></li>
-                                    <li><a class="dropdown-item" href="#">Niyagala (Gloriosa superba)</a></li>
-                                     <li><a class="dropdown-item" href="#">Olinda (Abrus precatorius)</a></li>
-                                     <li><a class="dropdown-item" href="#">Unknown plant poisoning</a></li>
+                                     <li><a class="dropdown-item" href="{{url('/Flora_detail_form',[1])}}">Aththana (Datura stramonium)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[2])}}">Divikaduru (Tabernaemantana dichotoma)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[3]) }}">DiyaKaduru (Cerebra manghas)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[4]) }}">Endaru (Ricinus communis)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[5]) }}">GodaKaduru (Stvychnos nuxvomica )</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[6]) }}">Habarala (Alocasia macromhiza)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[7]) }}">Hondala(Adenia Hondola)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[8]) }}">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[9]) }}">Kepunkiriya (Euphorbia hirita)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[10]) }}">Niyagala (Gloriosa superba)</a></li>
+                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[11]) }}">Olinda (Abrus precatorius)</a></li>
+                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[12]) }}">Unknown plant poisoning</a></li>
                    
                                 </ul>
                             </li>
