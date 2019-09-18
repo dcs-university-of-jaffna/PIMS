@@ -31,7 +31,7 @@ class Incident extends Model
     /**
      * Incident has one Patient
      *
-     * @return belongsTo()->result
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function patient()
     {
@@ -41,7 +41,7 @@ class Incident extends Model
     /**
      * Incident has one Toxicity
      *
-     * @return belongsTo()->result
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function toxicity()
     {

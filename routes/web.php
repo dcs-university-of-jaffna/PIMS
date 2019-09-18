@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -64,7 +63,7 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 });
 
 //------------------------------------------chamikara--------------------------------
-
+Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.show');
 
 
 //------------------------------------------chathuranga------------------------------
