@@ -1,12 +1,11 @@
 <?php
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bee_String_view', function () {
-    return view('bee_String_view');
-});
+
 
 Route::get('/form', function () {
     return view('form');
@@ -27,10 +26,10 @@ Route::get('/beestring_record_update', function () {
 });
 
 
-//show bee sting details fill the bee stirng form
-Route::get('/bee_String_view', function () {
-    return view('bee_record_update');
-});
+// //show bee sting details fill the bee stirng form
+// Route::get('/bee_String_view', function () {
+//     return view('bee_record_update');
+// });
 
 
 
@@ -45,7 +44,41 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
+Route::get('/Aththana_detail_form', function () {
+    return view('Detail_Forms.AththanaForm');
+});
 
+Route::get('/Aththana_detail_form1', function () {
+    return view('Detail_Forms.AththanaFirst');
+});
+
+Route::get('/Divikaduru_detail_form', function () {
+    return view('Detail_Forms.DivikaduruForm');
+});
+
+Route::get('/Divikaduru_detail_form1', function () {
+    return view('Detail_Forms.DivikaduruFirst');
+});
+
+Route::get('/Diyakaduru_detail_form', function () {
+    return view('Detail_Forms.DiyakaduruForm');
+});
+
+Route::get('/Diyakaduru_detail_form1', function () {
+    return view('Detail_Forms.DiyakaduruFirst');
+});
+
+
+
+Route::post('/submitAththana', 'FloraController@submitAththana');
+Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
+
+Route::post('/submitDivikaduru', 'FloraController@submitDivikaduru');
+Route::post('/submitDivikaduru1', 'FloraController@submitDivikaduruPHN');
+
+
+Route::post('/submitDiyakaduru', 'FloraController@submitDiyakaduru');
+Route::post('/submitDiyakaduru1', 'FloraController@submitDiyakaduruPHN');
 
 
 //--------------------------------------Thushangi-----------------------------------
@@ -63,7 +96,7 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 });
 
 //------------------------------------------chamikara--------------------------------
-Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.show');
+
 
 
 //------------------------------------------chathuranga------------------------------
@@ -79,3 +112,22 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
+//bee string view
+Route::get('/View_Bee_Sting', function () {
+    return view('View_Bee_Sting');
+});
+
+//Aththana view
+Route::get('/View_Aththana', function () {
+    return view('View_Aththana');
+});
+
+//Divi kaduru view
+Route::get('/View_Divi_kaduru', function () {
+    return view('View_Divi_kaduru');
+});
+
+//Diya kaduru view
+Route::get('/View_Diya_Kaduru', function () {
+    return view('View_Diya_Kaduru');
+});

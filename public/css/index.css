@@ -105,6 +105,7 @@ input[type="radio"] {
 	width: calc(100% / 5 * 5);
 }
 
+
 .panels div {
 	display: none;
 }
@@ -137,17 +138,17 @@ a {
 	color: #0cc39f;
 }
 
-h2,
 h4 {
 	margin-top: 0;
 }
 
 .form {
 	background: #ffffff;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
-	margin: 4em;
+	box-shadow: 0 5px px rgba(0, 0, 0, .4);
+	margin: 1em;
 	min-width: 480px;
 	padding: 1em;
+        height: 80%
 }
 
 .panels div {
@@ -158,9 +159,14 @@ h4 {
 
 input {
 	box-sizing: border-box;
-	display: block;
 	padding: .4em;
-	width: 100%;
+	
+}
+
+select {
+	box-sizing: border-box;
+	padding: .4em;
+	
 }
 
 .btn {
@@ -185,9 +191,74 @@ button {
 	font-weight: 700;
 	margin: 1em 0 0 0;
 	padding: 1em;
+         
+   
 }
+
+button:next{
+    position: absolute;
+    left :50%; 
+    top:45%;
+} 
 
 button:hover {
 	opacity: 0.8;
 }
 
+label1{
+    position: absolute;
+    top:35%
+}
+
+
+
+label2{
+position: absolute; 
+    top:45%;
+}
+
+label3{
+    position: absolute; 
+    top:55%;
+}
+
+label4{
+  position: absolute; 
+    top:65%;  
+}
+
+label5{
+    position: absolute;
+    top:75%;
+}
+
+label6{
+    position: absolute;
+    left :50%; 
+    top:35%;
+}
+
+label7{
+    position: absolute;
+    left :50%; 
+    top:45%;
+}
+
+label8{
+    position: absolute;
+    left :40%; 
+    top:65%;
+}
+
+label9{
+    position: absolute;
+    left :65%; 
+    top:35%;
+}
+
+h2{
+   position: absolute; 
+    top:1%;  
+    left :35%; 
+    color: white;
+}

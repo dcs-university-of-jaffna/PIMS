@@ -82,17 +82,18 @@
                                      Flora &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">Allary</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana</a></li>
-                                    <li><a class="dropdown-item" href="#">Aththe</a></li>
-                                    <li><a class="dropdown-item" href="#">Diya Kadunu</a></li>
-                                    <li><a class="dropdown-item" href="#">Endana</a></li>
-                                    <li><a class="dropdown-item" href="#">Goda Kaduru</a></li>
-                                    <li><a class="dropdown-item" href="#">Habarala</a></li>
-                                    <li><a class="dropdown-item" href="#">Hondala</a></li>
-                                    <li><a class="dropdown-item" href="#">Karththigai</a></li>
-                                    <li><a class="dropdown-item" href="#">Kepunkiriya</a></li>
-                                    <li><a class="dropdown-item" href="#">Others</a></li>
+                                      <li><a class="dropdown-item" href="{{ url('/Aththana_detail_form1') }}">Aththana (Datura stramonium)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Divikaduru_detail_form1') }}">Divi kaduru (Tabernaemantana dichotoma)</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Diyakaduru_detail_form1') }}">Diya Kaduru (Cerebra manghas)</a></li>
+                                    <li><a class="dropdown-item" href="#">Endaru (Ricinus communis)</a></li>
+                                    <li><a class="dropdown-item" href="#">Goda Kaduru (Stvychnos nuxvomica )</a></li>
+                                    <li><a class="dropdown-item" href="#">Habarala (Alocasia macromhiza)</a></li>
+                                    <li><a class="dropdown-item" href="#">Hondala(Adenia Hondola)</a></li>
+                                    <li><a class="dropdown-item" href="#">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
+                                    <li><a class="dropdown-item" href="#">Kepunkiriya (Euphorbia hirita)</a></li>
+                                    <li><a class="dropdown-item" href="#">Niyagala (Gloriosa superba)</a></li>
+                                     <li><a class="dropdown-item" href="#">Olinda (Abrus precatorius)</a></li>
+                                     <li><a class="dropdown-item" href="#">Unknown plant poisoning</a></li>
 
                                 </ul>
                             </li>
@@ -199,16 +200,17 @@
 
        <ul class="nav navbar-nav navbar-right">
             @if(Auth::user()->userType   =='Admin')
-              <li><a href="{{ url('/userPermission') }}">Admin</a></li>
+              <li><a class ="btn btn-outline-primary my-2 my-sm-0" href="{{ url('/userPermission') }}">Admin</a></li>&nbsp;
               @endif
-              <li class="nav-item">
-                  <button class="btn btn-outline-primary my-2 my-sm-0" href="{{ route('logout') }}"  class="nav-link"
+              <li class="nav-item"><button class="btn btn-outline-primary my-2 my-sm-0" href="{{ route('logout') }}"  class="nav-link"
                                                   onclick="event.preventDefault();
-                                                          document.getElementById('logout-form').submit();"></button>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                  </form>
-              </li>
+                                                          document.getElementById('logout-form').submit();">
+                                                  Logout
+                                     </button>
+                                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                  {{ csrf_field() }}
+                                              </form>
+                </li>
       </ul>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </nav>
@@ -240,19 +242,13 @@
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3">
-                     <span class="fl-bigmug-line-portfolio23"></span>
-                     <a href="#">{{$value->name}}.</a>
-                 </div>
-                 <div>
-                     <span class="fl-bigmug-line-big104"></span>
-                     <span>{{$value->area}}</span>
-                 </div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->name}}.</a></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
-                <a href="/incidents/{{$value->id}}" class="btn btn-dark py-2">Update</a>
+                <a href="#" class="btn btn-dark py-2">Update</a>
               </div>
            </div>
           @endforeach
