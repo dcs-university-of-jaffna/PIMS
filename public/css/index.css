@@ -148,7 +148,7 @@ h4 {
 	margin: 1em;
 	min-width: 480px;
 	padding: 1em;
-        height: 80%
+        height: 75%
 }
 
 .panels div {
@@ -207,58 +207,74 @@ button:hover {
 
 label1{
     position: absolute;
-    top:35%
+    top:38%
 }
 
 
-
 label2{
-position: absolute; 
-    top:45%;
+    position: absolute; 
+    top:50%;
 }
 
 label3{
     position: absolute; 
-    top:55%;
+    top:62%;
 }
 
 label4{
-  position: absolute; 
-    top:65%;  
+    position: absolute; 
+    top:74%;  
 }
 
 label5{
     position: absolute;
-    top:75%;
+    left :50%;
+    top:62%;
 }
 
 label6{
     position: absolute;
     left :50%; 
-    top:35%;
+    top:38%;
 }
 
 label7{
     position: absolute;
     left :50%; 
-    top:45%;
+    top:50%;
 }
 
 label8{
     position: absolute;
-    left :40%; 
-    top:65%;
+    top:74%;
 }
 
 label9{
     position: absolute;
     left :65%; 
-    top:35%;
+    top:38%;
+}
+
+label0{
+    position: absolute; 
+    top:73%;
+}
+
+label11{
+    position: absolute; 
+    left :35%;
+    top:38%;
+}
+
+h3{
+   position: absolute; 
+    top:-2%;  
+    left :75%; 
 }
 
 h2{
    position: absolute; 
     top:1%;  
-    left :35%; 
-    color: white;
+    left :30%;
+    color: window
 }
