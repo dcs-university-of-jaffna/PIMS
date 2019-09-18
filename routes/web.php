@@ -44,42 +44,10 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
-Route::get('/Aththana_detail_form', function () {
-    return view('Detail_Forms.AththanaForm');
-});
 
-Route::get('/Aththana_detail_form1', function () {
-    return view('Detail_Forms.AththanaFirst');
-});
-
-Route::get('/Divikaduru_detail_form', function () {
-    return view('Detail_Forms.DivikaduruForm');
-});
-
-Route::get('/Divikaduru_detail_form1', function () {
-    return view('Detail_Forms.DivikaduruFirst');
-});
-
-Route::get('/Diyakaduru_detail_form', function () {
-    return view('Detail_Forms.DiyakaduruForm');
-});
-
-Route::get('/Diyakaduru_detail_form1', function () {
-    return view('Detail_Forms.DiyakaduruFirst');
-});
-
-
-
-Route::post('/submitAththana', 'FloraController@submitAththana');
-Route::post('/submitAththana1', 'FloraController@submitAththanaPHN');
-
-Route::post('/submitDivikaduru', 'FloraController@submitDivikaduru');
-Route::post('/submitDivikaduru1', 'FloraController@submitDivikaduruPHN');
-
-
-Route::post('/submitDiyakaduru', 'FloraController@submitDiyakaduru');
-Route::post('/submitDiyakaduru1', 'FloraController@submitDiyakaduruPHN');
-
+Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
+Route::post('/submitFlora', 'FloraController@submitFlora');
+Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 
 //--------------------------------------Thushangi-----------------------------------
 
