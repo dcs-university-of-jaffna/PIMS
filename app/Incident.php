@@ -30,8 +30,6 @@ class Incident extends Model
 {
     /**
      * Incident has one Patient
-     *
-     * @return belongsTo()->result
      */
     public function patient()
     {
@@ -40,8 +38,6 @@ class Incident extends Model
 
     /**
      * Incident has one Toxicity
-     *
-     * @return belongsTo()->result
      */
     public function toxicity()
     {
@@ -49,9 +45,15 @@ class Incident extends Model
     }
 
     /**
+     * Incident has one laboratory
+     */
+    public function laboratory()
+    {
+        return $this->hasOne('App\Laboratory');
+    }
+
+    /**
      * Incident has many Symptoms
-     *
-     * @return belongsToMany()->result
      */
     public function symptoms()
     {
@@ -62,8 +64,6 @@ class Incident extends Model
 
     /**
      * Incident has many Managements
-     *
-     * @return belongsToMany()->result
      */
     public function managements()
     {
@@ -77,8 +77,6 @@ class Incident extends Model
 
     /**
      * Incident has many Users
-     *
-     * @return belongsToMany()->result
      */
     public function users()
     {

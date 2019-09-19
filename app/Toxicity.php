@@ -29,13 +29,11 @@ use Illuminate\Database\Eloquent\Model;
 class Toxicity extends Model
 {
     /**
-     * Toxicity has many Incidents
-     *
-     * @return hasMany()->result
+     * Toxicity has one Incident
      */
-    public function incidents()
+    public function incident()
     {
-        return $this->hasMany('App\Incident');
+        return $this->hasOne('App\Incident');
     }
 
 }
