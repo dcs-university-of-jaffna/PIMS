@@ -99,3 +99,7 @@ Route::get('/View_Divi_kaduru', function () {
 Route::get('/View_Diya_Kaduru', function () {
     return view('View_Diya_Kaduru');
 });
+
+Route::get('/Carbamate_Insecticides', function() {
+    return view('Chemicals_Details.Carbamate_Insecticides');
+});
