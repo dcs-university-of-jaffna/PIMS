@@ -40,6 +40,10 @@ class Natural extends Model
         return $this->belongsTo('App\Toxicity','id');
     }
 
+    /**
+     * Natural has one (flora || fauna || microbial || fungal)
+     *
+     */
     public function flora()
     {
         return $this->hasOne('App\Flora','id');
