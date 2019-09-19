@@ -30,8 +30,6 @@ class Incident extends Model
 {
     /**
      * Incident has one Patient
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function patient()
     {
@@ -40,8 +38,6 @@ class Incident extends Model
 
     /**
      * Incident has one Toxicity
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function toxicity()
     {
@@ -49,26 +45,30 @@ class Incident extends Model
     }
 
     /**
+     * Incident has one laboratory
+     */
+    public function laboratory()
+    {
+        return $this->hasOne('App\Laboratory');
+    }
+
+    /**
      * Incident has many Symptoms
-     *
-     * @return belongsToMany()->result
      */
     public function symptoms()
     {
         return $this->belongsToMany('App\Symptom')
-            ->using('App\IncidentSymptom')
+            ->using('App\Incident_Symptom')
             ->withTimestamps();
     }
 
     /**
      * Incident has many Managements
-     *
-     * @return belongsToMany()->result
      */
     public function managements()
     {
         return $this->belongsToMany(
-            'App\Management', 'prescription', 'incident_id', 'management_id'
+            'App\Management', 'prescriptions', 'incident_id', 'management_id'
         )
             ->using('App\Prescription')
             ->withPivot('doctor_id')
@@ -77,13 +77,11 @@ class Incident extends Model
 
     /**
      * Incident has many Users
-     *
-     * @return belongsToMany()->result
      */
     public function users()
     {
         return $this->belongsToMany(
-            'App\User', 'prescription', 'incident_id', 'doctor_id'
+            'App\User', 'prescriptions', 'incident_id', 'doctor_id'
         )
             ->using('App\Prescription')
             ->withPivot('management_id')
