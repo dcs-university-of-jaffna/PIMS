@@ -254,21 +254,22 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">{{$value->name}}</h2>
+                 <h2 class="mr-3 text-black h4"> {{$value->patient->patient_name}}.  </h2>
                  <div class="badge-wrap">
-                  <span class="bg-primary text-white badge py-2 px-4">{{$value->phn}}</span>
+                  <span class="bg-primary text-white badge py-2 px-4">{{$value->patient->phn}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->name}}.</a></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->toxicity->name}}</a></div>
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
-                <a href="#" class="btn btn-dark py-2">Update</a>
-              </div>
-           </div>
+                            <span> last update:{{$value->updated_at}}  </span>
+                            <a href="/incidents/{{$value->id}}" class="btn btn-dark py-2">Update</a>
+                        </div>
+                    </div>
           @endforeach
          </div>
         </div>
