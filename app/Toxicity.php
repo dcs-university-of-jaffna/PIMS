@@ -38,7 +38,7 @@ class Toxicity extends Model
     }
 
     /**
-     * Toxicity has one Incidents
+     * Toxicity has one (natural || chemical || pharmaceutical || other_toxicity)
      *
      */
     public function natural()
@@ -54,6 +54,11 @@ class Toxicity extends Model
     public function pharmaceutical()
     {
         return $this->hasOne('App\Pharmaceutical', 'id');
+    }
+
+    public function other_toxicity()
+    {
+        return $this->hasOne('App\Other_Toxicity', 'id');
     }
 
 }
