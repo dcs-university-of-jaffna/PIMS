@@ -29,11 +29,36 @@ use Illuminate\Database\Eloquent\Model;
 class Toxicity extends Model
 {
     /**
-     * Toxicity has one Incident
+     * Toxicity has one Incidents
+     *
      */
     public function incident()
     {
         return $this->hasOne('App\Incident');
+    }
+
+    /**
+     * Toxicity has one (natural || chemical || pharmaceutical || other_toxicity)
+     *
+     */
+    public function natural()
+    {
+        return $this->hasOne('App\Natural', 'id');
+    }
+
+    public function chemical()
+    {
+        return $this->hasOne('App\Chemical', 'id');
+    }
+
+    public function pharmaceutical()
+    {
+        return $this->hasOne('App\Pharmaceutical', 'id');
+    }
+
+    public function other_toxicity()
+    {
+        return $this->hasOne('App\Other_Toxicity', 'id');
     }
 
 }
