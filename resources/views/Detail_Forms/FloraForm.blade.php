@@ -293,7 +293,35 @@
                         <input type="checkbox" name ="AththanaClinical[]" value="146">Weakness<br> 
                      </label9>  
                      
-                
+                 @elseif($ray==5)
+                      <input type="checkbox" name = "AththanaClinical[]"  value="15">Bulging eyes<br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="28"> Cramps<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"    value="29" > Cyanosis  <br> 
+	                 <input type="checkbox" name ="AththanaClinical[]"   value="37" >  Dilation of pupils  <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="49"> Extensor spasms <br>              
+                        <input type="checkbox" name ="AththanaClinical[]" value="69">Hyperreflexia   <br> 
+			<input type="checkbox" name ="AththanaClinical[]" value="71"> Hyperthermia    <br> 
+                         <input type="checkbox" name = "AththanaClinical[]" value="84"  >  Metabolic acidosis <br>   
+                         <input type="checkbox" name = "AththanaClinical[]" value="85"  > Muscle twitching <br>  
+						 
+                          
+            
+                          
+                          <label11> 
+			<input type="checkbox" name ="AththanaClinical[]" value="88">Myoglobinuria  <br> 
+			<input type="checkbox" name = "AththanaClinical[]" value="99"  > Opisthotonus <br>  
+                        <input type="checkbox" name = "AththanaClinical[]" value="102"  >Painful convulsions <br>  
+                        <input type="checkbox" name ="AththanaClinical[]"    value="104" >Pancreatitis <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="112"> Pulmonary infiltration <br> 
+                        <input type="checkbox" name ="AththanaClinical[]"   value="114" >Renal failure  <br> 						 
+                        <input type="checkbox" name ="AththanaClinical[]"   value="117" >  Respiratory failure  <br> 
+                         <input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis <br>   
+			<input type="checkbox" name ="AththanaClinical[]" value="123">Risus sardonicus   <br>  
+                        </label11>
+                       
+                     <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
             @endif
         
     </div>
