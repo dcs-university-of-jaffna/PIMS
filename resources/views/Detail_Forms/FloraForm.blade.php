@@ -372,6 +372,31 @@
                          <br>   If others :<br>
                       <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
+                     
+                       @elseif($ray==7)
+						<input type="checkbox" name = "AththanaClinical[]"  value="1">Abdominal pain<br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="34">Diarrhoea<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"    value="40" > Dizziness  <br> 
+						<input type="checkbox" name ="AththanaClinical[]"   value="37" >  Exudate  <br> 
+						<input type="checkbox" name ="AththanaClinical[]" value="54">	Fever  <br> 
+						<input type="checkbox" name = "AththanaClinical[]"  value="70"> Hypersensitivity reactions <br>                    
+						<input type="checkbox" name ="AththanaClinical[]" value="92">	Necrotising enteritis    <br> 
+                          
+                      
+                          <label11> 
+						 <input type="checkbox" name = "AththanaClinical[]" value="87"  > Myocarditis <br>  
+						<input type="checkbox" name = "AththanaClinical[]" value="105"  >Papilloedema <br>  
+						<input type="checkbox" name = "AththanaClinical[]" value="118"  > Restlessness <br> 
+						<input type="checkbox" name ="AththanaClinical[]"    value="120" >Retinopathy<br> 
+						<input type="checkbox" name ="AththanaClinical[]" value="122">Right iliac fossa tenderness <br> 
+						<input type="checkbox" name = "AththanaClinical[]" value="134"  > Tender liver <br>  
+						<input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>  
+                     </label11> 
+                    
+                    <br><br>   If others :<br>
+                      <textarea rows = "4" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                       
             @endif
         
     </div>
