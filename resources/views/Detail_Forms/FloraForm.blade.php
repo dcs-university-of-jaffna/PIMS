@@ -285,7 +285,7 @@
                      
                        <label9> 
                        <b> Inhalation :</b><br>
-		                 <input type="checkbox" name = "AththanaClinical[]"  value="27"> Cough<br> 
+		          <input type="checkbox" name = "AththanaClinical[]"  value="27"> Cough<br> 
                            <input type="checkbox" name = "AththanaClinical[]"  value="54"> 	Fever<br>            
                         <input type="checkbox" name ="AththanaClinical[]"    value="77" > Hypoxaemia  <br> 
                          <input type="checkbox" name = "AththanaClinical[]"  value="113"> Pulmonary oedema <br>              
@@ -321,6 +321,56 @@
                        
                      <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                     
+            @elseif($ray==6)       
+                          <input type="checkbox" name ="AththanaClinical[]"    value="6" > Anuria  <br>  
+                         <input type="checkbox" name ="AththanaClinical[]"    value="8" > Aphonia  <br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="12">Blisters of oral mucosa<br> 
+			<input type="checkbox" name = "AththanaClinical[]"  value="13"> Bradycardia <br>  
+                        <input type="checkbox" name = "AththanaClinical[]"  value="16"> Burning sensation<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"   value="25" >  Convulsion  <br>           
+                        <input type="checkbox" name ="AththanaClinical[]" value="44">Dysphagia  <br> 
+			 <input type="checkbox" name ="AththanaClinical[]" value="61"> Haemorrhagic gastritis <br> 
+                        <input type="checkbox" name = "AththanaClinical[]" value="78"  >  Impaired articulation <br> 
+                        <input type="checkbox" name ="AththanaClinical[]" value="90">Necrosis  <br> 
+			<input type="checkbox" name = "AththanaClinical[]" value="91"  >Necrotic oesophagitis <br>  
+                        
+                         
+             <label11>
+                        <input type="checkbox" name = "AththanaClinical[]" value="98"  >Oliguria <br> 
+                        <input type="checkbox" name ="AththanaClinical[]"    value="100" >Oral cavity irritation <br> 
+			<input type="checkbox" name ="AththanaClinical[]"   value="101" >Pain <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="109">Profuse salivation <br>                        						 
+                        <input type="checkbox" name ="AththanaClinical[]"   value="114" >  Renal failure  <br> 
+                        <input type="checkbox" name = "AththanaClinical[]" value="138"  > Tremor<br><br>  
+                         <b> Hypocalcemia </b><br>
+		          <input type="checkbox" name = "AththanaClinical[]"  value="19"> Circumoral paresthesia<br> 
+                           <input type="checkbox" name = "AththanaClinical[]"  value="85"> Muscle twitching<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"    value="139" > Trismus  <br> 
+            </label11>
+                        
+                         <label13>
+                             <b>Oedema of the </b><br>
+                        <input type="checkbox" name = "AththanaClinical[]" value="93">Mouth<br>       
+                        <input type="checkbox" name = "AththanaClinical[]"  value="94">Lips <br>       
+                        <input type="checkbox" name = "AththanaClinical[]" value="95" >Salivary glands  <br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="96" >Throat <br> 
+                        </label13>
+                        
+                        <label14>
+                            <b>Eye contact </b><br>
+                        <input type="checkbox" name = "AththanaClinical[]" value="11"  >Blepharospasm <br> 
+                        <input type="checkbox" name ="AththanaClinical[]"    value="24" >Conjunctival chemosis <br> 
+			<input type="checkbox" name ="AththanaClinical[]"   value="26" >Corneal abrasions <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="52">Eyelid oedema <br>                        						 
+                        <input type="checkbox" name ="AththanaClinical[]"   value="79" > Intense pain  <br> 
+                        <input type="checkbox" name = "AththanaClinical[]" value="106"  > Photophobia<br>  
+                        <input type="checkbox" name = "AththanaClinical[]" value="145"  > Watery eyes<br>  
+                        </label14>
+                    
+                         <br>   If others :<br>
+                      <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
             @endif
         
