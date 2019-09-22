@@ -46,7 +46,7 @@ class CreateFaunasTable extends Migration
                 $table->string('place_of_sting')->nullable();
                 $table->string('sting_site')->nullable();
                 $table->string('circumstance')->nullable();
-                $table->string('comments')->nullable();
+                $table->tinyInteger('avs_vials')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

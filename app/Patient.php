@@ -30,8 +30,6 @@ class Patient extends Model
 {
     /**
      * Patient has many Incidents
-     *
-     * @return hasMany()->result
      */
     public function incidents()
     {
