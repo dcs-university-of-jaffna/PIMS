@@ -244,21 +244,54 @@
                         <input type="checkbox" name = "AththanaClinical[]"  value="80">Junctional rhythms <br> <br>
                         </label11>
                           
-                          <label12> 
-                         
+                          <label12>
                         <input type="checkbox" name = "AththanaClinical[]" value="127">Sinoatrial_block<br> <br>      
                         <input type="checkbox" name = "AththanaClinical[]"  value="128">Sinus bradycardia <br> <br>       
                         <input type="checkbox" name = "AththanaClinical[]" value="129" >Slow pulse  <br> <br>
                         <input type="checkbox" name = "AththanaClinical[]"  value="143" >Ventricular fibrillation <br> <br>
-                      
                         </label12>
-                        
-                     
-
                          
+                     If others :<br>
+                      <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                        
+                         
+                         @elseif($ray==4)
+                         <b>   Ingestion :</b><br>
+		                 <input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal_pain<br> 
+                           <input type="checkbox" name = "AththanaClinical[]"  value="2"> Acute renal failure<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"    value="5" >  Anaphylaxis  <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="25"> Convulsion <br>              
+                        <input type="checkbox" name ="AththanaClinical[]"   value="28" >  Cramps  <br> 
+                        <input type="checkbox" name ="AththanaClinical[]" value="31">Dehydration    <br> 
+                         <input type="checkbox" name = "AththanaClinical[]" value="34"  >  Diarrhoea <br>   
+                         <input type="checkbox" name ="AththanaClinical[]" value="46">Electrolytes imbalance   <br> 
+                         
+                            
+                          <label11> 
+                        <br><input type="checkbox" name = "AththanaClinical[]" value="60"  > Haematuria <br>  
+                        <input type="checkbox" name ="AththanaClinical[]"    value="66" > Hepatic Necrosis <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="73"> Hypoglycemia <br>              
+                        <input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  <br> 
+                        <input type="checkbox" name ="AththanaClinical[]" value="119">Retinal Haemorrhage   <br> 
+                         <input type="checkbox" name = "AththanaClinical[]" value="126"  >  Shock <br>   
+                        <input type="checkbox" name = "AththanaClinical[]" value="144"  >  Vomiting <br>
+                        </label11>
+                         
+                         <br><br>
                           If others :<br>
                       <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
+                     
+                       <label9> 
+                       <b> Inhalation :</b><br>
+		                 <input type="checkbox" name = "AththanaClinical[]"  value="27"> Cough<br> 
+                           <input type="checkbox" name = "AththanaClinical[]"  value="54"> 	Fever<br>            
+                        <input type="checkbox" name ="AththanaClinical[]"    value="77" > Hypoxaemia  <br> 
+                         <input type="checkbox" name = "AththanaClinical[]"  value="113"> Pulmonary oedema <br>              
+                        <input type="checkbox" name ="AththanaClinical[]"   value="116" >	Respiratory distress  <br> 
+                        <input type="checkbox" name ="AththanaClinical[]" value="146">Weakness<br> 
+                     </label9>  
                      
                 
             @endif
