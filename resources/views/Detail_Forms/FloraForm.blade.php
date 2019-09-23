@@ -513,6 +513,10 @@
                                                  <br><br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
+                     
+                      @elseif($ray==12)
+                      
+                   <textarea rows = "13" cols = "150" name = "Laboratory Detail"  placeholder="Enter Clinical Features here "></textarea>
                        
             @endif
         
