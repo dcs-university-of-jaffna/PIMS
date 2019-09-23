@@ -8,6 +8,7 @@ use App\Natural;
 use App\Flora;
 use App\Prescription;
 use App\IncidentSymptom;
+use App\Laboratory;
 use Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
@@ -93,6 +94,10 @@ class FloraController extends Controller
        
        $incident->save();
          
+      $laboratory=new  Laboratory;
+      $laboratory->incident_id = $incident->id;
+      $laboratory->comments = $request->Lab_Comments; 
+      $laboratory->save();
        
        $flora = new Flora;
        $flora->id=$natural->id;   
@@ -159,6 +164,8 @@ class FloraController extends Controller
 
       return view('Detail_Forms.FloraForm',compact('patient1','patient2','back','ray'));
    }
+   
+ 
    
 }  
 

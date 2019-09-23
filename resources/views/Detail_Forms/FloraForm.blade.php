@@ -566,7 +566,7 @@
              
     <div data-panel="five">
         <h4>Laboratory Detail</h4>
-                   <textarea rows = "13" cols = "150" name = "Laboratory Detail"  placeholder="Enter laboratory detail here "></textarea>
+                   <textarea rows = "13" cols = "150" name = "Lab_Comments"  placeholder="Enter laboratory detail here "></textarea>
    </div>
      
      
