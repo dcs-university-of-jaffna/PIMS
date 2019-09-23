@@ -482,13 +482,37 @@
                           <label13>
                           <input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis <br>                          
                           <input type="checkbox" name ="AththanaClinical[]"    value="126" > Shock<br> 
-						  <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
+			   <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
                           </label13>  
                                                  
                                                 <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
-                     
+                    
+                       @elseif($ray==11)
+						 <input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br> 
+					         <input type="checkbox" name ="AththanaClinical[]" value="2"> Acute renal failure<br> 
+						 <input type="checkbox" name ="AththanaClinical[]"   value="25" >  Convulsion  <br>   
+						 <input type="checkbox" name ="AththanaClinical[]" value="34">	Diarrhoea<br>
+						 <input type="checkbox" name = "AththanaClinical[]" value="33"  > Demyelination<br>
+                                                 <input type="checkbox" name ="AththanaClinical[]" value="41">	Drowsiness   <br>
+						 <input type="checkbox" name ="AththanaClinical[]"    value="59" > Haematemesis<br>
+                                                <input type="checkbox" name = "AththanaClinical[]" value="67"  > Hepatotoxicity <br>   						 
+						
+        
+                          <label11> 
+						 <input type="checkbox" name ="AththanaClinical[]"    value="73" > Hypoglycemia<br>  
+						 <input type="checkbox" name = "AththanaClinical[]"  value="76"> Hypovolemic shock<br> 
+					         <input type="checkbox" name ="AththanaClinical[]" value="83"> Malena<br>
+					         <input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br>   
+						 <input type="checkbox" name ="AththanaClinical[]" value="103"> Pallor<br>
+						 <input type="checkbox" name = "AththanaClinical[]" value="119" > Retinal haemorrhage <br>							 
+                                                 <input type="checkbox" name = "AththanaClinical[]" value="135" > Tenderness <br> 
+						 <input type="checkbox" name = "AththanaClinical[]" value="144" > Vomiting <br> 
+						 </label11> 
+                                                 <br><br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
                        
             @endif
         
