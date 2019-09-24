@@ -65,6 +65,8 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 
 //------------------------------------------chamikara--------------------------------
 Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.show');
+Route::get('/incidents/{incident}/edit', 'IncidentController@edit')->name('incidents.edit');
+Route::patch('/incidents/{incident}', 'IncidentController@update')->name('incidents.update');
 
 
 

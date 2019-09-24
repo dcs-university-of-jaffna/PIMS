@@ -30,14 +30,10 @@ class Management extends Model
 {
     /**
      * Management has many Incidents
-     *
-     * @return belongsToMany()->result
      */
     public function incidents()
     {
-        return $this->belongsToMany(
-            'App\Incident', 'prescription', 'management_id', 'incident_id'
-        )
+        return $this->belongsToMany('App\Incident', 'prescription', 'management_id', 'incident_id')
             ->using('App\Prescription')
             ->withPivot('doctor_id')
             ->withTimestamps();
@@ -45,14 +41,10 @@ class Management extends Model
 
     /**
      * Management has many Users
-     *
-     * @return belongsToMany()->result
      */
     public function users()
     {
-        return $this->belongsToMany(
-            'App\User', 'prescription', 'management_id', 'doctor_id'
-        )
+        return $this->belongsToMany('App\User', 'prescription', 'management_id', 'doctor_id')
             ->using('App\Prescription')
             ->withPivot('incident_id')
             ->withTimestamps();

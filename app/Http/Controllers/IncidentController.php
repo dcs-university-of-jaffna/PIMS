@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class IncidentController extends Controller
 {
-    public function show(Incident $incident)
+    public function edit(Incident $incident)
     {
-        $symptoms = $incident->symptoms()->pluck('symptoms.id');
-        $managements = $incident->managements()->pluck('managements.id');
+        $symptoms = $incident->symptoms->pluck('id');
+        $managements = $incident->managements->pluck('id');
         $toxicity = $incident->toxicity->natural->flora;
-        return view('updates/diyakaduru', compact('incident', 'toxicity', 'symptoms', 'managements'));
+        return view('updates/edit', compact('incident', 'toxicity', 'symptoms', 'managements'));
+    }
+
+
+    public function update(Request $request, Incident $incident){
+        //$request = request();
+        dd($request);
     }
 }
 

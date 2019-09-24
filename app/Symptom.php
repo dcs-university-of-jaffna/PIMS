@@ -30,8 +30,6 @@ class Symptom extends Model
 {
     /**
      * Symptom has many Incidents
-     *
-     * @return belongsToMany()->result
      */
     public function incidents()
     {

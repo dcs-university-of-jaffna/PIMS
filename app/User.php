@@ -72,14 +72,10 @@ class User extends Authenticatable
 
     /**
      * User has many Incidents
-     *
-     * @return belongsToMany()->result
      */
     public function incidents()
     {
-        return $this->belongsToMany(
-            'App\Incident', 'prescription', 'doctor_id', 'incident_id'
-        )
+        return $this->belongsToMany('App\Incident', 'prescription', 'doctor_id', 'incident_id')
             ->using('App\Prescription')
             ->withPivot('management_id')
             ->withTimestamps();
@@ -87,14 +83,10 @@ class User extends Authenticatable
 
     /**
      * User has many Managements
-     *
-     * @return belongsToMany()->result
      */
     public function managements()
     {
-        return $this->belongsToMany(
-            'App\Management', 'prescription', 'doctor_id', 'management_id'
-        )
+        return $this->belongsToMany('App\Management', 'prescription', 'doctor_id', 'management_id')
             ->using('App\Prescription')
             ->withPivot('incident_id')
             ->withTimestamps();
