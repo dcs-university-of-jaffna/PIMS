@@ -262,7 +262,7 @@ label0{
 
 label11{
     position: absolute; 
-    left :35%;
+    left :33%;
     top:38%;
 }
 
@@ -277,4 +277,22 @@ h2{
     top:1%;  
     left :30%;
     color: window
+}
+
+label12{
+   position: absolute; 
+    left :55%;
+    top:45%; 
+}
+
+label13{
+   position: absolute; 
+    left :55%;
+    top:38%; 
+}
+
+label14{
+   position: absolute; 
+    left :75%;
+    top:38%; 
 }
