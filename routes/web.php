@@ -45,7 +45,7 @@ Route::post('/submit', 'BeeStringController@submit');
 
 //--------------------------------------Rayan--------------------------------------
 
-Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
+Route::get('/Flora_detail_form/{id}', 'FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 
