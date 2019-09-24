@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Incident;
-use DB;
+
 
 class FrontController extends Controller
 {
 
     public function show_save_record()
     {
-        $data = Incident::where('is_submited', 0)->latest()->paginate(10);
+        $data = incident::where('is_submited',0)->latest()->paginate(15);
         return view('home',compact('data'));
+
     }
 }
 
