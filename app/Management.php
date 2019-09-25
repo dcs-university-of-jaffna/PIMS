@@ -36,7 +36,7 @@ class Management extends Model
     public function incidents()
     {
         return $this->belongsToMany(
-            'App\Incident', 'prescriptions', 'management_id', 'incident_id'
+            'App\Incident', 'prescription', 'management_id', 'incident_id'
         )
             ->using('App\Prescription')
             ->withPivot('doctor_id')
@@ -51,7 +51,7 @@ class Management extends Model
     public function users()
     {
         return $this->belongsToMany(
-            'App\User', 'prescriptions', 'management_id', 'doctor_id'
+            'App\User', 'prescription', 'management_id', 'doctor_id'
         )
             ->using('App\Prescription')
             ->withPivot('incident_id')

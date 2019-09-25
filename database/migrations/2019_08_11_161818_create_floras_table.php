@@ -47,7 +47,7 @@ class CreateFlorasTable extends Migration
                 $table->string('circumstance')->nullable();
                 $table->string('poisoning_mode')->nullable();
                 $table->string('antidote')->nullable();
-                $table->unsignedInteger('activated_chracol_doses')->nullable();
+                $table->tinyInteger('activated_chracol_doses')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')
