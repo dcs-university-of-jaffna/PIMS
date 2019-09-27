@@ -95,7 +95,7 @@
       <div class="container">
          <h3>Pending</h3>
           <br>
-      @foreach($data as $value)
+      @foreach($savedata as $value)
         <div class="row" data-aos="fade">
          <div class="col-md-12">
 
@@ -124,11 +124,7 @@
            @endforeach
          </div>
         </div>
-        <div class="site-section bg-light">
-      <div class="container">
-         <h3>Submit</h3>
-          <br>
-      
+
    
 
 
