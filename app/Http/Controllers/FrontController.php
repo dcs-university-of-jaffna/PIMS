@@ -11,7 +11,9 @@ class FrontController extends Controller
 
     public function show_save_record()
     {
-        $data = incident::where('is_submited',0)->latest()->paginate(15);
+        $data = incident::with('Patient')
+        ->where('is_submited',0)->latest()->paginate(15);
+         //dd( $data);
         return view('home',compact('data'));
 
     }
