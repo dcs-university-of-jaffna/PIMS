@@ -105,13 +105,13 @@
                <div class="job-post-item-header d-flex align-items-center">
                  <h2 class="mr-3 text-black h4">{{$value->toxicity->sub_group}}</h2>
                  <div class="badge-wrap">
-                 <span class="bg-success text-white badge py-2 px-4"> :</span>
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->date}} : {{$value->time}}</span>
                   <span class="bg-info text-white badge py-2 px-4">{{$value->toxicity->name}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span></span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> area}}</span></div>
                </div>
               </div>
 

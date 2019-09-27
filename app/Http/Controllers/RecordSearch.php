@@ -14,13 +14,13 @@ class RecordSearch extends Controller
      
 
     $phn = $request->phn;
-    $data = Incident::with('toxicity','patient')
-            ->leftJoin('patients','patients.id','=','incidents.patient_id')
+    $data = Incident::
+              leftJoin('patients','patients.id','=','incidents.patient_id')
             ->join('toxicities','toxicities.id','=','incidents.toxicity_id')
             ->where('patients.phn','=', $phn)
             ->where('incidents.is_submited','=',0)
             ->get();
-    dd($data);
+   // dd($data);
     return view('record',compact('data','phn'));
    }
 
