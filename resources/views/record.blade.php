@@ -125,6 +125,39 @@
          </div>
         </div>
 
+        <div class="site-section bg-light">
+      <div class="container">
+         <h3>Submit</h3>
+          <br>
+          @foreach($submitdata as $value)
+        <div class="row" data-aos="fade">
+         <div class="col-md-12">
+
+           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+
+              <div class="mb-4 mb-md-0 mr-5">
+               <div class="job-post-item-header d-flex align-items-center">
+                 <h2 class="mr-3 text-black h4">{{$value->toxicity->sub_group}}</h2>
+                 <div class="badge-wrap">
+                 <span class="bg-success text-white badge py-2 px-4">{{$value->date}} : {{$value->time}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">{{$value->toxicity->name}}</span>
+                 </div>
+               </div>
+               <div class="job-post-item-body d-block d-md-flex">
+                 <div class="mr-3"><p>Site.</p></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> area}}</span></div>
+               </div>
+              </div>
+
+              <div class="ml-auto">
+   
+                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                <a href="{{('/View_Bee_Sting')}}" class="btn btn-warning py-2">view</a>
+              </div>
+           </div>
+           @endforeach
+         </div>
+        </div>
    
 
 
