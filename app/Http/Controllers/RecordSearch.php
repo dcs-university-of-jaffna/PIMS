@@ -11,8 +11,7 @@ use Illuminate\Database\Eloquent\Builder;
 class RecordSearch extends Controller
 {
    public function phnsearch(Request $request){
-     
-    
+   
     $phn = $request->phn;
     //serch save data using phn
     $savedata = Incident::
