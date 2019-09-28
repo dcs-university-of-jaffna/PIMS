@@ -248,7 +248,8 @@
               </div>
 
               <div class="ml-auto">
-                <a href="{{URL('/separateuser/'.$value->id)}}" class="btn btn-dark py-2">Update</a>
+              
+                <a href="/update/{{$value->id}}/edit" class="btn btn-dark py-2">Update</a>
               </div>
            </div>
           @endforeach

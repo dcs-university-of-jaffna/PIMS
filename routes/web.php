@@ -54,7 +54,6 @@ Route::get('/Aththana_detail_form1', function () {
     return view('Detail_Forms.AththanaFirst');
 });
 
-Route::get('/separateuser/{id}','HomeController@separate');
 
 Route::get('/incident/{id}', 'IncidentController@index')->name('incident.show');
 
@@ -108,6 +107,9 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 
 
 //------------------------------------------chathuranga------------------------------
+//Route::get('/separateuser/{id}','HomeController@separate');
+Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
+Route::patch('/update/{id}','update@update')->name('incident.update');
 
 
 

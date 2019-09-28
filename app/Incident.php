@@ -35,7 +35,7 @@ class Incident extends Model
      */
     public function patient()
     {
-        return $this->belongsTo('App\Patient');
+        return $this->belongsTo(Patient::class);
     }
 
     /**
@@ -45,7 +45,7 @@ class Incident extends Model
      */
     public function toxicity()
     {
-        return $this->belongsTo('App\Toxicity');
+        return $this->belongsTo(Toxicity::class);
     }
 
     /**

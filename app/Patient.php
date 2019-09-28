@@ -35,7 +35,7 @@ class Patient extends Model
      */
     public function incidents()
     {
-        return $this->hasMany('App\Incident');
+        return $this->hasMany(Incident::class);
     }
 }
 
