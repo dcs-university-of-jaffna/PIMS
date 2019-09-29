@@ -49,7 +49,7 @@ Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 
-//--------------------------------------Thushangi-----------------------------------
+//--------------------------------------Thushankgi-----------------------------------
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
@@ -62,6 +62,8 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::delete('/userPermission/{id}','SetUserPermissionController@destroy')->middleware('AuthenticateMiddleware');
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
+
+Route::get('Chemicals_Details/Carbamate_Insecticides','ChemicalController@index');
 
 //------------------------------------------chamikara--------------------------------
 
@@ -100,6 +102,3 @@ Route::get('/View_Diya_Kaduru', function () {
     return view('View_Diya_Kaduru');
 });
 
-Route::get('/Carbamate_Insecticides', function() {
-    return view('Chemicals_Details.Carbamate_Insecticides');
-});
