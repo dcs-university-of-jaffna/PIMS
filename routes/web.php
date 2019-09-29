@@ -103,4 +103,3 @@ Route::get('/View_Divi_kaduru', 'view_record_controller_phn_search@view_record')
 
 
 
-

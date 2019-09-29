@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Incident;
+use DB;
 
 class view_record_controller_phn_search extends Controller
 {
@@ -14,8 +16,15 @@ class view_record_controller_phn_search extends Controller
 
         if($request->toxicity_sub_group=='flora'){
             if($request->toxicity_name == 'Divikaduru'){
-              //  dd($request->incident_id);
-                return view('View_Divi_kaduru');
+               
+              $incident = Incident::find($request->incident_id);
+              $patient  = $incident->patient;
+              $toxicity = $incident->toxicity->natural->flora;
+              $symptom  = $incident->symptoms;
+              $management = $incident->managements();
+              $user    = $incident->users();                                          
+           
+                return view('View_Divi_kaduru',compact('incident','patient','toxicity','symptom','management','user'));
             }
         }
     }
