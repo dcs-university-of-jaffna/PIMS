@@ -19,7 +19,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Name : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="{{$incident->id}}" readonly>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->name}}" readonly>
       
         </div>
    </div>
@@ -28,7 +28,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">PHN : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="" readonly>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->phn}}" readonly>
    
         </div>
    </div>
@@ -43,7 +43,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Date : </label>
-        <input type="text" class="form-control" value ="" readonly>
+        <input type="text" class="form-control" value ="{{$incident->date}}" readonly>
          </div>
    </div>
     
@@ -51,7 +51,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Time : </label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$incident->time}}" readonly>
    
         </div>
    </div>
@@ -62,7 +62,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Part of plant : </label>
-        <input type="text" class="form-control" value=""  readonly>
+        <input type="text" class="form-control" value="{{$toxicity->natural->flora->plant_part}}"  readonly>
          </div>
    </div>
     
@@ -70,7 +70,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Region :</label>
-      <input type="text" class="form-control" value="" readonly>
+      <input type="text" class="form-control" value="{{$incident->area}}" readonly>
    
         </div>
    </div>
@@ -80,7 +80,7 @@
 <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->amount}}" readonly>
    
         </div>
    </div>
@@ -88,7 +88,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->circumstance}}" readonly>
    
         </div>
    </div>
@@ -99,7 +99,7 @@
      <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Mode of poisoning :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->poisoning_mode }}" readonly>
    
         </div>
     </div>
@@ -113,7 +113,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox" readonly value="" >
+            <input class="form-check-input"  type="checkbox" readonly value=" @if($symptom->id ==) checked @endif" >
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Dryness of mucous membrane 

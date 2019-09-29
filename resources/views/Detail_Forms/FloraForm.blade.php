@@ -114,7 +114,7 @@
                             <option value = "Velanai"> Velanai  </option>
                              <option value = "Outside Jaffna District"> Outside Jaffna District </option>
                         </select>
-                    </span>
+                        symptom    </span>
                </label3>  
             
                <label4> 04) Part of plant :
