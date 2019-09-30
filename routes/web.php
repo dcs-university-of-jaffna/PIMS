@@ -82,12 +82,6 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
-//Aththana view
-Route::get('/View_Aththana', function () {
-    return view('View_Aththana');
-});
-
-
 
 //Diya kaduru view
 Route::get('/View_Diya_Kaduru', function () {
@@ -98,7 +92,10 @@ Route::get('/View_Diya_Kaduru', function () {
 Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
 
 //Divi kaduru view show search phn
-Route::get('/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
+Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
+
+//Aththana view show search phn
+Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_record');
 
 
 
