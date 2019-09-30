@@ -18,14 +18,14 @@ class view_record_controller_phn_search extends Controller
 
   //Divikaduru        
             if($request->toxicity_name == 'Divikaduru'){
-               
+              
                   $incident = Incident::find($request->incident_id);
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;
                   $symptom  = $incident->symptoms;
                   $management = $incident->managements();
                   $user    = $incident->users();                                          
-           
+                  dd($symptom);
                 return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptom','management','user'));
             }
   
@@ -38,7 +38,7 @@ class view_record_controller_phn_search extends Controller
                   $symptom  = $incident->symptoms;
                   $management = $incident->managements();
                   $user    = $incident->users();                                          
-                 // dd($incident);
+                 // dd($symptom);
                 return view('/flora_view/View_Aththana',compact('incident','patient','toxicity','symptom','management','user'));
             }  
 
