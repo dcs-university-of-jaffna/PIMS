@@ -106,8 +106,32 @@ class view_record_controller_phn_search extends Controller
               return view('/flora_view/Hondala',compact('incident','patient','toxicity','symptom','management','user'));
            } 
 
+  //Kaneru 
+            else if($request->toxicity_name == 'Kaneru'){
+                                                                          
+                $incident = Incident::find($request->incident_id);
+                $patient  = $incident->patient;
+                $toxicity = $incident->toxicity->natural->flora;
+                $symptom  = $incident->symptoms;
+                $management = $incident->managements();
+                $user    = $incident->users();                                          
+                // dd($incident);
+                return view('/flora_view/Kaneru',compact('incident','patient','toxicity','symptom','management','user'));
+           } 
 
 
+//Kepunkiriya 
+           else if($request->toxicity_name == 'Kepunkiriya'){
+                                                                          
+            $incident = Incident::find($request->incident_id);
+            $patient  = $incident->patient;
+            $toxicity = $incident->toxicity->natural->flora;
+            $symptom  = $incident->symptoms;
+            $management = $incident->managements();
+            $user    = $incident->users();                                          
+            // dd($incident);
+            return view('/flora_view/Kepunkiriya',compact('incident','patient','toxicity','symptom','management','user'));
+       } 
 
 
 
