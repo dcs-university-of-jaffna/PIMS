@@ -82,11 +82,7 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
-
-//Diya kaduru view
-Route::get('/View_Diya_Kaduru', function () {
-    return view('View_Diya_Kaduru');
-});
+//----------------flora----------------------
 
 //show record for search phn value usiing incident->id
 Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
@@ -99,6 +95,10 @@ Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_
 
 //Diya Kaduru view show search phn
 Route::get('/flora_view/View_Diya_Kaduru', 'view_record_controller_phn_search@view_record');
+
+//Endara view show search phn
+Route::get('/flora_view/Endara', 'view_record_controller_phn_search@view_record');
+
 
 
 
