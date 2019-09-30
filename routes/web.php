@@ -97,6 +97,8 @@ Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@vi
 //Aththana view show search phn
 Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_record');
 
+//Diya Kaduru view show search phn
+Route::get('/flora_view/View_Diya_Kaduru', 'view_record_controller_phn_search@view_record');
 
 
 
