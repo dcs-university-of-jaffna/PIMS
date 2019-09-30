@@ -118,7 +118,7 @@ Route::get('/flora_view/Kepunkiriya', 'view_record_controller_phn_search@view_re
 //Niyagala view show search phn
 Route::get('/flora_view/Niyagala', 'view_record_controller_phn_search@view_record');
 
-
-
+//Olinda view show search phn
+Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record');
 
 
