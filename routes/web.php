@@ -122,3 +122,9 @@ Route::get('/flora_view/Niyagala', 'view_record_controller_phn_search@view_recor
 Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record');
 
 
+//Unknown_plant_poisoning view show search phn
+Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
+
+
+
+

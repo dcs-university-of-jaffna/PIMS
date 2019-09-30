@@ -158,9 +158,21 @@ class view_record_controller_phn_search extends Controller
               $user    = $incident->users();                                          
               // dd($incident);
               return view('/flora_view/Olinda',compact('incident','patient','toxicity','symptom','management','user'));
-          } 
+             } 
 
+  //Unknown plant poisoning
 
+          else if($request->toxicity_name == 'Unknown plant poisoning'){
+                                                                                                        
+            $incident = Incident::find($request->incident_id);
+            $patient  = $incident->patient;
+            $toxicity = $incident->toxicity->natural->flora;
+            $symptom  = $incident->symptoms;
+            $management = $incident->managements();
+            $user    = $incident->users();                                          
+            // dd($incident);
+            return view('/flora_view/Unknown_plant_poisoning',compact('incident','patient','toxicity','symptom','management','user'));
+        } 
 
 
         }
