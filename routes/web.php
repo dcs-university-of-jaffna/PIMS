@@ -105,6 +105,10 @@ Route::get('/flora_view/Godakaduru', 'view_record_controller_phn_search@view_rec
 //Habarala view show search phn
 Route::get('/flora_view/Habarala', 'view_record_controller_phn_search@view_record');
 
+//Habarala view show search phn
+Route::get('/flora_view/Hondala', 'view_record_controller_phn_search@view_record');
+
+
 
 
 
