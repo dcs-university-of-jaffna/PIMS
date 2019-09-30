@@ -113,10 +113,10 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox" readonly value=" " >
+            <input class="form-check-input"  type="checkbox" readonly value="@if($symptom->id==30) checked @endif" >
             
             <label class="form-check-label" for="gridCheck">
-               &nbsp;  Dryness of mucous membrane 
+               &nbsp;  Cycloplegia
             </label>
             </div>
         </div>
@@ -127,7 +127,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp; Delirium  
+            &nbsp; Convulsion 
             </label>
             </div>
         </div>
@@ -138,7 +138,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Dilation of pupils 
+            &nbsp;   Delirium
             </label>
             </div>
         </div>
@@ -151,7 +151,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Disturbance of consciousness 
+            &nbsp;  Dilation of pupils
             </label>
             </div>
         </div>
@@ -162,7 +162,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Convulsion  
+            &nbsp;  Disturbance of consciousnessvalue  
             </label>
             </div>
         </div>
@@ -173,7 +173,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;     Eye inflammation 
+            &nbsp;     Dryness of mucous membrane 
             </label>
             </div>
         </div>
@@ -186,7 +186,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp; Flushing of face
+            &nbsp; Eye inflammation 
             </label>
             </div>
         </div>
@@ -197,7 +197,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Fits   
+            &nbsp;  Fits 
             </label>
             </div>
         </div>
@@ -222,7 +222,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Hallucinogenic_effects 
+            &nbsp;  Flushing of face 
             </label>
             </div>
         </div>
@@ -233,7 +233,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Talkativeness   
+            &nbsp;   Hallucinogenic_effects     
             </label>
             </div>
         </div>
@@ -244,7 +244,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;     Thirst  
+            &nbsp;     Psychomotor_disturbances 
             </label>
             </div>
         </div>
@@ -257,17 +257,23 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" readonly value="">
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Psychomotor_disturbances 
+            &nbsp;   Talkativeness 
             </label>
             </div>
         </div>
    </div>
     
    <div class="col">
-        <div class="form-group">  
+   <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="">
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Thirst
+            </label>
+            </div>
         </div>
    </div>
-
+ 
    <div class="col">
         <div class="form-group">
          </div> 
