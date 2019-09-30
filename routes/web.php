@@ -49,7 +49,7 @@ Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 
-//--------------------------------------Thushankgi-----------------------------------
+//--------------------------------------Thushangi-----------------------------------
 
 Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], function () {
     //admin routes
@@ -63,7 +63,8 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
-Route::get('Chemicals_Details/Carbamate_Insecticides','ChemicalController@index');
+Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+Route::get('Chemicals_Details/First_Page','ChemicalController@firstpage');
 
 //------------------------------------------chamikara--------------------------------
 
@@ -82,23 +83,25 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
-//bee string view
-Route::get('/View_Bee_Sting', function () {
-    return view('View_Bee_Sting');
-});
-
 //Aththana view
 Route::get('/View_Aththana', function () {
     return view('View_Aththana');
 });
 
-//Divi kaduru view
-Route::get('/View_Divi_kaduru', function () {
-    return view('View_Divi_kaduru');
-});
+
 
 //Diya kaduru view
 Route::get('/View_Diya_Kaduru', function () {
     return view('View_Diya_Kaduru');
 });
+
+//show record for search phn value usiing incident->id
+Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
+
+//Divi kaduru view show search phn
+Route::get('/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
+
+
+
+
 

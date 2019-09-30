@@ -84,5 +84,10 @@ class ChemicalController extends Controller
                     'managementData14','managementData15','managementData16','managementData17',
                     'managementData18','managementData19','managementData20','managementData21'));
     }
+
+    public function firstpage()
+    {
+        return view('Chemicals_Details.First_Page');
+    }
 }
 
