@@ -5,6 +5,7 @@
  * License : MIT
  * Author : blivesta (http://blivesta.com/)
  */
+
 ;(function (factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {

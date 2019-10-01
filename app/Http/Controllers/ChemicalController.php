@@ -9,6 +9,12 @@ use App\Management;
 
 class ChemicalController extends Controller
 {
+
+    public function firstpage()
+    {
+        return view('Chemicals_Details.First_Page');
+    }
+    
     public function index()
     {
         $clinicalData1 = Symptom::select('name')->where('id',89)->get();
@@ -83,11 +89,6 @@ class ChemicalController extends Controller
                     'managementData9','managementData10','managementData11','managementData12','managementData13',
                     'managementData14','managementData15','managementData16','managementData17',
                     'managementData18','managementData19','managementData20','managementData21'));
-    }
-
-    public function firstpage()
-    {
-        return view('Chemicals_Details.First_Page');
     }
 }
 
