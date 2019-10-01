@@ -23,7 +23,7 @@ $factory->define(
             'place_of_sting' => $faker-> randomElement(array('indoor', 'garden', 'paddyfield', 'road', 'forest', 'unutilized land', 'other')),
             'sting_site' => $faker-> randomElement(array('head&neck', 'upperlimb', 'leg', 'foot&ankle', 'abdomen', 'other')),
             'circumstance' => $faker-> randomElement(array('provoked', 'unprovoked')),
-            'comments' => $faker->userName,
+            'avs_vials' => $faker-> numberBetween($min = 1, $max = 20),
         ];
     }
 );

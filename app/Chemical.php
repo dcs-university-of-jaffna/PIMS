@@ -8,12 +8,10 @@ class Chemical extends Model
 {
     /**
      * Chemical is a subclass of Toxicity
-     *
-     * @return belongsTo()->result
      */
     public function toxicity()
     {
-        return $this->belongsTo('App\Toxicity');
+        return $this->belongsTo('App\Toxicity','id');
     }
 
     public function Symptom()

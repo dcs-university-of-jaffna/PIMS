@@ -78,7 +78,7 @@ class User extends Authenticatable
     public function incidents()
     {
         return $this->belongsToMany(
-            'App\Incident', 'prescriptions', 'doctor_id', 'incident_id'
+            'App\Incident', 'prescription', 'doctor_id', 'incident_id'
         )
             ->using('App\Prescription')
             ->withPivot('management_id')
@@ -93,7 +93,7 @@ class User extends Authenticatable
     public function managements()
     {
         return $this->belongsToMany(
-            'App\Management', 'prescriptions', 'doctor_id', 'management_id'
+            'App\Management', 'prescription', 'doctor_id', 'management_id'
         )
             ->using('App\Prescription')
             ->withPivot('incident_id')
