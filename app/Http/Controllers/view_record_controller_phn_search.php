@@ -15,16 +15,17 @@ class view_record_controller_phn_search extends Controller
          pass the value */
 //Flora
         if($request->toxicity_sub_group=='flora'){
+
   //Divikaduru        
             if($request->toxicity_name == 'Divikaduru'){
-               
+              
                   $incident = Incident::find($request->incident_id);
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;
                   $symptom  = $incident->symptoms;
                   $management = $incident->managements();
                   $user    = $incident->users();                                          
-           
+                  dd($symptom);
                 return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptom','management','user'));
             }
   
@@ -37,12 +38,12 @@ class view_record_controller_phn_search extends Controller
                   $symptom  = $incident->symptoms;
                   $management = $incident->managements();
                   $user    = $incident->users();                                          
-                 // dd($incident);
+                 // dd($symptom);
                 return view('/flora_view/View_Aththana',compact('incident','patient','toxicity','symptom','management','user'));
             }  
 
    //Diyakaduru
-            else if($request->toxicity_name == 'Diyakaduru'){
+            else if($request->toxicity_name == 'DiyaKaduru'){
                                       
                 $incident = Incident::find($request->incident_id);
                 $patient  = $incident->patient;
@@ -55,7 +56,7 @@ class view_record_controller_phn_search extends Controller
             } 
 
   //Endara
-            else if($request->toxicity_name == 'Endara'){
+            else if($request->toxicity_name == 'Endaru'){
                                       
               $incident = Incident::find($request->incident_id);
               $patient  = $incident->patient;
@@ -64,11 +65,11 @@ class view_record_controller_phn_search extends Controller
               $management = $incident->managements();
               $user    = $incident->users();                                          
             // dd($incident);
-             return view('/flora_view/Endara',compact('incident','patient','toxicity','symptom','management','user'));
+             return view('/flora_view/Endaru',compact('incident','patient','toxicity','symptom','management','user'));
           } 
   
   //Godakaduru
-            else if($request->toxicity_name == 'Godakaduru'){
+            else if($request->toxicity_name == 'GodaKaduru'){
                                                 
               $incident = Incident::find($request->incident_id);
               $patient  = $incident->patient;
@@ -123,6 +124,46 @@ class view_record_controller_phn_search extends Controller
 //Kepunkiriya 
            else if($request->toxicity_name == 'Kepunkiriya'){
                                                                           
+                $incident = Incident::find($request->incident_id);
+                $patient  = $incident->patient;
+                $toxicity = $incident->toxicity->natural->flora;
+                $symptom  = $incident->symptoms;
+                $management = $incident->managements();
+                $user    = $incident->users();                                          
+                // dd($incident);
+                return view('/flora_view/Kepunkiriya',compact('incident','patient','toxicity','symptom','management','user'));
+            } 
+
+ //Niyagala
+            else if($request->toxicity_name == 'Niyagala'){
+                                                                                      
+                $incident = Incident::find($request->incident_id);
+                $patient  = $incident->patient;
+                $toxicity = $incident->toxicity->natural->flora;
+                $symptom  = $incident->symptoms;
+                $management = $incident->managements();
+                $user    = $incident->users();                                          
+                // dd($incident);
+                return view('/flora_view/Niyagala',compact('incident','patient','toxicity','symptom','management','user'));
+            } 
+  //Olinda
+
+            else if($request->toxicity_name == 'Olinda'){
+                                                                                                
+              $incident = Incident::find($request->incident_id);
+              $patient  = $incident->patient;
+              $toxicity = $incident->toxicity->natural->flora;
+              $symptom  = $incident->symptoms;
+              $management = $incident->managements();
+              $user    = $incident->users();                                          
+              // dd($incident);
+              return view('/flora_view/Olinda',compact('incident','patient','toxicity','symptom','management','user'));
+             } 
+
+  //Unknown plant poisoning
+
+          else if($request->toxicity_name == 'Unknown plant poisoning'){
+                                                                                                        
             $incident = Incident::find($request->incident_id);
             $patient  = $incident->patient;
             $toxicity = $incident->toxicity->natural->flora;
@@ -130,16 +171,8 @@ class view_record_controller_phn_search extends Controller
             $management = $incident->managements();
             $user    = $incident->users();                                          
             // dd($incident);
-            return view('/flora_view/Kepunkiriya',compact('incident','patient','toxicity','symptom','management','user'));
-       } 
-
-
-
-
-
-
-
-
+            return view('/flora_view/Unknown_plant_poisoning',compact('incident','patient','toxicity','symptom','management','user'));
+        } 
 
 
         }

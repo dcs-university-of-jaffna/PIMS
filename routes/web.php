@@ -98,8 +98,8 @@ Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_
 //Diya Kaduru view show search phn
 Route::get('/flora_view/View_Diya_Kaduru', 'view_record_controller_phn_search@view_record');
 
-//Endara view show search phn
-Route::get('/flora_view/Endara', 'view_record_controller_phn_search@view_record');
+//Endaru view show search phn
+Route::get('/flora_view/Endaru', 'view_record_controller_phn_search@view_record');
 
 //Godakaduru view show search phn
 Route::get('/flora_view/Godakaduru', 'view_record_controller_phn_search@view_record');
@@ -117,6 +117,15 @@ Route::get('/flora_view/Kaneru', 'view_record_controller_phn_search@view_record'
 //Kepunkiriya view show search phn
 Route::get('/flora_view/Kepunkiriya', 'view_record_controller_phn_search@view_record');
 
+//Niyagala view show search phn
+Route::get('/flora_view/Niyagala', 'view_record_controller_phn_search@view_record');
+
+//Olinda view show search phn
+Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record');
+
+
+//Unknown_plant_poisoning view show search phn
+Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
 
 
 
