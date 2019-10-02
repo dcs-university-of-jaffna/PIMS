@@ -113,7 +113,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox" readonly value="@if($symptom->id==30) checked @endif" >
+            <input class="form-check-input"  type="checkbox" readonly value="" >
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Cycloplegia

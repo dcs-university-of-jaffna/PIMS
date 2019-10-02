@@ -25,7 +25,7 @@ class view_record_controller_phn_search extends Controller
                   $symptom  = $incident->symptoms;
                   $management = $incident->managements();
                   $user    = $incident->users();                                          
-                  dd($symptom);
+                
                 return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptom','management','user'));
             }
   
