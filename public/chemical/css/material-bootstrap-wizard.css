@@ -146,7 +146,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   padding-top: 100px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
-    position: relative; }
+    position: relative;}
 
 h1, .h1 {
   font-size: 3.8em;
@@ -210,12 +210,12 @@ h2.title {
   color: #00bcd4; }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: whitesmoke;
   padding: 10px 0;
   width: 100%;
   border-radius: 6px;
   color: rgba(0,0,0, 0.87);
-  background: #fff; }
+   }
 
 .wizard-card {
   min-height: 410px;
