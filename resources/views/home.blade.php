@@ -136,7 +136,7 @@
                             Pesticides
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <li><a class="dropdown-item" href="{{url('/Carbamate_Insecticides')}}">Carbamate Insecticides</a></li>
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page"> Carbamate Insecticides </a></li>
                             <li><a class="dropdown-item" href="#">Chlorophenoxy Compounds</a></li>   
                             <li><a class="dropdown-item" href="#">Coumarins</a></li>   
                             <li><a class="dropdown-item" href="#">Dithiocarbamate</a></li>   
