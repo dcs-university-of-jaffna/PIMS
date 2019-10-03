@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Incident;
+use App\Symptom;
+
 use DB;
 
 class view_record_controller_phn_search extends Controller
@@ -20,13 +22,14 @@ class view_record_controller_phn_search extends Controller
             if($request->toxicity_name == 'Divikaduru'){
               
                   $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
                   $patient  = $incident->patient;
-                  $toxicity = $incident->toxicity->natural->flora;
-                  $symptom  = $incident->symptoms;
-                  $management = $incident->managements();
+                  $toxicity = $incident->toxicity->natural->flora;     
+                  $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                          
-                
-                return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptom','management','user'));
+            
+                 // dd( $toxicity);
+                return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptoms','management','user'));
             }
   
    //Ahthana
