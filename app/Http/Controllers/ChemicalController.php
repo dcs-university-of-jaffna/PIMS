@@ -6,13 +6,19 @@ use App\Symptom;
 use App\Chemical;
 use App\Management;
 use App\Patient;
+use App\Toxicity;
+use App\Incident;
 
 class ChemicalController extends Controller
 {
-
-    public function firstpage()
+    public function firstpage($id)
     {
-        return view('Chemicals_Details.First_Page');
+        if($id==1)
+        {
+            $id = 'Carbamate_Insecticides';
+            //$toxicityData1->save();
+        }
+        return view('Chemicals_Details.First_Page',compact('id'));
     }
     
     public function index(Request $request)
@@ -20,6 +26,7 @@ class ChemicalController extends Controller
         $phn = new Patient();
         $phn->phn = $request->phn;
         $phn->save();
+
         $clinicalData1 = Symptom::select('name')->where('id',89)->get();
         $clinicalData2 = Symptom::select('name')->where('id',144)->get();
         $clinicalData3 = Symptom::select('name')->where('id',216)->get();
@@ -96,13 +103,30 @@ class ChemicalController extends Controller
 
     public function save(Request $request)
     {
-        $data = new Chemical();
-        $data->sub_group = 'pesticides';
-        $data->amount=$request->amount;
-        $data->poisoning_mode=$request->mode;
-        $data->circumstance=$request->circumstances;
-        $data->save();
-        return 'done';
+        $toxicityData = new Toxicity();
+        $toxicityData->main_group = 'chemicals';
+        $toxicityData->sub_group = 'pesticides';
+        if($this->firstpage(1))
+        {
+            $toxicityData->name = 'Carbamate_Insecticides';
+        };
+        $toxicityData->save();
+
+        $chemicalData = new Chemical();
+        $chemicalData->sub_group = 'pesticides';
+        $chemicalData->amount = $request->amount;
+        $chemicalData->poisoning_mode = $request->mode;
+        $chemicalData->circumstance = $request->circumstances;
+        $chemicalData->save();
+
+        // $incidentsData = new Incident();
+        // //$patientData = Patient::select('id')->where('name',$this->index('phn'));
+        // $incidentsData->patient_id="23";
+        // $toxicityDat = Toxicity::select('id')->where('name','=',$this->firstpage(1));
+        // $incidentsData->toxicity_id=$toxicityDat;
+        // $incidentsData->save();
+
+        return redirect('/home'); 
     }
 
 }

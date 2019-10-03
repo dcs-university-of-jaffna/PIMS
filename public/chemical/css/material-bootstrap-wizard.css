@@ -147,13 +147,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 15px;
 }
 .above {
-  padding-top: 2px;
-  color:black;
+  padding-top: 5px;
+  color: white;
   font-size: 15px;
-  margin-left: 10px;
 }
 .wizard-container {
-  padding-top: 2px;
+  padding-top: 5px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative;}

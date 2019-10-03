@@ -42,7 +42,7 @@
 	        </div>
         </a>
         
-        <a href="/Chemicals_Details/First_Page">
+        <a href="{{URL::previous()}}">
             <div class="right-container">
                <div class="right">
                    <img src="{{asset('chemical/img/back-button.png')}}" style="width:60px;height:60px">
@@ -63,18 +63,17 @@
                     <div>
                         <h6 class="upper" name="chemicals"> Main_Group -> Chemicals </h6>
                     </div> 
-                     
+                    <div>
+                        <h6 class="above" name="pesticides"> Sub_Group -> Pesticides </h6>
+                    </div>
 		            <!--      Wizard container        -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="green" id="wizardProfile">
 		                    <form action="{{url('Chemicals_Details/Submitted')}}">
 		                <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
-                            <div>
-                                <h6 class="above" name="pesticides"> Sub_Group -> Pesticides </h6>
-                            </div>
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
-		                        	   Details of Carbamate Insecticides
+		                        	   Details of Carbamate_Insecticides
 		                        	</h3>
 		                    	</div>
 								<div class="wizard-navigation">
@@ -104,7 +103,7 @@
 														<i class="material-icons">calendar_today</i>
 													</span>
 													<div class="form-group label-floating">
-			                                          <label class="control-label">Date <small></small></label>
+			                                          <label class="control-label"> <small>Date</small></label>
 			                                          <input name="date" type="date" class="form-control">
 			                                        </div>
 												</div>
@@ -114,7 +113,7 @@
 														<i class="material-icons">access_time</i>
 													</span>
 													<div class="form-group label-floating">
-													  <label class="control-label">Time <small></small></label>
+													  <label class="control-label"><small>Time</small></label>
 													  <input name="time" type="time" class="form-control">
 													</div>
 												</div>
@@ -125,7 +124,7 @@
 														<i class="material-icons">opacity</i>
 													</span>
 													<div class="form-group label-floating">
-			                                            <label class="control-label">Amount* <small></small></label>
+			                                            <label class="control-label"><small>Amount* </small></label>
 			                                            <input name="amount" type="text" class="form-control">
 			                                        </div>
 												</div>
@@ -134,7 +133,7 @@
 														<i class="material-icons">pets</i>
 													</span>
 													<div class="form-group label-floating">
-														<label class="control-label">Mode <small></small></label>
+														<label class="control-label"><small>Mode</small></label>
 														<select name="mode" class="form-control"> 
 															<option> --Select Mode of Poisoning-- </option>
 															<option value="oral ingestion"> oral ingestion </option>
@@ -150,7 +149,7 @@
 														<i class="material-icons">rv_hookup</i>
 													</span>
 													<div class="form-group label-floating">
-														<label class="control-label">Circumstances <small></small></label>
+														<label class="control-label"><small> Circumstances </small></label>
 														<select name="circumstances" class="form-control"> 
 															<option> --Select the Circumstances-- </option>
 															<option value="accidental"> accidental </option>
