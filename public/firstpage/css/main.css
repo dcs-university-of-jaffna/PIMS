@@ -45,7 +45,28 @@ body, html {
 	height: 100%;
   font-family: Poppins-Regular, sans-serif;
 }
-
+.logo-container{
+  left: 50px;
+  position: absolute;
+  top: 20px;
+  z-index: 3;
+}
+.logo-container .logo{
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  width: 100px;
+  float: left;
+}
+.logo-container .brand{
+  font-size: 18px;
+  color: #FFF;
+  line-height: 20px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 60px
+}
 /*---------------------------------------------*/
 a {
 	font-family: Poppins-Regular;
@@ -178,7 +199,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/
 
-.container-contact100 {
+.container-contact11 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -190,11 +211,11 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-image: url('../images/chemical-background-vector-1366048.jpg');
+  background-image: url('../images/Chemistry-Widescreen-Wallpaper.jpg');
  
 }
 
-.wrap-contact100 {
+.wrap-contact11 {
   width: 965px;
   background: #fff;
   overflow: hidden;
@@ -211,7 +232,7 @@ iframe {
 
 /*==================================================================
 [ Contact more ]*/
-.contact100-more {
+.contact11-more {
   width: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +242,7 @@ iframe {
   padding: 30px 15px 0px 15px;
 }
 
-.contact100-more::before {
+.contact11-more::before {
   content: "";
   display: block;
   position: absolute;
@@ -238,7 +259,7 @@ iframe {
 /*==================================================================
 [ Form ]*/
 
-.contact100-form {
+.contact11-form {
   width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -249,7 +270,7 @@ iframe {
   padding: 56px 55px 63px 55px;
 }
 
-.contact100-form-title {
+.contact11-form-title {
   width: 100%;
   display: block;
   font-family: Poppins-Regular;
@@ -265,22 +286,22 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
-.wrap-input100 {
+.wrap-input11 {
   width: 100%;
   position: relative;
   border: 1px solid black;
 }
 
-.rs1-wrap-input100,
-.rs2-wrap-input100 {
+.rs1-wrap-input11,
+.rs2-wrap-input11 {
   width: 50%;
 }
 
-.rs2-wrap-input100 {
+.rs2-wrap-input11 {
   border-left: none;
 }
 
-.label-input100 {
+.label-input11 {
   font-family: Poppins-Regular;
   font-size: 12px;
   color: black;
@@ -303,7 +324,7 @@ iframe {
   margin-bottom: 0;
 }
 
-.input100 {
+.input11 {
   display: block;
   width: 100%;
   background: transparent;
@@ -314,12 +335,12 @@ iframe {
   padding: 0 25px;
 }
 
-input.input100 {
+input.input11 {
   height: 55px;
 }
 
 
-textarea.input100 {
+textarea.input11 {
   min-height: 139px;
   padding-top: 19px;
   padding-bottom: 15px;
@@ -327,7 +348,7 @@ textarea.input100 {
 
 /*---------------------------------------------*/
 
-.focus-input100 {
+.focus-input11 {
   position: absolute;
   display: block;
   width: calc(100% + 2px);
@@ -352,7 +373,7 @@ textarea.input100 {
   transform: scaleX(1.1) scaleY(1.3);
 }
 
-.input100:focus + .focus-input100 {
+.input11:focus + .focus-input11 {
   visibility: visible;
   opacity: 1;
 
@@ -367,7 +388,7 @@ textarea.input100 {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-contact100-form-btn {
+.container-contact11-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -379,7 +400,7 @@ textarea.input100 {
   padding-top: 23px;
 }
 
-.contact100-form-btn {
+.contact11-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -406,7 +427,7 @@ textarea.input100 {
   transition: all 0.4s;
 }
 
-.contact100-form-btn:hover {
+.contact11-form-btn:hover {
   background: #333333;
 }
 
@@ -416,37 +437,37 @@ textarea.input100 {
 [ Responsive ]*/
 
 @media (max-width: 992px) {
-  .contact100-form {
+  .contact11-form {
     width: 60%;
     padding: 56px 30px 63px 30px;
   }
 
-  .contact100-more {
+  .contact11-more {
     width: 40%;
   }
 }
 
 @media (max-width: 768px) {
-  .contact100-form {
+  .contact11-form {
     width: 100%;
   }
 
-  .contact100-more {
+  .contact11-more {
     width: 100%;
   }
 }
 
 @media (max-width: 576px) {
-  .contact100-form {
+  .contact11-form {
     padding: 56px 15px 63px 15px;
   }
 
-  .rs1-wrap-input100,
-  .rs2-wrap-input100 {
+  .rs1-wrap-input11,
+  .rs2-wrap-input11 {
     width: 100%;
   }
 
-  .rs2-wrap-input100 {
+  .rs2-wrap-input11 {
     border-left: 1px solid #e6e6e6;
     border-top: none;
   }

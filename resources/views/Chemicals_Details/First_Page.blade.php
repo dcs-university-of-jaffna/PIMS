@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,29 +29,37 @@
 <!--===============================================================================================-->
 </head>
 <body>
+		<a href="/home">
+			<div class="logo-container">
+			   <div class="logo">
+				   <img src="{{asset('chemical/img/gettyimages-183881669-612x612.jpg')}}" style="weidth:80px;height:80px">
+			   </div>
+			   <div class="brand">
+				   Go To Home
+			   </div>
+		   </div>
+	   </a>
 
-
-	<div class="container-contact100">
-		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" action="{{url('Chemicals_Details/Carbamate_Insecticides/{id}')}}">
-				<span class="contact100-form-title">
-					Verify Patient
+	<div class="container-contact11">
+		<div class="wrap-contact11">
+			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/Carbamate_Insecticides/{id}')}}" mehod="post">
+				<span class="contact11-form-title">
+					Verify Patient for {{$id}}
 				</span>
 
-				<label class="label-input100" for="phone">Enter Patient's PHN Number</label>
-				<div class="wrap-input100">
-					<input id="phone" class="input100" type="text" name="phone" required>
-					<span class="focus-input100"></span>
+				<label class="label-input11" for="phn">Enter Patient's PHN Number</label>
+				<div class="wrap-input11">
+					<input id="phn" class="input11" type="text" name="phn" pattern="[0-9]{11}" title = "Please enter only number" maxlength="11">
+					<span class="focus-input11"></span>
 				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+				<div class="container-contact11-form-btn">
+					<button class="contact11-form-btn">
 						Verify
 					</button>
 				</div>
 			</form>
 
-			<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+			<div class="contact11-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
 				<div class="flex-w size1 p-b-47">
 					<div class="txt1 p-r-25">
 						<span class="lnr lnr-map-marker"></span>

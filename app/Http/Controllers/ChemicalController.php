@@ -5,18 +5,28 @@ use Illuminate\Http\Request;
 use App\Symptom;
 use App\Chemical;
 use App\Management;
-
+use App\Patient;
+use App\Toxicity;
+use App\Incident;
 
 class ChemicalController extends Controller
 {
-
-    public function firstpage()
+    public function firstpage($id)
     {
-        return view('Chemicals_Details.First_Page');
+        if($id==1)
+        {
+            $id = 'Carbamate_Insecticides';
+            //$toxicityData1->save();
+        }
+        return view('Chemicals_Details.First_Page',compact('id'));
     }
     
-    public function index()
+    public function index(Request $request)
     {
+        $phn = new Patient();
+        $phn->phn = $request->phn;
+        $phn->save();
+
         $clinicalData1 = Symptom::select('name')->where('id',89)->get();
         $clinicalData2 = Symptom::select('name')->where('id',144)->get();
         $clinicalData3 = Symptom::select('name')->where('id',216)->get();
@@ -76,7 +86,7 @@ class ChemicalController extends Controller
         $managementData19 = Symptom::select('name')->where('id',52)->get();
         $managementData20 = Symptom::select('name')->where('id',55)->get();
         $managementData21 = Symptom::select('name')->where('id',54)->get();
-        return view('Chemicals_Details.Carbamate_Insecticides',compact('clinicalData1','clinicalData2',
+        return view('Chemicals_Details.Carbamate_Insecticides',compact('phn','clinicalData1','clinicalData2',
                     'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                     'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                     'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -90,5 +100,34 @@ class ChemicalController extends Controller
                     'managementData14','managementData15','managementData16','managementData17',
                     'managementData18','managementData19','managementData20','managementData21'));
     }
+
+    public function save(Request $request)
+    {
+        $toxicityData = new Toxicity();
+        $toxicityData->main_group = 'chemicals';
+        $toxicityData->sub_group = 'pesticides';
+        if($this->firstpage(1))
+        {
+            $toxicityData->name = 'Carbamate_Insecticides';
+        };
+        $toxicityData->save();
+
+        $chemicalData = new Chemical();
+        $chemicalData->sub_group = 'pesticides';
+        $chemicalData->amount = $request->amount;
+        $chemicalData->poisoning_mode = $request->mode;
+        $chemicalData->circumstance = $request->circumstances;
+        $chemicalData->save();
+
+        // $incidentsData = new Incident();
+        // //$patientData = Patient::select('id')->where('name',$this->index('phn'));
+        // $incidentsData->patient_id="23";
+        // $toxicityDat = Toxicity::select('id')->where('name','=',$this->firstpage(1));
+        // $incidentsData->toxicity_id=$toxicityDat;
+        // $incidentsData->save();
+
+        return redirect('/home'); 
+    }
+
 }
 
