@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +42,7 @@
 
 	<div class="container-contact11">
 		<div class="wrap-contact11">
-			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/Carbamate_Insecticides/{id}')}}">
+			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/Carbamate_Insecticides')}}">
 				<span class="contact11-form-title">
 					Verify Patient
 				</span>

@@ -1,4 +1,4 @@
-/*!
+  /byjgf trv bjhymu*!
 
  =========================================================
  * Material Bootstrap Wizard - v1.0.2
@@ -141,9 +141,19 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     .made-with-mk .made-with strong {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.9); }
-
+.upper {
+  padding-top: 30px;
+  color: white;
+  font-size: 15px;
+}
+.above {
+  padding-top: 2px;
+  color:black;
+  font-size: 15px;
+  margin-left: 10px;
+}
 .wizard-container {
-  padding-top: 100px;
+  padding-top: 2px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative;}
@@ -223,14 +233,15 @@ h2.title {
   .wizard-card .picture-container {
     position: relative;
     cursor: pointer;
-    text-align: center; }
+    text-align: center;
+  top: 50px; }
   .wizard-card .picture {
     width: 106px;
-    height: 106px;
+    height: 30px;
     background-color: #999999;
     border: 4px solid #CCCCCC;
-    color: #FFFFFF;
-    border-radius: 50%;
+    color:black;
+    border-radius: 20%;
     margin: 5px auto;
     overflow: hidden;
     transition: all 0.2s;
@@ -1292,7 +1303,7 @@ select.form-control {
   width: 0;
   height: 0;
   overflow: hidden;
-  left: 0;
+  left: 0;98+
   pointer-events: none; }
 .checkbox .checkbox-material {
   vertical-align: middle;

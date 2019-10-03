@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Symptom;
 use App\Chemical;
 use App\Management;
-
+use App\Patient;
 
 class ChemicalController extends Controller
 {
@@ -15,8 +15,11 @@ class ChemicalController extends Controller
         return view('Chemicals_Details.First_Page');
     }
     
-    public function index()
+    public function index(Request $request)
     {
+        $phn = new Patient();
+        $phn->phn = $request->phn;
+        $phn->save();
         $clinicalData1 = Symptom::select('name')->where('id',89)->get();
         $clinicalData2 = Symptom::select('name')->where('id',144)->get();
         $clinicalData3 = Symptom::select('name')->where('id',216)->get();
@@ -76,7 +79,7 @@ class ChemicalController extends Controller
         $managementData19 = Symptom::select('name')->where('id',52)->get();
         $managementData20 = Symptom::select('name')->where('id',55)->get();
         $managementData21 = Symptom::select('name')->where('id',54)->get();
-        return view('Chemicals_Details.Carbamate_Insecticides',compact('clinicalData1','clinicalData2',
+        return view('Chemicals_Details.Carbamate_Insecticides',compact('phn','clinicalData1','clinicalData2',
                     'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                     'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                     'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -90,5 +93,17 @@ class ChemicalController extends Controller
                     'managementData14','managementData15','managementData16','managementData17',
                     'managementData18','managementData19','managementData20','managementData21'));
     }
+
+    public function save(Request $request)
+    {
+        $data = new Chemical();
+        $data->sub_group = 'pesticides';
+        $data->amount=$request->amount;
+        $data->poisoning_mode=$request->mode;
+        $data->circumstance=$request->circumstances;
+        $data->save();
+        return 'done';
+    }
+
 }
 

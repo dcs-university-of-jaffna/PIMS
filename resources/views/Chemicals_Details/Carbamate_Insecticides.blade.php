@@ -60,12 +60,18 @@
 	    <div class="container">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
+                    <div>
+                        <h6 class="upper" name="chemicals"> Main_Group -> Chemicals </h6>
+                    </div> 
+                     
 		            <!--      Wizard container        -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="green" id="wizardProfile">
-		                    <form action="" method="">
+		                    <form action="{{url('Chemicals_Details/Submitted')}}">
 		                <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
-
+                            <div>
+                                <h6 class="above" name="pesticides"> Sub_Group -> Pesticides </h6>
+                            </div>
 		                    	<div class="wizard-header">
 		                        	<h3 class="wizard-title">
 		                        	   Details of Carbamate Insecticides
@@ -87,7 +93,7 @@
 		                                	<div class="col-sm-4 col-sm-offset-1">
 		                                    	<div class="picture-container">
 		                                        	<div class="picture">
-		                                            	
+                                                        {{$phn->phn}}
 		                                        	</div>
 		                                        	<h6>PHN Number</h6>
 		                                    	</div>
@@ -857,7 +863,9 @@
                                         <div class="wizard-footer">
                                             <div class="pull-right">
                                                 <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-                                                <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finish' />
+                                                
+                                                    <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Finish' />
+                                                
                                             </div>
         
                                             <div class="pull-left">
