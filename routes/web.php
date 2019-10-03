@@ -63,11 +63,13 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
+Route::get('Chemicals_Details/First_Page','ChemicalController@firstpage');
+Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+
+
 //------------------------------------------chamikara--------------------------------
 
-Route::get('/Carbamate_Insecticides', function() {
-    return view('Chemicals_Details.Carbamate_Insecticides');
-});
+
 
 //------------------------------------------chathuranga------------------------------
 
