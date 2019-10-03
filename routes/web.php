@@ -63,8 +63,9 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
-Route::get('Chemicals_Details/First_Page','ChemicalController@firstpage');
+Route::get('Chemicals_Details/First_Page/{id}','ChemicalController@firstpage');
 Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+Route::get('Chemicals_Details/Submitted','ChemicalController@save');
 
 
 //------------------------------------------chamikara--------------------------------
