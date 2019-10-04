@@ -604,8 +604,9 @@
                   <input type="hidden" name="id" value="12" >
             @endif  
                            
-                        <button type="submit" name ="save" value="save">save</button>  
-                         <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> save & submit</button> 
+            <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
+            <button type="submit" name ="save" value="save">Save</button>  
+            <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
     </div>
 </form> 
               
