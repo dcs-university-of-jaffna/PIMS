@@ -35,12 +35,12 @@ class view_record_controller_phn_search extends Controller
    //Ahthana
            else if($request->toxicity_name == 'Aththana'){
                           
-                  $incident = Incident::find($request->incident_id);
-                  $patient  = $incident->patient;
-                  $toxicity = $incident->toxicity->natural->flora;
-                  $symptom  = $incident->symptoms;
-                  $management = $incident->managements();
-                  $user    = $incident->users();                                          
+                $incident = Incident::find($request->incident_id);
+                $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                $patient  = $incident->patient;
+                $toxicity = $incident->toxicity->natural->flora;     
+                $management = $incident->managements()->pluck('managements.id');
+                $user    = $incident->users();                                          
                  // dd($symptom);
                 return view('/flora_view/View_Aththana',compact('incident','patient','toxicity','symptom','management','user'));
             }  
@@ -48,12 +48,12 @@ class view_record_controller_phn_search extends Controller
    //Diyakaduru
             else if($request->toxicity_name == 'DiyaKaduru'){
                                       
-                $incident = Incident::find($request->incident_id);
-                $patient  = $incident->patient;
-                $toxicity = $incident->toxicity->natural->flora;
-                $symptom  = $incident->symptoms;
-                $management = $incident->managements();
-                $user    = $incident->users();                                          
+                  $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $patient  = $incident->patient;
+                  $toxicity = $incident->toxicity->natural->flora;     
+                  $management = $incident->managements()->pluck('managements.id');
+                  $user    = $incident->users();                                                                                  
               // dd($incident);
             return view('/flora_view/View_Diya_Kaduru',compact('incident','patient','toxicity','symptom','management','user'));
             } 
