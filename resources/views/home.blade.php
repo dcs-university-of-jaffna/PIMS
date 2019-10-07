@@ -61,18 +61,15 @@
                                      Fauna &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">Bee Sting</a></li>
-                                    <li><a class="dropdown-item" href="#">Black widow spider</a></li>  
-                                    <li><a class="dropdown-item" href="#">Blister beetle</a></li> 
-                                    <li><a class="dropdown-item" href="#">Centipede</a></li> 
-                                    <li><a class="dropdown-item" href="#">Hornet sting</a></li> 
-                                    <li><a class="dropdown-item" href="#">Jellyfish</a></li> 
-                                    <li><a class="dropdown-item" href="#">Snake bite</a></li> 
-                                    <li><a class="dropdown-item" href="#">Scorpion bite</a></li> 
-                                    <li><a class="dropdown-item" href="#">Turtle flesh poisoning</a></li> 
-                                    <li><a class="dropdown-item" href="#">Wasp sting</a></li> 
-                                    <li><a class="dropdown-item" href="#">Others</a></li> 
-                    
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[1])}}">Bee, Wasp, Hornet Stings</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[2])}}">Black Widow Spider</a></li>  
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[3])}}">Blister Beetle Ingestion</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[4])}}">Centipede Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[5])}}">Jelly Fish</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[6])}}">Scorpion Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[7])}}">Snake bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[8])}}">Turtle Flesh Poison</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[9])}}">Unknown Bite</a></li> 
                                 </ul>
                             </li>
 

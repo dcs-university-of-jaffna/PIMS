@@ -44,10 +44,13 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
-
 Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
+
+Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');        
+Route::post('/submitFauna', 'FaunaController@submitFauna');
+Route::post('/submit_fauna_first_page', 'FaunaController@submitFaunaPHN');
 
 //--------------------------------------Thushangi-----------------------------------
 
@@ -127,7 +130,5 @@ Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record'
 
 //Unknown_plant_poisoning view show search phn
 Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
-
-
 
 
