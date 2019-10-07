@@ -44,7 +44,6 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
-
 Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
@@ -67,6 +66,11 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
+Route::get('Chemicals_Details/First_Page/{id}','ChemicalController@firstpage');
+Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+Route::get('Chemicals_Details/Submitted','ChemicalController@save');
+
+
 //------------------------------------------chamikara--------------------------------
 
 
@@ -84,26 +88,47 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
-//bee string view
-Route::get('/View_Bee_Sting', function () {
-    return view('View_Bee_Sting');
-});
+//----------------flora----------------------
 
-//Aththana view
-Route::get('/View_Aththana', function () {
-    return view('View_Aththana');
-});
+//show record for search phn value usiing incident->id
+Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
 
-//Divi kaduru view
-Route::get('/View_Divi_kaduru', function () {
-    return view('View_Divi_kaduru');
-});
+//Divi kaduru view show search phn
+Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
 
-//Diya kaduru view
-Route::get('/View_Diya_Kaduru', function () {
-    return view('View_Diya_Kaduru');
-});
+//Aththana view show search phn
+Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_record');
 
-Route::get('/Carbamate_Insecticides', function() {
-    return view('Chemicals_Details.Carbamate_Insecticides');
-});
+//Diya Kaduru view show search phn
+Route::get('/flora_view/View_Diya_Kaduru', 'view_record_controller_phn_search@view_record');
+
+//Endaru view show search phn
+Route::get('/flora_view/Endaru', 'view_record_controller_phn_search@view_record');
+
+//Godakaduru view show search phn
+Route::get('/flora_view/Godakaduru', 'view_record_controller_phn_search@view_record');
+
+//Habarala view show search phn
+Route::get('/flora_view/Habarala', 'view_record_controller_phn_search@view_record');
+
+//Habarala view show search phn
+Route::get('/flora_view/Hondala', 'view_record_controller_phn_search@view_record');
+
+
+//Kaneru view show search phn
+Route::get('/flora_view/Kaneru', 'view_record_controller_phn_search@view_record');
+
+//Kepunkiriya view show search phn
+Route::get('/flora_view/Kepunkiriya', 'view_record_controller_phn_search@view_record');
+
+//Niyagala view show search phn
+Route::get('/flora_view/Niyagala', 'view_record_controller_phn_search@view_record');
+
+//Olinda view show search phn
+Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record');
+
+
+//Unknown_plant_poisoning view show search phn
+Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
+
+
