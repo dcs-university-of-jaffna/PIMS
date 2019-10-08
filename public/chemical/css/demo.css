@@ -8,7 +8,7 @@
     overflow: hidden;
     border-radius: 50%;
     border: 1px solid #333333;
-    width: 60px;
+    width: 100px;
     float: left;
 }
 .logo-container .brand{
@@ -21,9 +21,32 @@
     width: 60px
 }
 
+.right-container{
+    right: 50px;
+    position: absolute;
+    top: 20px;
+    z-index: 3;
+}
+.right-container .logo{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    width: 100px;
+    float: left;
+}
+.right-container .brand{
+    font-size: 18px;
+    color: #FFF;
+    line-height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60px
+}
+
 body{
     background-color: #CCCCCC;
-    background-image: url('../img/chemical-background-vector-1366048.jpg')
+    background-image: url('../img/Chemistry-Widescreen-Wallpaper.jpg')
 }
 
 .section .wizard-card{ 
