@@ -427,21 +427,21 @@
                       <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
-                      @elseif($ray==9)
+            @elseif($ray==9)
 						<input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br> 
 						 <input type="checkbox" name = "AththanaClinical[]"  value="349"> Burning sensation of throat <br>  
 						 <input type="checkbox" name ="AththanaClinical[]" value="20"> 	CNS depression<br> 
 						 <input type="checkbox" name = "AththanaClinical[]"  value="31"> Dehydration <br>   
 						 <input type="checkbox" name ="AththanaClinical[]" value="34">	Diarrhoea<br> 
 						 <input type="checkbox" name ="AththanaClinical[]" value="41">	Drowsiness   <br> 
-                                                 <input type="checkbox" name = "AththanaClinical[]"  value="45"> Ecg abnormalities<br>
-						<input type="checkbox" name = "AththanaClinical[]" value="62"> Haemorrhagic gastroententis <br> 
-                                                 <input type="checkbox" name ="AththanaClinical[]"   value="68" > Hyperpnoea  <br> 
-                                                  <input type="checkbox" name ="AththanaClinical[]" value="74">	Hypotension    <br>  
+                         <input type="checkbox" name = "AththanaClinical[]"  value="45"> Ecg abnormalities<br>
+						 <input type="checkbox" name = "AththanaClinical[]" value="62"> Haemorrhagic gastroententis <br> 
+                         <input type="checkbox" name ="AththanaClinical[]"   value="68" > Hyperpnoea  <br> 
+                         <input type="checkbox" name ="AththanaClinical[]" value="74">	Hypotension    <br>  
 	
                           <label11> 
 		
-						 <input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br>  
+						<input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br>  
 						<input type="checkbox" name = "AththanaClinical[]" value="107"  > Polydipsia <br>  
 						<input type="checkbox" name ="AththanaClinical[]"    value="124" > Salivation<br> 
 						<input type="checkbox" name ="AththanaClinical[]" value="130"> Sweating <br> 
