@@ -8,6 +8,7 @@ use App\Management;
 use App\Patient;
 use App\Toxicity;
 use App\Incident;
+use DB;
 
 class ChemicalController extends Controller
 {
@@ -119,12 +120,12 @@ class ChemicalController extends Controller
         $chemicalData->circumstance = $request->circumstances;
         $chemicalData->save();
 
-        // $incidentsData = new Incident();
-        // //$patientData = Patient::select('id')->where('name',$this->index('phn'));
-        // $incidentsData->patient_id="23";
-        // $toxicityDat = Toxicity::select('id')->where('name','=',$this->firstpage(1));
-        // $incidentsData->toxicity_id=$toxicityDat;
-        // $incidentsData->save();
+        $incidentsData = new Incident();
+        $incidentsData->patient_id = DB::table('patients')->orderBy('id','desc')->first()->id;
+        $incidentsData->toxicity_id = DB::table('toxicities')->orderBy('id','desc')->first()->id;
+        $incidentsData->date = $request->date;
+        $incidentsData->time = $request->time;
+        $incidentsData->save();
 
         return redirect('/home'); 
     }
