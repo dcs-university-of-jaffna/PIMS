@@ -70,8 +70,10 @@ Route::get('/Carbamate_Insecticides', function() {
 });
 
 //------------------------------------------chathuranga------------------------------
+Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
+Route::patch('/update/{id}','update@update')->name('incident.update');
 
-
+//Route::get('/home')->name('home');
 
 //------------------------------------------Dilshan ---------------------------------
 
@@ -79,7 +81,7 @@ Route::get('/Carbamate_Insecticides', function() {
 Route::get('/home', 'FrontController@show_save_record');
 
 //serch phn number in home blade  & show all record in record blade
-Route::post('/phnsearch','RecordSearch@phnsearch');
+Route::post('/phnsearch','RecordSearch@phnsearch');return view('home');
 Route::get('/record','RecordSearch@phnsearch');
 
 //Aththana view

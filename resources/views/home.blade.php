@@ -267,7 +267,7 @@
 
               <div class="ml-auto">
                             <span> last update:{{$value->updated_at}}  </span>
-                            <a href="/incidents/{{$value->id}}" class="btn btn-dark py-2">Update</a>
+                            <a href="/update/{{$value->id}}/edit" class="btn btn-dark py-2">Update</a>
                         </div>
                     </div>
           @endforeach
