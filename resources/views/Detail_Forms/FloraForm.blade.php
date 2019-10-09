@@ -482,7 +482,7 @@
                           <label13>
                           <input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis <br>                          
                           <input type="checkbox" name ="AththanaClinical[]"    value="126" > Shock<br> 
-			   <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
+			              <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
                           </label13>  
                                                  
                                                 <br>   If others :<br>
