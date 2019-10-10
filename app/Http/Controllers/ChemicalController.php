@@ -9,6 +9,8 @@ use App\Patient;
 use App\Toxicity;
 use App\Incident;
 use DB;
+use App\Laboratory;
+use App\IncidentSymptom;
 
 class ChemicalController extends Controller
 {
@@ -125,7 +127,290 @@ class ChemicalController extends Controller
         $incidentsData->toxicity_id = DB::table('toxicities')->orderBy('id','desc')->first()->id;
         $incidentsData->date = $request->date;
         $incidentsData->time = $request->time;
+        $incidentsData->symptom_others = $request->clinical_comment;
+        $incidentsData->management_others = $request->management_comment;
+        $incidentsData->comments = $request->comment;
         $incidentsData->save();
+
+        $laboratiesData = new Laboratory();
+        $laboratiesData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+        $laboratiesData->comments = $request->laboratry_comment;
+        $laboratiesData->save();
+
+        
+        if($request->abdominal_cramps)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','abdominal cramps')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->acute_pancreatitis)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','acute pancreatitis')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->ataxia)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','ataxia')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->blurred_vision)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','blurred vision')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->bradycardia)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','bradycardia')->first()->id;
+                $incidentSymptomData->save();
+        }   
+        if($request->cardiac_arrhythmia)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','cardiac arrhythmia')->first()->id;
+                $incidentSymptomData->save();
+        }       
+        if($request->coma)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','coma')->first()->id;
+                $incidentSymptomData->save();
+        }  
+        if($request->conduction_defects)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','conduction defects')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->confusion)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','confusion')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->convulsions)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','convulsions')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->cranial_nerve_palsy)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','cranial nerve palsy')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->cyanosis)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','cyanosis')->first()->id;
+                $incidentSymptomData->save();
+        }  
+        if($request->delayed_weakness)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','delayed weakness')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->diarrhoea)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','diarrhoea')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->disorientation)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','disorientation')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->dyspnoea)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','dyspnoea')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->general_weakness)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','general weakness')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->giddiness)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','giddiness')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->headache)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','headache')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->hyperglycemia)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','hyperglycemia')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->incontinence)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','incontinence')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->incoordination)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','incoordination')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->lachrymation)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','lachrymation')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->incoordination)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','incoordination')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->muscle_twitching)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','muscle twitching')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->nausea)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','nausea')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->paralysis)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','paralysis')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->productive_cough)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','productive cough')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->pulmonary)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','pulmonary')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->rhinorrhoea)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','rhinorrhoea')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->rhonchi)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','rhonchi')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->salivation)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','salivation')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->small)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','small/pinpoint pupil')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->sweating)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','sweating')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->tenesmus)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','tenesmus')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->tightness_of_chest)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','tightness of chest')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->urinary_frequency)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','urinary frequency')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->vomiting)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','vomiting')->first()->id;
+                $incidentSymptomData->save();
+        }
+        if($request->weakness)
+        {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','weakness')->first()->id;
+                $incidentSymptomData->save();
+        }
 
         return redirect('/home'); 
     }

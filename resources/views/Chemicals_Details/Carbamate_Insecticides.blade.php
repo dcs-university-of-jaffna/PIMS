@@ -168,7 +168,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="abdominal_cramps">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -179,7 +179,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="acute_pancreatitis">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -190,7 +190,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="ataxia">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -201,7 +201,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="blurred_vision">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -212,7 +212,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="bradycardia">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -223,7 +223,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb">
+                                                            <input type="checkbox" name="cardiac_arrhythmia">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -234,7 +234,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Code">
+                                                            <input type="checkbox" name="coma">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -245,7 +245,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="conduction_defects">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -256,7 +256,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="confusion">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -267,7 +267,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="convulsions">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -280,7 +280,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
+                                                            <input type="checkbox" name="cranial_nerve_palsy" value="">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -291,7 +291,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
+                                                            <input type="checkbox" name="cyanosis">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -302,7 +302,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="delayed_weakness">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -313,7 +313,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="diarrhoea">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -324,7 +324,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="disorientation">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -335,7 +335,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
+                                                            <input type="checkbox" name="dyspnoea">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -346,7 +346,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Code">
+                                                            <input type="checkbox" name="general_weakness">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -357,7 +357,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="giddiness">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -368,7 +368,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="headache">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -379,7 +379,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="hyperglycemia">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -392,8 +392,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
-                                                            <div class="icon">
+                                                            <input type="checkbox" name="incontinence">                                                            <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
                                                             <h6>@foreach ($clinicalData19 as $item)
@@ -403,7 +402,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
+                                                            <input type="checkbox" name="incoordination">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -414,7 +413,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="lachrymation">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -425,7 +424,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="muscle_twitching">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -436,7 +435,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="nausea">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -447,7 +446,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
+                                                            <input type="checkbox" name="paralysis">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -458,7 +457,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Code">
+                                                            <input type="checkbox" name="productive_cough">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -469,7 +468,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="pulmonary">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -480,7 +479,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="rhinorrhoea">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -491,7 +490,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="rhonchi">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -504,7 +503,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
+                                                            <input type="checkbox" name="salivation">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -515,8 +514,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="">
-                                                            <div class="icon">
+                                                            <input type="checkbox" name="small">                                                         <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
                                                             <h6>@foreach ($clinicalData10 as $item)
@@ -526,7 +524,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="sweating">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -537,7 +535,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="tenesmus">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -548,7 +546,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="tightness_of_chest">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -559,7 +557,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
+                                                            <input type="checkbox" name="urinary_frequency">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
@@ -570,7 +568,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Code">
+                                                            <input type="checkbox" name="vomiting">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -581,7 +579,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <input type="checkbox" name="weakness">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
@@ -590,6 +588,15 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row-sm-6">
+                                                <div class="choice" data-toggle="wizard-checkbox">
+                                                    <p> If any be additinally, Please mention here </p>
+                                                    <textarea name = "clinical_comment" cols="90" rows="5">
+                                                    
+                                                    </textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -839,11 +846,22 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row-sm-6">
+                                                <div class="choice" data-toggle="wizard-checkbox">
+                                                    <p> If any be additinally, Please mention here </p>
+                                                    <textarea name = "management_comment" cols="90" rows="5">
+                                                    
+                                                    </textarea>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="tab-pane" id="laboratry">
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <h4 class="info-text">If have any coments please mention here </h4>
+                                                    <textarea name="laboratry_comment" cols="90" rows="10">
+
+                                                    </textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -853,7 +871,7 @@
                                                     <h4 class="info-text">If have any coments please mention here </h4>
                                                 </div>
                                                 <div class="col-sm-12">
-                                                    <textarea>
+                                                    <textarea name = "comment" cols="90" rows="10">
                                                     
                                                     </textarea>
                                                 </div>
