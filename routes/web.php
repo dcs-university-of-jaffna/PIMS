@@ -77,6 +77,8 @@ Route::get('Chemicals_Details/Submitted','ChemicalController@save');
 
 //------------------------------------------chathuranga------------------------------
 
+Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
+Route::patch('/update/{id}','update@update')->name('incident.update');
 
 
 //------------------------------------------Dilshan ---------------------------------
