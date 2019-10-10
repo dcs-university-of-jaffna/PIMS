@@ -613,7 +613,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData2 as $item)
+                                                            <h6>@foreach ($managementData4 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -624,7 +624,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData1 as $item)
+                                                            <h6>@foreach ($managementData2 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -646,7 +646,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData4 as $item)
+                                                            <h6>@foreach ($managementData1 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -660,7 +660,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData5 as $item)
+                                                            <h6>@foreach ($managementData8 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -671,7 +671,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData12 as $item)
+                                                            <h6>@foreach ($managementData5 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -682,7 +682,18 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData6 as $item)
+                                                            <h6>@foreach ($managementData11 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($managementData12 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -704,7 +715,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData8 as $item)
+                                                            <h6>@foreach ($managementData9 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -715,7 +726,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData9 as $item)
+                                                            <h6>@foreach ($managementData6 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -731,17 +742,6 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($managementData11 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label> Supportive Care </label>
@@ -751,7 +751,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData16 as $item)
+                                                            <h6>@foreach ($managementData19 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -762,7 +762,40 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
+                                                            <h6>@foreach ($managementData18 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($managementData16 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
                                                             <h6>@foreach ($managementData13 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="jobb" value="Develop">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($managementData20 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -784,7 +817,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData15 as $item)
+                                                            <h6>@foreach ($managementData21 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
@@ -806,40 +839,7 @@
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
-                                                            <h6>@foreach ($managementData19 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($managementData18 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($managementData21 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Develop">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($managementData20 as $item)
+                                                            <h6>@foreach ($managementData15 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>

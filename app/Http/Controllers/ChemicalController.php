@@ -26,10 +26,12 @@ class ChemicalController extends Controller
     
     public function index(Request $request)
     {
+        //save phn in patient table
         $phn = new Patient();
         $phn->phn = $request->phn;
         $phn->save();
 
+        //get clinical features from symptom table
         $clinicalData1 = Symptom::select('name')->where('id',89)->get();
         $clinicalData2 = Symptom::select('name')->where('id',144)->get();
         $clinicalData3 = Symptom::select('name')->where('id',216)->get();
@@ -68,27 +70,29 @@ class ChemicalController extends Controller
         $clinicalData36 = Symptom::select('name')->where('id',233)->get();
         $clinicalData37 = Symptom::select('name')->where('id',234)->get();
         $clinicalData38 = Symptom::select('name')->where('id',235)->get();
-        $managementData1 = Symptom::select('name')->where('id',26)->get();
-        $managementData2 = Symptom::select('name')->where('id',16)->get();
-        $managementData3 = Symptom::select('name')->where('id',34)->get();
-        $managementData4 = Symptom::select('name')->where('id',42)->get();
-        $managementData5 = Symptom::select('name')->where('id',9)->get();
-        $managementData6 = Symptom::select('name')->where('id',44)->get();
-        $managementData7 = Symptom::select('name')->where('id',45)->get();
-        $managementData8 = Symptom::select('name')->where('id',46)->get();
-        $managementData9 = Symptom::select('name')->where('id',47)->get();
-        $managementData10 = Symptom::select('name')->where('id',48)->get();
-        $managementData11 = Symptom::select('name')->where('id',49)->get();
-        $managementData12 = Symptom::select('name')->where('id',36)->get();
-        $managementData13 = Symptom::select('name')->where('id',6)->get();
-        $managementData14 = Symptom::select('name')->where('id',43)->get();
-        $managementData15 = Symptom::select('name')->where('id',50)->get();
-        $managementData16 = Symptom::select('name')->where('id',5)->get();
-        $managementData17 = Symptom::select('name')->where('id',51)->get();
-        $managementData18 = Symptom::select('name')->where('id',53)->get();
-        $managementData19 = Symptom::select('name')->where('id',52)->get();
-        $managementData20 = Symptom::select('name')->where('id',55)->get();
-        $managementData21 = Symptom::select('name')->where('id',54)->get();
+
+        //get management features from management table
+        $managementData1 = Management::select('name')->where('id',26)->get();
+        $managementData2 = Management::select('name')->where('id',16)->get();
+        $managementData3 = Management::select('name')->where('id',34)->get();
+        $managementData4 = Management::select('name')->where('id',42)->get();
+        $managementData5 = Management::select('name')->where('id',9)->get();
+        $managementData6 = Management::select('name')->where('id',44)->get();
+        $managementData7 = Management::select('name')->where('id',45)->get();
+        $managementData8 = Management::select('name')->where('id',46)->get();
+        $managementData9 = Management::select('name')->where('id',47)->get();
+        $managementData10 = Management::select('name')->where('id',48)->get();
+        $managementData11 = Management::select('name')->where('id',49)->get();
+        $managementData12 = Management::select('name')->where('id',36)->get();
+        $managementData13 = Management::select('name')->where('id',6)->get();
+        $managementData14 = Management::select('name')->where('id',43)->get();
+        $managementData15 = Management::select('name')->where('id',50)->get();
+        $managementData16 = Management::select('name')->where('id',5)->get();
+        $managementData17 = Management::select('name')->where('id',51)->get();
+        $managementData18 = Management::select('name')->where('id',53)->get();
+        $managementData19 = Management::select('name')->where('id',52)->get();
+        $managementData20 = Management::select('name')->where('id',55)->get();
+        $managementData21 = Management::select('name')->where('id',54)->get();
         return view('Chemicals_Details.Carbamate_Insecticides',compact('phn','clinicalData1','clinicalData2',
                     'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                     'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
@@ -106,6 +110,7 @@ class ChemicalController extends Controller
 
     public function save(Request $request)
     {
+        //save details in toxicity table
         $toxicityData = new Toxicity();
         $toxicityData->main_group = 'chemicals';
         $toxicityData->sub_group = 'pesticides';
@@ -115,6 +120,7 @@ class ChemicalController extends Controller
         };
         $toxicityData->save();
 
+        // save details in chemical table
         $chemicalData = new Chemical();
         $chemicalData->sub_group = 'pesticides';
         $chemicalData->amount = $request->amount;
@@ -122,6 +128,7 @@ class ChemicalController extends Controller
         $chemicalData->circumstance = $request->circumstances;
         $chemicalData->save();
 
+        // save details in incident table
         $incidentsData = new Incident();
         $incidentsData->patient_id = DB::table('patients')->orderBy('id','desc')->first()->id;
         $incidentsData->toxicity_id = DB::table('toxicities')->orderBy('id','desc')->first()->id;
@@ -132,12 +139,13 @@ class ChemicalController extends Controller
         $incidentsData->comments = $request->comment;
         $incidentsData->save();
 
+        // laboratry details save in laboratry table
         $laboratiesData = new Laboratory();
         $laboratiesData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
         $laboratiesData->comments = $request->laboratry_comment;
         $laboratiesData->save();
 
-        
+        // clinical features save in incident_symptoms table
         if($request->abdominal_cramps)
         {
                 $incidentSymptomData = new IncidentSymptom();
