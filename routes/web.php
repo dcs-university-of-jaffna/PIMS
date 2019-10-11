@@ -90,10 +90,12 @@ Route::get('/home', 'FrontController@show_save_record');
 Route::post('/phnsearch','RecordSearch@phnsearch');return view('home');
 Route::get('/record','RecordSearch@phnsearch');
 
-//----------------flora----------------------
+
+//--------------- phn search -----------
 
 //show record for search phn value usiing incident->id
 Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
+//----------------flora----------------------
 
 //Divi kaduru view show search phn
 Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
