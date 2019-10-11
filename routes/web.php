@@ -93,11 +93,15 @@ Route::get('/record','RecordSearch@phnsearch');
 
 //--------------- phn search -----------
 
-//show record for search phn value usiing incident->id
+//show record for search phn value using incident->id
 Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
 
+//update record for search phn value using incident->id
+Route::get('/record_update/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','update_record_controller_phn_search@view_record');
 
-//----------------flora----------------------
+
+
+//----------------flora view----------------------
 
 //Divi kaduru view show search phn
 Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
@@ -136,5 +140,46 @@ Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record'
 
 //Unknown_plant_poisoning view show search phn
 Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
+
+
+
+//----------------flora update----------------------
+
+//Divi kaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Aththana update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Diya Kaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Endaru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Godakaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Habarala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Habarala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+
+//Kaneru update update search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Kepunkiriya update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Niyagala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Olinda update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Unknown_plant_poisoning update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
 
 

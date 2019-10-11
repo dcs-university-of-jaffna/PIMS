@@ -118,7 +118,7 @@
 
               <div class="ml-auto">
    
-                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                <a href="/record_update/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-danger py-2">update</a>
                 <a href="/record_view/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
@@ -152,7 +152,7 @@
 
               <div class="ml-auto">
    
-                <a href="/beestring_record_update" class="btn btn-danger py-2">update</a>
+                <a href="/record_update/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}"  class="btn btn-danger py-2">update</a>
                  <a href="/record_view/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
