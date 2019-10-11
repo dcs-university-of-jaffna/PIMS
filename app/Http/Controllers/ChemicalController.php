@@ -11,6 +11,8 @@ use App\Incident;
 use DB;
 use App\Laboratory;
 use App\IncidentSymptom;
+use App\Prescription;
+use Auth;
 
 class ChemicalController extends Controller
 {
@@ -110,7 +112,7 @@ class ChemicalController extends Controller
 
     public function save(Request $request)
     {
-        //save details in toxicity table
+        // to save details in toxicity table
         $toxicityData = new Toxicity();
         $toxicityData->main_group = 'chemicals';
         $toxicityData->sub_group = 'pesticides';
@@ -120,7 +122,7 @@ class ChemicalController extends Controller
         };
         $toxicityData->save();
 
-        // save details in chemical table
+        // to save details in chemical table
         $chemicalData = new Chemical();
         $chemicalData->sub_group = 'pesticides';
         $chemicalData->amount = $request->amount;
@@ -128,7 +130,7 @@ class ChemicalController extends Controller
         $chemicalData->circumstance = $request->circumstances;
         $chemicalData->save();
 
-        // save details in incident table
+        // to save details in incident table
         $incidentsData = new Incident();
         $incidentsData->patient_id = DB::table('patients')->orderBy('id','desc')->first()->id;
         $incidentsData->toxicity_id = DB::table('toxicities')->orderBy('id','desc')->first()->id;
@@ -137,15 +139,23 @@ class ChemicalController extends Controller
         $incidentsData->symptom_others = $request->clinical_comment;
         $incidentsData->management_others = $request->management_comment;
         $incidentsData->comments = $request->comment;
+        if($request->save)
+        {
+            $incidentsData->is_submited = '0';
+        }
+        if($request->submit)
+        {
+            $incidentsData->is_submited = '1';
+        }
         $incidentsData->save();
 
-        // laboratry details save in laboratry table
+        // laboratry details to save in laboratry table
         $laboratiesData = new Laboratory();
         $laboratiesData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
         $laboratiesData->comments = $request->laboratry_comment;
         $laboratiesData->save();
 
-        // clinical features save in incident_symptoms table
+        // clinical features to save in incident_symptoms table
         if($request->abdominal_cramps)
         {
                 $incidentSymptomData = new IncidentSymptom();
@@ -342,11 +352,11 @@ class ChemicalController extends Controller
                 $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','productive cough')->first()->id;
                 $incidentSymptomData->save();
         }
-        if($request->pulmonary)
+        if($request->pulmonary_oedema)
         {
                 $incidentSymptomData = new IncidentSymptom();
                 $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
-                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','pulmonary')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name','pulmonary oedema')->first()->id;
                 $incidentSymptomData->save();
         }
         if($request->rhinorrhoea)
@@ -420,6 +430,178 @@ class ChemicalController extends Controller
                 $incidentSymptomData->save();
         }
 
+        // management features to save in prescription table
+        //special
+        if($request->diazepam)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','diazepam')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->gastric_lavage)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','gastric lavage')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->nebulisation)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','nebulisation')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->resuscitation)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','resuscitation')->first()->id;
+                $prescriptionData->save();
+        }
+        //specific
+        if($request->ascorbio_acid_iv)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','ascorbio acid iv')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->atropine)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','atropine')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->d_penicillamine)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','d penicillamine')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->hemodialysis)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','hemodialysis')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->methylene_blue_iv)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','1% Methylene blue iv')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->potassium_ferric)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','potassium ferric hexacyanoferrate(purssian blue)')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->pralidoxime)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','pralidoxime')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->urinary_alkalinization)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','urinary alkalinization')->first()->id;
+                $prescriptionData->save();
+        }
+        //supportie care
+        if($request->adrenaline_im)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','adrenaline im')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->adrenaline_iv)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','adrenaline iv')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->antibiotics)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','antibiotics')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->anticonvulsants)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','anticonvulsants')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->broncho_dilators)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','broncho dilators')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->general_anaesthesia)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','general anaesthesia')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->hydrocortisone_iv)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','hydrocortisone iv')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->sodium_bicarbonates)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','sodium bicarbonates')->first()->id;
+                $prescriptionData->save();
+        }
+        if($request->vitamine_k_therapy)
+        {
+                $prescriptionData = new Prescription();
+                $prescriptionData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $prescriptionData->doctor_id = Auth::id();
+                $prescriptionData->management_id = DB::table('managements')->where('name','vitamine k therapy')->first()->id;
+                $prescriptionData->save();
+        }
         return redirect('/home'); 
     }
 
