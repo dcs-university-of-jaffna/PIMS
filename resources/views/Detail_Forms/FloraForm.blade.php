@@ -88,11 +88,11 @@
                 <label1> 01) Date : 
                    <input type = "date" name = "date" id="datePickerId"  >
                 </label1>  
-                              
+                <br>              
                 <label2> 02) Time  : 
                    <input type = "time" name = "time" >
                 </label2>
-               
+               <br>
                 <label3>03) Region :
                     <span class = "select">
                         <select name = "area">
@@ -176,7 +176,7 @@
 			
                         <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia<br><br> 
                         <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth<br> <br>            
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema<br> <br>
+                        <input type="checkbox" name = "AththanaClinical[]" value="48"  >  Erythema<br> <br>
        
                         <label11> 
                         <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever<br> <br>
@@ -534,6 +534,7 @@
                      <input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given <br>
                      <input type="checkbox" name = "management[]" value="13"   > Dialysis <br>
 
+                        <br>
                      <label11> 
                             <input type="checkbox" name = "management[]" value="14"  >  Dopamine given <br>
                              <input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids <br>
@@ -543,7 +544,6 @@
                             <input type="checkbox" name = "management[]" value="26"  > Resuscitation <br>
                             <input type="checkbox" name = "management[]" value="29"  > Supportive therapy <br>
                    </label11> 
-                        <br>
                         If others : <br> 
                             <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
                         <br><br>
