@@ -183,6 +183,10 @@ Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@vi
 //Unknown_plant_poisoning update show search phn
 Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
 
+//----------------------- Update submit ------------------------------------------
 //submit flora update details
 Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
+
+//submit fauna update deails
+Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
 
