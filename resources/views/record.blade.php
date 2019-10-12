@@ -151,8 +151,9 @@
               </div>
 
               <div class="ml-auto">
-   
+               @if(Auth::user()->userType   =='Admin')
                 <a href="/record_update/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}"  class="btn btn-danger py-2">update</a>
+              @endif  
                  <a href="/record_view/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-warning py-2">view</a>
               </div>
            </div>
