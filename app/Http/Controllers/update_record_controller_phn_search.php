@@ -40,7 +40,7 @@ class update_record_controller_phn_search extends Controller
                 $toxicity = $incident->toxicity->natural->flora;     
                 $management = $incident->managements()->pluck('managements.id');
                 $user    = $incident->users();                                          
-                 // dd($symptom);
+                //  dd($symptoms);
                 return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
             }  
 
