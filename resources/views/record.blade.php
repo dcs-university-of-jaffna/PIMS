@@ -120,6 +120,9 @@
    
                 <a href="/record_update/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-danger py-2">update</a>
                 <a href="/record_view/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-warning py-2">view</a>
+                @if(Auth::user()->userType   =='Admin')
+                  <a href="/record_delete/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}"  class="btn btn-black py-2">Delete</a>
+                @endif  
               </div>
            </div>
            @endforeach
@@ -153,8 +156,12 @@
               <div class="ml-auto">
                @if(Auth::user()->userType   =='Admin')
                 <a href="/record_update/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}"  class="btn btn-danger py-2">update</a>
+ 
               @endif  
                  <a href="/record_view/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}" class="btn btn-warning py-2">view</a>
+              @if(Auth::user()->userType   =='Admin')
+                 <a href="/record_delete/{{$value->id}}/{{$value->toxicity->id}}/{{$value->toxicity->name}}/{{$value->toxicity->sub_group}}"  class="btn btn-black py-2">Delete</a>
+              @endif  
               </div>
            </div>
            @endforeach

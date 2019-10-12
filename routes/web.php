@@ -99,7 +99,8 @@ Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_s
 //update record for search phn value using incident->id
 Route::get('/record_update/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','update_record_controller_phn_search@view_record');
 
-
+//delete record
+Route::get('/record_delete/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','DeleterecordController@deleterecord');
 
 //----------------flora view----------------------
 
@@ -184,3 +185,4 @@ Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@vi
 
 //submit flora update details
 Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
+
