@@ -28,6 +28,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Incident extends Model
 {
+    protected $guarded = ['id', 'patient_id', 'toxicity_id'];
+
     /**
      * Incident has one Patient
      */

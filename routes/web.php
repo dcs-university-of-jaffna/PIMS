@@ -45,6 +45,7 @@ Route::post('/submit', 'BeeStringController@submit');
 
 //--------------------------------------Rayan--------------------------------------
 
+Route::get('/Flora_detail_form/{id}', 'FloraController@FirstPage');
 Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
@@ -101,4 +102,8 @@ Route::get('/View_Divi_kaduru', function () {
 //Diya kaduru view
 Route::get('/View_Diya_Kaduru', function () {
     return view('View_Diya_Kaduru');
+});
+
+Route::get('/Carbamate_Insecticides', function() {
+    return view('Chemicals_Details.Carbamate_Insecticides');
 });
