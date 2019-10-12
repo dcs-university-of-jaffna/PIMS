@@ -10,4 +10,7 @@ class UpdateController extends Controller
         dd($request);
 
     }
+    public function submitFauna(Request $request){
+        dd($request);
+    }
 }

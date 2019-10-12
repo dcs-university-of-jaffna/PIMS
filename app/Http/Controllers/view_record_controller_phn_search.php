@@ -180,5 +180,16 @@ class view_record_controller_phn_search extends Controller
 
 
         }
+        if($request->toxicity_sub_group=='fauna'){
+             
+                  $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $patient  = $incident->patient;
+                  $toxicity = $incident->toxicity->natural->fauna;     
+                  $management = $incident->managements()->pluck('managements.id');
+                  $user    = $incident->users();  
+                   
+                  return view('/Fauna_View_Update/fauna_view',compact('incident','patient','toxicity','symptoms','management','user'));
+        }
     }
 }
