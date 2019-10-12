@@ -176,7 +176,7 @@
 			
                         <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia<br><br> 
                         <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth<br> <br>            
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema<br> <br>
+                        <input type="checkbox" name = "AththanaClinical[]" value="48"  >  Erythema<br> <br>
        
                         <label11> 
                         <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever<br> <br>
