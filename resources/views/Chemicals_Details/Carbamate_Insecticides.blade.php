@@ -32,7 +32,7 @@
 	<div class="image-container set-full-height" style="background-image: url{{asset('chemical/img/wizard-profile.jpg')}}">
 	    <!--   Home   -->
 	    <a href="/home">
-	         <div class="logo-container">
+	         <div class="logo-container" onclick="return confirm('Are you sure &#128552 if you go home, datas will be lost &#128533')">
 	            <div class="logo">
 	                <img src="{{asset('chemical/img/gettyimages-183881669-612x612.jpg')}}">
 	            </div>
@@ -45,7 +45,7 @@
         <a href="{{URL::previous()}}">
             <div class="right-container">
                <div class="right">
-                   <img src="{{asset('chemical/img/back-button.png')}}" style="width:60px;height:60px">
+                   <img src="{{asset('chemical/img/back-button.png')}}" style="width:60px;height:60px" onclick="return confirm('Are you sure &#128552 if you go back, datas will be lost &#128533');">
                </div>
            </div>
        </a>
@@ -879,7 +879,7 @@
                                                 <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
                                                 
                                                 <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='save' value='Save' />
-                                                <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Submit' onclick="return confirm('Are you sure you want to submit?');"/>
+                                                <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Submit' onclick="return confirm('Are you sure you want to submit &#128519');"/>
                                                 
                                             </div>
         
