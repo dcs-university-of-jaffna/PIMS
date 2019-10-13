@@ -92,6 +92,7 @@ class FaunaController extends Controller
        $fauna->id=$natural->id;
        $fauna->number_of_stings= $request->number_of_stings;
        $fauna->place_of_sting= $request->place_of_sting;
+       $fauna->avs_vials= $request->AVS;
        
        if(is_null($request->place_of_sting)){
        $fauna->place_of_sting= $request->place_of_sting1;
@@ -104,6 +105,20 @@ class FaunaController extends Controller
        
        $fauna->circumstance= $request->circumstance;
        $fauna->save();
+       
+        $management =$request->management;
+        if (is_null($management)){
+            
+        }
+        else{
+            foreach ($management as $value){
+                $prescription=new Prescription;
+                $prescription->management_id=$value;
+                $prescription->incident_id = $incident->id;
+                $prescription->doctor_id = Auth::id();
+                $prescription->save();
+            }
+       }
        
        
         $back=1;
