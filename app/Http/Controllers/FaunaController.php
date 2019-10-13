@@ -74,6 +74,8 @@ class FaunaController extends Controller
        $incident->date=$request->date;
        $incident->time=$request->time;
        $incident->area=$request->area; 
+       $incident->symptom_others=$request->clinicals_others;
+       $incident->management_others=$request->managements_others;
        $incident->comments=$request->comments;
        
        if(Input::get('submit') == 'submit') {
@@ -105,6 +107,19 @@ class FaunaController extends Controller
        
        $fauna->circumstance= $request->circumstance;
        $fauna->save();
+       
+        $symptom = $request->AththanaClinical;
+        if (is_null($symptom)){
+            
+        }
+        else{
+            foreach ($symptom as $value){
+                $incidentSymptom=new IncidentSymptom;
+                $incidentSymptom->symptom_id=$value;
+                $incidentSymptom->incident_id = $incident->id;
+                $incidentSymptom->save();
+            }
+       }
        
         $management =$request->management;
         if (is_null($management)){
