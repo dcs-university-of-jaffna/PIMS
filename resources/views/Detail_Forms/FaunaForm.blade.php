@@ -171,7 +171,33 @@
      
     <div data-panel="three">
           <h4>Clinical Feature</h4>
-                
+                @if($ray==1)<br>
+ <input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  <br>
+ <input type="checkbox" name ="AththanaClinical[]"    value="34" >  Diarrhoea  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="74" >  Hypotension <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="81" >  Laryngeal oedema  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="82"  >  Malaise <br>    
+ <input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  <br>
+ <input type="checkbox" name ="AththanaClinical[]"   value="98" >  	Oliguria <br> 
+ 
+<label11> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="110" >  Pruritus <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="114"  >  Renal failure <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="121" >   Rhabdomyolysis <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="259" > Seizures  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="166"  >  Serum sickness <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="131"  >  Swelling <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="137" >  Tightness of chest  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="140" >  Urticaria  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="144"  >  Vomiting <br>   
+ </label11> 
+  <br><br>
+  If others :<br>
+ <textarea rows = "4" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+  <br><br> 
+  @endif  
     </div>
 		    
             
