@@ -79,17 +79,17 @@
                                      Flora &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                     <li><a class="dropdown-item" href="{{url('/Flora_detail_form',[1])}}">Aththana (Datura stramonium)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[2])}}">Divikaduru (Tabernaemantana dichotoma)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[3]) }}">DiyaKaduru (Cerebra manghas)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[4]) }}">Endaru (Ricinus communis)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[5]) }}">GodaKaduru (Stvychnos nuxvomica )</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[6]) }}">Habarala (Alocasia macromhiza)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[7]) }}">Hondala(Adenia Hondola)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[8]) }}">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[9]) }}">Kepunkiriya (Euphorbia hirita)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[10]) }}">Niyagala (Gloriosa superba)</a></li>
-                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[11]) }}">Olinda (Abrus precatorius)</a></li>
+                                     <li><a class="dropdown-item" href="{{url('/Flora_detail_form',[1])}}">Aththana </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[2])}}">Divikaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[3]) }}">DiyaKaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[4]) }}">Endaru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[5]) }}">GodaKaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[6]) }}">Habarala </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[7]) }}">Hondala</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[8]) }}">Kaneru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[9]) }}">Kepunkiriya</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[10]) }}">Niyagala</a></li>
+                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[11]) }}">Olinda </a></li>
                                      <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[12]) }}">Unknown plant poisoning</a></li>
                    
                                 </ul>
