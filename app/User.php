@@ -75,20 +75,9 @@ class User extends Authenticatable
      */
     public function incidents()
     {
-        return $this->belongsToMany('App\Incident', 'prescription', 'doctor_id', 'incident_id')
-            ->using('App\Prescription')
-            ->withPivot('management_id')
+        return $this->belongsToMany('App\Incident')
+            ->using('App\IncidentUser')
             ->withTimestamps();
     }
 
-    /**
-     * User has many Managements
-     */
-    public function managements()
-    {
-        return $this->belongsToMany('App\Management', 'prescription', 'doctor_id', 'management_id')
-            ->using('App\Prescription')
-            ->withPivot('incident_id')
-            ->withTimestamps();
-    }
 }

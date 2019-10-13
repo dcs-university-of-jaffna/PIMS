@@ -25,7 +25,6 @@ use Illuminate\Database\Eloquent\Model;
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
-
 class Symptom extends Model
 {
     /**
@@ -35,6 +34,17 @@ class Symptom extends Model
     {
         return $this->belongsToMany('App\Incident')
             ->using('App\IncidentSymptom')
+            ->withTimestamps();
+    }
+
+    /**
+     * Symptom has many Poisons
+     */
+    public function toxins()
+    {
+        return $this->belongsToMany('App\Toxin')
+            ->using('App\SymptomToxin')
+            ->withPivot('category')
             ->withTimestamps();
     }
 

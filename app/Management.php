@@ -25,7 +25,6 @@ use Illuminate\Database\Eloquent\Model;
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
-
 class Management extends Model
 {
     /**
@@ -33,21 +32,21 @@ class Management extends Model
      */
     public function incidents()
     {
-        return $this->belongsToMany('App\Incident', 'prescription', 'management_id', 'incident_id')
-            ->using('App\Prescription')
-            ->withPivot('doctor_id')
+        return $this->belongsToMany('App\Incident')
+            ->using('App\IncidentManagement')
             ->withTimestamps();
     }
 
     /**
-     * Management has many Users
+     * Managements has many ManagementGroup     *
      */
-    public function users()
+    public function management_groups()
     {
-        return $this->belongsToMany('App\User', 'prescription', 'management_id', 'doctor_id')
-            ->using('App\Prescription')
-            ->withPivot('incident_id')
+        return $this->belongsToMany('App\ManagementGroup')
+            ->using('App\ManagementManagementGroup')
+            ->withPivot('category')
             ->withTimestamps();
     }
+
 }
 

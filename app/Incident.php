@@ -69,9 +69,8 @@ class Incident extends Model
      */
     public function managements()
     {
-        return $this->belongsToMany('App\Management', 'prescription', 'incident_id', 'management_id')
-            ->using('App\Prescription')
-            ->withPivot('doctor_id')
+        return $this->belongsToMany('App\Management')
+            ->using('App\IncidentManagement')
             ->withTimestamps();
     }
 
@@ -80,9 +79,8 @@ class Incident extends Model
      */
     public function users()
     {
-        return $this->belongsToMany('App\User', 'prescription', 'incident_id', 'doctor_id')
-            ->using('App\Prescription')
-            ->withPivot('management_id')
+        return $this->belongsToMany('App\User')
+            ->using('App\IncidentUser')
             ->withTimestamps();
     }
 }
