@@ -114,7 +114,7 @@
                             <option value = "Velanai"> Velanai  </option>
                              <option value = "Outside Jaffna District"> Outside Jaffna District </option>
                         </select>
-                    </span>
+                        symptom    </span>
                </label3>  
             
                <label4> 04) Part of plant :
@@ -176,7 +176,7 @@
 			
                         <input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia<br><br> 
                         <input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth<br> <br>            
-                        <input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema<br> <br>
+                        <input type="checkbox" name = "AththanaClinical[]" value="48"  >  Erythema<br> <br>
        
                         <label11> 
                         <input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever<br> <br>
@@ -294,13 +294,13 @@
                      </label9>  
                      
                  @elseif($ray==5)
-                      <input type="checkbox" name = "AththanaClinical[]"  value="15"> Bulging eyes<br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="15"> Bulging eyes<br> 
                         <input type="checkbox" name = "AththanaClinical[]"  value="28"> Cramps<br>            
                         <input type="checkbox" name ="AththanaClinical[]"    value="29" > Cyanosis  <br> 
-	                 <input type="checkbox" name ="AththanaClinical[]"   value="37" >  Dilation of pupils  <br> 
+	                     <input type="checkbox" name ="AththanaClinical[]"   value="37" >  Dilation of pupils  <br> 
                          <input type="checkbox" name = "AththanaClinical[]"  value="49"> Extensor spasms <br>              
                         <input type="checkbox" name ="AththanaClinical[]" value="69"> Hyperreflexia   <br> 
-			<input type="checkbox" name ="AththanaClinical[]" value="71"> Hyperthermia    <br> 
+			            <input type="checkbox" name ="AththanaClinical[]" value="71"> Hyperthermia    <br> 
                          <input type="checkbox" name = "AththanaClinical[]" value="84"  >  Metabolic acidosis <br>   
                          <input type="checkbox" name = "AththanaClinical[]" value="85"  > Muscle twitching <br>  
 						 
@@ -308,15 +308,15 @@
             
                           
                           <label11> 
-			<input type="checkbox" name ="AththanaClinical[]" value="88"> Myoglobinuria  <br> 
-			<input type="checkbox" name = "AththanaClinical[]" value="99"  > Opisthotonus <br>  
+            			<input type="checkbox" name ="AththanaClinical[]" value="88"> Myoglobinuria  <br> 
+		            	<input type="checkbox" name = "AththanaClinical[]" value="99"  > Opisthotonus <br>  
                         <input type="checkbox" name = "AththanaClinical[]" value="102"  > Painful convulsions <br>  
                         <input type="checkbox" name ="AththanaClinical[]"    value="104" > Pancreatitis <br> 
                          <input type="checkbox" name = "AththanaClinical[]"  value="112"> Pulmonary infiltration <br> 
                         <input type="checkbox" name ="AththanaClinical[]"   value="114" > Renal failure  <br> 						 
                         <input type="checkbox" name ="AththanaClinical[]"   value="117" >  Respiratory failure  <br> 
                          <input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis <br>   
-			<input type="checkbox" name ="AththanaClinical[]" value="123"> Risus sardonicus   <br>  
+		            	<input type="checkbox" name ="AththanaClinical[]" value="123"> Risus sardonicus   <br>  
                         </label11>
                        
                      <br>   If others :<br>
@@ -399,27 +399,27 @@
                      
                        @elseif($ray==8)
 						<input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br> 
-                                                 <input type="checkbox" name = "AththanaClinical[]"  value="7"> Anxiety<br>      
+                        <input type="checkbox" name = "AththanaClinical[]"  value="7"> Anxiety<br>      
 						<input type="checkbox" name ="AththanaClinical[]"   value="13" >  Bradycardia  <br> 						
-                                                <input type="checkbox" name ="AththanaClinical[]"    value="17" > burning sensation of mouth  <br> 
-					        <input type="checkbox" name ="AththanaClinical[]" value="21"> Coma <br> 
+                        <input type="checkbox" name ="AththanaClinical[]"    value="17" > burning sensation of mouth  <br> 
+					    <input type="checkbox" name ="AththanaClinical[]" value="21"> Coma <br> 
 						<input type="checkbox" name = "AththanaClinical[]"  value="25"> Convulsion <br>                    
 						<input type="checkbox" name ="AththanaClinical[]" value="34">	Diarrhoea<br> 
-                                                <input type="checkbox" name = "AththanaClinical[]"  value="46"> Electrolytes imbalance <br>                    
+                        <input type="checkbox" name = "AththanaClinical[]"  value="46"> Electrolytes imbalance <br>                    
 						<input type="checkbox" name ="AththanaClinical[]" value="74">	Hypotension    <br>  
-                                                 <input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br> 
+                        <input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br> 
                       
                           <label11> 
 						 
-					        <input type="checkbox" name = "AththanaClinical[]" value="118"  > Restlessness <br> 
+					    <input type="checkbox" name = "AththanaClinical[]" value="118"  > Restlessness <br> 
 						<input type="checkbox" name = "AththanaClinical[]" value="135"  > Tenderness <br>  
 						<input type="checkbox" name ="AththanaClinical[]"    value="141" > Ventricular arrhythmia<br> 
 						<input type="checkbox" name ="AththanaClinical[]" value="142"> Ventricular ectopics <br> 
 						<input type="checkbox" name = "AththanaClinical[]" value="147"  > Yellow vision <br>  
 						<input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>
                                                 <b> HB </b><br>
-		          <input type="checkbox" name = "AththanaClinical[]"  value="352"> 1st degree heart block<br> 
-                           <input type="checkbox" name = "AththanaClinical[]"  value="353"> 2nd degree heart block<br>            
+		                <input type="checkbox" name = "AththanaClinical[]"  value="352"> 1st degree heart block<br> 
+                        <input type="checkbox" name = "AththanaClinical[]"  value="353"> 2nd degree heart block<br>            
                         <input type="checkbox" name ="AththanaClinical[]"    value="399" > 3rd degree heart block  <br> 
 						
                      </label11> 
@@ -427,21 +427,21 @@
                       <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
-                      @elseif($ray==9)
+            @elseif($ray==9)
 						<input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br> 
 						 <input type="checkbox" name = "AththanaClinical[]"  value="349"> Burning sensation of throat <br>  
 						 <input type="checkbox" name ="AththanaClinical[]" value="20"> 	CNS depression<br> 
 						 <input type="checkbox" name = "AththanaClinical[]"  value="31"> Dehydration <br>   
 						 <input type="checkbox" name ="AththanaClinical[]" value="34">	Diarrhoea<br> 
 						 <input type="checkbox" name ="AththanaClinical[]" value="41">	Drowsiness   <br> 
-                                                 <input type="checkbox" name = "AththanaClinical[]"  value="45"> Ecg abnormalities<br>
-						<input type="checkbox" name = "AththanaClinical[]" value="62"> Haemorrhagic gastroententis <br> 
-                                                 <input type="checkbox" name ="AththanaClinical[]"   value="68" > Hyperpnoea  <br> 
-                                                  <input type="checkbox" name ="AththanaClinical[]" value="74">	Hypotension    <br>  
+                         <input type="checkbox" name = "AththanaClinical[]"  value="45"> Ecg abnormalities<br>
+						 <input type="checkbox" name = "AththanaClinical[]" value="62"> Haemorrhagic gastroententis <br> 
+                         <input type="checkbox" name ="AththanaClinical[]"   value="68" > Hyperpnoea  <br> 
+                         <input type="checkbox" name ="AththanaClinical[]" value="74">	Hypotension    <br>  
 	
                           <label11> 
 		
-						 <input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br>  
+						<input type="checkbox" name = "AththanaClinical[]" value="89"  > Nausea <br>  
 						<input type="checkbox" name = "AththanaClinical[]" value="107"  > Polydipsia <br>  
 						<input type="checkbox" name ="AththanaClinical[]"    value="124" > Salivation<br> 
 						<input type="checkbox" name ="AththanaClinical[]" value="130"> Sweating <br> 
@@ -482,7 +482,7 @@
                           <label13>
                           <input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis <br>                          
                           <input type="checkbox" name ="AththanaClinical[]"    value="126" > Shock<br> 
-			   <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
+			              <input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting <br>    
                           </label13>  
                                                  
                                                 <br>   If others :<br>
@@ -604,8 +604,9 @@
                   <input type="hidden" name="id" value="12" >
             @endif  
                            
-                        <button type="submit" name ="save" value="save">save</button>  
-                         <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> save & submit</button> 
+            <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
+            <button type="submit" name ="save" value="save">Save</button>  
+            <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
     </div>
 </form> 
               

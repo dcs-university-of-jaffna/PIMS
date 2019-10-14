@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Diya Kaduru View</title>
+    <title> GodaKaduru  </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
  <br><br><br>
  
-   <h1  class="font-weight-bold" align="center">Diya Kaduru (Cerebra manghas)</h1>
+   <h1  class="font-weight-bold" align="center">GodaKaduru (Stvychnos nuxvomica ) </h1>
  <div class="container">
     <br><br>
  <form class="needs-validation" novalidate>
 
-   
  <div class="row"> 
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Name : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="" readonly>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->name}}" readonly>
       
         </div>
    </div>
@@ -29,7 +28,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">PHN : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="" readonly>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->phn}}" readonly>
    
         </div>
    </div>
@@ -44,7 +43,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Date : </label>
-        <input type="text" class="form-control" value ="" readonly>
+        <input type="text" class="form-control" value ="{{$incident->date}}" readonly>
          </div>
    </div>
     
@@ -52,7 +51,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Time : </label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$incident->time}}" readonly>
    
         </div>
    </div>
@@ -63,7 +62,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Part of plant : </label>
-        <input type="text" class="form-control" value=""  readonly>
+        <input type="text" class="form-control" value="{{$toxicity->natural->flora->plant_part}}"  readonly>
          </div>
    </div>
     
@@ -71,7 +70,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Region :</label>
-      <input type="text" class="form-control" value="" readonly>
+      <input type="text" class="form-control" value="{{$incident->area}}" readonly>
    
         </div>
    </div>
@@ -81,7 +80,7 @@
 <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->amount}}" readonly>
    
         </div>
    </div>
@@ -89,7 +88,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->circumstance}}" readonly>
    
         </div>
    </div>
@@ -100,7 +99,7 @@
      <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Mode of poisoning :</label>
-      <input type="text" class="form-control"  value="" readonly>
+      <input type="text" class="form-control"  value="{{$toxicity->natural->flora->poisoning_mode }}" readonly>
    
         </div>
     </div>
@@ -114,10 +113,10 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox" readonly value="" >
+            <input class="form-check-input"  type="checkbox" readonly value="15" @if($symptoms->contains(15)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
-               &nbsp;  Abdominal_pain 
+               &nbsp;  Bulging eyes
             </label>
             </div>
         </div>
@@ -126,9 +125,9 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="28" @if($symptoms->contains(28)) checked @endif >
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Diarrhoea  
+            &nbsp;  Cramps
             </label>
             </div>
         </div>
@@ -137,9 +136,9 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="29" @if($symptoms->contains(29)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Numbness and burning of mouth 
+            &nbsp;   Cyanosis
             </label>
             </div>
         </div>
@@ -150,9 +149,9 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="37" @if($symptoms->contains(37)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Electrolytes imbalance 
+            &nbsp;  Dilation of pupils 
             </label>
             </div>
         </div>
@@ -161,9 +160,9 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="49" @if($symptoms->contains(49)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Nausea   
+            &nbsp;  Extensor spasms  
             </label>
             </div>
         </div>
@@ -172,101 +171,23 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="69" @if($symptoms->contains(69)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;     Vomiting  
+            &nbsp;     Hyperreflexia
             </label>
             </div>
         </div>
    </div>
 </div>
 
-<br>
-<h3 class="font-weight-bold"> CVS </h3>
- <br>
-
- <div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  Sinus bradycardia 
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp; Slow pulse    
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;     Hypotension  
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
-<br>
-
-
-<h3 class="font-weight-bold">Cardiac Dysrrhythmias </h3>
- <br>
-
- <div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  Junctional rhythms 
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp; 1st Degree HB   
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;     Atrial and ventricular ectopics   
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
 
 <div class="row"> 
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="71" @if($symptoms->contains(71)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Sinoatrial_block  
+            &nbsp;  Hyperthermia
             </label>
             </div>
         </div>
@@ -275,9 +196,9 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="84" @if($symptoms->contains(84)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp; Ventricular fibrillation     
+            &nbsp;  Metabolic acidosis
             </label>
             </div>
         </div>
@@ -286,20 +207,136 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="85" @if($symptoms->contains(85)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;      2nd Degree HB  
+            &nbsp;     Muscle twitching
             </label>
             </div>
         </div>
    </div>
 </div>
-<br>
 
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="88" @if($symptoms->contains(88)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Myoglobinuria
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="99" @if($symptoms->contains(99)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Opisthotonus  
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="102" @if($symptoms->contains(102)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Painful convulsions
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="104" @if($symptoms->contains(104)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Pancreatitis
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="112" @if($symptoms->contains(112)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp; Pulmonary infiltration 
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="114" @if($symptoms->contains(114)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Renal failure
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="117" @if($symptoms->contains(117)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Respiratory failure
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="121" @if($symptoms->contains(121)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp; Rhabdomyolysis
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="123" @if($symptoms->contains(123)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Risus sardonicus
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+
+<br><br>
 <div class="form-group">
   <label for="comment">Others:</label>
-  <textarea class="form-control" rows="5" id="comment" readonly></textarea>
+  <textarea class="form-control" rows="5" id="comment" value =""   readonly >{{$incident->symptom_others}} </textarea>
 </div> 
+
+
+
+
+
+
 
 
 <br><br>
@@ -311,171 +348,171 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="3" @if($management->contains(3)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Alkalinization
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" readonly value="4" @if($management->contains(4)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Analgesics given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="5" @if($management->contains(5)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Antibiotics given 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="6" @if($management->contains(6)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Anticonvulsants given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="9" @if($management->contains(9)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Atropine given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="10" @if($management->contains(10)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Blood transfusion/Plasma expanders  
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="11" @if($management->contains(11)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Calcium gluconate given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="13" @if($management->contains(13)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Dialysis
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="14" @if($management->contains(14)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;    Dopamine given 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="20" @if($management->contains(20)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Methylprednisolone/Corticosteroids
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="21" @if($management->contains(21)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  NaCl given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="22" @if($management->contains(22)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  NaHCO3 given
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="24" @if($management->contains(24)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Prednisalone given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="26" @if($management->contains(26)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Resuscitation
             </label>
             </div>
         </div>
    </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Supportive therapy 
-            </label>
-            </div>
-        </div>
-   </div>
 
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="29" @if($management->contains(29)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Anticonvulsants 
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
-
-<div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Atropine  
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  Dialysis   
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Alkalinization  
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
-
-<div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Blood transfusion/Plasma expanders 
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   NaHCO3 
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Dopamine  
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
-
-<div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Analgesics 
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  Calcium gluconate 
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Antibiotics 
-            </label>
-            </div>
-        </div>
-   </div>
-</div>
-
-<div class="row"> 
-    <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;   Prednisalone 
-            </label>
-            </div>
-        </div>
-   </div>
-    
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  NaCl 
-            </label>
-            </div>
-        </div>
-   </div>
-
-   <div class="col">
-        <div class="form-group">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
-            <label class="form-check-label" for="gridCheck">
-            &nbsp;  Methylprednisolone/Corticosteroids 
+            &nbsp;  Supportive therapy  
             </label>
             </div>
         </div>
@@ -484,50 +521,72 @@
 <br><br>
 
 
- <h3 class="font-weight-bold">Gastrointestinal decontamination : </h3>
+ 
+
+<div class="form-group">
+  <label for="comment">Others:</label>
+  <textarea class="form-control" rows="5" id="comment" readonly>{{$incident->management_others}}</textarea>
+</div> 
+
+<h3 class="font-weight-bold">Gastrointestinal decontamination : </h3>
  <br>
- <div class="row"> 
-    <div class="col">
+
+    <div class="row">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="15" @if($management->contains(15)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Gastric aspiration & lavage 
+            &nbsp;   Gastric aspiration 
             </label>
             </div>
         </div>
    </div>
-    
-   <div class="col">
+   <div class="row">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="1" @if($management->contains(1)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Activated chracol 
+            &nbsp;  Activated chracol      
             </label>
+           
             </div>
         </div>
    </div>
 
-   <div class="col">
+   <label class="form-check-label" for="gridCheck">
+            &nbsp; &nbsp; If yes, number of doses       
+    </label>
+            <div class="col">      
+                <input  class="form-control" readonly value="{{$toxicity->activated_chracol_doses}}"> 
+            </div>
+            <br>
+
+   <div class="row">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox" readonly value="">
+            <input class="form-check-input" type="checkbox" readonly value="7" @if($management->contains(7)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Antidote given
             </label>
             </div>
         </div>
    </div>
-</div>
+
+   <label class="form-check-label" for="gridCheck">
+            &nbsp; &nbsp; If yes, type of antidote      
+    </label>
+            <div class="col">      
+                <input  class="form-control" readonly value=" {{$toxicity->antidote}}">
+     </div>
 
 
-<div class="form-group">
-  <label for="comment">Others:</label>
-  <textarea class="form-control" rows="5" id="comment" readonly></textarea>
-</div> 
 
- <br>
+
+
+
+
+
+
 
 
 
@@ -547,7 +606,7 @@
  
  <div class="form-group">
  
-  <textarea class="form-control"  rows="5" readonly></textarea>
+  <textarea class="form-control"  rows="5" readonly>{{$incident->comments}}</textarea>
 </div> 
 
 
@@ -573,6 +632,13 @@
   }, false);
 })();
 </script>
+    
+    
+    
+    
+    
+    
+    
     
     </div>
 

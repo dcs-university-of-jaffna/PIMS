@@ -61,18 +61,15 @@
                                      Fauna &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#">Bee Sting</a></li>
-                                    <li><a class="dropdown-item" href="#">Black widow spider</a></li>  
-                                    <li><a class="dropdown-item" href="#">Blister beetle</a></li> 
-                                    <li><a class="dropdown-item" href="#">Centipede</a></li> 
-                                    <li><a class="dropdown-item" href="#">Hornet sting</a></li> 
-                                    <li><a class="dropdown-item" href="#">Jellyfish</a></li> 
-                                    <li><a class="dropdown-item" href="#">Snake bite</a></li> 
-                                    <li><a class="dropdown-item" href="#">Scorpion bite</a></li> 
-                                    <li><a class="dropdown-item" href="#">Turtle flesh poisoning</a></li> 
-                                    <li><a class="dropdown-item" href="#">Wasp sting</a></li> 
-                                    <li><a class="dropdown-item" href="#">Others</a></li> 
-                    
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[1])}}">Bee, Wasp, Hornet Stings</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[2])}}">Black Widow Spider</a></li>  
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[3])}}">Blister Beetle Ingestion</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[4])}}">Centipede Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[5])}}">Jelly Fish</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[6])}}">Scorpion Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[7])}}">Snake bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[8])}}">Turtle Flesh Poison</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[9])}}">Unknown Bite</a></li> 
                                 </ul>
                             </li>
 
@@ -82,17 +79,17 @@
                                      Flora &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                     <li><a class="dropdown-item" href="{{url('/Flora_detail_form',[1])}}">Aththana (Datura stramonium)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[2])}}">Divikaduru (Tabernaemantana dichotoma)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[3]) }}">DiyaKaduru (Cerebra manghas)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[4]) }}">Endaru (Ricinus communis)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[5]) }}">GodaKaduru (Stvychnos nuxvomica )</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[6]) }}">Habarala (Alocasia macromhiza)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[7]) }}">Hondala(Adenia Hondola)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[8]) }}">Kaneru (Nerium oleandor/Thevetia peruviana)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[9]) }}">Kepunkiriya (Euphorbia hirita)</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[10]) }}">Niyagala (Gloriosa superba)</a></li>
-                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[11]) }}">Olinda (Abrus precatorius)</a></li>
+                                     <li><a class="dropdown-item" href="{{url('/Flora_detail_form',[1])}}">Aththana </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[2])}}">Divikaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[3]) }}">DiyaKaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[4]) }}">Endaru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[5]) }}">GodaKaduru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[6]) }}">Habarala </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[7]) }}">Hondala</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[8]) }}">Kaneru </a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[9]) }}">Kepunkiriya</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[10]) }}">Niyagala</a></li>
+                                     <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[11]) }}">Olinda </a></li>
                                      <li><a class="dropdown-item" href="{{ url('/Flora_detail_form',[12]) }}">Unknown plant poisoning</a></li>
                    
                                 </ul>
@@ -136,26 +133,26 @@
                             Pesticides
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <li><a class="dropdown-item" href="{{url('/Carbamate_Insecticides')}}">Carbamate Insecticides</a></li>
-                            <li><a class="dropdown-item" href="#">Chlorophenoxy Compounds</a></li>   
-                            <li><a class="dropdown-item" href="#">Coumarins</a></li>   
-                            <li><a class="dropdown-item" href="#">Dithiocarbamate</a></li>   
-                            <li><a class="dropdown-item" href="#">Diuron</a></li>   
-                            <li><a class="dropdown-item" href="#">Fipronil</a></li>   
-                            <li><a class="dropdown-item" href="#">Glyphosate</a></li>   
-                            <li><a class="dropdown-item" href="#">Imidacloprid</a></li>   
-                            <li><a class="dropdown-item" href="#">Metaldehyde</a></li>   
-                            <li><a class="dropdown-item" href="#">Methyl Bromide</a></li>   
-                            <li><a class="dropdown-item" href="#">Nitrophends and Nitro Cresols</a></li>   
-                            <li><a class="dropdown-item" href="#">Organochlorines</a></li>   
-                            <li><a class="dropdown-item" href="#">Organophosphates</a></li>   
-                            <li><a class="dropdown-item" href="#">Phosphides</a></li>   
-                            <li><a class="dropdown-item" href="#">Propanil </a></li>   
-                            <li><a class="dropdown-item" href="#">Pyrethrum and related compounds</a></li>   
-                            <li><a class="dropdown-item" href="#">Thallium</a></li>   
-                            <li><a class="dropdown-item" href="#">Thiocarbamates</a></li>   
-                            <li><a class="dropdown-item" href="#">Triazenes and Triazoles</a></li>   
-                            <li><a class="dropdown-item" href="#">Other pesticide poisoning</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/1" value="1"> Carbamate Insecticides </a></li>
+                            <li><a class="dropdown-item" href="#" value="2">Chlorophenoxy Compounds</a></li>   
+                            <li><a class="dropdown-item" href="#" value="3">Coumarins</a></li>   
+                            <li><a class="dropdown-item" href="#" value="4">Dithiocarbamate</a></li>   
+                            <li><a class="dropdown-item" href="#" value="5">Diuron</a></li>   
+                            <li><a class="dropdown-item" href="#" value="6">Fipronil</a></li>   
+                            <li><a class="dropdown-item" href="#" value="7">Glyphosate</a></li>   
+                            <li><a class="dropdown-item" href="#" value="8">Imidacloprid</a></li>   
+                            <li><a class="dropdown-item" href="#" value="9">Metaldehyde</a></li>   
+                            <li><a class="dropdown-item" href="#" value="10">Methyl Bromide</a></li>   
+                            <li><a class="dropdown-item" href="#" value="11">Nitrophends and Nitro Cresols</a></li>   
+                            <li><a class="dropdown-item" href="#" value="12">Organochlorines</a></li>   
+                            <li><a class="dropdown-item" href="#" value="13">Organophosphates</a></li>   
+                            <li><a class="dropdown-item" href="#" value="14">Phosphides</a></li>   
+                            <li><a class="dropdown-item" href="#" value="15">Propanil </a></li>   
+                            <li><a class="dropdown-item" href="#" value="16">Pyrethrum and related compounds</a></li>   
+                            <li><a class="dropdown-item" href="#" value="17">Thallium</a></li>   
+                            <li><a class="dropdown-item" href="#" value="18">Thiocarbamates</a></li>   
+                            <li><a class="dropdown-item" href="#" value="19">Triazenes and Triazoles</a></li>   
+                            <li><a class="dropdown-item" href="#" value="20">Other pesticide poisoning</a></li>   
                         </ul>
                             </li>
                     </ul>

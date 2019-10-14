@@ -39,7 +39,7 @@ class update extends Controller
 
 
     }
-    public function update(Incident $incident)
+    public function update(Request $request)
     {
         //$incident=new Incident;
         //$toxicity = new Toxicity;
@@ -54,14 +54,25 @@ class update extends Controller
         //$incident->management_others=$request->managements_others;
         //$incident->comments=$request->comments;
         //$incident->save();
-        $data = request()->validate([
+        /*$data = request()->validate([
             'date' =>'',
             'time' =>'',
             'area' =>''
         ]);
         //dd($data);
-        $incident->save();
-        
+        //$incident->save();
+        $request->incident->update($data);*/
+        /*$incident = new Incident;
+        $incident->time = $request->time;
+        //$back=0;
+        //dd( $incident->time);
+        $incident->save();*/
+        $incident->update([
+            'date' => $request->date,
+            'time' => $request->time,
+            'area' => $request->area,
+        ]);
+
         return redirect('home');
     }
    /* function submitFlora(Request $request){

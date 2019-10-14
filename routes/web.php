@@ -44,10 +44,13 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
-
 Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
+
+Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');        
+Route::post('/submitFauna', 'FaunaController@submitFauna');
+Route::post('/submit_fauna_first_page', 'FaunaController@submitFaunaPHN');
 
 //--------------------------------------Thushangi-----------------------------------
 
@@ -63,17 +66,19 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
     Route::resource('/userPermission','SetUserPermissionController')->middleware('AuthenticateMiddleware');
 });
 
+Route::get('Chemicals_Details/First_Page/{id}','ChemicalController@firstpage');
+Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+Route::get('Chemicals_Details/Submitted','ChemicalController@save');
+
+
 //------------------------------------------chamikara--------------------------------
 
-Route::get('/Carbamate_Insecticides', function() {
-    return view('Chemicals_Details.Carbamate_Insecticides');
-});
+
 
 //------------------------------------------chathuranga------------------------------
 Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
 Route::patch('/update/{id}','update@update')->name('incident.update');
 
-//Route::get('/home')->name('home');
 
 //------------------------------------------Dilshan ---------------------------------
 
@@ -81,28 +86,106 @@ Route::patch('/update/{id}','update@update')->name('incident.update');
 Route::get('/home', 'FrontController@show_save_record');
 
 //serch phn number in home blade  & show all record in record blade
-Route::post('/phnsearch','RecordSearch@phnsearch');return view('home');
+Route::post('/phnsearch','RecordSearch@phnsearch');
 Route::get('/record','RecordSearch@phnsearch');
 
-//Aththana view
-Route::get('/View_Aththana', function () {
-    return view('View_Aththana');
-});
 
+//--------------- phn search -----------
 
-
-//Diya kaduru view
-Route::get('/View_Diya_Kaduru', function () {
-    return view('View_Diya_Kaduru');
-});
-
-//show record for search phn value usiing incident->id
+//show record for search phn value using incident->id
 Route::get('/record_view/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','view_record_controller_phn_search@view_record');
 
+//update record for search phn value using incident->id
+Route::get('/record_update/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','update_record_controller_phn_search@view_record');
+
+//delete record
+Route::get('/record_delete/{incident_id}/{toxicity_id}/{toxicity_name}/{toxicity_sub_group}','DeleterecordController@deleterecord');
+
+//----------------flora view----------------------
+
 //Divi kaduru view show search phn
-Route::get('/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
+Route::get('/flora_view/View_Divi_kaduru', 'view_record_controller_phn_search@view_record');
+
+//Aththana view show search phn
+Route::get('/flora_view/View_Aththtna', 'view_record_controller_phn_search@view_record');
+
+//Diya Kaduru view show search phn
+Route::get('/flora_view/View_Diya_Kaduru', 'view_record_controller_phn_search@view_record');
+
+//Endaru view show search phn
+Route::get('/flora_view/Endaru', 'view_record_controller_phn_search@view_record');
+
+//Godakaduru view show search phn
+Route::get('/flora_view/Godakaduru', 'view_record_controller_phn_search@view_record');
+
+//Habarala view show search phn
+Route::get('/flora_view/Habarala', 'view_record_controller_phn_search@view_record');
+
+//Habarala view show search phn
+Route::get('/flora_view/Hondala', 'view_record_controller_phn_search@view_record');
+
+
+//Kaneru view show search phn
+Route::get('/flora_view/Kaneru', 'view_record_controller_phn_search@view_record');
+
+//Kepunkiriya view show search phn
+Route::get('/flora_view/Kepunkiriya', 'view_record_controller_phn_search@view_record');
+
+//Niyagala view show search phn
+Route::get('/flora_view/Niyagala', 'view_record_controller_phn_search@view_record');
+
+//Olinda view show search phn
+Route::get('/flora_view/Olinda', 'view_record_controller_phn_search@view_record');
+
+
+//Unknown_plant_poisoning view show search phn
+Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_search@view_record');
 
 
 
+//----------------flora update----------------------
 
+//Divi kaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Aththana update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Diya Kaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Endaru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Godakaduru update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Habarala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Habarala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+
+//Kaneru update update search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Kepunkiriya update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Niyagala update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Olinda update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//Unknown_plant_poisoning update show search phn
+Route::get('/flora_update/flora_update', 'update_record_controller_phn_search@view_record');
+
+//----------------------- Update submit ------------------------------------------
+//submit flora update details
+Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
+
+//submit fauna update deails
+Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
 
