@@ -188,7 +188,7 @@ class view_record_controller_phn_search extends Controller
                   $toxicity = $incident->toxicity->natural->fauna;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();  
-                   
+                   //dd($management);
                   return view('/Fauna_View_Update/fauna_view',compact('incident','patient','toxicity','symptoms','management','user'));
         }
     }
