@@ -281,10 +281,19 @@
 </div>
 
 
+
+
 <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" value =""   readonly >{{$incident->symptom_others}} </textarea>
 </div> 
+
+
+
+
+
+
+
 
 
 <br><br>

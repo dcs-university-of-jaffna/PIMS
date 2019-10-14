@@ -142,17 +142,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.9); }
 .upper {
-  padding-top: 30px;
-  color: white;
+  margin-right:50%;
+  color: black;
   font-size: 15px;
 }
 .above {
-  padding-top: 5px;
-  color: white;
+  margin-left:2%;
+  color: black;
   font-size: 15px;
 }
 .wizard-container {
-  padding-top: 5px;
+  padding-top: 90px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative;}

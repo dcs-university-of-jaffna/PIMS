@@ -171,12 +171,71 @@
      
     <div data-panel="three">
           <h4>Clinical Feature</h4>
-                
+                @if($ray==1)<br>
+ <input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  <br>
+ <input type="checkbox" name ="AththanaClinical[]"    value="34" >  Diarrhoea  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="74" >  Hypotension <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="81" >  Laryngeal oedema  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="82"  >  Malaise <br>    
+ <input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  <br>
+ <input type="checkbox" name ="AththanaClinical[]"   value="98" >  	Oliguria <br> 
+ 
+<label11> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="110" >  Pruritus <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="114"  >  Renal failure <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="121" >   Rhabdomyolysis <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="259" > Seizures  <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="166"  >  Serum sickness <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="131"  >  Swelling <br>  
+ <input type="checkbox" name ="AththanaClinical[]"   value="137" >  Tightness of chest  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"    value="140" >  Urticaria  <br> 
+ <input type="checkbox" name ="AththanaClinical[]"   value="144"  >  Vomiting <br>   
+ </label11> 
+  <br><br>
+  If others :<br>
+ <textarea rows = "4" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+  <br><br> 
+  @endif  
     </div>
 		    
             
     <div data-panel="four">
 			<h4> Managemnt Detail</h4>
+                        
+                    <br> <input type="checkbox" name = "management[]" value="2"  > Adrenaline <br>
+                     <input type="checkbox" name = "management[]" value="4"  >  Analgesics given <br>
+                     <input type="checkbox" name = "management[]" value="41" > Antacids <br>
+                     <input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given  <br>  
+                     <input type="checkbox" name = "management[]" value="8"  >  Antihistamine <br> 
+                     <input type="checkbox" name = "management[]" value="11" > Calcium gluconate given <br>
+		     <input type="checkbox" name = "management[]" value="16" > Gastric lavage <br>  
+                     <input type="checkbox" name = "management[]" value="33" > Hydrocortisone <br>
+		     <input type="checkbox" name = "management[]" value="36" > Hemodialysis <br>
+					 
+
+                     <label11>
+                            <input type="checkbox" name = "management[]" value="17" > Icepacks Applaid <br>   
+                            <input type="checkbox" name = "management[]" value="40"  > Inotropic support <br>
+                            <input type="checkbox" name = "management[]" value="34"  > Nebulisation<br>
+                            <input type="checkbox" name = "management[]" value="35"  > Peritoneal<br>                        
+                            <input type="checkbox" name = "management[]" value="31"  > Rest the area of bite<br>      
+                            <input type="checkbox" name = "management[]" value="26"  > Resuscitation <br>
+                            <input type="checkbox" name = "management[]" value="37"  > Tetanus prophylaxis <br>
+			    <input type="checkbox" name = "management[]" value="38"  > Topical steroids <br>
+			    <input type="checkbox" name = "management[]" value="30"  > Wound cleaning<br>     
+                     </label11> 
+                        <br><br>
+                        If others : <br> 
+                            <textarea rows = "3" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
+                        <br><br>
+                        
+                         <label9> <b> AVS :</b> </label><br><br>
+                            <input type="checkbox" name = "management[]" value="7"  > Anti snake venom serum(AVS) given<br>  
+                             If yes, no of vials :  
+                            <input type="number" name = "AVS" >
+                         </label9>
                      
     </div>
              
