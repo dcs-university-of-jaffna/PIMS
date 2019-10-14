@@ -121,15 +121,15 @@
                       <span class = "select">
                         <select name = "plant_part">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "Branches"> Branches </option>
-                            <option value = "Bulbs"> Bulbs  </option>
-                            <option value = "Flowers"> Flowers	  </option>
-                            <option value = "Leaves"> Leaves </option>
+                            <option value = "branches"> Branches </option>
+                            <option value = "bulbs"> Bulbs  </option>
+                            <option value = "flowers"> Flowers	  </option>
+                            <option value = "leaves"> Leaves </option>
                             <option value = "pods"> Pods  </option>
-                            <option value = "Roots"> Roots </option>
-                            <option value = "Seeds"> Seeds  </option>
-                            <option value = "Stems"> Stems </option>
-                            <option value = "Twigs"> Twigs  </option>
+                            <option value = "roots"> Roots </option>
+                            <option value = "seeds"> Seeds  </option>
+                            <option value = "stems"> Stems </option>
+                            <option value = "twigs"> Twigs  </option>
                         </select>
                 </label4>
                         <br><br>

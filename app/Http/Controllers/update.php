@@ -26,14 +26,16 @@ class update extends Controller
         //$toxicity = Toxicity::find($incident->toxicity_id);
         //$natural = Natural::find($toxicity->id);
 
-        $toxicity = $incident->toxicity->natural->flora;
+        $flora = $incident->toxicity->natural->flora;
 
         //$tempPrescription = Prescription::find($incident->id);
         //$Prescription = Prescription::find($tempPrescription->id);
         $managements = $incident->managements()->pluck('managements.id');
-        //dd($managements);
+       // dd($managements);
+        dd($flora);
 
-        return view('update.FloraUpdateForm',compact('incident','managements'));
+
+        return view('update.FloraUpdateForm',compact('incident','managements','flora'));
 
 
     }

@@ -104,7 +104,7 @@
                         <span class = "select">
                             <select name = "plant_part" id ="plant_part">
                                 <option value = " "> ..Please choose one option.. </option>
-                                <option value = "Branches"> Branches </option>
+                                <option value = "branches"> Branches </option>
                                 <option value = "bulbs"> Bulbs  </option>
                                 <option value = "flowers"> Flowers	  </option>
                                 <option value = "leaves"> Leaves </option>
