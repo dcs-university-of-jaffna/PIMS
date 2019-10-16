@@ -67,7 +67,7 @@ Route::group(['middleware' => ['App\Http\Middleware\AuthenticateMiddleware']], f
 });
 
 Route::get('Chemicals_Details/First_Page/{id}','ChemicalController@firstpage');
-Route::get('Chemicals_Details/Carbamate_Insecticides/{id}', 'ChemicalController@index');
+Route::get('Chemicals_Details/{id}', 'ChemicalController@index');
 Route::get('Chemicals_Details/Submitted','ChemicalController@save');
 
 

@@ -42,7 +42,7 @@
 
 	<div class="container-contact11">
 		<div class="wrap-contact11">
-			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/Carbamate_Insecticides/{id}')}}" mehod="post">
+			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/{id}')}}" mehod="post">
 				<span class="contact11-form-title">
 					Verify Patient for {{$id}}
 				</span>
