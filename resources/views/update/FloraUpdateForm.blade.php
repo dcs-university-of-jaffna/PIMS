@@ -24,6 +24,8 @@
             <form action="/update/{{$incident->id}}"  enctype="multipart/form-data" method="post">
                 @csrf
                 @method('PATCH')
+            <div>
+                <h3>Poison Detail</h3>
                 <div class="row">
                     <div class="col-sm-4 pl-4">
                         <label1 > 01) Date :
@@ -92,71 +94,335 @@
                                     </script>
                             </span>
                         </label3>
-                        </div>
+                    </div>
                 </div>
+                <br>
+                <div class="row">
+                
+                    <div class="col-sm-4 pl-4">
+                    <label4> 04) Part of plant :
+                        <span class = "select">
+                            <select name = "plant_part" id ="plant_part">
+                                <option value = " "> ..Please choose one option.. </option>
+                                <option value = "branches"> Branches </option>
+                                <option value = "bulbs"> Bulbs  </option>
+                                <option value = "flowers"> Flowers	  </option>
+                                <option value = "leaves"> Leaves </option>
+                                <option value = "pods"> Pods  </option>
+                                <option value = "roots"> Roots </option>
+                                <option value = "seeds"> Seeds  </option>
+                                <option value = "stems"> Stems </option>
+                                <option value = "twigs"> Twigs  </option>
+                            </select>
+                            <script>
+                                        var a = "{{$flora->plant_part}}";
+
+                                        function setSelectedIndex(s,v) {
+
+                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            {
+
+                                                if ( s.options[i].value == v ) 
+                                                {
+
+                                                    s.options[i].selected = true;
+                                                    break;
+
+                                                }
+                                            }
+                                            return;
+                                            //s.selected = true;
+
+                                        }
+                                    // $url = "{{$incident->area}}";
+                                        setSelectedIndex(document.getElementById('plant_part'),a);
+
+                            </script>
+                    </label4>
+                    </div>
+                    <div class="col-sm-4 pl-4">
+                        <label6>05) Circumstance : 
+                        <span class = "select">
+                                <select name = "circumstance" id="circumstance">
+                                    <option value = " "> ..Please choose one option.. </option>
+                                    <option value = "Accidental">  Accidental   </option>
+                                    <option value = "Homicidal"> Homicidal </option>
+                                    <option value = "Occupational"> Occupational </option>
+                                    <option value = "Sucidal"> Suicidal  </option>
+                                </select>
+                                <script>
+                                        var a = "{{$flora->circumstance}}";
+
+                                        function setSelectedIndex(s,v) {
+
+                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            {
+
+                                                if ( s.options[i].value == v ) 
+                                                {
+
+                                                    s.options[i].selected = true;
+                                                    break;
+
+                                                }
+                                            }
+                                            return;
+                                            //s.selected = true;
+
+                                        }
+                                    // $url = "{{$incident->area}}";
+                                        setSelectedIndex(document.getElementById('circumstance'),a);
+                                </script>
+                            </span>
+                    </label6>
+                        <br><br>
+                    </div>
+                    <div class="col-sm-4 pl-4">
+                    <label7>06) Mode of poisoning : 
+                    <span class = "select">
+                            <select name = "poisoning_mode" id = "poisoning_mode">
+                                <option value = " "> ..Please choose one option.. </option>
+                                <option value = "Contact">  Contact   </option>
+                                <option value = "Ingestion"> Ingestion  </option>
+                                <option value = "Inhalation"> Inhalation </option>
+                                <option value = "Others"> Others </option>
+                            </select>
+                            <script>
+                                        var a = "{{$flora->poisoning_mode}}";
+
+                                        function setSelectedIndex(s,v) {
+
+                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            {
+
+                                                if ( s.options[i].value == v ) 
+                                                {
+
+                                                    s.options[i].selected = true;
+                                                    break;
+
+                                                }
+                                            }
+                                            return;
+                                            //s.selected = true;
+
+                                        }
+                                    // $url = "{{$incident->area}}";
+                                        setSelectedIndex(document.getElementById('poisoning_mode'),a);
+                                </script>
+
+                        </span>
+                    </label7> 
+                    <br><br>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 pl-4">
+                        <label5> 07) Amount of poisoning :
+                        <input type="number" min="0" name="amount" value="{{old('date') ?? $flora->amount}}"/>
+                        </label5>
+                        <br><br>
+         
+                </div>                       
+            </div>
+<!--div>============================================================================================================================================================<-->
+
                 <div data-panel="four">
                     <h4> Managemnt Detail</h4>
-                    
-                        <input type="checkbox" id = "test1" name = "management1" class="check1" value="03"  >  Alkalinization <br>          
-                        <input type="checkbox" id = "test2" name = "management2" class="check1" value="04"  >  Analgesics given <br>
-                        <input type="checkbox" id = "test3" name = "management[]" class="check1" value="05"  > Antibiotics given <br>            
-                        <input type="checkbox" id = "test4" name = "management[]" class="check1" value="06"  > Anticonvulsants given  <br>             
-                        <input type="checkbox" id = "test5" name = "management[]" class="check1" value="09"  >  Atropine given <br>           
-                        <input type="checkbox" id = "test6" name = "management[]" class="check1" value="10"  > Blood transfusion/Plasma expanders <br>               
-                        <input type="checkbox" id = "test7" name = "management[]" class="check1" value="11"   > Calcium gluconate given <br>            
-                        <input type="checkbox" id = "test8" name = "management[]" class="check1" value="13"   > Dialysis <br>
-                
-                    <label11> 
-                        <input type="checkbox" id = "test9" name = "management[]" value="14"  >  Dopamine given <br>
-                        <input type="checkbox" id = "test10" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids <br>
-                        <input type="checkbox" id = "test11" name = "management[]" value="21">  NaCl given <br>
-                        <input type="checkbox" id = "test12" name = "management[]" value="22"  >  NaHCO3 given <br>                        
-                        <input type="checkbox" id = "test13" name = "management[]" value="24"  > Prednisalone given <br>      
-                        <input type="checkbox" id = "test14" name = "management[]" value="26"  > Resuscitation <br>
-                        <input type="checkbox" id = "test15"name = "management[]" value="29"  > Supportive therapy <br>
-                    </label11> 
+                    <div>
+                        <input type="checkbox"
+                        id = "test1" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="03" 
+                        @if ( $managements ->contains(3))
+                            checked
+                        @endif
+                        >
+                        <label for="test1"> Alkalinization</label>
+                    </div>
+                    <div>         
+                        <input type="checkbox"
+                        id = "test2" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="04"
+                        @if ( $managements ->contains(4))
+                            checked
+                        @endif
+                        >  
+                        <label for="test2">Analgesics given</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test3" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="05"
+                        @if ( $managements ->contains(5))
+                            checked
+                        @endif
+                        >
+                        <label for="test3">Antibiotics given</label>
+                    </div>
+                    <div>           
+                        <input type="checkbox" 
+                        id = "test4" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="06"  
+                        @if ( $managements ->contains(6))
+                            checked
+                        @endif
+                        >
+                        <label for="test4">Anticonvulsants given</label>
+                    </div>
+                    <div>           
+                        <input type="checkbox" 
+                        id = "test5" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="9"
+                          
+                        @if ( $managements ->contains(9))
+                            checked
+                        @endif
+                        >
+                        <label for="test5">Atropine given</label>
+                    </div>                    
+                    <div>           
+                        <input type="checkbox" 
+                        id = "test6" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="10"  
+                        @if ( $managements ->contains(10))
+                            checked
+                        @endif
+                        >
+                        <label for="test6">Blood transfusion/Plasma expanders </label>
+                    </div>
+                </div>
+                <div>               
+                        <input type="checkbox" 
+                        id = "test7" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="11"   
+                        @if ( $managements ->contains(11))
+                            checked  = true;
+                        @endif
+                        >
+                        <label for="test7">Calcium gluconate given </label>
+                    </div>
+                    <div>            
+                        <input type="checkbox" 
+                        id = "test8" 
+                        name = "management[]" 
+                        class="check1" 
+                        value="13"   
+                        @if ( $managements ->contains(13))
+                            checked
+                        @endif
+                        >
+                        <label for="test8">Dialysis </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test9" 
+                        name = "management[]" 
+                        value="14"  
+                        @if ( $managements ->contains(14))
+                            checked
+                        @endif
+                        > 
+                        <label for="test9">Dopamine given </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test10" 
+                        name = "management[]" 
+                        value="20" 
+                        @if ( $managements ->contains(20))
+                            checked
+                        @endif
+                        >
+                        <label for="test10">Methylprednisolone/Corticosteroids </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test11" 
+                        name = "management[]" 
+                        value="21"
+                        @if ( $managements ->contains(21))
+                            checked
+                        @endif
+                        >  
+                        <label for="test11">NaCl given </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test12" 
+                        name = "management[]" 
+                        value="22"  
+                        @if ( $managements ->contains(22))
+                            checked
+                        @endif
+                        >  
+                        <label for="test12">NaHCO3 given </label>
+                        </div>
+                    <div>                        
+                        <input type="checkbox" 
+                        id = "test13" 
+                        name = "management[]" 
+                        value="24"  
+                        @if ( $managements ->contains(24))
+                            checked
+                        @endif
+                        >
+                        <label for="test13">Prednisalone given </label>
+                    </div>
+                    <div>      
+                        <input type="checkbox" 
+                        id = "test14" 
+                        name = "management[]" 
+                        value="26"  
+                        @if ( $managements ->contains(26))
+                            checked
+                        @endif
+                        > 
+                        <label for="test14">Resuscitation </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" 
+                        id = "test15"
+                        name = "management[]" 
+                        value="29"  
+                        @if ( $managements ->contains(29))
+                            checked
+                        @endif
+                        > 
+                        <label for="test16">Supportive therapy </label>
+                    </div>                    
                     If others : <br> 
-                                    <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
-                                <br><br>
-                                
-                    <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
-                        <input type="checkbox" id = "test16" name = "management[]" value="15"  > Gastric_aspiration<br><br> 
-                        <input type="checkbox" id = "test17" name = "management[]" value="1"  > Activated chracol<br>  
-                    
-                        If yes, number of doses :  
+                            <textarea id="testone" rows = "4" cols = "120" name = "managements others" value="{{old('date') ?? $incident->management_others}}" placeholder="Enter other management detail here">{{$incident->management_others}}</textarea>
+                        <br><br>                        
+                            
+                        
+                        <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
+                         <input type="checkbox" name = "management[]" value="15"  > Gastric_aspiration<br><br> 
+                         <input type="checkbox" name = "management[]" value="1"  > Activated chracol<br>  
+                           
+                          If yes, number of doses :  
                             <input type="text" name = "activated_chracol_doses" >
-                        <br><br><br>
-                    
-                        <label> <b> Antidote :</b> </label><br><br>
-                            <input type="checkbox" id = "test18" name = "management[]" value="7"  > Antidote given<br>  
-                        If yes, type of antidote :  
+                         <br><br><br>
+                         
+                         <label> <b> Antidote :</b> </label><br><br>
+                            <input type="checkbox" name = "management[]" value="7"  > Antidote given<br>  
+                             If yes, type of antidote :  
                             <input type="text" name = "antidote" >
-                    </label9>
-
-
-                            <script>
-                            var a = ["test1","test2","test3","test4","test5","test6","test7","test8","test9","test10","test11","test12","test13","test14","test15","test16","test17","test18"];
-                            for(var i = 0;a.length;i++)
-                            {
-                                    var p = a[i];
-                                    var b = {{$managements}};  
-                                        for(var j=0;j<b.length;j++)
-                                        {
-                                            var t = b[j];
-                                            function check(v,k) 
-                                            {
-                                                    if(v.value==k)
-                                                    {
-                                                    document.getElementById(p).checked = true;
-                                                    //break;
-                                                    }
-
-                                            }
-                                            check(document.getElementById(p),t);
-                                        }
-                            }
-                            </script>   
-
+                         </label9>
+                        
                     </div>
                     <div class="row p-4">
                             <button class="btn btn-success">
@@ -169,5 +435,9 @@
             <footer class="blockquote-footer">CB Tennakoon</footer>
         </blockquote> 
     </div>
+</html>
+
+
+</div>
 </html>
 
