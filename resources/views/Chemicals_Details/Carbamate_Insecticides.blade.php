@@ -160,9 +160,9 @@
 		                            	</div>
 		                            </div>
                                     <div class="tab-pane" id="clinical">
-                                            <h4 class="info-text"> Please Click needed boxs </h4>
+                                            {{-- <h4 class="info-text"> Please Click needed boxs </h4> --}}
                                             <div class="row">
-                                                <div class="col-sm-3">
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="abdominal_cramps">
@@ -229,6 +229,8 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="coma">
@@ -273,8 +275,6 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="cranial_nerve_palsy">
@@ -297,6 +297,8 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="delayed_weakness">
@@ -374,6 +376,8 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="hyperglycemia">
@@ -385,8 +389,6 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="incontinence">                                                            <div class="icon">
@@ -452,6 +454,8 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="productive_cough">
@@ -496,8 +500,6 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="salivation">
@@ -519,6 +521,8 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="sweating">
@@ -591,7 +595,7 @@
                                             <div class="row-sm-6">
                                                 <div class="choice" data-toggle="wizard-checkbox">
                                                     <p> If any be additinally, Please mention here </p>
-                                                    <textarea name = "clinical_comment" style="width:100%">
+                                                    <textarea name = "clinical_comment" style="width:100%" rows="5">
                                                     
                                                     </textarea>
                                                 </div>
@@ -602,7 +606,7 @@
                                                 <div class="col-sm-12">
                                                     <h4 class="info-text">Carefully mark needed boxes </h4>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-2">
                                                     <label> General </label>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
@@ -649,7 +653,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-2">
                                                     <label> Specific </label>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
@@ -695,6 +699,9 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label>  </label>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="methylene_blue_iv">
@@ -740,7 +747,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-2">
                                                     <label> Supportive Care </label>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
@@ -797,6 +804,9 @@
                                                             @endforeach</h6>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label>  </label>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
                                                             <input type="checkbox" name="general_anaesthesia">
@@ -846,7 +856,7 @@
                                             <div class="row-sm-6">
                                                 <div class="choice" data-toggle="wizard-checkbox">
                                                     <p> If any be additinally, Please mention here </p>
-                                                    <textarea name = "management_comment" style="width:100%">
+                                                    <textarea name = "management_comment" style="width:100%" rows="5">
                                                     
                                                     </textarea>
                                                 </div>
@@ -856,7 +866,7 @@
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <h4 class="info-text">If have any coments please mention here </h4>
-                                                    <textarea name="laboratry_comment" style="width:100%">
+                                                    <textarea name="laboratry_comment" style="width:100%" rows="5">
 
                                                     </textarea>
                                                 </div>
@@ -868,7 +878,7 @@
                                                     <h4 class="info-text">If have any coments please mention here </h4>
                                                 </div>
                                                 <div class="col-sm-12">
-                                                    <textarea name = "comment" style="width:100%">
+                                                    <textarea name = "comment" style="width:100%" rows="5">
                                                     
                                                     </textarea>
                                                 </div>
