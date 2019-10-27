@@ -201,40 +201,74 @@
 
 @elseif($ray==2)
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="170"  > coagulopathy </label><br> 
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="163"> convulsions </label><br>
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="171"> cramping truncal pain </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="169" > haemoglobinuria </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="173" > headache </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="175"  > hyperaesthesia </label><br>						 
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="157"  > hypertension </label><br>
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="54"> fever </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="167" > local necrosis </label><br>	
-					     <label><input type="checkbox" name = "AththanaClinical[]" value="172" > muscle spasm </label><br>	
-						 <label><input type="checkbox" name ="AththanaClinical[]"   value="89" > nausea  </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="170"  > Coagulopathy </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="163"> Convulsions </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="171"> Cramping truncal pain </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="169" > Haemoglobinuria </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="173" > Headache </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="175"  > Hyperaesthesia </label><br>						 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="157"  > Hypertension </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="54"> Fever </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="167" > Local necrosis </label><br>	
+					         <label><input type="checkbox" name = "AththanaClinical[]" value="172" > Muscle spasm </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]"   value="89" > Nausea  </label><br> 
 
 						
         
                           <label11>
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="101">	pain </label><br>
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="176"> ptosis </label>	<br>						 
-						 <label><input type="checkbox" name ="AththanaClinical[]" value="114">	renal failure </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="118"  > restlessness </label><br>
-                         <label><input type="checkbox" name ="AththanaClinical[]" value="124">	salivation  </label> <br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="168" > scarlatiniform rash </label><br> 
-						 <label><input type="checkbox" name ="AththanaClinical[]"    value="130" > sweating </label><br>
-                         <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > swelling </label><br>
-						 <label><input type="checkbox" name = "AththanaClinical[]" value="174" > tachypnoea </label><br>						  
-						 <label><input type="checkbox" name ="AththanaClinical[]"    value="140" > urticaria </label><br>  
-						 <label><input type="checkbox" name = "AththanaClinical[]"  value="144"> vomiting </label><br> 
-					     <label><input type="checkbox" name ="AththanaClinical[]" value="146"> weakness </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="101">	Pain </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="176"> Ptosis </label>	<br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="114">	Renal failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="118"  > Restlessness </label><br>
+                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="124">	Salivation  </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="168" > Scarlatiniform rash </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="130" > Sweating </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="174" > Tachypnoea </label><br>						  
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="140" > Urticaria </label><br>  
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="144"> Vomiting </label><br> 
+					         <label><input type="checkbox" name ="AththanaClinical[]" value="146"> Weakness </label><br>
 					        
 
 						 
 						 </label11> 
                                                  <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>	
+                     @elseif($ray==3)
+                                                 <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="17"  > Burning sensation of mouth </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="376"  > Cardiac abnormalities </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="380" > Cranial nerve palsy </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="367" > Dark coloured urine </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="359"> Disseminated intravascular coagulation</label><br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="44"> Dysphagia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"   value="371" > Dysuria  </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="370" > Gross haematuria </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="59"> Haematemesis </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
+						 
+						
+						 
+					
+                          <label11>               
+                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="372">	Mucosal erosion </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
+						  <label><input type="checkbox" name = "AththanaClinical[]" value="378" > Occult rectal bleeding </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="382" > Periorbital dermatitis</label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="375">	Priapism </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="381"  > Progressive muscle weakness</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="373"> Renal dysfunction</label>	<br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="117" > Respiratory failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="125"  > Seizure </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="377">	Vaginal bleeding  </label> <br>
+		 
+						 </label11> 
+                                                 <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>			
+                   
   
   @endif  
     </div>
