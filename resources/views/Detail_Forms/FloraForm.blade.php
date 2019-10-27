@@ -88,11 +88,11 @@
                 <label1> 01) Date : 
                    <input type = "date" name = "date" id="datePickerId"  >
                 </label1>  
-                              
+                <br>              
                 <label2> 02) Time  : 
                    <input type = "time" name = "time" >
                 </label2>
-               
+               <br>
                 <label3>03) Region :
                     <span class = "select">
                         <select name = "area">
@@ -121,15 +121,15 @@
                       <span class = "select">
                         <select name = "plant_part">
                             <option value = " "> ..Please choose one option.. </option>
-                            <option value = "Branches"> Branches </option>
-                            <option value = "Bulbs"> Bulbs  </option>
-                            <option value = "Flowers"> Flowers	  </option>
-                            <option value = "Leaves"> Leaves </option>
+                            <option value = "branches"> Branches </option>
+                            <option value = "bulbs"> Bulbs  </option>
+                            <option value = "flowers"> Flowers	  </option>
+                            <option value = "leaves"> Leaves </option>
                             <option value = "pods"> Pods  </option>
-                            <option value = "Roots"> Roots </option>
-                            <option value = "Seeds"> Seeds  </option>
-                            <option value = "Stems"> Stems </option>
-                            <option value = "Twigs"> Twigs  </option>
+                            <option value = "roots"> Roots </option>
+                            <option value = "seeds"> Seeds  </option>
+                            <option value = "stems"> Stems </option>
+                            <option value = "twigs"> Twigs  </option>
                         </select>
                 </label4>
                         <br><br>
@@ -174,9 +174,11 @@
           <h4>Clinical Feature</h4>
                 @if($ray==1)
 			
+
                         <label><input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </label><br><br> 
                         <label><input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </label><br> <br>            
                         <label><input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema </label><br> <br>
+
        
                         <label11> 
                         <label><input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </label> <br> <br>
@@ -421,12 +423,14 @@
 		          <label><input type="checkbox" name = "AththanaClinical[]"  value="352"> 1st degree heart block</label><br> 
                            <label><input type="checkbox" name = "AththanaClinical[]"  value="353"> 2nd degree heart block</label><br>            
                         <label><input type="checkbox" name ="AththanaClinical[]"    value="399" > 3rd degree heart block </label> <br> 
+
 						
                      </label11> 
                                                  <br>   If others :<br>
                       <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
+
                       @elseif($ray==9)
 						<label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain </label><br> 
 						 <label><input type="checkbox" name = "AththanaClinical[]"  value="349"> Burning sensation of throat</label> <br>  
@@ -446,6 +450,8 @@
 						<label><input type="checkbox" name ="AththanaClinical[]"    value="124" > Salivation </label><br> 
 						<label><input type="checkbox" name ="AththanaClinical[]" value="130"> Sweating </label><br> 
 						<label><input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting </label> <br>
+
+    
 						
 						
                      </label11> 
@@ -480,9 +486,11 @@
                           </label11> 
                                                 
                           <label13>
+
                           <label><input type="checkbox" name = "AththanaClinical[]" value="121"  > Rhabdomyolysis </label> <br>                          
                           <label><input type="checkbox" name ="AththanaClinical[]"    value="126" > Shock </label><br> 
 			   <label><input type="checkbox" name = "AththanaClinical[]" value="144"  > Vomiting </label><br>    
+
                           </label13>  
                                                  
                                                 <br>   If others :<br>
@@ -534,6 +542,7 @@
                      <label><input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given </label><br>
                      <label><input type="checkbox" name = "management[]" value="13"   > Dialysis </label> <br>
 
+                        <br>
                      <label11> 
                             <label><input type="checkbox" name = "management[]" value="14"  >  Dopamine given </label> <br>
                              <label><input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids </label> <br>
@@ -543,7 +552,6 @@
                             <label><input type="checkbox" name = "management[]" value="26"  > Resuscitation </label><br>
                             <label><input type="checkbox" name = "management[]" value="29"  > Supportive therapy </label><br>
                    </label11> 
-                        <br>
                         If others : <br> 
                             <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
                         <br><br>

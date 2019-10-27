@@ -13,6 +13,7 @@ class view_record_controller_phn_search extends Controller
     
     public function view_record(Request $request){
       
+    
       /*show record route pass the incident_id,toxicity_id,toxicity_name,toxicity_sub_group
          pass the value */
 //Flora
@@ -179,5 +180,38 @@ class view_record_controller_phn_search extends Controller
 
 
         }
+        if($request->toxicity_sub_group=='fauna'){
+             
+                  $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $patient  = $incident->patient;
+                  $toxicity = $incident->toxicity->natural->fauna;     
+                  $management = $incident->managements()->pluck('managements.id');
+                  $user    = $incident->users();  
+                   //dd($management);
+                  return view('/Fauna_View_Update/fauna_view',compact('incident','patient','toxicity','symptoms','management','user'));
+        }
+
+
+
+       //chemical
+
+         if($request->toxicity_sub_group=='Carbamate Insecticides'){
+             
+                  $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $patient  = $incident->patient;
+                  $toxicity = $incident->toxicity->chemical;     
+                  $management = $incident->managements()->pluck('managements.id');
+                  $user    = $incident->users();  
+                   //dd($management);
+                  return view('/Chemical_View_Update/Chemical_View',compact('incident','patient','toxicity','symptoms','management','user'));
+        }
     }
+
+
+
+
+
+
 }

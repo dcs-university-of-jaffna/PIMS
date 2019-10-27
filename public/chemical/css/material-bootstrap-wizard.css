@@ -142,17 +142,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.9); }
 .upper {
-  padding-top: 30px;
-  color: white;
+  margin-right:50%;
+  color: black;
   font-size: 15px;
 }
 .above {
-  padding-top: 5px;
-  color: white;
+  margin-left:2%;
+  color: black;
   font-size: 15px;
 }
 .wizard-container {
-  padding-top: 5px;
+  padding-top: 90px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative;}
@@ -281,7 +281,7 @@ h2.title {
     box-shadow: 0 16px 26px -10px rgba(76, 175, 80, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2); }
   .wizard-card[data-color="green"] .picture:hover {
     border-color: #4caf50; }
-  .wizard-card[data-color="green"] .choice:hover .icon, .wizard-card[data-color="green"] .choice.active .icon {
+  .wizard-card[data-color="purple"] .choice:hover .icon, .wizard-card[data-color="green"] .choice.active .icon {
     border-color: #4caf50;
     color: #4caf50; }
   .wizard-card[data-color="green"] .form-group .form-control {
