@@ -267,8 +267,61 @@
 						 </label11> 
                                                  <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
-                     <br><br>			
-                   
+                     <br><br>
+                     
+                      @elseif($ray==4)
+                                                 <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="177"  > Redness</label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
+                                                 <br><br><br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                     
+                       @elseif($ray==5)
+                       
+                         <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="183" > Anaphylactoid </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="186">	Arthralgia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="197">	Ataxia </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="165">	Burning pain </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="18"  > Cardiac arrhythmias </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="193">	Chills </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="21"  > Coma </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="29" > Cyanosis</label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="192"  > Desquamation </label><br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="34" > Diarrhoea </label><br>
+						 
+
+					
+                          <label11>               
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="189"> Erythematous papular lesion </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="54"> Fever </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="188"> Hemolysis</label>	<br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="74"> Hypotension </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="187"> Local oedema</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="172">	Muscle spasm  </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="185" > Myalgia</label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="182" > Paraesthesia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="113" > Pulmonary oedema  </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="181">	Rash </label><br>
+						
+                        
+
+			</label11>
+                                                 
+                         <label13> 
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="125" > Seizure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="180" > Shooting pain </label><br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="178" > Stinging </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="179" > Throbbing</label><br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="144"> Vomiting </label><br>
+                         </label13>                         
+                                                 
+                                                 <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+
   
   @endif  
     </div>
@@ -347,7 +400,7 @@
             @endif  
                            
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
-            <button type="submit" name ="save" value="save">Save</button>  
+            <button type="submit" name ="save" onclick="return confirm(&quot;Save the data?&quot;)" value="save">Save</button>  
             <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
     </div>
 </form> 
