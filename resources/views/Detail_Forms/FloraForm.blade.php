@@ -605,7 +605,7 @@
             @endif  
                            
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
-            <button type="submit" name ="save" value="save">Save</button>  
+            <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)">Save</button>  
             <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
     </div>
 </form> 
