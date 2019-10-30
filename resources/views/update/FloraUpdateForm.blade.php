@@ -225,7 +225,6 @@
 
                 </div>
             </div>
-<!--div>============================================================================================================================================================<-->
 
                 <div data-panel="four">
                     <h4> Managemnt Detail</h4>
@@ -402,7 +401,7 @@
                             checked
                         @endif
                         >
-                        <label for="test16">Supportive therapy </label>
+                        <label for="test15">Supportive therapy </label>
                     </div>
 
                     If others : <br>
