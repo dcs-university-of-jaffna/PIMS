@@ -321,7 +321,17 @@
                                                  <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
-
+                     
+                      @elseif($ray==6)
+                       
+                         <label><input type="checkbox" name = "AththanaClinical[]"  value="5"> Anaphylaxis<br></label></label> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="165">	Burning pain </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="355">	ecchymoses </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="207">	Lymphangitis </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="131" > Swelling </label><br>
+                           <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>                        
   
   @endif  
     </div>
