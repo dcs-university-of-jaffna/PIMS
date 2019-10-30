@@ -414,8 +414,12 @@
                                                     <br> If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>    
-						 
-  @endif  
+						      @elseif($ray==9)
+                      
+                   <textarea rows = "13" cols = "150" name = "clinicals_others"  placeholder="Enter Clinical Features here "></textarea>
+                       
+            @endif
+   
     </div>
 		    
             
