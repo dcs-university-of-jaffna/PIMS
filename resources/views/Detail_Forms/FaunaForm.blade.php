@@ -387,7 +387,34 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>    
                      						 
-  
+                     @elseif($ray==8)
+                       
+					     <label><input type="checkbox" name ="AththanaClinical[]"  value="364">	Burning sensation of lips </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="17"> Burning sensation of mouth<br></label></label>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="349">	Burning sensation of throat </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="363">	Cold extremities </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="21" > Coma </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="163">	Convulsions </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="41">	Drowsiness </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="47"  > Epigastric pain </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="89">	Nausea </label> <br>
+						 
+						 <label11>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="365"  > Pustular papillae </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="117"  > Respiratory failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="300"  > Stomatitis</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="130">	Sweating </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="132"> Tachycardia<br></label></label>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="366">	Ulcerg </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="360"  > Vertigo </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="144" > Vomiting </label><br>
+						
+						 </label11>
+                                                 
+                                                    <br> If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>    
+						 
   @endif  
     </div>
 		    
