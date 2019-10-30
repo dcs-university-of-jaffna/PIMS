@@ -34,7 +34,7 @@ class update extends Controller
         //$Prescription = $incident->natural->id;
         //dd($Prescription);
         $managements = $incident->managements()->pluck('managements.id');
-        // dd($managements);
+       // dd($managements);
         //dd($flora);
 
 
@@ -51,8 +51,8 @@ class update extends Controller
         //$incident->patient_id=$request->PHNid;
         //$incident->toxicity_id=$toxicity->id;
         //$incident->date=$request->date;
-        // $incident->time=$request->time;
-        // $incident->area=$request->area;
+       // $incident->time=$request->time;
+       // $incident->area=$request->area;
         //$incident->symptom_others=$request->clinicals_others;
         //$incident->management_others=$request->managements_others;
         //$incident->comments=$request->comments;
@@ -119,12 +119,12 @@ class update extends Controller
 
         return redirect('home');
     }
-    /* function submitFlora(Request $request){
+   /* function submitFlora(Request $request){
 
-         $incidents = new incidents;
-         $incidents->area = $request->area;
-         $incidents->save();
-         return view('home');
+        $incidents = new incidents;
+        $incidents->area = $request->area;
+        $incidents->save();
+        return view('home');
 
-     }*/
+    }*/
 }

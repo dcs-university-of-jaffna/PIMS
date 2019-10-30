@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AththanaUpdateForm</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>AththanaUpdateForm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
         body {
-        background-color: #53c68c ;
+            background-color: #53c68c;
         }
     </style>
 </head>
@@ -28,8 +28,8 @@
                 <h3>Poison Detail</h3>
                 <div class="row">
                     <div class="col-sm-4 pl-4">
-                        <label1 > 01) Date :
-                            <input type = "date" name = "date" id="date" value="{{old('date') ?? $incident->date}}">
+                        <label1> 01) Date :
+                            <input type="date" name="date" id="date" value="{{old('date') ?? $incident->date}}">
 
                         </label1>
                     </div>
@@ -39,45 +39,43 @@
 
                     </script>
                     <div class="col-sm-4 pl-4">
-                    <label2 class="pl-5"> 02) Time  :
-                            <input type = "time" name = "time" value="{{old('date') ?? $incident->time}}">
-                    </label2>
+                        <label2 class="pl-5"> 02) Time :
+                            <input type="time" name="time" value="{{old('date') ?? $incident->time}}">
+                        </label2>
                     </div>
                     <div class="col-sm-3 pl-4">
 
                         <label3>03) Region :
 
-                            <span class = "select" >
-                                    <select name = "area" id="area" type = "time" >
-                                        <option   value = " "> ..Please choose one option.. </option>
-                                        <option id= "Chankanai" value = "Chankanai"> Chankanai </option>
-                                        <option id= "Chavakachcheri" value = "Chavakachcheri"> Chavakachcheri  </option>
-                                        <option id= "Delft" value = "Delft"> Delft  </option>
-                                        <option id= "Jaffna"value = "Jaffna"> Jaffna  </option>
-                                        <option id= "Karainagar" value = "Karainagar"> Karainagar  </option>
-                                        <option id= "Karaveddy" value = "Karaveddy"> Karaveddy  </option>
-                                        <option id= "Kayts" value = "Kayts"> Kayts  </option>
-                                        <option id= "Kopay" value = "Kopay"> Kopay  </option>
-                                        <option id= "Maruthankerney" value = "Maruthankerney"> Maruthankerney  </option>
-                                        <option id= "Nallur" value = "Nallur"> Nallur  </option>
-                                        <option id= "Point Pedro" value = "Point Pedro"> Point Pedro  </option>
-                                        <option id= "Sandilipay" value = "Sandilipay"> Sandilipay  </option>
-                                        <option id= "Tellippalai" value = "Tellippalai"> Tellippalail  </option>
-                                        <option id= "Uduvil" value = "Uduvil"> Uduvil  </option>
-                                        <option id= "Velanai" value = "Velanai"> Velanai  </option>
-                                        <option id= "Outside Jaffna District" value = "Outside Jaffna District"> Outside Jaffna District </option>
+                            <span class="select">
+                                    <select name="area" id="area" type="time">
+                                        <option value=" "> ..Please choose one option.. </option>
+                                        <option id="Chankanai" value="Chankanai"> Chankanai </option>
+                                        <option id="Chavakachcheri" value="Chavakachcheri"> Chavakachcheri  </option>
+                                        <option id="Delft" value="Delft"> Delft  </option>
+                                        <option id="Jaffna" value="Jaffna"> Jaffna  </option>
+                                        <option id="Karainagar" value="Karainagar"> Karainagar  </option>
+                                        <option id="Karaveddy" value="Karaveddy"> Karaveddy  </option>
+                                        <option id="Kayts" value="Kayts"> Kayts  </option>
+                                        <option id="Kopay" value="Kopay"> Kopay  </option>
+                                        <option id="Maruthankerney" value="Maruthankerney"> Maruthankerney  </option>
+                                        <option id="Nallur" value="Nallur"> Nallur  </option>
+                                        <option id="Point Pedro" value="Point Pedro"> Point Pedro  </option>
+                                        <option id="Sandilipay" value="Sandilipay"> Sandilipay  </option>
+                                        <option id="Tellippalai" value="Tellippalai"> Tellippalail  </option>
+                                        <option id="Uduvil" value="Uduvil"> Uduvil  </option>
+                                        <option id="Velanai" value="Velanai"> Velanai  </option>
+                                        <option id="Outside Jaffna District" value="Outside Jaffna District"> Outside Jaffna District </option>
                                     </select>
 
                                     <script>
                                         var a = "{{$incident->area}}";
 
-                                        function setSelectedIndex(s,v) {
+                                        function setSelectedIndex(s, v) {
 
-                                            for ( var i = 0; i < s.options.length; i++ )
-                                            {
+                                            for (var i = 0; i < s.options.length; i++) {
 
-                                                if ( s.options[i].id == v )
-                                                {
+                                                if (s.options[i].id == v) {
 
                                                     s.options[i].selected = true;
                                                     break;
@@ -88,8 +86,9 @@
                                             //s.selected = true;
 
                                         }
-                                    // $url = "{{$incident->area}}";
-                                        setSelectedIndex(document.getElementById('area'),a);
+
+                                        // $url = "{{$incident->area}}";
+                                        setSelectedIndex(document.getElementById('area'), a);
 
                                     </script>
                             </span>
