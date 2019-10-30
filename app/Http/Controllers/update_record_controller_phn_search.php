@@ -189,5 +189,25 @@ class update_record_controller_phn_search extends Controller
                    
                   return view('/Fauna_View_Update/fauna_update',compact('incident','patient','toxicity','symptoms','management','user'));
         }
+
+
+
+        //chemical
+
+         if($request->toxicity_sub_group=='Carbamate Insecticides'){
+             
+                  $incident = Incident::find($request->incident_id);
+                  $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $patient  = $incident->patient;
+                  $toxicity = $incident->toxicity->chemical;     
+                  $management = $incident->managements()->pluck('managements.id');
+                  $user    = $incident->users();  
+                   //dd($management);
+                  return view('/Chemical_View_Update/Chemical_Update',compact('incident','patient','toxicity','symptoms','management','user'));
+        }
+
+
     }
+
+    
 }

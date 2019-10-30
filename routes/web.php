@@ -79,7 +79,6 @@ Route::get('Chemicals_Details/Submitted','ChemicalController@save');
 Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
 Route::patch('/update/{id}','update@update')->name('incident.update');
 
-//Route::get('/home')->name('home');
 
 //------------------------------------------Dilshan ---------------------------------
 
@@ -190,3 +189,9 @@ Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
 //submit fauna update deails
 Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
 
+
+//----------------------- chemical ------------------------------------------------
+//Carbamate Insecticides update
+Route::get('/Chemical_View_Update/Chemical_Update', 'update_record_controller_phn_search@view_record');
+//Carbamate Insecticides show details
+Route::get('/Chemical_View_Update/Chemical_View', 'update_record_controller_phn_search@view_record');

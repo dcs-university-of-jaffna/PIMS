@@ -36,6 +36,7 @@ class update extends Controller
         $managements = $incident->managements()->pluck('managements.id');
        // dd($managements);
         //dd($flora);
+        //dd($flora);
 
 
         return view('update.FloraUpdateForm',compact('incident','managements','flora'));
