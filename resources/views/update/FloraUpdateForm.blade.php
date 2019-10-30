@@ -30,7 +30,7 @@
                     <div class="col-sm-4 pl-4">
                         <label1 > 01) Date :
                             <input type = "date" name = "date" id="date" value="{{old('date') ?? $incident->date}}">
-                        
+
                         </label1>
                     </div>
                     <script>
@@ -46,7 +46,7 @@
                     <div class="col-sm-3 pl-4">
 
                         <label3>03) Region :
-                    
+
                             <span class = "select" >
                                     <select name = "area" id="area" type = "time" >
                                         <option   value = " "> ..Please choose one option.. </option>
@@ -67,16 +67,16 @@
                                         <option id= "Velanai" value = "Velanai"> Velanai  </option>
                                         <option id= "Outside Jaffna District" value = "Outside Jaffna District"> Outside Jaffna District </option>
                                     </select>
-                            
+
                                     <script>
                                         var a = "{{$incident->area}}";
 
                                         function setSelectedIndex(s,v) {
 
-                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            for ( var i = 0; i < s.options.length; i++ )
                                             {
 
-                                                if ( s.options[i].id == v ) 
+                                                if ( s.options[i].id == v )
                                                 {
 
                                                     s.options[i].selected = true;
@@ -98,7 +98,7 @@
                 </div>
                 <br>
                 <div class="row">
-                
+
                     <div class="col-sm-4 pl-4">
                     <label4> 04) Part of plant :
                         <span class = "select">
@@ -119,10 +119,10 @@
 
                                         function setSelectedIndex(s,v) {
 
-                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            for ( var i = 0; i < s.options.length; i++ )
                                             {
 
-                                                if ( s.options[i].value == v ) 
+                                                if ( s.options[i].value == v )
                                                 {
 
                                                     s.options[i].selected = true;
@@ -138,10 +138,11 @@
                                         setSelectedIndex(document.getElementById('plant_part'),a);
 
                             </script>
+                        </span>
                     </label4>
                     </div>
                     <div class="col-sm-4 pl-4">
-                        <label6>05) Circumstance : 
+                        <label6>05) Circumstance :
                         <span class = "select">
                                 <select name = "circumstance" id="circumstance">
                                     <option value = " "> ..Please choose one option.. </option>
@@ -155,10 +156,10 @@
 
                                         function setSelectedIndex(s,v) {
 
-                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            for ( var i = 0; i < s.options.length; i++ )
                                             {
 
-                                                if ( s.options[i].value == v ) 
+                                                if ( s.options[i].value == v )
                                                 {
 
                                                     s.options[i].selected = true;
@@ -178,7 +179,7 @@
                         <br><br>
                     </div>
                     <div class="col-sm-4 pl-4">
-                    <label7>06) Mode of poisoning : 
+                    <label7>06) Mode of poisoning :
                     <span class = "select">
                             <select name = "poisoning_mode" id = "poisoning_mode">
                                 <option value = " "> ..Please choose one option.. </option>
@@ -192,10 +193,10 @@
 
                                         function setSelectedIndex(s,v) {
 
-                                            for ( var i = 0; i < s.options.length; i++ ) 
+                                            for ( var i = 0; i < s.options.length; i++ )
                                             {
 
-                                                if ( s.options[i].value == v ) 
+                                                if ( s.options[i].value == v )
                                                 {
 
                                                     s.options[i].selected = true;
@@ -212,7 +213,7 @@
                                 </script>
 
                         </span>
-                    </label7> 
+                    </label7>
                     <br><br>
                     </div>
                 </div>
@@ -222,8 +223,8 @@
                         <input type="number" min="0" name="amount" value="{{old('date') ?? $flora->amount}}"/>
                         </label5>
                         <br><br>
-         
-                </div>                       
+
+                </div>
             </div>
 <!--div>============================================================================================================================================================<-->
 
@@ -231,33 +232,33 @@
                     <h4> Managemnt Detail</h4>
                     <div>
                         <input type="checkbox"
-                        id = "test1" 
-                        name = "management[]" 
-                        class="check1" 
-                        value="03" 
+                        id = "test1"
+                        name = "management[]"
+                        class="check1"
+                        value="03"
                         @if ( $managements ->contains(3))
                             checked
                         @endif
                         >
                         <label for="test1"> Alkalinization</label>
                     </div>
-                    <div>         
+                    <div>
                         <input type="checkbox"
-                        id = "test2" 
-                        name = "management[]" 
-                        class="check1" 
+                        id = "test2"
+                        name = "management[]"
+                        class="check1"
                         value="04"
                         @if ( $managements ->contains(4))
                             checked
                         @endif
-                        >  
+                        >
                         <label for="test2">Analgesics given</label>
                     </div>
                     <div>
-                        <input type="checkbox" 
-                        id = "test3" 
-                        name = "management[]" 
-                        class="check1" 
+                        <input type="checkbox"
+                        id = "test3"
+                        name = "management[]"
+                        class="check1"
                         value="05"
                         @if ( $managements ->contains(5))
                             checked
@@ -265,62 +266,62 @@
                         >
                         <label for="test3">Antibiotics given</label>
                     </div>
-                    <div>           
-                        <input type="checkbox" 
-                        id = "test4" 
-                        name = "management[]" 
-                        class="check1" 
-                        value="06"  
+                    <div>
+                        <input type="checkbox"
+                        id = "test4"
+                        name = "management[]"
+                        class="check1"
+                        value="06"
                         @if ( $managements ->contains(6))
                             checked
                         @endif
                         >
                         <label for="test4">Anticonvulsants given</label>
                     </div>
-                    <div>           
-                        <input type="checkbox" 
-                        id = "test5" 
-                        name = "management[]" 
-                        class="check1" 
+                    <div>
+                        <input type="checkbox"
+                        id = "test5"
+                        name = "management[]"
+                        class="check1"
                         value="9"
-                          
+
                         @if ( $managements ->contains(9))
                             checked
                         @endif
                         >
                         <label for="test5">Atropine given</label>
-                    </div>                    
-                    <div>           
-                        <input type="checkbox" 
-                        id = "test6" 
-                        name = "management[]" 
-                        class="check1" 
-                        value="10"  
+                    </div>
+                    <div>
+                        <input type="checkbox"
+                        id = "test6"
+                        name = "management[]"
+                        class="check1"
+                        value="10"
                         @if ( $managements ->contains(10))
                             checked
                         @endif
                         >
                         <label for="test6">Blood transfusion/Plasma expanders </label>
                     </div>
-                </div>
-                <div>               
-                        <input type="checkbox" 
-                        id = "test7" 
-                        name = "management[]" 
-                        class="check1" 
-                        value="11"   
+
+                    <div>
+                        <input type="checkbox"
+                        id = "test7"
+                        name = "management[]"
+                        class="check1"
+                        value="11"
                         @if ( $managements ->contains(11))
                             checked  = true;
                         @endif
                         >
                         <label for="test7">Calcium gluconate given </label>
                     </div>
-                    <div>            
-                        <input type="checkbox" 
-                        id = "test8" 
-                        name = "management[]" 
-                        class="check1" 
-                        value="13"   
+                    <div>
+                        <input type="checkbox"
+                        id = "test8"
+                        name = "management[]"
+                        class="check1"
+                        value="13"
                         @if ( $managements ->contains(13))
                             checked
                         @endif
@@ -328,21 +329,21 @@
                         <label for="test8">Dialysis </label>
                     </div>
                     <div>
-                        <input type="checkbox" 
-                        id = "test9" 
-                        name = "management[]" 
-                        value="14"  
+                        <input type="checkbox"
+                        id = "test9"
+                        name = "management[]"
+                        value="14"
                         @if ( $managements ->contains(14))
                             checked
                         @endif
-                        > 
+                        >
                         <label for="test9">Dopamine given </label>
                     </div>
                     <div>
-                        <input type="checkbox" 
-                        id = "test10" 
-                        name = "management[]" 
-                        value="20" 
+                        <input type="checkbox"
+                        id = "test10"
+                        name = "management[]"
+                        value="20"
                         @if ( $managements ->contains(20))
                             checked
                         @endif
@@ -350,94 +351,94 @@
                         <label for="test10">Methylprednisolone/Corticosteroids </label>
                     </div>
                     <div>
-                        <input type="checkbox" 
-                        id = "test11" 
-                        name = "management[]" 
+                        <input type="checkbox"
+                        id = "test11"
+                        name = "management[]"
                         value="21"
                         @if ( $managements ->contains(21))
                             checked
                         @endif
-                        >  
+                        >
                         <label for="test11">NaCl given </label>
                     </div>
                     <div>
-                        <input type="checkbox" 
-                        id = "test12" 
-                        name = "management[]" 
-                        value="22"  
+                        <input type="checkbox"
+                        id = "test12"
+                        name = "management[]"
+                        value="22"
                         @if ( $managements ->contains(22))
                             checked
                         @endif
-                        >  
+                        >
                         <label for="test12">NaHCO3 given </label>
                         </div>
-                    <div>                        
-                        <input type="checkbox" 
-                        id = "test13" 
-                        name = "management[]" 
-                        value="24"  
+                    <div>
+                        <input type="checkbox"
+                        id = "test13"
+                        name = "management[]"
+                        value="24"
                         @if ( $managements ->contains(24))
                             checked
                         @endif
                         >
                         <label for="test13">Prednisalone given </label>
                     </div>
-                    <div>      
-                        <input type="checkbox" 
-                        id = "test14" 
-                        name = "management[]" 
-                        value="26"  
+                    <div>
+                        <input type="checkbox"
+                        id = "test14"
+                        name = "management[]"
+                        value="26"
                         @if ( $managements ->contains(26))
                             checked
                         @endif
-                        > 
+                        >
                         <label for="test14">Resuscitation </label>
                     </div>
                     <div>
-                        <input type="checkbox" 
+                        <input type="checkbox"
                         id = "test15"
-                        name = "management[]" 
-                        value="29"  
+                        name = "management[]"
+                        value="29"
                         @if ( $managements ->contains(29))
                             checked
                         @endif
-                        > 
+                        >
                         <label for="test16">Supportive therapy </label>
-                    </div>                    
-                    If others : <br> 
+                    </div>
+
+                    If others : <br>
                             <textarea id="testone" rows = "4" cols = "120" name = "managements others" value="{{old('date') ?? $incident->management_others}}" placeholder="Enter other management detail here">{{$incident->management_others}}</textarea>
-                        <br><br>                        
-                            
-                        
+                        <br><br>
+
+
                         <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
-                         <input type="checkbox" name = "management[]" value="15"  > Gastric_aspiration<br><br> 
-                         <input type="checkbox" name = "management[]" value="1"  > Activated chracol<br>  
-                           
-                          If yes, number of doses :  
+                         <input type="checkbox" name = "management[]" value="15"  > Gastric_aspiration<br><br>
+                         <input type="checkbox" name = "management[]" value="1"  > Activated chracol<br>
+
+                          If yes, number of doses :
                             <input type="text" name = "activated_chracol_doses" >
                          <br><br><br>
-                         
+
                          <label> <b> Antidote :</b> </label><br><br>
-                            <input type="checkbox" name = "management[]" value="7"  > Antidote given<br>  
-                             If yes, type of antidote :  
+                            <input type="checkbox" name = "management[]" value="7"  > Antidote given<br>
+                             If yes, type of antidote :
                             <input type="text" name = "antidote" >
                          </label9>
-                        
-                    </div>
+                </div>
+
                     <div class="row p-4">
                             <button class="btn btn-success">
                                 Save
-                            </button>       
-                    </div>                                        
-            <form>
-        </div>
+                            </button>
+                    </div>
+            </form>
+
         <blockquote class="blockquote">
             <footer class="blockquote-footer">CB Tennakoon</footer>
-        </blockquote> 
+        </blockquote>
+        </div>
     </div>
+</body>
 </html>
 
-
-</div>
-</html>
 
