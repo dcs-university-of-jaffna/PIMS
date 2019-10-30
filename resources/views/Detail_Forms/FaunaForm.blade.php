@@ -236,7 +236,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>	
                      @elseif($ray==3)
-                                                 <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+                    <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="17"  > Burning sensation of mouth </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="376"  > Cardiac abnormalities </label><br>
 						 <label><input type="checkbox" name ="AththanaClinical[]"    value="380" > Cranial nerve palsy </label><br>
@@ -246,13 +246,10 @@
 						 <label><input type="checkbox" name ="AththanaClinical[]"   value="371" > Dysuria  </label><br> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="370" > Gross haematuria </label><br>	
 						 <label><input type="checkbox" name ="AththanaClinical[]" value="59"> Haematemesis </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
 						 
-						
-						 
-					
                           <label11>               
-                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
+                        <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
 						 <label><input type="checkbox" name ="AththanaClinical[]" value="372">	Mucosal erosion </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
 						  <label><input type="checkbox" name = "AththanaClinical[]" value="378" > Occult rectal bleeding </label><br> 
