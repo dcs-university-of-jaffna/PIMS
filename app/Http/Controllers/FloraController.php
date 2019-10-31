@@ -106,7 +106,7 @@ class FloraController extends Controller
        $flora->circumstance = $request-> circumstance;
        $flora->poisoning_mode  = $request-> poisoning_mode;     
        $flora->antidote = $request->antidote; 
-       $flora->activated_chracol_doses = $request->activated_chracol_doses; 
+       $flora->activated_chracol_doses = $request->activated_chracol_doses;
        $flora->save();
         	
       

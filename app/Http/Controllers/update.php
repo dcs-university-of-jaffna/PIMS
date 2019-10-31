@@ -56,6 +56,8 @@ class update extends Controller
         $data1->circumstance =$request->circumstance;
         $data1->poisoning_mode=$request->poisoning_mode;
         $data1->amount=$request->amount;
+        $data1->activated_chracol_doses = $request->activated_chracol_doses;
+        $data1->antidote= $request->antidote; 
 
         $data1->save();
 
@@ -64,6 +66,7 @@ class update extends Controller
         $management=$request->management;
         $d =array_fill_keys($management,['doctor_id'=>$user]);
         $data->managements()->sync($d);
+
 
         return redirect('home');
     }
