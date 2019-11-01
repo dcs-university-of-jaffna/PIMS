@@ -189,3 +189,9 @@ Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
 //submit fauna update deails
 Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
 
+
+//----------------------- chemical ------------------------------------------------
+//Carbamate Insecticides update
+Route::get('/Chemical_View_Update/Chemical_Update', 'update_record_controller_phn_search@view_record');
+//Carbamate Insecticides show details
+Route::get('/Chemical_View_Update/Chemical_View', 'update_record_controller_phn_search@view_record');

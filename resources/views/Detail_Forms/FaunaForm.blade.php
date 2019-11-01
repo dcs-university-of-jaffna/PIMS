@@ -172,59 +172,281 @@
     <div data-panel="three">
           <h4>Clinical Feature</h4>
                 @if($ray==1)<br>
- <input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm <br> 
- <input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  <br> 
- <input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  <br>
- <input type="checkbox" name ="AththanaClinical[]"    value="34" >  Diarrhoea  <br>  
- <input type="checkbox" name ="AththanaClinical[]"   value="74" >  Hypotension <br> 
- <input type="checkbox" name ="AththanaClinical[]"    value="81" >  Laryngeal oedema  <br>  
- <input type="checkbox" name ="AththanaClinical[]"   value="82"  >  Malaise <br>    
- <input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  <br>
- <input type="checkbox" name ="AththanaClinical[]"   value="98" >  	Oliguria <br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  </label><br>
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="34" >  Diarrhoea  </label><br>  
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="74" >  Hypotension </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="81" >  Laryngeal oedema  </label><br>  
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="82"  >  Malaise </label><br>    
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  </label><br>
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="98" >  	Oliguria </label><br> 
  
 <label11> 
- <input type="checkbox" name ="AththanaClinical[]"    value="110" >  Pruritus <br> 
- <input type="checkbox" name ="AththanaClinical[]"   value="114"  >  Renal failure <br> 
- <input type="checkbox" name ="AththanaClinical[]"   value="121" >   Rhabdomyolysis <br> 
- <input type="checkbox" name ="AththanaClinical[]"    value="259" > Seizures  <br>  
- <input type="checkbox" name ="AththanaClinical[]"   value="166"  >  Serum sickness <br>  
- <input type="checkbox" name ="AththanaClinical[]"   value="131"  >  Swelling <br>  
- <input type="checkbox" name ="AththanaClinical[]"   value="137" >  Tightness of chest  <br> 
- <input type="checkbox" name ="AththanaClinical[]"    value="140" >  Urticaria  <br> 
- <input type="checkbox" name ="AththanaClinical[]"   value="144"  >  Vomiting <br>   
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="110" >  Pruritus </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="114"  >  Renal failure </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="121" >   Rhabdomyolysis </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="259" > Seizures  </label><br>  
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="166"  >  Serum sickness </label><br>  
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="131"  >  Swelling </label><br>  
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="137" >  Tightness of chest  </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"    value="140" >  Urticaria  </label><br> 
+ <label><input type="checkbox" name ="AththanaClinical[]"   value="144"  >  Vomiting </label><br>   
  </label11> 
   <br><br>
   If others :<br>
  <textarea rows = "4" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
-  <br><br> 
-  @endif  
+  <br>
+
+
+@elseif($ray==2)
+                         <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="170"  > Coagulopathy </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="163"> Convulsions </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="171"> Cramping truncal pain </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="169" > Haemoglobinuria </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="173" > Headache </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="175"  > Hyperaesthesia </label><br>						 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="157"  > Hypertension </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="54"> Fever </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="167" > Local necrosis </label><br>	
+					         <label><input type="checkbox" name = "AththanaClinical[]" value="172" > Muscle spasm </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]"   value="89" > Nausea  </label><br> 
+
+						
+        
+                          <label11>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="101">	Pain </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="176"> Ptosis </label>	<br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="114">	Renal failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="118"  > Restlessness </label><br>
+                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="124">	Salivation  </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="168" > Scarlatiniform rash </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="130" > Sweating </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="174" > Tachypnoea </label><br>						  
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="140" > Urticaria </label><br>  
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="144"> Vomiting </label><br> 
+					         <label><input type="checkbox" name ="AththanaClinical[]" value="146"> Weakness </label><br>
+					        
+
+						 
+						 </label11> 
+                                                 <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>	
+                     @elseif($ray==3)
+                                                 <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="17"  > Burning sensation of mouth </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="376"  > Cardiac abnormalities </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"    value="380" > Cranial nerve palsy </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="367" > Dark coloured urine </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="359"> Disseminated intravascular coagulation</label><br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="44"> Dysphagia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"   value="371" > Dysuria  </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="370" > Gross haematuria </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="59"> Haematemesis </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
+						 
+						
+						 
+					
+                          <label11>               
+                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="372">	Mucosal erosion </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
+						  <label><input type="checkbox" name = "AththanaClinical[]" value="378" > Occult rectal bleeding </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="382" > Periorbital dermatitis</label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="375">	Priapism </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="381"  > Progressive muscle weakness</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="373"> Renal dysfunction</label>	<br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="117" > Respiratory failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="125"  > Seizure </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]" value="377">	Vaginal bleeding  </label> <br>
+		 
+						 </label11> 
+                                                 <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                     
+                      @elseif($ray==4)
+                                                 <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="177"  > Redness</label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
+                                                 <br><br><br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                     
+                       @elseif($ray==5)
+                       
+                         <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="183" > Anaphylactoid </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="186">	Arthralgia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="197">	Ataxia </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="165">	Burning pain </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="18"  > Cardiac arrhythmias </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="193">	Chills </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="21"  > Coma </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="29" > Cyanosis</label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="192"  > Desquamation </label><br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="34" > Diarrhoea </label><br>
+						 
+
+					
+                          <label11>               
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="189"> Erythematous papular lesion </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="54"> Fever </label><br>	
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="188"> Hemolysis</label>	<br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="74"> Hypotension </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="187"> Local oedema</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="172">	Muscle spasm  </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="185" > Myalgia</label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="182" > Paraesthesia </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="113" > Pulmonary oedema  </label><br> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="181">	Rash </label><br>
+						
+                        
+
+			</label11>
+                                                 
+                         <label13> 
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="125" > Seizure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="180" > Shooting pain </label><br>	
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="178" > Stinging </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="179" > Throbbing</label><br>						 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="144"> Vomiting </label><br>
+                         </label13>                         
+                                                 
+                                                 <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>
+                     
+                      @elseif($ray==6)
+                       
+                         <label><input type="checkbox" name = "AththanaClinical[]"  value="5"> Anaphylaxis<br></label></label> 
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="165">	Burning pain </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="355">	Ecchymoses </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="207">	Lymphangitis </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="131" > Swelling </label><br>
+                           <br>   If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>    
+                     
+                     @elseif($ray==7)
+                       
+                         <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="208" > Blisters </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="359" > Disseminated intravascular coagulation </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="248" > Hematuria </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="354" > Hemoglobinuria </label><br>
+                                                 <label><input type="checkbox" name ="AththanaClinical[]"  value="74">	Hypotension </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="167"  > Local necrosis </label><br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="98" > Oliguria </label><br>
+                                                  <label><input type="checkbox" name ="AththanaClinical[]"  value="101"> Pain </label> <br>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="336" > Proteinuria </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="121" > Rhabdomyolysis </label><br>
+                                                  
+						 
+						 	
+						 
+                                                 <label11>
+                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling </label><br>
+                                                  <label><input type="checkbox" name ="AththanaClinical[]"  value="144"> Vomiting </label> <br><br>
+                                                  
+                                                  <b>Haematological</b><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="278" > Blood stained vomitus </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="355">	Ecchymoses </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="330">	Gum bleeding </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="335" > Intracranial haemorrhages  </label><br> 
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="298" > Melaena </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="324" > Per rectal bleeding  </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="247" > Purpura</label><br>
+						 <br>
+						 </label11>
+                                                 
+                                                  
+					
+                                                 <label13>
+                                                 <b>Neurological manifestations</b><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="210"> Areflexia </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="213"> Double vision</label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="41" > Drowsiness </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="44">	Dysphagia</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="214">	External ophthalmoplegia </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="209"> Facial muscle weakness </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="176" > Ptosis</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="211"> Respiratory paralysis</label>	<br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="212"> Visual disturbances </label><br>
+						 <br>
+						</label13>
+						 
+						 
+           <br> If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>    
+                     						 
+                     @elseif($ray==8)
+                       
+					     <label><input type="checkbox" name ="AththanaClinical[]"  value="364">	Burning sensation of lips </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="17"> Burning sensation of mouth<br></label></label>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="349">	Burning sensation of throat </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="363">	Cold extremities </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="21" > Coma </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="163">	Convulsions </label> <br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="41">	Drowsiness </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="47"  > Epigastric pain </label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="89">	Nausea </label> <br>
+						 
+						 <label11>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="365"  > Pustular papillae </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="117"  > Respiratory failure </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="300"  > Stomatitis</label><br>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="130">	Sweating </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]"  value="132"> Tachycardia<br></label></label>
+						 <label><input type="checkbox" name ="AththanaClinical[]"  value="366">	Ulcerg </label> <br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="360"  > Vertigo </label><br>
+						 <label><input type="checkbox" name = "AththanaClinical[]" value="144" > Vomiting </label><br>
+						
+						 </label11>
+                                                 
+                                                    <br> If others :<br>
+                      <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+                     <br><br>    
+						      @elseif($ray==9)
+                      
+                   <textarea rows = "13" cols = "150" name = "clinicals_others"  placeholder="Enter Clinical Features here "></textarea>
+                       
+            @endif
+   
     </div>
 		    
             
     <div data-panel="four">
 			<h4> Managemnt Detail</h4>
                         
-                    <br> <input type="checkbox" name = "management[]" value="2"  > Adrenaline <br>
-                     <input type="checkbox" name = "management[]" value="4"  >  Analgesics given <br>
-                     <input type="checkbox" name = "management[]" value="41" > Antacids <br>
-                     <input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given  <br>  
-                     <input type="checkbox" name = "management[]" value="8"  >  Antihistamine <br> 
-                     <input type="checkbox" name = "management[]" value="11" > Calcium gluconate given <br>
-		     <input type="checkbox" name = "management[]" value="16" > Gastric lavage <br>  
-                     <input type="checkbox" name = "management[]" value="33" > Hydrocortisone <br>
-		     <input type="checkbox" name = "management[]" value="36" > Hemodialysis <br>
+                    <br> <label><input type="checkbox" name = "management[]" value="2"  > Adrenaline </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="4"  >  Analgesics given </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="41" > Antacids </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given </label> <br>  
+                     <label><input type="checkbox" name = "management[]" value="8"  >  Antihistamine </label> <br> 
+                     <label><input type="checkbox" name = "management[]" value="11" > Calcium gluconate given </label> <br>
+		     <label><input type="checkbox" name = "management[]" value="16" > Gastric lavage </label> <br>  
+                     <label><input type="checkbox" name = "management[]" value="33" > Hydrocortisone </label> <br>
+		     <label><input type="checkbox" name = "management[]" value="36" > Hemodialysis </label> <br>
 					 
 
                      <label11>
-                            <input type="checkbox" name = "management[]" value="17" > Icepacks Applaid <br>   
-                            <input type="checkbox" name = "management[]" value="40"  > Inotropic support <br>
-                            <input type="checkbox" name = "management[]" value="34"  > Nebulisation<br>
-                            <input type="checkbox" name = "management[]" value="35"  > Peritoneal<br>                        
-                            <input type="checkbox" name = "management[]" value="31"  > Rest the area of bite<br>      
-                            <input type="checkbox" name = "management[]" value="26"  > Resuscitation <br>
-                            <input type="checkbox" name = "management[]" value="37"  > Tetanus prophylaxis <br>
-			    <input type="checkbox" name = "management[]" value="38"  > Topical steroids <br>
-			    <input type="checkbox" name = "management[]" value="30"  > Wound cleaning<br>     
+                            <label><input type="checkbox" name = "management[]" value="17" > Icepacks Applaid </label><br>   
+                            <label><input type="checkbox" name = "management[]" value="40"  > Inotropic support </label> <br>
+                            <label><input type="checkbox" name = "management[]" value="34"  > Nebulisation </label><br>
+                            <label><input type="checkbox" name = "management[]" value="35"  > Peritoneal </label><br>                        
+                            <label><input type="checkbox" name = "management[]" value="31"  > Rest the area of bite </label><br>      
+                            <label><input type="checkbox" name = "management[]" value="26"  > Resuscitation </label> <br>
+                            <label><input type="checkbox" name = "management[]" value="37"  > Tetanus prophylaxis </label> <br>
+			    <label><input type="checkbox" name = "management[]" value="38"  > Topical steroids </label> <br>
+			    <label><input type="checkbox" name = "management[]" value="30"  > Wound cleaning </label> <br>     
                      </label11> 
                         <br><br>
                         If others : <br> 
@@ -232,7 +454,7 @@
                         <br><br>
                         
                          <label9> <b> AVS :</b> </label><br><br>
-                            <input type="checkbox" name = "management[]" value="7"  > Anti snake venom serum(AVS) given<br>  
+                            <label><input type="checkbox" name = "management[]" value="7"  > Anti snake venom serum(AVS) given </label><br>  
                              If yes, no of vials :  
                             <input type="number" name = "AVS" >
                          </label9>
@@ -274,7 +496,7 @@
             @endif  
                            
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
-            <button type="submit" name ="save" value="save">Save</button>  
+            <button type="submit" name ="save" onclick="return confirm(&quot;Save the data?&quot;)" value="save">Save</button>  
             <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
     </div>
 </form> 
@@ -290,4 +512,3 @@
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
