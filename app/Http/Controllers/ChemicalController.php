@@ -20,8 +20,83 @@ class ChemicalController extends Controller
     {
         if($id==1)
         {
-            $id = 'Carbamate_Insecticides';
-            //$toxicityData1->save();
+            $id = 'Carbamate Insecticides';
+        }
+        if($id==2)
+        {
+            $id = 'Chlorophenoxy Compounds';
+        }
+        if($id==3)
+        {
+            $id = 'Coumarins';
+        }
+        if($id==4)
+        {
+            $id = 'Dithiocarbamate';
+        }
+        if($id==5)
+        {
+            $id = 'Diuron';
+        }
+        if($id==6)
+        {
+            $id = 'Fipronil';
+        }
+        if($id==7)
+        {
+            $id = 'Glyphosate';
+        }
+        if($id==8)
+        {
+            $id = 'Imidacloprid';
+        }
+        if($id==9)
+        {
+            $id = 'Metaldehyde';
+        }
+        if($id==10)
+        {
+            $id = 'Methyl Bromide';
+        }
+        if($id==11)
+        {
+            $id = 'Nitrophends and Nitro Cresols';
+        }
+        if($id==12)
+        {
+            $id = 'Organochlorines';
+        }
+        if($id==13)
+        {
+            $id = 'Organophosphates';
+        }
+        if($id==14)
+        {
+            $id = 'Phosphides';
+        }
+        if($id==15)
+        {
+            $id = 'Propanil ';
+        }
+        if($id==16)
+        {
+            $id = 'Pyrethrum and related compounds';
+        }
+        if($id==17)
+        {
+            $id = 'Thallium';
+        }
+        if($id==18)
+        {
+            $id = 'Thiocarbamates';
+        }
+        if($id==19)
+        {
+            $id = 'Triazenes and Triazoles';
+        }
+        if($id==20)
+        {
+            $id = 'Other pesticide poisoning';
         }
         return view('Chemicals_Details.First_Page',compact('id'));
     }
@@ -95,7 +170,7 @@ class ChemicalController extends Controller
         $managementData19 = Management::select('name')->where('id',52)->get();
         $managementData20 = Management::select('name')->where('id',55)->get();
         $managementData21 = Management::select('name')->where('id',54)->get();
-        return view('Chemicals_Details.Carbamate_Insecticides',compact('phn','clinicalData1','clinicalData2',
+        return view('Chemicals_Details.chemical',compact('phn','clinicalData1','clinicalData2',
                     'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                     'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                     'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
