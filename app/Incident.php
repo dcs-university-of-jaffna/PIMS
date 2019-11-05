@@ -58,7 +58,7 @@ class Incident extends Model
     public function symptoms()
     {
         return $this->belongsToMany('App\Symptom')
-            ->using('App\Incident_Symptom')
+            ->using('App\IncidentSymptom')
             ->withTimestamps();
     }
 
