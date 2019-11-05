@@ -70,7 +70,7 @@
                                     <span class="upper" name="chemicals"> Main_Group -> Chemicals </span>
                                     <span class="above" name="pesticides"> Sub_Group -> Pesticides </span>
 		                        	<h3 class="wizard-title">
-		                        	   Details of Carbamate_Insecticides
+		                        	   Details of {{$id}}
 		                        	</h3>
 		                    	</div>
 								<div class="wizard-navigation">
