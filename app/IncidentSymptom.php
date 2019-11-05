@@ -27,4 +27,9 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class IncidentSymptom extends Pivot
 {
     public $incrementing = true;
+    
+    public function incident()
+    {
+        return $this->hasOne('App\Incident');
+    }
 }

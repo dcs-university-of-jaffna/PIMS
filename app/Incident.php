@@ -51,6 +51,11 @@ class Incident extends Model
     {
         return $this->hasOne('App\Laboratory');
     }
+    /**
+    */
+    public function incidentSymptom(){
+        return $this->belongsTo('App\IncidentSymptom');
+    }
 
     /**
      * Incident has many Symptoms

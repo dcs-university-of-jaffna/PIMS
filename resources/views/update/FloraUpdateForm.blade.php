@@ -404,33 +404,37 @@
                         > 
                         <label for="test16">Supportive therapy </label>
                     </div>                    
-                    If others : <br> 
-                            <textarea id="testone" rows = "4" cols = "120" name = "managements others" value="{{old('date') ?? $incident->management_others}}" placeholder="Enter other management detail here">{{$incident->management_others}}</textarea>
-                        <br><br>                        
-                            
-                        
-                        <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
-                         <input type="checkbox" name = "management[]" value="15"  > Gastric_aspiration<br><br> 
-                         <input type="checkbox" name = "management[]" value="1"  > Activated chracol<br>  
-                           
-                          If yes, number of doses :  
-                            <input type="text" name = "activated_chracol_doses" >
-                         <br><br><br>
-                         
-                         <label> <b> Antidote :</b> </label><br><br>
-                            <input type="checkbox" name = "management[]" value="7"  > Antidote given<br>  
-                             If yes, type of antidote :  
-                            <input type="text" name = "antidote" >
-                         </label9>
-                        
+                    If yes, number of doses :
+                        <input type="text" name = "activated_chracol_doses" value="{{old('activated_chracol_doses') ?? $flora->activated_chracol_doses}}" >
+                        <br><br>
+
+                        Antidote :
+                        <br>
+                        <div>
+                        <input type="checkbox"
+                        id = "test18"
+                        name = "management[]"
+                        value="7"
+                        @if ( $managements ->contains(7))
+                            checked
+                        @endif
+                        >
+                        <label for="test18">Antidote given</label>
+                        </div>
+                                                
+                        If yes, type of antidote :
+                        <input type="text" name = "antidote" value="{{old('antidote') ?? $flora->antidote}}" >
                     </div>
+                </div>
+        
+    </div>
+		    		    
                     <div class="row p-4">
                             <button class="btn btn-success">
                                 Save
-                            </button>       
-                    </div>                                        
-            <form>
-        </div>
+                            </button>
+                    </div>
+            </form>
         <blockquote class="blockquote">
             <footer class="blockquote-footer">CB Tennakoon</footer>
         </blockquote> 
