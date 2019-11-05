@@ -162,7 +162,7 @@ class FloraController extends Controller
 
       $back=1;
 
-      return view('Detail_Forms.FloraForm',compact('patient1','patient2','back','ray'));
+      return view('Detail_Forms.saveForm');
    }
    
  
