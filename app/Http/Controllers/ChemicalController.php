@@ -619,7 +619,7 @@ class ChemicalController extends Controller
                         'managementData18','managementData19','managementData20','managementData21'));
         }
         if($id==16) {
-                $id = 'Chlorophenoxy_Compounds';
+                $id = 'Pyrethrum and related compounds';
 
                 //get clinical features from symptom table
                 $clinicalData1 = Symptom::select('name')->where('id',3)->get();
@@ -652,7 +652,7 @@ class ChemicalController extends Controller
                 $clinicalData28 = Symptom::select('name')->where('id',132)->get();
                 $clinicalData29 = Symptom::select('name')->where('id',144)->get();
 
-                return view('Chemicals_Details.Chlorophenoxy_Compounds',compact('id','phn','clinicalData1','clinicalData2',
+                return view('Chemicals_Details.Pyrethrum_and_related_compounds',compact('id','phn','clinicalData1','clinicalData2',
                         'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                         'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                         'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -665,7 +665,7 @@ class ChemicalController extends Controller
                         'managementData18','managementData19','managementData20','managementData21'));
         }
         if($id==17) {
-                $id = 'Chlorophenoxy_Compounds';
+                $id = 'Thallium';
 
                 //get clinical features from symptom table
                 $clinicalData1 = Symptom::select('name')->where('id',3)->get();
@@ -698,7 +698,7 @@ class ChemicalController extends Controller
                 $clinicalData28 = Symptom::select('name')->where('id',132)->get();
                 $clinicalData29 = Symptom::select('name')->where('id',144)->get();
 
-                return view('Chemicals_Details.Chlorophenoxy_Compounds',compact('id','phn','clinicalData1','clinicalData2',
+                return view('Chemicals_Details.Thallium',compact('id','phn','clinicalData1','clinicalData2',
                         'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                         'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                         'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -711,7 +711,7 @@ class ChemicalController extends Controller
                         'managementData18','managementData19','managementData20','managementData21'));
         }
         if($id==18) {
-                $id = 'Chlorophenoxy_Compounds';
+                $id = 'Thiocarbamates';
 
                 //get clinical features from symptom table
                 $clinicalData1 = Symptom::select('name')->where('id',3)->get();
@@ -744,7 +744,7 @@ class ChemicalController extends Controller
                 $clinicalData28 = Symptom::select('name')->where('id',132)->get();
                 $clinicalData29 = Symptom::select('name')->where('id',144)->get();
 
-                return view('Chemicals_Details.Chlorophenoxy_Compounds',compact('id','phn','clinicalData1','clinicalData2',
+                return view('Chemicals_Details.Thiocarbamates',compact('id','phn','clinicalData1','clinicalData2',
                         'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                         'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                         'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -757,7 +757,7 @@ class ChemicalController extends Controller
                         'managementData18','managementData19','managementData20','managementData21'));
         }
         if($id==19) {
-                $id = 'Chlorophenoxy_Compounds';
+                $id = 'Triazenes and Triazoles';
 
                 //get clinical features from symptom table
                 $clinicalData1 = Symptom::select('name')->where('id',3)->get();
@@ -790,7 +790,7 @@ class ChemicalController extends Controller
                 $clinicalData28 = Symptom::select('name')->where('id',132)->get();
                 $clinicalData29 = Symptom::select('name')->where('id',144)->get();
 
-                return view('Chemicals_Details.Chlorophenoxy_Compounds',compact('id','phn','clinicalData1','clinicalData2',
+                return view('Chemicals_Details.Triazenes_and_Triazoles',compact('id','phn','clinicalData1','clinicalData2',
                         'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                         'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                         'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -803,7 +803,7 @@ class ChemicalController extends Controller
                         'managementData18','managementData19','managementData20','managementData21'));
         }
         if($id==20) {
-                $id = 'Chlorophenoxy_Compounds';
+                $id = 'other pesticide poisoning';
 
                 //get clinical features from symptom table
                 $clinicalData1 = Symptom::select('name')->where('id',3)->get();
@@ -836,7 +836,7 @@ class ChemicalController extends Controller
                 $clinicalData28 = Symptom::select('name')->where('id',132)->get();
                 $clinicalData29 = Symptom::select('name')->where('id',144)->get();
 
-                return view('Chemicals_Details.Chlorophenoxy_Compounds',compact('id','phn','clinicalData1','clinicalData2',
+                return view('Chemicals_Details.other_pesticide_poisoning',compact('id','phn','clinicalData1','clinicalData2',
                         'clinicalData3','clinicalData4','clinicalData5','clinicalData6','clinicalData7',
                         'clinicalData8','clinicalData9','clinicalData10','clinicalData11','clinicalData12',
                         'clinicalData13','clinicalData14','clinicalData15','clinicalData16','clinicalData17',
@@ -1621,6 +1621,131 @@ class ChemicalController extends Controller
                 $incidentSymptomData = new IncidentSymptom();
                 $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
                 $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' stupor')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->anaphylactoid) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' anaphylactoid')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->bronchospasm) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' bronchospasm')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->swelling_of_oral_mucosa) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' swelling of oral mucosa')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->excitability) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' excitability')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->hypersenitivity_pneumonitis) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' hypersenitivity pneumonitis')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->numbness) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' numbness')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->patchy_lung_infiltration) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' patchy lung infiltration')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->fatigue) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' fatigue')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->morexa) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' morexa')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->photophobia) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' photophobia')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->areflexia) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' areflexia')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->cardiac_failure) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' cardiac failure')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->chroeathetosis) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' chroeathetosis')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->constipation) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' constipation')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->hallucinations) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' hallucinations')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->hypertension) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' hypertension')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->muscle_atrophy) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' muscle atrophy')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->optic_neuropathy) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' optic neuropathy')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->allergic_reactions) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' allergic_reactions')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->CNS_effects) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' CNS_effects')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->respiratory_acidesis) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' respiratory_acidesis')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->anorexia) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' anorexia')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->burning_sensaction_of_mouth) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' burning sensaction of mouth')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->huscle_spasm) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' huscle spasm')->first()->id;
+                $incidentSymptomData->save(); }
+        if($request->skin_dermatitis ) {
+                $incidentSymptomData = new IncidentSymptom();
+                $incidentSymptomData->incident_id = DB::table('incidents')->orderBy('id','desc')->first()->id;
+                $incidentSymptomData->symptom_id = DB::table('symptoms')->where('name',' skin dermatitis ')->first()->id;
                 $incidentSymptomData->save(); }
 
         // management features to save in prescription table
