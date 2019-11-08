@@ -260,7 +260,7 @@
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->toxicity->name}}</a></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->toxicity->toxin->name}}</a></div>
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
                </div>
               </div>

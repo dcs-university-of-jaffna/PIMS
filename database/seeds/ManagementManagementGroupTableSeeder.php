@@ -31,7 +31,7 @@ class ManagementManagementGroupTableSeeder extends Seeder
                 ['management_group_id' => 1, 'management_id' => 20, 'category' => 'general'],
                 ['management_group_id' => 1, 'management_id' => 15, 'category' => 'gastrointestinal decontamination'],
                 ['management_group_id' => 1, 'management_id' => 1, 'category' => 'gastrointestinal decontamination'],
-                ['management_group_id' => 1, 'management_id' => 7, 'category' => 'general'],
+                ['management_group_id' => 1, 'management_id' => 7, 'category' => 'antidote'],
                 ['management_group_id' => 2, 'management_id' => 26, 'category' => 'general'],
                 ['management_group_id' => 2, 'management_id' => 17, 'category' => 'general'],
                 ['management_group_id' => 2, 'management_id' => 30, 'category' => 'general'],

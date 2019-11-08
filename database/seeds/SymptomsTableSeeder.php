@@ -604,6 +604,7 @@ class SymptomsTableSeeder extends Seeder
                 ['id' => 560, 'name' => 'metformin'],
                 ['id' => 561, 'name' => 'haemolytic anaemia'],
                 ['id' => 562, 'name' => 'fasciculations'],
+                ['id' => 563, 'name' => 'guillain barre syndrome'],
 
             ]
         );
