@@ -953,6 +953,86 @@
 </div>
 @endif
 
+@else if($incident->toxicity->name =='Centipede Bite')
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="101" @if($management->contains(101)) checked @endif> 
+            
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;  Pain
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="117" @if($management->contains(117)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Redness 
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="131" @if($management->contains(131)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Swelling
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+@endif
+
+@else if($incident->toxicity->name =='Jelly Fish')
+
+
+
+
+@endif
+
+@else if($incident->toxicity->name =='Scorpion Bite')
+
+
+
+
+@endif
+
+
+@else if($incident->toxicity->name =='Snake bite')
+
+
+
+
+@endif
+
+
+
+@else if($incident->toxicity->name =='Turtle Flesh Poison')
+
+
+
+
+@endif
+
+
+@else if($incident->toxicity->name =='Unknown Bite')
+
+
+
+
+@endif
+
 <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" readonly name="clinicals_others"   >{{$incident->symptom_others}} </textarea>

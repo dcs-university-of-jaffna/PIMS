@@ -267,10 +267,10 @@
                      <br><br>
                      
                       @elseif($ray==4)
-                                                 <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="177"  > Redness</label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
-                                                 <br><br><br>   If others :<br>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
+                        <br><br><br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
