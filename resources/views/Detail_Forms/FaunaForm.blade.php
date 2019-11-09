@@ -333,16 +333,16 @@
                      @elseif($ray==7)
                        
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="208" > Blisters </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="208" > Blisters </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="359" > Disseminated intravascular coagulation </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="248" > Hematuria </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="354" > Hemoglobinuria </label><br>
-                                                 <label><input type="checkbox" name ="AththanaClinical[]"  value="74">	Hypotension </label> <br>
+                         <label><input type="checkbox" name ="AththanaClinical[]"  value="74">	Hypotension </label> <br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="167"  > Local necrosis </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="98" > Oliguria </label><br>
-                                                  <label><input type="checkbox" name ="AththanaClinical[]"  value="101"> Pain </label> <br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="336" > Proteinuria </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="98" > Oliguria </label><br>
+                         <label><input type="checkbox" name ="AththanaClinical[]"  value="101"> Pain </label> <br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="336" > Proteinuria </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="121" > Rhabdomyolysis </label><br>
                                                   
 						 
