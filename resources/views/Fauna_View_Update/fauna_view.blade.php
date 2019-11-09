@@ -1277,6 +1277,7 @@
         </div>
    </div>
 </div>
+
 <div class="row"> 
     <div class="col">
         <div class="form-group">
@@ -1318,7 +1319,74 @@
 @else if($incident->toxicity->name =='Scorpion Bite')
 
 
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="5" @if($symptoms->contains(5)) checked @endif> 
+            
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;  Anaphylaxis 
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="165" @if($symptoms->contains(165)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Burning pain
+            </label>
+            </div>
+        </div>
+   </div>
 
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="355" @if($symptoms->contains(355)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Ecchymoses
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="207" @if($symptoms->contains(207)) checked @endif> 
+            
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;  Lymphangitis 
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="131" @if($symptoms->contains(131)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Swelling
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            
+            </div>
+        </div>
+   </div>
+</div>
 
 @endif
 
