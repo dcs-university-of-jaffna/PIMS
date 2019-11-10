@@ -14,6 +14,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
+
 /**
  * Class representing attributes of incident_symptom pivot table
  * PHP version 7.2.19

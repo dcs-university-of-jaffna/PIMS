@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PivotModel representing prescription table
+ * PivotModel representing incident_user table
  * PHP version 7.2.19
  *
  * @category Model
@@ -16,7 +16,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
- * Class representing attributes of Prescription pivot table
+ * Class representing attributes of incident_user pivot table
  * PHP version 7.2.19
  *
  * @category PivotModel->Class
@@ -25,9 +25,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  * @license  GNU General Public License (GPL)
  * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
-
-class Prescription extends Pivot
+class IncidentUser extends Pivot
 {
     public $incrementing = true;
 }
-

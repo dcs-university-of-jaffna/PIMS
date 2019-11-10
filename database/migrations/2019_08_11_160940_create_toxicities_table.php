@@ -44,8 +44,18 @@ class CreateToxicitiesTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('main_group');
                 $table->string('sub_group');
-                $table->string('name');
+                $table->string('name')->nullable();
+                $table->unsignedBigInteger('toxin_id');
+                $table->unsignedBigInteger('management_group_id');
                 $table->timestamps();
+
+                $table->foreign('management_group_id')
+                    ->references('id')->on('management_groups')
+                    ->onUpdate('cascade');
+
+                $table->foreign('toxin_id')
+                    ->references('id')->on('toxins')
+                    ->onUpdate('cascade');
             }
         );
     }

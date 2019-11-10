@@ -38,6 +38,24 @@ class Toxicity extends Model
     }
 
     /**
+     * Toxicity has one Toxin
+     *
+     */
+    public function toxin()
+    {
+        return $this->belongsTo('App\Toxin');
+    }
+
+    /**
+     * Toxicity has one Management_Group
+     *
+     */
+    public function management_group()
+    {
+        return $this->belongsTo('App\ManagementGroup');
+    }
+
+    /**
      * Toxicity has one (natural || chemical || pharmaceutical || other_toxicity)
      *
      */

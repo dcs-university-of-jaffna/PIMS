@@ -282,7 +282,7 @@
                 <label for="cli_oth"> If others <br></label>
                 <input  type="text"
                         id="cli_oth"
-                        name="clinical_others"
+                        name="symptom_others"
                         value="{{ $incident->symptom_others }}"
                 >
             </div>
@@ -526,6 +526,7 @@
                             let act_given = document.getElementById("act_chr").checked;
                             document.getElementById("act_dos").disabled = !act_given;
                         }
+                        toggleActDos();
                     </script>
 
                 </div>
@@ -561,6 +562,7 @@
                         let act_given = document.getElementById("ant_do").checked;
                         document.getElementById("ant_type").disabled = !act_given;
                     }
+                    toggleAntidote()
                 </script>
             </div>
         </div>
