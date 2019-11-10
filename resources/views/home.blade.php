@@ -134,25 +134,25 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <li><a class="dropdown-item" href="Chemicals_Details/First_Page/1" value="1"> Carbamate Insecticides </a></li>
-                            <li><a class="dropdown-item" href="#" value="2">Chlorophenoxy Compounds</a></li>   
-                            <li><a class="dropdown-item" href="#" value="3">Coumarins</a></li>   
-                            <li><a class="dropdown-item" href="#" value="4">Dithiocarbamate</a></li>   
-                            <li><a class="dropdown-item" href="#" value="5">Diuron</a></li>   
-                            <li><a class="dropdown-item" href="#" value="6">Fipronil</a></li>   
-                            <li><a class="dropdown-item" href="#" value="7">Glyphosate</a></li>   
-                            <li><a class="dropdown-item" href="#" value="8">Imidacloprid</a></li>   
-                            <li><a class="dropdown-item" href="#" value="9">Metaldehyde</a></li>   
-                            <li><a class="dropdown-item" href="#" value="10">Methyl Bromide</a></li>   
-                            <li><a class="dropdown-item" href="#" value="11">Nitrophends and Nitro Cresols</a></li>   
-                            <li><a class="dropdown-item" href="#" value="12">Organochlorines</a></li>   
-                            <li><a class="dropdown-item" href="#" value="13">Organophosphates</a></li>   
-                            <li><a class="dropdown-item" href="#" value="14">Phosphides</a></li>   
-                            <li><a class="dropdown-item" href="#" value="15">Propanil </a></li>   
-                            <li><a class="dropdown-item" href="#" value="16">Pyrethrum and related compounds</a></li>   
-                            <li><a class="dropdown-item" href="#" value="17">Thallium</a></li>   
-                            <li><a class="dropdown-item" href="#" value="18">Thiocarbamates</a></li>   
-                            <li><a class="dropdown-item" href="#" value="19">Triazenes and Triazoles</a></li>   
-                            <li><a class="dropdown-item" href="#" value="20">Other pesticide poisoning</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/2" value="2">Chlorophenoxy Compounds</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/3" value="3">Coumarins</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/4" value="4">Dithiocarbamate</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/5" value="5">Diuron</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/6" value="6">Fipronil</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/7" value="7">Glyphosate</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/8" value="8">Imidacloprid</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/9" value="9">Metaldehyde</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/10" value="10">Methyl Bromide</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/12" value="11">Nitrophends and Nitro Cresols</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/12" value="12">Organochlorines</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/13" value="13">Organophosphates</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/14" value="14">Phosphides</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/15" value="15">Propanil </a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/16" value="16">Pyrethrum and related compounds</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/17" value="17">Thallium</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/18" value="18">Thiocarbamates</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/19" value="19">Triazenes and Triazoles</a></li>   
+                            <li><a class="dropdown-item" href="Chemicals_Details/First_Page/20" value="20">Other pesticide poisoning</a></li>   
                         </ul>
                             </li>
                     </ul>
