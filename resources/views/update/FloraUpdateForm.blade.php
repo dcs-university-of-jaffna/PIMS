@@ -45,29 +45,21 @@
                 <tr>
                     <th>
                         <h3>
-                            
-                            <!--p><a href="#Poison Detail" class="w3-button w3-black">Poison Detail</a></p-->
-                            <form action="#PoisonDetail">
-                                <input type="submit" value="Poison Detail">
-                            </form>
+                            <a name ="PoisonDetail"></a>
+                            <p><a href="#PoisonDetail" class="w3-button w3-black">Poison Detail</a></p>
                         </h3>
                     </th>
                     <th>
                         <h3>
-                            <!--p><a href="#Managemnt Detail">Managemnt Detail</a></p--> 
-                            <form action="#ManagemntDetail">
-                                <input type="submit" value="Managemnt Detail">
-                            </form>
+                            <p><a href="#ManagemntDetail">Managemnt Detail</a></p> 
                             
                         </h3>
                     </th>
                     <th>
                         <h3>
-                            <form action="#Gastrointestinaldecontamination">
-                                <input type="submit" value="Gastrointestinal decontamination">
-                            </form>
 
-                        <!--p><a href="#Gastrointestinal decontamination"></a></p-->  
+                        <a href="#Gastrointestinaldecontamination">Gastrointestinal decontamination</a></p>  
+                       
                         </h3>
                     </th>
                 </tr>
@@ -287,30 +279,19 @@
                     <tr>
                         <th>
                             <h3>
-                            <form action="#PoisonDetail">
-                                <input type="submit" value="Poison Detail">
-                            </form>
-                                <!--p><a href="#PoisonDetail">Poison Detail</a></p-->
+                                <p><a href="#PoisonDetail">Poison Detail</a></p>
 
                             </h3>
                         </th>
                         <th>
-                            <h3>
-                            <form action="#ManagemntDetail">
-                                <input type="submit" value="Managemnt Detail">
-                            </form>
-                    
-                                <!--a name ="ManagemntDetail"></a>
-                                <p><a href="#ManagemntDetail">Managemnt Detail</a></p-->  
+                            <h3>                    
+                                <a name ="ManagemntDetail"></a>
+                                <p><a href="#ManagemntDetail">Managemnt Detail</a></p>  
                             </h3>
                         </th>
                         <th>
                             <h3>
-                            <form action="#Gastrointestinaldecontamination">
-                                <input type="submit" value="Gastrointestinal decontamination">
-                            </form>
-
-                                <!--><a href="#Gastrointestinaldecontamination">Gastrointestinal decontamination</a></p-->  
+                                <a href="#Gastrointestinaldecontamination">Gastrointestinal decontamination</a></p>  
                             </h3>
                         </th>
                     </tr>
