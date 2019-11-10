@@ -48,6 +48,7 @@ class update extends Controller
 
         return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity','symptoms'));
 
+        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity'));
 
     }
     public function update(Request $request,$id)

@@ -650,7 +650,6 @@
                             </button>
                     </div>
             </form>
-
         <blockquote class="blockquote">
             <footer class="blockquote-footer">CB Tennakoon</footer>
         </blockquote>
