@@ -53,11 +53,7 @@
     <!-- partial:index.partial.html -->
 
     <div class="form">
-    
-        <input id="one" type="radio" name="stage" checked="checked" />
-	<input id="two" type="radio" name="stage" />
 	<input id="three" type="radio" name="stage" />
-	<input id="four" type="radio" name="stage" />
 	<input id="five" type="radio" name="stage" />
 	<input id="six" type="radio" name="stage" />
 

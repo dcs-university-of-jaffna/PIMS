@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Incident; 
+use App\Incident;
 use App\Toxicity;
 use App\Natural;
 use App\Prescription;
@@ -11,7 +10,10 @@ use App\Patient;
 use App\Flora;
 use App\IncidentSymptom;
 use App\Laboratory;
+use App\Management;
 use Auth;
+use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Input;
 
 
@@ -20,67 +22,65 @@ class update extends Controller
 {
     public function edit($incident)
     {
-        
+        //get incident value ,for given id number
         $incident = Incident::find($incident);
+
         //dd($incident);
-        //$toxicity = Toxicity::find($incident->toxicity_id);
+
+        $toxicity = Toxicity::find($incident->toxicity_id);
         //$natural = Natural::find($toxicity->id);
 
         $flora = $incident->toxicity->natural->flora;
+        //$incidentSymptom = IncidentSymptom::find($incident->id );
 
         //$tempPrescription = Prescription::find($incident->id);
-        //$Prescription = Prescription::find($tempPrescription->id);
+        //$Prescription = $incident->natural->id;
+        //dd($Prescription);
+        //$incidentSymptom = $incident->incidentSymptom;
+       // $incidentSymptom = $incident->IncidentSymptom->pluck('IncidentSymptom.id');
+       //get clinicle details 
+        $symptoms = $incident->symptoms;
         $managements = $incident->managements()->pluck('managements.id');
        // dd($managements);
-        dd($flora);
+        //dd($flora);
+        //dd($toxicity);
+        //dd($symptoms);
 
+        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity','symptoms'));
 
-        return view('update.FloraUpdateForm',compact('incident','managements','flora'));
-
+        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity'));
 
     }
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
-        //$incident=new Incident;
-        //$toxicity = new Toxicity;
-        //$natural = new Natural;
+        $data = Incident::find($id);
+        $data->date = $request->date;
+        $data->time = $request->time;
+        $data->area = $request->area;
+        $data->management_others=$request->managements_others;
 
-        //$incident->patient_id=$request->PHNid;
-        //$incident->toxicity_id=$toxicity->id;
-        //$incident->date=$request->date;
-       // $incident->time=$request->time;
-       // $incident->area=$request->area; 
-        //$incident->symptom_others=$request->clinicals_others;
-        //$incident->management_others=$request->managements_others;
-        //$incident->comments=$request->comments;
-        //$incident->save();
-        /*$data = request()->validate([
-            'date' =>'',
-            'time' =>'',
-            'area' =>''
-        ]);
-        //dd($data);
-        //$incident->save();
-        $request->incident->update($data);*/
-        /*$incident = new Incident;
-        $incident->time = $request->time;
-        //$back=0;
-        //dd( $incident->time);
-        $incident->save();*/
-        $incident->update([
-            'date' => $request->date,
-            'time' => $request->time,
-            'area' => $request->area,
-        ]);
+        $data->save();
+        
+        $data1 = $data->toxicity->natural->Flora;
+        $data1->plant_part=$request->plant_part;
+        $data1->circumstance =$request->circumstance;
+        $data1->poisoning_mode=$request->poisoning_mode;
+        $data1->amount=$request->amount;
+        $data1->activated_chracol_doses = $request->activated_chracol_doses;
+        $data1->antidote= $request->antidote; 
 
-        return redirect('home');
+        $data1->save();
+
+
+        $user = auth()->user()->id;
+        $management= $request->management;
+        //dd($management);
+        $d = array_fill_keys($management,['doctor_id'=>$user]);
+        $data->managements()->sync($d);
+
+        //$AththanaClinical= $request->AththanaClinical;
+        $data->symptoms()->sync($request->AththanaClinical);
+        //dd($AththanaClinical);
+         return redirect('home');
     }
-   /* function submitFlora(Request $request){
-
-        $incidents = new incidents;
-        $incidents->area = $request->area;
-        $incidents->save();
-        return view('home');
-
-    }*/
 }
