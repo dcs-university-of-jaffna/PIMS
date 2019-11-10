@@ -1,4 +1,4 @@
-/*!
+  /byjgf trv bjhymu*!
 
  =========================================================
  * Material Bootstrap Wizard - v1.0.2
@@ -141,12 +141,21 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     .made-with-mk .made-with strong {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.9); }
-
+.upper {
+  margin-right:50%;
+  color: black;
+  font-size: 15px;
+}
+.above {
+  margin-left:2%;
+  color: black;
+  font-size: 15px;
+}
 .wizard-container {
-  padding-top: 100px;
+  padding-top: 90px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
-    position: relative; }
+    position: relative;}
 
 h1, .h1 {
   font-size: 3.8em;
@@ -210,12 +219,12 @@ h2.title {
   color: #00bcd4; }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: whitesmoke;
   padding: 10px 0;
   width: 100%;
   border-radius: 6px;
   color: rgba(0,0,0, 0.87);
-  background: #fff; }
+   }
 
 .wizard-card {
   min-height: 410px;
@@ -223,14 +232,15 @@ h2.title {
   .wizard-card .picture-container {
     position: relative;
     cursor: pointer;
-    text-align: center; }
+    text-align: center;
+  top: 50px; }
   .wizard-card .picture {
     width: 106px;
-    height: 106px;
+    height: 30px;
     background-color: #999999;
     border: 4px solid #CCCCCC;
-    color: #FFFFFF;
-    border-radius: 50%;
+    color:black;
+    border-radius: 20%;
     margin: 5px auto;
     overflow: hidden;
     transition: all 0.2s;
@@ -271,7 +281,7 @@ h2.title {
     box-shadow: 0 16px 26px -10px rgba(76, 175, 80, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2); }
   .wizard-card[data-color="green"] .picture:hover {
     border-color: #4caf50; }
-  .wizard-card[data-color="green"] .choice:hover .icon, .wizard-card[data-color="green"] .choice.active .icon {
+  .wizard-card[data-color="purple"] .choice:hover .icon, .wizard-card[data-color="green"] .choice.active .icon {
     border-color: #4caf50;
     color: #4caf50; }
   .wizard-card[data-color="green"] .form-group .form-control {
@@ -1292,7 +1302,7 @@ select.form-control {
   width: 0;
   height: 0;
   overflow: hidden;
-  left: 0;
+  left: 0;98+
   pointer-events: none; }
 .checkbox .checkbox-material {
   vertical-align: middle;

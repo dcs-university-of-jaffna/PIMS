@@ -1,28 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Laravel</title>
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                height:100%;
+                background-image: url("images/main.jpg");
+                height: 100%;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 background-color: #fff;
-                /*background-image: url("/images/main.jpg ");*/
                 color: #636b6f;
-                /*background-repeat: no-repeat;*/
-                /*background-attachment: fixed;*/
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100px;
-                
+                height: 100vh;
                 margin: 0;
+
+            }
+            p.pp{
+                font-size: 1em; /* 14px/16=0.875em */
+                font-family:"Serif+";
+                font-weight: bold;;
+                font-variant: small-caps;
+                color: rgb(100, 100, 100);
+            }
+            p.ppp{
+                font-size: 1.3em; /* 14px/16=0.875em */
+                font-family:"Serif";
+                font-weight: bold;
+                font-variant: small-caps;
+                color: rgb(100, 100, 100);
+            }
+            .saveForm {
+                position: static;
+                top: 750px;
+                font-weight: lighter;
+                font-size: 40px;
+                
             }
 
             .full-height {
@@ -41,17 +65,12 @@
 
             .top-right {
                 position: absolute;
-                text-align: center;
-                margin-top: 400px; 
-                /*right: 10px;
-                top: 18px;*/
+                right: 10px;
+                top: 18px;
             }
 
             .content {
                 text-align: center;
-                position: absolute;
-                top: 200px;
-                
             }
 
             .title {
@@ -59,91 +78,58 @@
             }
 
             .links > a {
-                color: blue;
-                margin-top: 300px;
-                padding: 0 100px;
-                font-size: 60px;
-                font-weight: 10000;
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-                border-style: solid;
-                border-color:yellow;
-                background-color: orange;
             }
 
             .m-b-md {
-                
-                margin-bottom: 15px;
-                margin-top: 30px;
+                margin-bottom: 30px;
             }
-
-            .hero-image{
-                 /* The image used */
-                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/images/main.jpg ");
-
-                /* Full height */
-                height: 1000%;
-
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                position:relative;
-            }
-            .hero-text{
-                /*text-align: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);*/
-                color: white;
-            }
-
         </style>
     </head>
-    <body>      
-                 <div class="hero-image">
-                    <div class="hero-text">                    
-                        <div class="flex-center position-ref full-height"> 
-                            @if (Route::has('login'))
-                            
-                                    <div class="top-right links">
-                                        @auth
-                                            <a href="{{ url('/home') }}">Home</a>
-                                        @else
-                                            <a href="{{ route('login') }}">Login</a>
+    <body>
 
-                                            @if (Route::has('register'))
-                                                <a href="{{ route('register') }}">
-                                                Register
-                                                <!--button type="button" href="{{ route('register') }}">Register</button-->
-                                                </a>
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
-                          
-                                    <div class="content">
-                                    <table>                                     
-                                            <tr>
-                                                <td>
-                                                    <div class="title m-b-md">
-                                                    Poison Information Management System
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="title m-b-md">
-                                                    (PIMS)
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                    </table>
-                                    </div> 
+        <form>
+            <div class="container-fluid">
+            <div class="flex-center position-ref full-height">   
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <div class="title m-b-md ">
+                            <p class ="pp">Poison Information Management System</p>
                         </div>
-                    </div>
-                </div>
+                        <div class="title m-b-md ">
+                            <p class ="ppp">(PIMS)</p>
+                        </div>           
+                    
+                    @if (Route::has('login'))
+                        <div>
+                            @auth
+                                <a href="{{ url('/home') }}" ><button type="button" class="btn btn-success saveForm" aria-pressed="true">Home</button></a>
+                            @else
+                                <a href="{{ route('login') }}" ><button type="button" class="btn btn-success saveForm" aria-pressed="true">Login</button></a>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"><button type="button" class="btn btn-success saveForm" aria-pressed="true">Register</button></a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
+            </div>
+            </div>
+            </div>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     </body>
 </html>
