@@ -42,9 +42,50 @@
 
 	<div class="container-contact11">
 		<div class="wrap-contact11">
-			<form class="contact11-form validate-form" action="{{url('Chemicals_Details/{id}')}}" mehod="post">
+			<form class="contact11-form validate-form" action="{{URL('Chemicals_Details/submitted_phn')}}" method = "get">
 				<span class="contact11-form-title">
-					Verify Patient for {{$id}}
+					Verify Patient for 
+					@if($id==1) 
+						<label> Carbamate Insecticides </label> 
+					@elseif($id==2) 
+						<label> Chlorophenoxy Compounds </label>
+					@elseif($id==3) 
+						<label> Coumarins </label>
+					@elseif($id==4) 
+						<label> Dithiocarbamate </label>
+					@elseif($id==5) 
+						<label> Diuron </label>
+					@elseif($id==6) 
+						<label> Fipronil </label>
+					@elseif($id==7) 
+						<label> Glyphosate </label>
+					@elseif($id==8) 
+						<label> Imidacloprid </label>
+					@elseif($id==9) 
+						<label> Metaldehyde </label>
+					@elseif($id==10) 
+						<label> Methyl Bromide </label>
+					@elseif($id==11) 
+						<label> Nitrophends and Nitro Cresols </label>
+					@elseif($id==12) 
+						<label> Organochlorines </label>
+					@elseif($id==13) 
+						<label> Organophosphates </label>
+					@elseif($id==14) 
+						<label> Phosphides </label>
+					@elseif($id==15) 
+						<label> Propanil </label>
+					@elseif($id==16) 
+						<label> Pyrethrum and related compounds </label>
+					@elseif($id==17) 
+						<label> Thallium </label>
+					@elseif($id==18) 
+						<label> Thiocarbamates </label>
+					@elseif($id==19) 
+						<label> Triazenes and Triazoles </label>
+					@elseif($id==20) 
+						<label> Other pesticide poisoning </label>
+					@endif
 				</span>
 
 				<label class="label-input11" for="phn">Enter Patient's PHN Number</label>
@@ -52,6 +93,49 @@
 					<input id="phn" class="input11" type="text" name="phn" pattern="[0-9]{11}" title = "Please enter only number" maxlength="11">
 					<span class="focus-input11"></span>
 				</div>
+				  
+				@if($id==1)
+					<input type="hidden" name="id" value="1" >
+				@elseif($id==2)     
+					<input type="hidden" name="id" value="2" >
+				@elseif($id==3)     
+					<input type="hidden" name="id" value="3" >
+				@elseif($id==4)     
+					<input type="hidden" name="id" value="4" >
+				@elseif($id==5)     
+					<input type="hidden" name="id" value="5" >
+				@elseif($id==6)     
+					<input type="hidden" name="id" value="6" >
+				@elseif($id==7)     
+                  <input type="hidden" name="id" value="7" >
+				@elseif($id==8)     
+					<input type="hidden" name="id" value="8" >
+				@elseif($id==9)     
+					<input type="hidden" name="id" value="9" >
+				@elseif($id==10)     
+					<input type="hidden" name="id" value="10" > 
+				@elseif($id==11)     
+					<input type="hidden" name="id" value="11" >
+				@elseif($id==12)     
+					<input type="hidden" name="id" value="12" >
+				@elseif($id==13)     
+					<input type="hidden" name="id" value="13" >
+				@elseif($id==14)     
+					<input type="hidden" name="id" value="14" >
+				@elseif($id==15)     
+					<input type="hidden" name="id" value="15" > 
+				@elseif($id==16)     
+					<input type="hidden" name="id" value="16" >
+				@elseif($id==17)     
+					<input type="hidden" name="id" value="17" >
+				@elseif($id==18)     
+					<input type="hidden" name="id" value="18" > 
+				@elseif($id==19)     
+					<input type="hidden" name="id" value="19" >
+				@elseif($id==20)     
+					<input type="hidden" name="id" value="20" >
+				@endif 
+
 				<div class="container-contact11-form-btn">
 					<button class="contact11-form-btn">
 						Verify
