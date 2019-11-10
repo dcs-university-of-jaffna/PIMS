@@ -53,7 +53,6 @@ class update extends Controller
     }
     public function update(Request $request,$id)
     {
-
         $data = Incident::find($id);
         $data->date = $request->date;
         $data->time = $request->time;
