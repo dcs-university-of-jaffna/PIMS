@@ -22,10 +22,8 @@ class update extends Controller
 {
     public function edit($incident)
     {
-        //get incident value ,for given id number
+        //get data from incident
         $incident = Incident::find($incident);
-
-        //dd($incident);
 
         $toxicity = Toxicity::find($incident->toxicity_id);
         //$natural = Natural::find($toxicity->id);
@@ -36,29 +34,25 @@ class update extends Controller
         //$tempPrescription = Prescription::find($incident->id);
         //$Prescription = $incident->natural->id;
         //dd($Prescription);
-        //$incidentSymptom = $incident->incidentSymptom;
+        $incidentSymptom = $incident->incidentSymptom;
        // $incidentSymptom = $incident->IncidentSymptom->pluck('IncidentSymptom.id');
-       //get clinicle details 
-        $symptoms = $incident->symptoms;
+        //$symptoms = $incident->symptoms->pluck('id');
         $managements = $incident->managements()->pluck('managements.id');
        // dd($managements);
         //dd($flora);
         //dd($toxicity);
-        //dd($symptoms);
+        //dd($incidentSymptom);
 
-        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity','symptoms'));
-
+        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity'));
 
     }
     public function update(Request $request,$id)
     {
-
+        
         $data = Incident::find($id);
         $data->date = $request->date;
         $data->time = $request->time;
         $data->area = $request->area;
-        $data->management_others=$request->managements_others;
-
         $data->save();
         
         $data1 = $data->toxicity->natural->Flora;
@@ -73,14 +67,14 @@ class update extends Controller
 
 
         $user = auth()->user()->id;
-        $management= $request->management;
-        //dd($management);
-        $d = array_fill_keys($management,['doctor_id'=>$user]);
+        $management=$request->management;
+        $d =array_fill_keys($management,['doctor_id'=>$user]);
         $data->managements()->sync($d);
 
-        //$AththanaClinical= $request->AththanaClinical;
-        $data->symptoms()->sync($request->AththanaClinical);
-        //dd($AththanaClinical);
-         return redirect('home');
+        $symptom = $request->AththanaClinical;
+
+        //dd($symptom);
+
+        return redirect('home');
     }
 }

@@ -471,61 +471,10 @@
                         @if ( $managements ->contains(29))
                             checked
                         @endif
-                        >
-                        <label for="test15">Supportive therapy </label>
-                    </div>
-
-                    If others : <br>
-                            <textarea id="testone" rows = "4" cols = "120" name = "managements_others" value="{{old('date') ?? $incident->management_others}}" placeholder="Enter other management detail here">{{$incident->management_others}}</textarea>
-                        <br><br>
-
-                    <div>
-                    <table style="width:100%">
-                        <tr>
-                            <th>
-                                <h3>
-                                    <p><a href="#PoisonDetail">Poison Detail</a></p>
-                                </h3>
-                            </th>
-                            <th>
-                                <h3>
-                                    <p><a href="#ManagemntDetail">Managemnt Detail</a></p>  
-                                </h3>
-                            </th>
-                            <th>
-                                <h3>
-                                <a name ="Gastrointestinaldecontamination"></a>
-                                <p><a href="#Gastrointestinaldecontamination">Gastrointestinal decontamination</a></p>  
-                                </h3>
-                            </th>
-                        </tr>
-                    </table>
-
-                    <b> Gastrointestinal decontamination : </b></label><br><br>
-                    <div>
-                        <input type="checkbox"
-                        id = "test16"
-                        name = "management[]"
-                        value="15"
-                        @if ( $managements ->contains(15))
-                            checked
-                        @endif
-                        >
-                        <label for="test16">Gastric_aspiration</label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "test17"
-                        name = "management[]"
-                        value="1"
-                        @if ( $managements ->contains(1))
-                            checked
-                        @endif
-                        >
-                        <label for="test17">Activated chracol</label>
-                    </div>
-
-                        If yes, number of doses :
+                        > 
+                        <label for="test16">Supportive therapy </label>
+                    </div>                    
+                    If yes, number of doses :
                         <input type="text" name = "activated_chracol_doses" value="{{old('activated_chracol_doses') ?? $flora->activated_chracol_doses}}" >
                         <br><br>
 
@@ -541,97 +490,21 @@
                         @endif
                         >
                         <label for="test18">Antidote given</label>
-                    </div>                            
+                        </div>
+                                                
                         If yes, type of antidote :
                         <input type="text" name = "antidote" value="{{old('antidote') ?? $flora->antidote}}" >
                     </div>
-            </div>	
-
-        </div>
-           <div data-panel="three">
-<br>
-
-          <h4>Clinical Feature</h4>
-                @if($toxicity->name=='Aththana')
-			
-                    <div>
-                        <input type="checkbox"
-                        id = "ch1"
-                        name = "AththanaClinical[]"
-                        value="30"
-                        @if ( $symptoms ->contains(30))
-                            checked
-                        @endif
-                        >
-                        <label for="ch1">Cycloplegia</label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "ch2"
-                        name = "AththanaClinical[]"
-                        value="42"
-                        @if ( $symptoms ->contains(42))
-                            checked
-                        @endif
-                        >
-                        <label for="ch2">Dry mouth</label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "ch3"
-                        name = "AththanaClinical[]"
-                        value="48"
-                        @if ( $symptoms ->contains(48))
-                            checked
-                        @endif
-                        >
-                        <label for="ch3">Erythema</label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "ch4"
-                        name = "AththanaClinical[]"
-                        value="54"
-                        @if ( $symptoms ->contains(54))
-                            checked
-                        @endif
-                        >
-                        <label for="ch4"> Fever</label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "ch5"
-                        name = "AththanaClinical[]"
-                        value="84"
-                        @if ( $symptoms ->contains(84))
-                            checked
-                        @endif
-                        >
-                        <label for="ch5"> Mydriasis </label>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                        id = "ch6"
-                        name = "AththanaClinical[]"
-                        value="132"
-                        @if ($symptoms ->contains(132))
-                            checked
-                        @endif
-                        >
-                        <label for="ch6"> Tachycardia </label>
-                    </div>  
-                @endif                          
-         </div>                               
-    </div>	    
-
-
+                </div>
+        
+    </div>
+		    		    
                     <div class="row p-4">
                             <button class="btn btn-success">
                                 Save
                             </button>
                     </div>
             </form>
-
         <blockquote class="blockquote">
             <footer class="blockquote-footer">CB Tennakoon</footer>
         </blockquote>

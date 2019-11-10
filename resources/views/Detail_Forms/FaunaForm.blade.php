@@ -236,7 +236,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>	
                      @elseif($ray==3)
-                                                 <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
+                    <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="17"  > Burning sensation of mouth </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="376"  > Cardiac abnormalities </label><br>
 						 <label><input type="checkbox" name ="AththanaClinical[]"    value="380" > Cranial nerve palsy </label><br>
@@ -246,13 +246,10 @@
 						 <label><input type="checkbox" name ="AththanaClinical[]"   value="371" > Dysuria  </label><br> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="370" > Gross haematuria </label><br>	
 						 <label><input type="checkbox" name ="AththanaClinical[]" value="59"> Haematemesis </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="337"  > Haemorrhage</label><br>
 						 
-						
-						 
-					
                           <label11>               
-                                                 <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
+                        <label><input type="checkbox" name ="AththanaClinical[]" value="383">	Keratoconjunctivitis  </label> <br>
 						 <label><input type="checkbox" name ="AththanaClinical[]" value="372">	Mucosal erosion </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="89" > Nausea </label><br>
 						  <label><input type="checkbox" name = "AththanaClinical[]" value="378" > Occult rectal bleeding </label><br> 
@@ -270,10 +267,10 @@
                      <br><br>
                      
                       @elseif($ray==4)
-                                                 <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="177"  > Redness</label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
-                                                 <br><br><br>   If others :<br>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
+                        <br><br><br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
@@ -336,16 +333,16 @@
                      @elseif($ray==7)
                        
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="208" > Blisters </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="208" > Blisters </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="359" > Disseminated intravascular coagulation </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="248" > Hematuria </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="354" > Hemoglobinuria </label><br>
-                                                 <label><input type="checkbox" name ="AththanaClinical[]"  value="74">	Hypotension </label> <br>
+                         <label><input type="checkbox" name ="AththanaClinical[]"  value="74">	Hypotension </label> <br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="167"  > Local necrosis </label><br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="98" > Oliguria </label><br>
-                                                  <label><input type="checkbox" name ="AththanaClinical[]"  value="101"> Pain </label> <br>
-                                                 <label><input type="checkbox" name = "AththanaClinical[]" value="336" > Proteinuria </label><br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="98" > Oliguria </label><br>
+                         <label><input type="checkbox" name ="AththanaClinical[]"  value="101"> Pain </label> <br>
+                         <label><input type="checkbox" name = "AththanaClinical[]" value="336" > Proteinuria </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="121" > Rhabdomyolysis </label><br>
                                                   
 						 

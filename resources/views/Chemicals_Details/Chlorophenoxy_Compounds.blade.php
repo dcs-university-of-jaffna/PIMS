@@ -165,278 +165,9 @@
                                                 <div class="col-sm-2">
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="abdominal_pain">
+                                                            <input type="checkbox" name="agitation">
                                                             <div class="icon">
                                                                 <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData3 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="acute_pancreatitis">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData37 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="ataxia">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData33 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="blurred_vision">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData11 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="bradycardia">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData20 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="cardiac_arrhythmia">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData21 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="coma">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData34 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="conduction_defects">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData22 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="confusion">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData31 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="convulsions">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData35 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="cranial_nerve_palsy">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData27 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="cyanosis">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData16 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="delayed_weakness">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData38 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="diarrhoea">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData4 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="disorientation">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData32 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="dyspnoea">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData15 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="general_weakness">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData29 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="giddiness">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData30 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="headache">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData28 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="hyperglycemia">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData36 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="incontinence">                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData19 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="incoordination">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData24 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="lachrymation">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData9 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="muscle_twitching">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData23 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="nausea">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
                                                             </div>
                                                             <h6>@foreach ($clinicalData1 as $item)
                                                                 {{$item->name}}   
@@ -445,131 +176,7 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="paralysis">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData26 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="productive_cough">
-                                                            <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData13 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="pulmonary_oedema">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData14 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="rhinorrhoea">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData8 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="rhonchi">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData12 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="salivation">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData7 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="small">                                                         <div class="icon">
-                                                                <i class="fa fa-terminal"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData10 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="sweating">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData6 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="tenesmus">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData5 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="tightness_of_chest">
-                                                            <div class="icon">
-                                                                <i class="fa fa-laptop"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData17 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="urinary_frequency">
-                                                            <div class="icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </div>
-                                                            <h6>@foreach ($clinicalData18 as $item)
-                                                                {{$item->name}}   
-                                                            @endforeach</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row-sm-6">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="vomiting">
+                                                            <input type="checkbox" name="ataxia">
                                                             <div class="icon">
                                                                 <i class="fa fa-terminal"></i>
                                                             </div>
@@ -580,11 +187,304 @@
                                                     </div>
                                                     <div class="row-sm-6">
                                                         <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="weakness">
+                                                            <input type="checkbox" name="burning_sensation_of_abdomen">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData3 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="burning_sensation_of_chest">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData4 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="burning_sensation_of_throat">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData5 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="burning_sensation_of_tongue">
+                                                            <div class="icon">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData6 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="coma">
+                                                            <div class="icon">
+                                                                <i class="fa fa-terminal"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData7 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="confusion">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData8 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="convulsions">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData9 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="diarrhoea">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData10 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="electrolyte_canges_specify">
+                                                            <div class="icon">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData11 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="fasciculations">
+                                                            <div class="icon">
+                                                                <i class="fa fa-terminal"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData12 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="hyperreflexia">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData13 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="hyperventilation">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData14 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="hyporeflexia">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData15 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="hypotension">
+                                                            <div class="icon">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData16 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="metabolic_acidosis">
+                                                            <div class="icon">
+                                                                <i class="fa fa-terminal"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData17 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="miosis">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData18 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="muscle_weakness">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData19 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="myotonia">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData20 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="nausea">                                                            <div class="icon">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData21 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="nystagmus">
+                                                            <div class="icon">
+                                                                <i class="fa fa-terminal"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData22 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="pyrexia">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData23 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="renal_failure">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData24 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="respiratory_alkalosis">
                                                             <div class="icon">
                                                                 <i class="fa fa-laptop"></i>
                                                             </div>
                                                             <h6>@foreach ($clinicalData25 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="respiratory_muscle_weakness">
+                                                            <div class="icon">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData26 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="rhabdomyolysis">
+                                                            <div class="icon">
+                                                                <i class="fa fa-terminal"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData27 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="tachycardia">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData28 as $item)
+                                                                {{$item->name}}   
+                                                            @endforeach</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row-sm-6">
+                                                        <div class="choice" data-toggle="wizard-checkbox">
+                                                            <input type="checkbox" name="vomiting">
+                                                            <div class="icon">
+                                                                <i class="fa fa-laptop"></i>
+                                                            </div>
+                                                            <h6>@foreach ($clinicalData29 as $item)
                                                                 {{$item->name}}   
                                                             @endforeach</h6>
                                                         </div>
