@@ -42,8 +42,13 @@ class CreatePatientsTable extends Migration
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->bigInteger('phn');
-                $table->string('name')->nullable();
                 $table->string('nic')->nullable();
+                $table->string('fname')->nullable();
+                $table->string('lname')->nullable();
+                $table->string('bdate')->nullable();
+                $table->string('address')->nullable();
+                $table->string('contact')->nullable();
+                $table->string('gender')->nullable();
                 $table->timestamps();
             }
         );

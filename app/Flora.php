@@ -28,6 +28,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Flora extends Model
 {
+    protected $guarded = ['id'];
     /**
      * Flora is a subclass of Natural
      */

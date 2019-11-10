@@ -19,10 +19,11 @@ $factory->define(
     Flora::class,
     function (Faker $faker) {
         return [
-            'plant_part' => $faker-> randomElement(array('leaf', 'branch', 'root', 'flover', 'fruit', 'cover')),
+            'plant_part' => $faker-> randomElement(array('Leaves', 'Branches', 'Bulbs', 'Pods', 'Roots',
+                'Flowers', 'Fruit', 'Cover', 'Seeds', 'Stems', 'Twigs')),
             'amount' => $faker->numberBetween($min = 1, $max = 100),
-            'circumstance' => $faker->randomElement(array('accidental', 'suicidal', 'homocidal', 'occupational')),
-            'poisoning_mode' => $faker->randomElement(array('contact', 'ingestion', 'inhalation', 'other')),
+            'circumstance' => $faker->randomElement(array('Accidental', 'Suicidal', 'Homicidal', 'Occupational')),
+            'poisoning_mode' => $faker->randomElement(array('Contact', 'Ingestion', 'Inhalation', 'Other')),
             'antidote' => $faker->userName,
             'activated_chracol_doses' => $faker->numberBetween($min = 1, $max = 99),
         ];
