@@ -145,10 +145,11 @@ h4 {
 .form {
 	background: #ffffff;
 	box-shadow: 0 5px px rgba(0, 0, 0, .4);
-	margin: 1em;
+	margin: 2em;
 	min-width: 480px;
 	padding: 1em;
-        height: 75%
+          height: 70%;
+      
 }
 
 .panels div {
@@ -204,6 +205,30 @@ button:next{
 button:hover {
 	opacity: 0.8;
 }
+
+label_A{
+    position: absolute;
+    top:28%
+}
+
+label_B{
+    position: absolute;
+    left:50%;
+    top:28%
+}
+
+label_A1{
+    position: absolute;
+    top:38%
+}
+
+label_B1{
+    position: absolute;
+    left:50%;
+    top:38%
+}
+
+
 
 label1{
     position: absolute;

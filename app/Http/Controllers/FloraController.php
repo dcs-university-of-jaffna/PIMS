@@ -23,21 +23,27 @@ class FloraController extends Controller
     }
     
     function submitFloraPHN(Request $request){
-       $ray=$request->id;
-       $patient = new Patient;
-       $patient->phn = $request->PHN;
-       $back=0;
-       $patient->save();
-       $patient1=patient::pluck('phn')->last();
-       $patient2=patient::pluck('id')->last();
-       return view('Detail_Forms.FloraForm',compact('patient1','patient2','back','ray'));
+          $ray=$request->id;
+          $back=0;
+ 
+       return view('Detail_Forms.FloraForm',compact('request','back','ray'));
     }
 
     function submitFlora(Request $request){
        $ray=$request->id;
-       $patient1=Patient::pluck('phn')->last();
-       $patient2=Patient::pluck('id')->last();
        
+       $patient = new Patient;
+       $patient->phn=$request->PHN;	
+       $patient->nic=$request->nic ;	
+       $patient->fname=$request->Fname; 	
+       $patient-> lname=$request->Sname ;	
+       $patient->bdate=$request->Bdate; 
+       $patient->address=$request->address ;
+       $patient->contact=$request->Cno ;
+       $patient->gender=$request->gender;	
+       $patient->save();
+       
+     /*  
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
        $toxicity->sub_group ='flora';
@@ -160,7 +166,7 @@ class FloraController extends Controller
                 $prescription->save();    
         }
 
-      $back=1;
+      $back=1;*/
 
       return view('Detail_Forms.saveForm');
    }
