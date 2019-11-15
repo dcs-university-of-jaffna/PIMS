@@ -8,6 +8,8 @@ use App\Natural;
 use App\Fauna;
 use App\Prescription;
 use App\IncidentSymptom;
+use App\IncidentUser;
+use App\IncidentManagement;
 use App\Laboratory;
 use Auth;
 use Illuminate\Support\Facades\Input;
@@ -23,73 +25,66 @@ class FaunaController extends Controller
     }
     
     function submitFaunaPHN(Request $request){
-       $ray=$request->id;
-       $patient = new Patient;
-       $patient->phn = $request->PHN;
-       $back=0;
-       $patient->save();
-       $patient1=patient::pluck('phn')->last();
-       $patient2=patient::pluck('id')->last();
-       return view('Detail_Forms.FaunaForm',compact('patient1','patient2','back','ray'));
+          $ray=$request->id;
+          $back=0;
+ 
+       return view('Detail_Forms.FaunaForm',compact('request','back','ray'));
     }
 
     function submitFauna(Request $request){
        $ray=$request->id;
-       $patient1=Patient::pluck('phn')->last();
-       $patient2=Patient::pluck('id')->last(); 
+       
+       $patient = new Patient;
+       $patient->phn=$request->PHN;	
+       $patient->nic=$request->nic ;	
+       $patient->fname=$request->Fname; 	
+       $patient-> lname=$request->Sname ;	
+       $patient->bdate=$request->Bdate; 
+       $patient->address=$request->address ;
+       $patient->contact=$request->Cno ;
+       $patient->gender=$request->gender;	
+       $patient->save();
+        
+       
        
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
        $toxicity->sub_group ='fauna';
-       
-            if($ray==1)
+        
+            if($ray==13)
                 $toxicity->name ='Bee, Wasp, Hornet Stings'; 
-            elseif($ray==2)     
+            elseif($ray==14)     
                   $toxicity->name ='Black Widow Spider'; 
-            elseif($ray==3)     
+            elseif($ray==21)     
                   $toxicity->name ='Blister Beetle ingestion'; 
-            elseif($ray==4)     
+            elseif($ray==15)     
                   $toxicity->name ='Centipede Bite'; 
-            elseif($ray==5)     
+            elseif($ray==16)     
                   $toxicity->name ='Jelly Fish'; 
-            elseif($ray==6)     
+            elseif($ray==17)     
                  $toxicity->name ='Scorpion Bite'; 
-            elseif($ray==7)     
+            elseif($ray==18)     
                   $toxicity->name ='Snake Bite'; 
-            elseif($ray==8)     
+            elseif($ray==19)     
                  $toxicity->name ='Turtle Flesh Poisoning'; 
-            elseif($ray==9)     
+            elseif($ray==20)     
                 $toxicity->name ='Unknown Bite'; 
        
-            $toxicity->save();
             
-            $natural = new Natural;
-            $natural->id = $toxicity->id ;
-            $natural->natural_type = 'flora';
-            $natural->save(); 
-            
-       $incident=new Incident;
-       $incident->patient_id=$request->PHNid;
-       $incident->toxicity_id=$toxicity->id;
-       $incident->date=$request->date;
-       $incident->time=$request->time;
-       $incident->area=$request->area; 
-       $incident->symptom_others=$request->clinicals_others;
-       $incident->management_others=$request->managements_others;
-       $incident->comments=$request->comments;
+            $toxicity->toxin_id=$ray;
+            $toxicity->management_group_id=2;
+
+       $toxicity->save();
        
-       if(Input::get('submit') == 'submit') {
-            $incident->is_submited=1;   
-       }
        
-        $incident->save();
-        
-      $laboratory=new  Laboratory;
-      $laboratory->incident_id = $incident->id;
-      $laboratory->comments = $request->Lab_Comments; 
-      $laboratory->save();
-      
-      
+       
+       
+       $natural = new Natural;
+       $natural->id = $toxicity->id ;
+       $natural->natural_type = 'fauna';
+       $natural->save(); 
+       
+       
        $fauna = new Fauna;
        $fauna->id=$natural->id;
        $fauna->number_of_stings= $request->number_of_stings;
@@ -107,8 +102,37 @@ class FaunaController extends Controller
        
        $fauna->circumstance= $request->circumstance;
        $fauna->save();
+
        
-        $symptom = $request->AththanaClinical;
+      
+       
+       $incident=new Incident;
+       $incident->patient_id= $patient->id;
+       $incident->toxicity_id=$toxicity->id;
+       $incident->date=$request->date;
+       $incident->time=$request->time;
+       $incident->area=$request->area; 
+       $incident->symptom_others=$request->clinicals_others;
+       $incident->management_others=$request->managements_others;
+       $incident->comments=$request->comments;
+       
+       if(Input::get('submit') == 'submit') {
+            $incident->is_submited=1;   
+       }
+       
+       $incident->save();
+         
+    
+       
+      $laboratory=new  Laboratory;
+      $laboratory->incident_id = $incident->id;
+      $laboratory->comments = $request->Lab_Comments; 
+      $laboratory->incident_id = $incident->id;
+      $laboratory->save();
+      
+        	
+      
+  $symptom = $request->AththanaClinical;
         if (is_null($symptom)){
             
         }
@@ -120,31 +144,33 @@ class FaunaController extends Controller
                 $incidentSymptom->save();
             }
        }
-       
+      
+      
         $management =$request->management;
         if (is_null($management)){
             
         }
         else{
-            foreach ($management as $value){
-                $prescription=new Prescription;
-                $prescription->management_id=$value;
-                $prescription->incident_id = $incident->id;
-                $prescription->doctor_id = Auth::id();
-                $prescription->save();
+             foreach ($management as $value){
+                $incident_management=new IncidentManagement ;
+                $incident_management->management_id=$value;
+                $incident_management->incident_id = $incident->id;
+                $incident_management->save();
             }
        }
-       
-       
-        $back=1;
+        
+    
+        
+        $incident_user=new IncidentUser ;
+        $incident_user->user_id = Auth::id();
+        $incident_user->incident_id = $incident->id;
 
-       return view('Detail_Forms.saveForm');
-    }
+      $back=1;
+
+      return view('Detail_Forms.saveForm');
+   }
    
  
    
 }  
-
-
-
 

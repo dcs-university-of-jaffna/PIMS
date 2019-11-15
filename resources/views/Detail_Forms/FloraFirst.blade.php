@@ -86,7 +86,7 @@
                          <input type = "text" name = "Cno"   >
                  <br> <br>
                           <label> Address:</label><br>
-                <textarea rows = "3" cols = "150" placeholder="Enter address here" name = "address"></textarea>
+                <textarea rows = "3" cols = "100" placeholder="Enter address here" name = "address"></textarea>
       <br>
       <button >next</button>
                </label_A>
