@@ -22,23 +22,23 @@
     @endif 
     
     <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn" onclick="return confirm(&quot;Close the form..? unsaved data will be lost&quot;)"><i class="fa fa-close"></i>Close</button></a>
-     @if($ray==1)
+     @if($ray==13)
         <h2 style="text-align: center"><b>  Poison : Bee, Wasp, Hornet Stings </b></h2><br>
-         @elseif($ray==2)
+         @elseif($ray==14)
          <h2 style="text-align: center"><b> Poison : Black Widow Spider  </b></h2><br>
-         @elseif($ray==3)
+         @elseif($ray==21)
          <h2 style="text-align: center"><b> Poison : Blister Beetle Ingestion </b></h2><br>
-         @elseif($ray==4)
+         @elseif($ray==15)
         <h2 style="text-align: center"><b>  Poison : Centipede Bite </b></h2><br>
-         @elseif($ray==5)
+         @elseif($ray==16)
         <h2 style="text-align: center"><b>   Poison : Jelly Fish </b></h2><br>
-         @elseif($ray==6)
+         @elseif($ray==17)
         <h2 style="text-align: center"><b>   Poison : Scorpion Bite  </b></h2><br>
-         @elseif($ray==7)
+         @elseif($ray==18)
          <h2 style="text-align: center"><b>  Poison : Snake bite  </b></h2><br>
-         @elseif($ray==8)
+         @elseif($ray==19)
          <h2 style="text-align: center"><b> Poison : Turtle Flesh Poison  </b></h2><br>
-         @elseif($ray==9)
+         @elseif($ray==20)
         <h2 style="text-align: center"><b> Poison : Unknown Bite </b></h2><br>
          @endif 
          
@@ -69,10 +69,41 @@
 	<div class="panels">
       
             <div data-panel="one">
-		<h4>Personal Detail</h4>
-                <label>PHN Number : {{$patient1}} </label>      
-               
+		           
+ <label_A1>   
+            <label>First Name :</label>
+                        <input type="text" name="Fname" required="true"  value ="{{$request->Fname}}"  >       
+                 <br><br>
+                 <label>NIC Number :</label>
+                        <input type="text" name="nic" value ="{{$request->nic}}" >  
+                 <br><br>
+                 <label> Birth Date :</label>
+                         <input type = "date" name = "Bdate" id="datePickerId"  value ="{{$request->Bdate}}" >
+                 <br><br>
+                 
+                <label> Contact Number :</label>
+                         <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
+                 <br> <br>
+                          <label> Address:</label><br>
+                          <textarea rows = "3" cols = "150" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
+      <br>
+
+               </label_A1>
+            
+                 <label_B1>
+                    <label>Second Name :</label>
+                        <input type="text" name="Sname"  value ="{{$request->Sname}}" >          
+                <br><br>
+                <label>PHN Number :</label>
+                        <input type="text" name="PHN" value ="{{$request->PHN}}">  
+                <br><br>
+                <label> Gender :</label>
+                 <input type="text" name="gender" value ="{{$request->gender}}">  
+                        
+               <br><br> 
+                  </label_B1> 
             </div>
+
         
       
          <form action="/submitFauna" method="post">	
@@ -471,25 +502,25 @@
                             </label>
                         <br><br>
                         
-                        <input type="hidden" name="PHNid" value="{{$patient2}}">
-            @if($ray==1)
-                 <input type="hidden" name="id" value="1" >
-            @elseif($ray==2)     
-                  <input type="hidden" name="id" value="2" >
-            @elseif($ray==3)     
-                  <input type="hidden" name="id" value="3" >
-            @elseif($ray==4)     
-                  <input type="hidden" name="id" value="4" >
-            @elseif($ray==5)     
-                  <input type="hidden" name="id" value="5" >
-            @elseif($ray==6)     
-                  <input type="hidden" name="id" value="6" >
-            @elseif($ray==7)     
-                  <input type="hidden" name="id" value="7" >
-            @elseif($ray==8)     
-                  <input type="hidden" name="id" value="8" >
-            @elseif($ray==9)     
-                  <input type="hidden" name="id" value="9" >
+                   
+            @if($ray==13)
+                 <input type="hidden" name="id" value="13" >
+            @elseif($ray==14)     
+                  <input type="hidden" name="id" value="14" >
+            @elseif($ray==21)     
+                  <input type="hidden" name="id" value="21" >
+            @elseif($ray==15)     
+                  <input type="hidden" name="id" value="15" >
+            @elseif($ray==16)     
+                  <input type="hidden" name="id" value="16" >
+            @elseif($ray==17)     
+                  <input type="hidden" name="id" value="17" >
+            @elseif($ray==18)     
+                  <input type="hidden" name="id" value="18" >
+            @elseif($ray==19)     
+                  <input type="hidden" name="id" value="19" >
+            @elseif($ray==20)     
+                  <input type="hidden" name="id" value="20" >
             @endif  
                            
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
@@ -500,7 +531,7 @@
               
 	</div>
         
-	<button onclick="doclick()" name="next" id="btn_hide" style="position: absolute ; top:85%" >next</button>
+	<button onclick="doclick()" name="next" id="btn_hide" style="position: absolute ; top:80%" >next</button>
 
 </div>
 <!-- partial -->
