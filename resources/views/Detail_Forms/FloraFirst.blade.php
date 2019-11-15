@@ -93,7 +93,7 @@
             
                  <label_B>
                     <label>Second Name :</label>
-                        <input type="text" name="Sname" required="true" >          
+                        <input type="text" name="Sname"  >          
                 <br><br>
                 <label>PHN Number :</label>
                         <input type="text" name="PHN">  

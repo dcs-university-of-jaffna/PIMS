@@ -8,6 +8,8 @@ use App\Natural;
 use App\Flora;
 use App\Prescription;
 use App\IncidentSymptom;
+use App\IncidentUser;
+use App\IncidentManagement;
 use App\Laboratory;
 use Auth;
 use Illuminate\Support\Facades\Input;
@@ -42,8 +44,9 @@ class FloraController extends Controller
        $patient->contact=$request->Cno ;
        $patient->gender=$request->gender;	
        $patient->save();
+        
        
-     /*  
+       
        $toxicity = new Toxicity;
        $toxicity->main_group ='natural';
        $toxicity->sub_group ='flora';
@@ -72,9 +75,13 @@ class FloraController extends Controller
                 $toxicity->name ='Olinda'; 
             elseif($ray==12)     
                $toxicity->name ='Unknown plant poisoning'; 
-           
+            
+            $toxicity->toxin_id=$ray;
+            $toxicity->management_group_id=1;
 
        $toxicity->save();
+       
+       
        
        
        $natural = new Natural;
@@ -83,27 +90,6 @@ class FloraController extends Controller
        $natural->save(); 
        
        
-       $incident=new Incident;
-       $incident->patient_id=$request->PHNid;
-       $incident->toxicity_id=$toxicity->id;
-       $incident->date=$request->date;
-       $incident->time=$request->time;
-       $incident->area=$request->area; 
-       $incident->symptom_others=$request->clinicals_others;
-       $incident->management_others=$request->managements_others;
-       $incident->comments=$request->comments;
-       
-       
-       if(Input::get('submit') == 'submit') {
-            $incident->is_submited=1;   
-       }
-       
-       $incident->save();
-         
-      $laboratory=new  Laboratory;
-      $laboratory->incident_id = $incident->id;
-      $laboratory->comments = $request->Lab_Comments; 
-      $laboratory->save();
        
        $flora = new Flora;
        $flora->id=$natural->id;   
@@ -114,9 +100,36 @@ class FloraController extends Controller
        $flora->antidote = $request->antidote; 
        $flora->activated_chracol_doses = $request->activated_chracol_doses; 
        $flora->save();
+       
+      
+       
+       $incident=new Incident;
+       $incident->patient_id= $patient->id;
+       $incident->toxicity_id=$toxicity->id;
+       $incident->date=$request->date;
+       $incident->time=$request->time;
+       $incident->area=$request->area; 
+       $incident->symptom_others=$request->clinicals_others;
+       $incident->management_others=$request->managements_others;
+       $incident->comments=$request->comments;
+       
+       if(Input::get('submit') == 'submit') {
+            $incident->is_submited=1;   
+       }
+       
+       $incident->save();
+         
+    
+       
+      $laboratory=new  Laboratory;
+      $laboratory->incident_id = $incident->id;
+      $laboratory->comments = $request->Lab_Comments; 
+      $laboratory->incident_id = $incident->id;
+      $laboratory->save();
+      
         	
       
-        $symptom = $request->AththanaClinical;
+  $symptom = $request->AththanaClinical;
         if (is_null($symptom)){
             
         }
@@ -145,12 +158,11 @@ class FloraController extends Controller
             
         }
         else{
-            foreach ($management as $value){
-                $prescription=new Prescription;
-                $prescription->management_id=$value;
-                $prescription->incident_id = $incident->id;
-                $prescription->doctor_id = Auth::id();
-                $prescription->save();
+             foreach ($management as $value){
+                $incident_management=new IncidentManagement ;
+                $incident_management->management_id=$value;
+                $incident_management->incident_id = $incident->id;
+                $incident_management->save();
             }
        }
         
@@ -159,14 +171,18 @@ class FloraController extends Controller
          
         }
         else{
-         $prescription=new Prescription;
-                $prescription->management_id=$management1;
-                $prescription->incident_id = $incident->id;
-                $prescription->doctor_id = Auth::id();
-                $prescription->save();    
+         $incident_management=new incident_management;
+                $incident_management->management_id=$management1;
+                $incident_management->incident_id = $incident->id;
+                $incident_management->save();    
         }
+        
+        
+        $incident_user=new IncidentUser ;
+        $incident_user->user_id = Auth::id();
+        $incident_user->incident_id = $incident->id;
 
-      $back=1;*/
+      $back=1;
 
       return view('Detail_Forms.saveForm');
    }
