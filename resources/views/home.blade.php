@@ -251,14 +251,15 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4"> {{$value->patient->name}}.  </h2>
+                 <h2 class="mr-3 text-black h4"> {{$value->patient->fname}} {{$value->patient->lname}}.  </h2>
                  <div class="badge-wrap">
-                  <span class="bg-primary text-white badge py-2 px-4">{{$value->patient->phn}}</span>
+                  <span class="bg-primary text-white badge py-2 px-4">PHN : {{$value->patient->phn}}</span>
+                  <span class="bg-success text-white badge py-2 px-4">NIC : {{$value->patient->nic}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->toxicity->name}}</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->patient->address}}</span></div>
                </div>
               </div>
 
