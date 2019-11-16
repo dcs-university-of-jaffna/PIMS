@@ -14,15 +14,35 @@
  <div class="container">
     <br><br>
  
- 
+ <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
  
  <form action="/update_phn_search_fauna" method ="post">
    @csrf 
+ 
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">First Name : </label>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02"> Last Name : </label>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->lname}}">
+   
+        </div>
+   </div>
+</div>
+
  <div class="row"> 
     <div class="col">
         <div class="form-group">
-        <label for="validationCustom01">Name : </label>
-        <input type="text" class="form-control" name ="name" id="validationCustom01" value="{{$patient->name}}" readonly>
+        <label for="validationCustom01">PHN : </label>
+        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->phn}}" >
       
         </div>
    </div>
@@ -30,8 +50,46 @@
 
    <div class="col">
         <div class="form-group">
-        <label for="validationCustom02">PHN : </label>
-      <input type="text" class="form-control" name="phn" id="validationCustom02" value="{{$patient->phn}}" readonly>
+        <label for="validationCustom02"> BirthDay : </label>
+      <input type="Date" class="form-control" id="validationCustom02" value="{{$patient->bdate}}" >
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">NIC : </label>
+        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Address : </label>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">Gender : </label>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->gender}}" >
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Contact : </label>
+      <input type="number" class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
    
         </div>
    </div>
