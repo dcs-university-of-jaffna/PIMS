@@ -13,6 +13,9 @@
    <h1  class="font-weight-bold" align="center">Divi kaduru (Tabernaemantana dichotoma)</h1>
  <div class="container">
     <br><br>
+      
+  <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
  <form class="needs-validation" novalidate>
 
 <div class="row"> 

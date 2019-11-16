@@ -13,6 +13,10 @@
    <h1  class="font-weight-bold" align="center">Endaru (Ricinus communis) </h1>
  <div class="container">
     <br><br>
+      
+  <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
+  
  <form class="needs-validation" novalidate>
 
 <div class="row"> 
@@ -90,7 +94,7 @@
         </div>
    </div>
 </div>
-<br><br>
+
 <br><br>
 
   
