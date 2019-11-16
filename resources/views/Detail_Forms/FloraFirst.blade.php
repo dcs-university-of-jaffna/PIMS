@@ -77,58 +77,51 @@
             @endif      
                   
             <h4>Personal Detail</h4>  
-
-<div class="row">
-  <div class="column">
- 
-    <p>   
-            <label> 01) First Name :</label>
-                        <input type="text" name="Fname" required="true" >       
-                 <br><br>
+ <table class="table">
+        <tr>
+            <td>
+             <label> 01) First Name :</label>
+                        <input type="text" name="Fname" required="true"  >       
+                 <br>
                  <label> 03) NIC Number :</label>
-                        <input type="text" name="nic"  >  
-                 <br><br>
-                 <label>  05) Birth Date :</label>
+                        <input type="text" name="nic" >  
+                 <br>
+                 <label> 05) Birth Date :</label>
                          <input type = "date" name = "Bdate" id="datePickerId"  >
-                 <br><br>
-                 
-               
-                          <label>  07)  Address:</label><br>
-                <input type = "text" name = "address" id="datePickerId"  >
-                <br<br></p>
-     <button >next</button>   
-  </div>
-    
-  <div class="column">
-    
-    <p> 
-                    <label>  01) Second Name :</label>
-                        <input type="text" name="Sname"  >          
-                <br><br>
-                <label>  03) PHN Number :</label>
-                        <input type="text" name="PHN">  
-                <br><br>
-                 <label>  05)  Contact Number :</label>
-                         <input type = "text" name = "Cno"   >
-                 <br> <br>
+                 <br>
                 
-                <label>  07)  Gender :</label><br>
-                         <span class = "select">
-                        <select name = "gender">
-                            <option value = " "> ..Please choose one option.. </option>
-                            <option value = "Male"> Male </option>
-                            <option value = "Female"> Female  </option>
-                            </select>
-               <br><br> 
-                </p>
-               
-  </div>
-      
-</div>
+              <label> 04) Address :</label>
+                        <input type="text" name="address" >  
+                 <br> 
+                 
+                
+            </td>
+            
+            <td>
+            <label> 02) Second Name :</label>
+                        <input type="text" name="Sname" >          
+                <br>
+                <label> 04) PHN Number :</label>
+                        <input type="text" name="PHN" >  
+                <br>
+                 <label> 06)  Contact Number :</label>
+                         <input type = "text" name = "Cno"  >
+                 <br> 
+                
+                 <label>08) Gender  :<br>
+                    <span class = "select">
+               <select name = "gender" class="form-control">
+           <option value = " "> ..Please choose one option.. </option>
+            <option value = "Male">     Male    </option>
+            <option value = "Female">   Female </option>
+         </select>
+                <br>        
+                
+            </td>
+        </tr>
+     </table>
 
-
-
-
+             <button >next</button>
       
          </form>
  </div>
