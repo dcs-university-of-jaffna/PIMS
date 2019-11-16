@@ -13,23 +13,82 @@
    <h1  class="font-weight-bold" align="center"> {{$incident->toxicity->name}}  </h1>
  <div class="container">
     <br><br>
+    <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
  <form class="needs-validation" novalidate>
 
- <div class="row">
+ 
+<div class="row"> 
     <div class="col">
         <div class="form-group">
-        <label for="validationCustom01">Name : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->name}}" readonly>
-
+        <label for="validationCustom01">First Name : </label>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->fname}}" readonly>
         </div>
    </div>
-
+    
 
    <div class="col">
         <div class="form-group">
-        <label for="validationCustom02">PHN : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->phn}}" readonly>
+        <label for="validationCustom02"> Last Name : </label>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->lname}}" readonly>
+   
+        </div>
+   </div>
+</div>
 
+ <div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">PHN : </label>
+        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->phn}}" readonly>
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02"> BirthDay : </label>
+      <input type="Date" class="form-control" id="validationCustom02" value="{{$patient->bdate}}" readonly>
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">NIC : </label>
+        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->nic}}" readonly >
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Address : </label>
+      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->address}}" readonly>
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">Gender : </label>
+        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->gender}}" readonly>
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Contact : </label>
+      <input type="number" class="form-control" id="validationCustom02" value="{{$patient->contact}}" readonly>
+   
         </div>
    </div>
 </div>
@@ -348,8 +407,7 @@
    </div>
 </div>
 
-
-@else if($incident->toxicity->name =='Black Widow Spider')
+@elseif($incident->toxicity->name =='Black Widow Spider')
     <div class="row">
     <div class="col">
         <div class="form-group">
@@ -626,8 +684,7 @@
 </div>
 
 
-
-     @else if ( $incident->toxicity->name =="Blister Beetle Ingestion")
+@elseif($incident->toxicity->name == 'Blister Beetle Ingestion')
      <div class="row">
          <div class="col">
              <div class="form-group">
@@ -666,12 +723,7 @@
 
 
 
-
-
-@endif
-
-
-@else if($incident->toxicity->name =='Blister Beetle Ingestion')
+@elseif($incident->toxicity->name =='Blister Beetle Ingestion')
 
 
  <div class="row"> 
@@ -951,9 +1003,9 @@
         </div>
    </div>
 </div>
-@endif
 
-@else if($incident->toxicity->name =='Centipede Bite')
+
+@elseif($incident->toxicity->name =='Centipede Bite')
 
 <div class="row"> 
     <div class="col">
@@ -992,9 +1044,9 @@
 </div>
 
 
-@endif
 
-@else if($incident->toxicity->name =='Jelly Fish')
+
+@elseif($incident->toxicity->name =='Jelly Fish')
 
 <div class="row"> 
     <div class="col">
@@ -1314,9 +1366,8 @@
    </div>
 </div>
 
-@endif
 
-@else if($incident->toxicity->name =='Scorpion Bite')
+@elseif($incident->toxicity->name =='Scorpion Bite')
 
 
 <div class="row"> 
@@ -1388,10 +1439,9 @@
    </div>
 </div>
 
-@endif
 
 
-@else if($incident->toxicity->name =='Snake bite')
+@elseif($incident->toxicity->name =='Snake bite')
 
 
 <div class="row"> 
@@ -1784,25 +1834,14 @@
    </div>
 </div>
 
-@endif
 
 
-
-@else if($incident->toxicity->name =='Turtle Flesh Poison')
-
+@elseif($incident->toxicity->name =='Turtle Flesh Poison')
 
 
+@elseif($incident->toxicity->name =='Unknown Bite')
 
 @endif
-
-
-@else if($incident->toxicity->name =='Unknown Bite')
-
-
-
-
-@endif
-
 <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" readonly name="clinicals_others"   >{{$incident->symptom_others}} </textarea>
