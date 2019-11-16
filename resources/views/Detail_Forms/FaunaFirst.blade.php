@@ -55,47 +55,48 @@
             @endif      
                   
            <h4>Personal Detail</h4>
-            <label_A>   
-            <label>First Name :</label>
+           <label_A>   
+            <label> 01) First Name : </label>
                         <input type="text" name="Fname" required="true" >       
-                 <br><br>
-                 <label>NIC Number :</label>
+                 <br><br><br>
+                 <label> 03) NIC Number : </label>
                         <input type="text" name="nic"  >  
-                 <br><br>
-                 <label> Birth Date :</label>
+                 <br><br><br>
+                 <label> 05) Birth Date : </label>
                          <input type = "date" name = "Bdate" id="datePickerId"  >
-                 <br><br>
+                 <br><br><br>
                  
-                <label> Contact Number :</label>
-                         <input type = "text" name = "Cno"   >
-                 <br> <br>
-                          <label> Address:</label><br>
-                <textarea rows = "3" cols = "100" placeholder="Enter address here" name = "address"></textarea>
+               
+                          <label> 07) Address: </label><br>
+                <textarea rows = "3" cols = "50" placeholder="Enter address here" name = "address"></textarea>
       <br>
       <button >next</button>
                </label_A>
             
                  <label_B>
-                    <label>Second Name :</label>
+                    <label> 02) Second Name : </label>
                         <input type="text" name="Sname"  >          
-                <br><br>
-                <label>PHN Number :</label>
+                <br><br><br>
+                <label> 04) PHN Number : </label>
                         <input type="text" name="PHN">  
-                <br><br>
-                <label> Gender :</label>
+                <br><br><br>
+                 <label> 06) Contact Number : </label>
+                         <input type = "text" name = "Cno"   >
+                 <br> <br><br>
+                
+                <label> 08) Gender : </label>
                          <span class = "select">
                         <select name = "gender">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Male"> Male </option>
                             <option value = "Female"> Female  </option>
                             </select>
-               <br><br> 
+               <br><br> <br>
                   </label_B> 
                  
        
                     
                     <br>
-                 
          </form>
  </div>
  
