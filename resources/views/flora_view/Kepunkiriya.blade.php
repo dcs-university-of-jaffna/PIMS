@@ -13,9 +13,12 @@
    <h1  class="font-weight-bold" align="center"> Kepunkiriya (Euphorbia hirita) </h1>
  <div class="container">
     <br><br>
+      
+  <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
  <form class="needs-validation" novalidate>
 
- <
+ 
 <div class="row"> 
     <div class="col">
         <div class="form-group">
