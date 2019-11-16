@@ -146,9 +146,10 @@ h4 {
 	background: #ffffff;
 	box-shadow: 0 5px px rgba(0, 0, 0, .4);
 	margin: 2em;
-	min-width: 480px;
+        min-width: 480px;
 	padding: 1em;
-          height: 70%;
+        min-height: 560px;
+        
       
 }
 
@@ -160,8 +161,9 @@ h4 {
 
 input {
 	box-sizing: border-box;
+	display: block;
 	padding: .4em;
-	
+	width: 50%;
 }
 
 select {
@@ -196,38 +198,43 @@ button {
    
 }
 
-button:next{
-    position: absolute;
-    left :50%; 
-    top:45%;
-} 
+
 
 button:hover {
 	opacity: 0.8;
 }
 
-label_A{
-    position: absolute;
-    top:28%
+
+* {
+  box-sizing: border-box;
 }
 
-label_B{
-    position: absolute;
-    left:50%;
-    top:28%
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-label_A1{
-    position: absolute;
-    top:38%
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-label_B1{
-    position: absolute;
-    left:50%;
-    top:38%
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
 
+.table{
+ table-layout: fixed;
+  width: 100%; 
+}
 
 
 label1{
@@ -291,18 +298,7 @@ label11{
     top:38%;
 }
 
-h3{
-   position: absolute; 
-    top:-2%;  
-    left :75%; 
-}
 
-h2{
-   position: absolute; 
-    top:1%;  
-    left :30%;
-    color: window
-}
 
 label12{
    position: absolute; 

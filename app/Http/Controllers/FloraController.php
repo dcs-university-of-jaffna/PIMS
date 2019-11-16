@@ -32,7 +32,7 @@ class FloraController extends Controller
     }
 
     function submitFlora(Request $request){
-       $ray=$request->id;
+     /*  $ray=$request->id;
        
        $patient = new Patient;
        $patient->phn=$request->PHN;	
@@ -182,9 +182,9 @@ class FloraController extends Controller
         $incident_user->user_id = Auth::id();
         $incident_user->incident_id = $incident->id;
 
-      $back=1;
+      $back=1;*/
 
-      return view('Detail_Forms.saveForm');
+      return view('Detail_Forms.flora_update',compact('request'));
    }
    
  
