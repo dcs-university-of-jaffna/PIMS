@@ -32,8 +32,13 @@ class FloraController extends Controller
     }
 
     function submitFlora(Request $request){
-     /*  $ray=$request->id;
-       
+       $ray=$request->id;
+       return view('Detail_Forms.flora_update',compact('request','ray'));
+   }
+   
+ function updateFlora(Request $request){
+
+       $ray = $request->id;
        $patient = new Patient;
        $patient->phn=$request->PHN;	
        $patient->nic=$request->nic ;	
@@ -90,13 +95,29 @@ class FloraController extends Controller
        $natural->save(); 
        
        
-       
        $flora = new Flora;
-       $flora->id=$natural->id;   
+       $flora->id=$natural->id;
        $flora->plant_part = $request-> plant_part;
-       $flora->amount = $request-> amount;
        $flora->circumstance = $request-> circumstance;
-       $flora->poisoning_mode  = $request-> poisoning_mode;     
+       $flora->poisoning_mode  = $request-> poisoning_mode; 
+       $flora->amount  = $request-> amount; 
+       
+       if(is_null($request-> Oplant_part)){}
+       else{
+           $flora->plant_part = $request-> Oplant_part; 
+       }
+      
+       if(is_null($request-> Ocircumstance)){}
+       else{
+           $flora->circumstance = $request-> Ocircumstance;
+       }
+    
+       if(is_null($request->Opoisoning_mode )){}
+       else{    
+          $flora->poisoning_mode  = $request-> Opoisoning_mode; 
+       }
+    
+               
        $flora->antidote = $request->antidote; 
        $flora->activated_chracol_doses = $request->activated_chracol_doses; 
        $flora->save();
@@ -104,11 +125,16 @@ class FloraController extends Controller
       
        
        $incident=new Incident;
+         $incident->area=$request->area; 
+          if(is_null($request->Oarea)){}
+           else{   
+         $incident->area=$request->Oarea; 
+       }
+      
        $incident->patient_id= $patient->id;
        $incident->toxicity_id=$toxicity->id;
        $incident->date=$request->date;
        $incident->time=$request->time;
-       $incident->area=$request->area; 
        $incident->symptom_others=$request->clinicals_others;
        $incident->management_others=$request->managements_others;
        $incident->comments=$request->comments;
@@ -182,12 +208,10 @@ class FloraController extends Controller
         $incident_user->user_id = Auth::id();
         $incident_user->incident_id = $incident->id;
 
-      $back=1;*/
-
-      return view('Detail_Forms.flora_update',compact('request'));
-   }
-   
- 
+      $back=1;
+      
+       return view('Detail_Forms.saveForm');
+ }
    
 }  
 

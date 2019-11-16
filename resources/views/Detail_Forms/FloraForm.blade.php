@@ -100,7 +100,7 @@
                  <br>
                 
                 <label> 07) Address:</label><br>
-                <input type = "text" name = "address"  value ={{$request->address}} >
+                <input type = "text" name = "address"  value ="{{$request->address}}" >
                  <br> 
                  
                 
@@ -117,8 +117,13 @@
                          <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
                  <br> 
                 
-                <label> 08) Gender :</label><br>
-                       <input type="text" name="gender" value ="{{$request->gender}}">
+                 <label>08) Gender  :<br>
+                    <span class = "select">
+               <select name = "gender" class="form-control">
+           <option  value="{{$request->gender}}">{{$request->gender}}</option>
+            <option value = "Male">     Male    </option>
+            <option value = "Female">   Female </option>
+         </select>
                 <br>        
                 
             </td>
@@ -129,20 +134,18 @@
      
      
         <div data-panel="two">
-	        <h4>Poison Detail</h4>
-     
-                             
-                <label1> 01) Date : 
+            <h4>Poison Detail</h4>
+            <table class="table">
+        <tr>
+            <td>    
+                <label> 01) Date : 
                    <input type = "date" name = "date" id="datePickerId"  >
-                </label1>  
+                </label>  
                 <br>              
-                <label2> 02) Time  : 
-                   <input type = "time" name = "time" >
-                </label2>
-               <br>
-                <label3>03) Region :
+               
+                <label>03) Region :<br>
                     <span class = "select">
-                        <select name = "area">
+                        <select name = "area" onchange='checkvalue1(this.value)'>
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Chankanai"> Chankanai </option>
                             <option value = "Chavakachcheri"> Chavakachcheri  </option>
@@ -159,14 +162,15 @@
                             <option value = "Tellippalai"> Tellippalail  </option>
                             <option value = "Uduvil"> Uduvil  </option>
                             <option value = "Velanai"> Velanai  </option>
-                             <option value = "Outside Jaffna District"> Outside Jaffna District </option>
+                            <option value = "Others"> Others </option>
                         </select>
+                         <input type="text" name="Oarea" id="area" style='display:none;'/>
                       </span>
-               </label3>  
-            
-               <label4> 04) Part of plant :
+               </label>  
+            <br>
+               <label> 05) Part of plant :<br>
                       <span class = "select">
-                        <select name = "plant_part">
+                        <select name = "plant_part" onchange='checkvalue2(this.value)'>
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "branches"> Branches </option>
                             <option value = "bulbs"> Bulbs  </option>
@@ -177,62 +181,85 @@
                             <option value = "seeds"> Seeds  </option>
                             <option value = "stems"> Stems </option>
                             <option value = "twigs"> Twigs  </option>
+                            <option value = "Others"> Others </option>
                         </select>
-                </label4>
-                        <br><br>
-           
-              <label6>05) Circumstance : 
+                          <input type="text" name="Oplant_part" id="plant_part" style='display:none;'/>
+                        </span>
+
+                </label>
+                        <br>
+                        
+                        <label> 07) Mode of poisoning :<br> 
                    <span class = "select">
-                        <select name = "circumstance">
-                            <option value = " "> ..Please choose one option.. </option>
-                            <option value = "Accidental">  Accidental   </option>
-                            <option value = "Homicidal"> Homicidal </option>
-                            <option value = "Occupational"> Occupational </option>
-                            <option value = "Sucidal"> Suicidal  </option>
-                        </select>
-                    </span>
-               </label6>
-            <br><br>
-        <br>        
-         
-                 <label7>06) Mode of poisoning : 
-                   <span class = "select">
-                        <select name = "poisoning_mode">
+                        <select name = "poisoning_mode" onchange='checkvalue(this.value)'>
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Contact">  Contact   </option>
                             <option value = "Ingestion"> Ingestion  </option>
                             <option value = "Inhalation"> Inhalation </option>
                              <option value = "Others"> Others </option>
                         </select>
+                       <input type="text" name="Opoisoning_mode" id="poisoning_mode" style='display:none;'/>
                     </span>
-                </label7> 
-        <br><br>
-        
+                </label> 
+                         </td>
+            
+            <td>
+               <label> 02) Time  : 
+                   <input type = "time" name = "time" >
+                </label>  <br><br>
+                
+              <label>04) Circumstance : <br>
+                   <span class = "select">
+                        <select name = "circumstance" onchange='checkvalue3(this.value)'>
+                            <option value = " "> ..Please choose one option.. </option>
+                            <option value = "Accidental">  Accidental   </option>
+                            <option value = "Homicidal"> Homicidal </option>
+                            <option value = "Occupational"> Occupational </option>
+                            <option value = "Sucidal"> Suicidal  </option>
+                            <option value = "Others"> Others  </option>
+                        </select>
+                       <input type="text" name="Ocircumstance" id="circumstance" style='display:none;'/>
+                    </span>
+               </label>
+            <br>
+        <br>
        
-                <label5> 07) Amount of poisoning :
+                <label> 06) Amount of poisoning :<br>
                    <input type="text" name="amount" />
-                </label5>
-        <br><br>
-         
+                </label>
+            
+            
+          </td>
+            
+          </tr></table>
    </div>
                   
       
     <div data-panel="three">
           <h4>Clinical Feature</h4>
                 @if($ray==1)
-			
-
-                        <label><input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </label><br><br> 
-                        <label><input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </label><br> <br>            
-                        <label><input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema </label><br> <br>
-
+			<table>
+                        <tr>
+                            <td>
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </label>
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </label>           
+                       
+                           </td>
        
-                        <label11> 
-                        <label><input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </label> <br> <br>
-                        <label><input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis </label> <br> <br>           
-                        <label><input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </label> <br> <br>
-                        </label11><br>              
-                            
+                           <td></td><td></td> <td></td><td></td><td></td><td></td> <td></td><td></td>
+                        <td>
+                        <label><input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema </label>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </label> 
+                        </td>
+                        
+                        <td></td><td></td> <td></td><td></td><td></td><td></td> <td></td><td></td>
+                        <td>
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis </label>         
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </label>
+                       </td>
+                        <tr>  
+                        </table>         
+                            <br><br>
                          
                               CNS effects : 
                                  <span class = "select">
