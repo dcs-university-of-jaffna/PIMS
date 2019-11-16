@@ -71,40 +71,41 @@
             <div data-panel="one">
 		           
  <label_A1>   
-            <label>First Name :</label>
+            <label> 01) First Name :</label>
                         <input type="text" name="Fname" required="true"  value ="{{$request->Fname}}"  >       
                  <br><br>
-                 <label>NIC Number :</label>
+                 <label> 03) NIC Number :</label>
                         <input type="text" name="nic" value ="{{$request->nic}}" >  
                  <br><br>
-                 <label> Birth Date :</label>
+                 <label> 05) Birth Date :</label>
                          <input type = "date" name = "Bdate" id="datePickerId"  value ="{{$request->Bdate}}" >
                  <br><br>
                  
-                <label> Contact Number :</label>
-                         <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
-                 <br> <br>
-                          <label> Address:</label><br>
-                          <textarea rows = "3" cols = "150" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
+               
+                          <label> 07) Address:</label><br>
+                          <textarea rows = "3" cols = "50" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
       <br>
 
                </label_A1>
             
                  <label_B1>
-                    <label>Second Name :</label>
+                    <label> 02) Second Name :</label>
                         <input type="text" name="Sname"  value ="{{$request->Sname}}" >          
                 <br><br>
-                <label>PHN Number :</label>
+                <label> 04) PHN Number :</label>
                         <input type="text" name="PHN" value ="{{$request->PHN}}">  
                 <br><br>
-                <label> Gender :</label>
+                 <label> 06) Contact Number :</label>
+                         <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
+                 <br> <br>
+                
+                <label> 08) Gender :</label>
                  <input type="text" name="gender" value ="{{$request->gender}}">  
                         
                <br><br> 
                   </label_B1> 
             </div>
 
-        
       
          <form action="/submitFauna" method="post">	
      @csrf      
@@ -202,7 +203,7 @@
      
     <div data-panel="three">
           <h4>Clinical Feature</h4>
-                @if($ray==1)<br>
+                @if($ray==13)<br>
  <label><input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  </label><br>
@@ -230,7 +231,7 @@
   <br>
 
 
-@elseif($ray==2)
+@elseif($ray==14)
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="170"  > Coagulopathy </label><br> 
 						 <label><input type="checkbox" name ="AththanaClinical[]" value="163"> Convulsions </label><br>
@@ -266,7 +267,7 @@
                                                  <br>   If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>	
-                     @elseif($ray==3)
+                     @elseif($ray==21)
                     <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="17"  > Burning sensation of mouth </label><br>
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="376"  > Cardiac abnormalities </label><br>
@@ -297,7 +298,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
-                      @elseif($ray==4)
+                      @elseif($ray==15)
                         <label><input type="checkbox" name = "AththanaClinical[]"  value="101"> Pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="177"  > Redness</label><br>
                         <label><input type="checkbox" name = "AththanaClinical[]" value="131"  > Swelling</label>
@@ -305,7 +306,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
-                       @elseif($ray==5)
+                       @elseif($ray==16)
                        
                          <br><label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label></label> 
 						 <label><input type="checkbox" name = "AththanaClinical[]" value="183" > Anaphylactoid </label><br>
@@ -350,7 +351,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>
                      
-                      @elseif($ray==6)
+                      @elseif($ray==17)
                        
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="5"> Anaphylaxis<br></label></label> 
 						 <label><input type="checkbox" name ="AththanaClinical[]"  value="165">	Burning pain </label> <br>
@@ -361,7 +362,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>    
                      
-                     @elseif($ray==7)
+                     @elseif($ray==18)
                        
                          <label><input type="checkbox" name = "AththanaClinical[]"  value="1"> Abdominal pain<br></label>
                          <label><input type="checkbox" name = "AththanaClinical[]" value="2" > Acute renal failure  </label><br>
@@ -415,7 +416,7 @@
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>    
                      						 
-                     @elseif($ray==8)
+                     @elseif($ray==19)
                        
 					     <label><input type="checkbox" name ="AththanaClinical[]"  value="364">	Burning sensation of lips </label> <br>
 						 <label><input type="checkbox" name = "AththanaClinical[]"  value="17"> Burning sensation of mouth<br></label></label>
@@ -442,7 +443,7 @@
                                                     <br> If others :<br>
                       <textarea rows = "3" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
                      <br><br>    
-						      @elseif($ray==9)
+						      @elseif($ray==20)
                       
                    <textarea rows = "13" cols = "150" name = "clinicals_others"  placeholder="Enter Clinical Features here "></textarea>
                        

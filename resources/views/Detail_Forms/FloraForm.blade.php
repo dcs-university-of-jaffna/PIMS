@@ -79,33 +79,35 @@
 		<h4>Personal Detail</h4>
             
  <label_A1>   
-            <label>First Name :</label>
+            <label> 01) First Name :</label>
                         <input type="text" name="Fname" required="true"  value ="{{$request->Fname}}"  >       
                  <br><br>
-                 <label>NIC Number :</label>
+                 <label> 03) NIC Number :</label>
                         <input type="text" name="nic" value ="{{$request->nic}}" >  
                  <br><br>
-                 <label> Birth Date :</label>
+                 <label> 05) Birth Date :</label>
                          <input type = "date" name = "Bdate" id="datePickerId"  value ="{{$request->Bdate}}" >
                  <br><br>
                  
-                <label> Contact Number :</label>
-                         <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
-                 <br> <br>
-                          <label> Address:</label><br>
-                          <textarea rows = "3" cols = "150" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
+               
+                          <label> 07) Address:</label><br>
+                          <textarea rows = "3" cols = "50" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
       <br>
 
                </label_A1>
             
                  <label_B1>
-                    <label>Second Name :</label>
+                    <label> 02) Second Name :</label>
                         <input type="text" name="Sname"  value ="{{$request->Sname}}" >          
                 <br><br>
-                <label>PHN Number :</label>
+                <label> 04) PHN Number :</label>
                         <input type="text" name="PHN" value ="{{$request->PHN}}">  
                 <br><br>
-                <label> Gender :</label>
+                 <label> 06) Contact Number :</label>
+                         <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
+                 <br> <br>
+                
+                <label> 08) Gender :</label>
                  <input type="text" name="gender" value ="{{$request->gender}}">  
                         
                <br><br> 
@@ -195,7 +197,7 @@
         
        
                 <label5> 07) Amount of poisoning :
-                   <input type="number" min="0" name="amount" />
+                   <input type="text" name="amount" />
                 </label5>
         <br><br>
          
