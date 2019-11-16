@@ -1799,6 +1799,7 @@
         </div>
    </div>
 </div>
+
 <div class="row"> 
     <div class="col">
         <div class="form-group">
@@ -1838,10 +1839,224 @@
 
 @elseif($incident->toxicity->name =='Turtle Flesh Poison')
 
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="364" @if($symptoms->contains(364)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Burning sensation of lips
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="17" @if($symptoms->contains(17)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Burning sensation of mouth
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="349" @if($symptoms->contains(349)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Burning sensation of throat 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="363" @if($symptoms->contains(363)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Cold extremities
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="21" @if($symptoms->contains(21)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Coma
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="163" @if($symptoms->contains(163)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Convulsions 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="41" @if($symptoms->contains(41)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Drowsiness
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="47" @if($symptoms->contains(47)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Epigastric pain
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="89" @if($symptoms->contains(89)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Nausea 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="365" @if($symptoms->contains(365)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;  Pustular papillae
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="117" @if($symptoms->contains(117)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Respiratory failure
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="300" @if($symptoms->contains(300)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Stomatitis
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="130" @if($symptoms->contains(130)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Sweating
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="132" @if($symptoms->contains(132)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Tachycardia
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="366" @if($symptoms->contains(366)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Ulcerg 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" readonly value="360" @if($symptoms->contains(360)) checked @endif>        
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Vertigo
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" readonly value="144" @if($symptoms->contains(144)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Vomiting 
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+         
+            </div>
+        </div>
+   </div>
+</div>
+
+
 
 @elseif($incident->toxicity->name =='Unknown Bite')
 
+
 @endif
+<br><br>
 <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" readonly name="clinicals_others"   >{{$incident->symptom_others}} </textarea>
