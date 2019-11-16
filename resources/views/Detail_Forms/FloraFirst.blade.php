@@ -6,12 +6,16 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body><br>   <table class="table">
+        <tr>
+            <td>
      <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-home" aria-hidden="true"></i>Back</button></a>
 
       <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn" onclick="return confirm(&quot;Close the form..? unsaved data will be lost&quot;)"><i class="fa fa-close"></i>Close</button></a>
-     @if($ray==1)
-        <h2 style="text-align: center"><b>  Poison : Aththana (Datura stramonium)  </b></h2><br>
+     </td>
+     <td>
+      @if($ray==1)
+        <h3><b>  Poison : Aththana (Datura stramonium)  </b></h3><br>
          @elseif($ray==2)
          <h2 style="text-align: center"><b> Poison : Divikaduru (Tabernaemantana dichotoma)  </b></h2><br>
          @elseif($ray==3)
@@ -35,10 +39,12 @@
          @elseif($ray==12)
          <h2 style="text-align: center"><b>  Poison : Unknown plant poisoning  </b></h2><br>
          @endif 
-         
-    
+         </td>
+        
+    <td>
      <h3 style="text-align: center"><b> Category : Natural Toxins - Flora   </b></h3><br>
-     
+     </td>
+     </tr></table>
 <div class="form">
   
  
@@ -70,50 +76,60 @@
                   <input type="hidden" name="id" value="12" >
             @endif      
                   
-            <h4>Personal Detail</h4>
-            <label_A>   
-            <label> 01) First Name : </label>
+            <h4>Personal Detail</h4>  
+
+<div class="row">
+  <div class="column">
+ 
+    <p>   
+            <label> 01) First Name :</label>
                         <input type="text" name="Fname" required="true" >       
-                 <br><br><br>
-                 <label> 03) NIC Number : </label>
+                 <br><br>
+                 <label> 03) NIC Number :</label>
                         <input type="text" name="nic"  >  
-                 <br><br><br>
-                 <label> 05) Birth Date : </label>
+                 <br><br>
+                 <label>  05) Birth Date :</label>
                          <input type = "date" name = "Bdate" id="datePickerId"  >
-                 <br><br><br>
+                 <br><br>
                  
                
-                          <label> 07) Address: </label><br>
-                <textarea rows = "3" cols = "50" placeholder="Enter address here" name = "address"></textarea>
-      <br>
-      <button >next</button>
-               </label_A>
-            
-                 <label_B>
-                    <label> 02) Second Name : </label>
+                          <label>  07)  Address:</label><br>
+                <input type = "text" name = "address" id="datePickerId"  >
+                <br<br></p>
+     <button >next</button>   
+  </div>
+    
+  <div class="column">
+    
+    <p> 
+                    <label>  01) Second Name :</label>
                         <input type="text" name="Sname"  >          
-                <br><br><br>
-                <label> 04) PHN Number : </label>
+                <br><br>
+                <label>  03) PHN Number :</label>
                         <input type="text" name="PHN">  
-                <br><br><br>
-                 <label> 06) Contact Number : </label>
+                <br><br>
+                 <label>  05)  Contact Number :</label>
                          <input type = "text" name = "Cno"   >
-                 <br> <br><br>
+                 <br> <br>
                 
-                <label> 08) Gender : </label>
+                <label>  07)  Gender :</label><br>
                          <span class = "select">
                         <select name = "gender">
                             <option value = " "> ..Please choose one option.. </option>
                             <option value = "Male"> Male </option>
                             <option value = "Female"> Female  </option>
                             </select>
-               <br><br> <br>
-                  </label_B> 
-                 
-       
-                    
-                    <br>
-                 
+               <br><br> 
+                </p>
+               
+  </div>
+      
+</div>
+
+
+
+
+      
          </form>
  </div>
           <!-- partial -->
