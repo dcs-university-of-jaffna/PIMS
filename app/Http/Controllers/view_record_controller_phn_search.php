@@ -23,6 +23,7 @@ class view_record_controller_phn_search extends Controller
             if($request->toxicity_name == 'Divikaduru'){
               
                   $incident = Incident::find($request->incident_id);
+                  
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;     
@@ -35,8 +36,10 @@ class view_record_controller_phn_search extends Controller
   
    //Ahthana
            else if($request->toxicity_name == 'Aththana'){
-                          
+                  
+              
                 $incident = Incident::find($request->incident_id);
+                
                 $symptoms  = $incident->symptoms()->pluck('symptoms.id');
                 $patient  = $incident->patient;
                 $toxicity = $incident->toxicity->natural->flora;     
