@@ -340,19 +340,7 @@
         </div>
    </div>
 </div>
- 
- <h4 class="font-weight-bold">CNS effects :</h4>
- <br>
-     <select  name = "Clinical[]" class="form-control" id="" value="">
-                <option value = "{{$symptoms1}}"> {{$r}}</option>
-                 <option value = "22"> Combative  </option>
-                <option value = "3">  Agitation   </option>
-                <option value = "22"> Combative  </option>
-                <option value = "23"> Confusion </option>
-                <option value = "38"> disorientation </option>
-         </select>
 
- <br><br>
  
  
  
@@ -621,9 +609,8 @@
   <textarea class="form-control" name = "comments" rows="5" >{{$request->comments}}</textarea>
 </div> 
 
-
- <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)">Save</button>  
- <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
+ <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)" class="btn btn-primary">Save</button>  
+ <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit" class="btn btn-success" > Save & Submit</button> 
 
   
   <br><br><br>
