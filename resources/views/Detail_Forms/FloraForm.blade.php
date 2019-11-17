@@ -662,7 +662,7 @@
                          </table>
                         <br>
                           If others : <br> 
-                            <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
+                            <textarea rows = "4" cols = "120" name = "managements_others"  placeholder="Enter other management detail here"></textarea>
                        
                        
     </div>
@@ -704,10 +704,11 @@
             @elseif($ray==12)     
                   <input type="hidden" name="id" value="12" >
             @endif  
-                      
+                     
             <input type="hidden"  name = "AththanaClinical[]" value="-1">
             <input type="hidden"  name = "AththanaClinical[]" value="-2">
-           
+           <input type="hidden"  name = " management[]" value="-1">
+            <input type="hidden"  name = " management[]" value="-2">
             
             
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 

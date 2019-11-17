@@ -47,7 +47,17 @@
      </tr></table>
 <div class="form">
   
- 
+             <h3 style="text-align: center"> Personal Detail</h3>
+ <table class="table">
+     <tr>
+         <td><h4>New Patient Personal Detail</h4></td><td></td><td></td><td></td>
+         <td>
+            <form class="form-inline my-2 my-lg-0"  action="/phnsearch" method="POST">
+         {{csrf_field()}}
+                <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder="Search" aria-label="Search" required>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+           </form>
+                </td></tr></table>
          <form action="/submit_flora_first_page" method="post">	
             @csrf
             @if($ray==1)
@@ -76,7 +86,7 @@
                   <input type="hidden" name="id" value="12" >
             @endif      
                   
-            <h4>Personal Detail</h4>  
+  
  <table class="table">
         <tr>
             <td>
