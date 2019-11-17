@@ -213,7 +213,11 @@ class FloraController extends Controller
         $incident_user=new IncidentUser ;
         $incident_user->user_id = Auth::id();
         $incident_user->incident_id = $incident->id;
+
         $incident_user->save();
+
+        
+
 
       $back=1;
       

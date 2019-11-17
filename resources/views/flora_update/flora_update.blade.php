@@ -50,7 +50,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">First Name : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
+        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
         </div>
    </div>
     
@@ -58,7 +58,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Last Name : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->lname}}">
+      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}">
    
         </div>
    </div>
@@ -68,7 +68,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">PHN : </label>
-        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->phn}}" >
+        <input type="number" name = "phn"  class="form-control" id="validationCustom01" value="{{$patient->phn}}" >
       
         </div>
    </div>
@@ -77,7 +77,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> BirthDay : </label>
-      <input type="Date" class="form-control" id="validationCustom02" value="{{$patient->bdate}}" >
+      <input type="Date" name = "birthday"  class="form-control" id="validationCustom02" value="{{$patient->bdate}}" >
    
         </div>
    </div>
@@ -87,7 +87,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">NIC : </label>
-        <input type="number" class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+        <input type="number" name = "nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
       
         </div>
    </div>
@@ -96,7 +96,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Address : </label>
-      <input type="text" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
+      <input type="text"  name = "address" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
    
         </div>
    </div>
@@ -106,7 +106,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Gender : </label>
-        <input type="text" class="form-control" id="validationCustom01" value="{{$patient->gender}}" >
+        <input type="text"  name = "gender" class="form-control" id="validationCustom01" value="{{$patient->gender}}" >
       
         </div>
    </div>
@@ -115,7 +115,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="number" class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
+      <input type="number" name = "contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
    
         </div>
    </div>
@@ -149,7 +149,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Part of plant : </label>
-       <select  class="form-control" id="" value="">
+       <select  class="form-control" id="" value="" name="plant_part">
             <option  value="{{$toxicity->natural->flora->plant_part}}">{{$toxicity->natural->flora->plant_part}}</option>
             <option value = "Branches"> Branches </option>
             <option value = "Bulbs">    Bulbs    </option>
@@ -169,7 +169,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Region :</label>
-            <select  class="form-control" id="" value="">
+            <select  class="form-control" name="region" id="" value="">
                 <option value="{{$incident->area}}">{{$incident->area}}</option>
                 <option value = "Chankanai">      Chankanai       </option>
                 <option value = "Chavakachcheri"> Chavakachcheri  </option>
@@ -196,7 +196,7 @@
 <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
-      <input type="number" name="Amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
+      <input type="number" name="amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
    
         </div>
    </div>
@@ -204,7 +204,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
-         <select  class="form-control"  id="" value="">
+         <select  class="form-control"  id="" value="" name="circumstance">
                 <option value="{{$toxicity->natural->flora->circumstance}}">{{$toxicity->natural->flora->circumstance}}</option>
                 <option value = "Accidental">   Accidental   </option>
                 <option value = "Homicidal">    Homicidal    </option>
@@ -220,7 +220,7 @@
      <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Mode of poisoning :</label>
-         <select  class="form-control" id="" value="">
+         <select  class="form-control" id="" value="" name="poisoning_mode">
                 <option value = "{{$toxicity->natural->flora->poisoning_mode}}" >{{$toxicity->natural->flora->poisoning_mode }}</option>
                 <option value = "Contact">    Contact   </option>
                 <option value = "Ingestion">  Ingestion  </option>
@@ -312,7 +312,7 @@
 
  <h4 class="font-weight-bold">CNS effects :</h4>
  <br>
-     <select  class="form-control" id="" value="">
+     <select  class="form-control" id="" value="" name="CNS_effects">
                 <option value = "@if($symptoms->contains(3)) 3 @elseif($symptoms->contains(22)) 22  
                 @elseif($symptoms->contains(23)) 23 @else 38 @endif" >  @if($symptoms->contains(3)) Agitation @elseif($symptoms->contains(22)) Combative  
                 @elseif($symptoms->contains(23)) Confusion @else disorientation @endif  </option>
