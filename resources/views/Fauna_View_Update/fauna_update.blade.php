@@ -80,8 +80,24 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Gender : </label>
-        <input type="text"  name = "gender" class="form-control" id="validationCustom01" value="{{$patient->gender}}" >
-      
+        <select name = "gender" class="form-control">
+            @if($patient->gender != null){
+                     <option value = "{{$patient->gender}}"> {{$patient->gender}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+
+                 @if($patient->gender != 'Male'){
+                     <option value = "Male"> Male </option>
+                }
+                @endif
+                @if($patient->gender != 'Female'){
+                     <option value = "Female"> Female  </option>
+                }@endif
+
+         </select>                   
         </div>
    </div>
     
@@ -122,7 +138,7 @@
     <div class="col">
         <div class="form-group">
             <label for="validationCustom04">Place of bite/sting : </label>
-             <select class="form-control"  onchange='otherbiteplace(this.value)' name = "Place_of_bite" value="{{$toxicity->natural->fauna->place_of_sting}}" >
+             <select class="form-control"  onchange='otherbiteplace(this.value)' name = "place_of_sting" value="{{$toxicity->natural->fauna->place_of_sting}}" >
                 @if($toxicity->natural->fauna->place_of_sting != null){
                      <option value = "{{$toxicity->natural->fauna->place_of_sting}}"> {{$toxicity->natural->fauna->place_of_sting}} </option>
                 }
@@ -179,7 +195,7 @@
    <div class="col" id="placeofbite" style='display:none;'>
         <div class="form-group">
             <label for="validationCustom04">Place of bite/sting  others, specify: </label>
-            <input type="text" class="form-control" name="Place_of_bite_others" value=""  >
+            <input type="text" class="form-control" name="place_of_sting_others" value=""  >
          </div>
    </div>
 </div>
@@ -347,7 +363,7 @@
     <div class="col" id="bitesite" style='display:none;'>
         <div class="form-group">
          <label for="validationCustom02">Bite site/Sting site  others, specify  :</label>
-         <input type="text" class="form-control" name="bite_string_others" value="" >
+         <input type="text" class="form-control" name="sting_site_others" value="" >
         </div>
     </div>
     </div>
@@ -375,7 +391,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="14" @if($symptoms->contains(14)) checked @endif> 
+            <input class="form-check-input" name = "Clinical[]" type="checkbox"  name = "Clinical[]"  value="14" @if($symptoms->contains(14)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Bronchospasm
@@ -387,7 +403,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="165" @if($symptoms->contains(165)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="165" @if($symptoms->contains(165)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Burning pain
             </label>
@@ -398,7 +414,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="53" @if($symptoms->contains(53)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="53" @if($symptoms->contains(53)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Facial oedema
             </label>
@@ -411,7 +427,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="34" @if($symptoms->contains(34)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="34" @if($symptoms->contains(34)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Diarrhoea 
@@ -423,7 +439,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="74" @if($symptoms->contains(74)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="74" @if($symptoms->contains(74)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Hypotension
             </label>
@@ -434,7 +450,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="81" @if($symptoms->contains(81)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="81" @if($symptoms->contains(81)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Laryngeal oedema 
             </label>
@@ -447,7 +463,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="82" @if($symptoms->contains(82)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="82" @if($symptoms->contains(82)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Malaise
@@ -459,7 +475,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="89" @if($symptoms->contains(89)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="89" @if($symptoms->contains(89)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Nausea
             </label>
@@ -470,7 +486,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="98" @if($symptoms->contains(98)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="98" @if($symptoms->contains(98)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Oliguria
             </label>
@@ -484,7 +500,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="110" @if($symptoms->contains(110)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="110" @if($symptoms->contains(110)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  BPruritus
@@ -496,7 +512,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="114" @if($symptoms->contains(114)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="114" @if($symptoms->contains(114)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Renal failure
             </label>
@@ -507,7 +523,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="121" @if($symptoms->contains(121)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="121" @if($symptoms->contains(121)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Rhabdomyolysis
             </label>
@@ -521,7 +537,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="259" @if($symptoms->contains(259)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="259" @if($symptoms->contains(259)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Seizures
@@ -533,7 +549,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="166" @if($symptoms->contains(166)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="166" @if($symptoms->contains(166)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Serum sickness
             </label>
@@ -544,7 +560,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="131" @if($symptoms->contains(131)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="131" @if($symptoms->contains(131)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Swelling
             </label>
@@ -557,7 +573,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="137" @if($symptoms->contains(137)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="137" @if($symptoms->contains(137)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Tightness of chest
@@ -569,7 +585,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="140" @if($symptoms->contains(140)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="140" @if($symptoms->contains(140)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Urticaria
             </label>
@@ -580,7 +596,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Vomiting
             </label>
@@ -604,7 +620,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="1" @if($symptoms->contains(1)) checked @endif>
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="1" @if($symptoms->contains(1)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Abdominal pain
@@ -616,7 +632,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="170" @if($symptoms->contains(170)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="170" @if($symptoms->contains(170)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Coagulopathy
             </label>
@@ -627,7 +643,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="163" @if($symptoms->contains(163)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="163" @if($symptoms->contains(163)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Convulsions
             </label>
@@ -639,7 +655,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="171" @if($symptoms->contains(171)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="171" @if($symptoms->contains(171)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Cramping truncal pain
@@ -651,7 +667,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="169" @if($symptoms->contains(169)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="169" @if($symptoms->contains(169)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Haemoglobinuria
             </label>
@@ -662,7 +678,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="173" @if($symptoms->contains(173)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="173" @if($symptoms->contains(173)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Headache
             </label>
@@ -673,7 +689,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="175" @if($symptoms->contains(175)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="175" @if($symptoms->contains(175)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Hyperaesthesia
@@ -685,7 +701,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="157" @if($symptoms->contains(157)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="157" @if($symptoms->contains(157)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Hypertension
             </label>
@@ -696,7 +712,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="54" @if($symptoms->contains(54)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="54" @if($symptoms->contains(54)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Fever
             </label>
@@ -707,7 +723,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="167" @if($symptoms->contains(167)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="167" @if($symptoms->contains(167)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Local necrosis
@@ -719,7 +735,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="172" @if($symptoms->contains(172)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="172" @if($symptoms->contains(172)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Muscle spasm
             </label>
@@ -730,7 +746,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="89" @if($symptoms->contains(89)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="89" @if($symptoms->contains(89)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Nausea
             </label>
@@ -741,7 +757,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="101" @if($symptoms->contains(101)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="101" @if($symptoms->contains(101)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Pain
@@ -753,7 +769,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="176" @if($symptoms->contains(176)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="176" @if($symptoms->contains(176)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Ptosis
             </label>
@@ -764,7 +780,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="114" @if($symptoms->contains(114)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="114" @if($symptoms->contains(114)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   	Renal failure
             </label>
@@ -775,7 +791,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="118" @if($symptoms->contains(118)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="118" @if($symptoms->contains(118)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Restlessness
@@ -787,7 +803,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="124" @if($symptoms->contains(124)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="124" @if($symptoms->contains(124)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Salivation
             </label>
@@ -798,7 +814,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="168" @if($symptoms->contains(168)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="168" @if($symptoms->contains(168)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Scarlatiniform rash
             </label>
@@ -809,7 +825,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="130" @if($symptoms->contains(130)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="130" @if($symptoms->contains(130)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Sweating
@@ -821,7 +837,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="131" @if($symptoms->contains(131)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="131" @if($symptoms->contains(131)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Swelling
             </label>
@@ -832,7 +848,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="174" @if($symptoms->contains(174)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="174" @if($symptoms->contains(174)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Tachypnoea
             </label>
@@ -843,7 +859,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="140" @if($symptoms->contains(140)) checked @endif>
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="140" @if($symptoms->contains(140)) checked @endif>
 
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Urticaria
@@ -855,7 +871,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Vomiting
             </label>
@@ -866,7 +882,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="146" @if($symptoms->contains(146)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="146" @if($symptoms->contains(146)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Weakness
             </label>
@@ -881,7 +897,7 @@
          <div class="col">
              <div class="form-group">
                  <div class="form-check">
-                     <input class="form-check-input"  type="checkbox"  value="1" @if($symptoms->contains(1)) checked @endif>
+                     <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="1" @if($symptoms->contains(1)) checked @endif>
 
                      <label class="form-check-label" for="gridCheck">
                          &nbsp; Abdominal pain
@@ -893,7 +909,7 @@
          <div class="col">
              <div class="form-group">
                  <div class="form-check">
-                     <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif >
+                     <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif >
                      <label class="form-check-label" for="gridCheck">
                          &nbsp;  Vomiting
                      </label>
@@ -904,7 +920,7 @@
          <div class="col">
              <div class="form-group">
                  <div class="form-check">
-                     <input class="form-check-input" type="checkbox"  value="146" @if($symptoms->contains(146)) checked @endif>
+                     <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="146" @if($symptoms->contains(146)) checked @endif>
                      <label class="form-check-label" for="gridCheck">
                          &nbsp;   Weakness
                      </label>
@@ -922,7 +938,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="1" @if($symptoms->contains(1)) checked @endif> 
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="1" @if($symptoms->contains(1)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Abdominal pain
@@ -934,7 +950,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="17" @if($symptoms->contains(17)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="17" @if($symptoms->contains(17)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Burning sensation of mouth 
             </label>
@@ -945,7 +961,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="376" @if($symptoms->contains(376)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="376" @if($symptoms->contains(376)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Cardiac abnormalities
             </label>
@@ -958,7 +974,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="380" @if($symptoms->contains(380)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="380" @if($symptoms->contains(380)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Cranial nerve palsy
@@ -970,7 +986,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="367" @if($symptoms->contains(367)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="367" @if($symptoms->contains(367)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp; Dark coloured urine
             </label>
@@ -981,7 +997,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="359" @if($symptoms->contains(359)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="359" @if($symptoms->contains(359)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Disseminated intravascular coagulation
             </label>
@@ -994,7 +1010,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="44" @if($symptoms->contains(44)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="44" @if($symptoms->contains(44)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Dysphagia
@@ -1006,7 +1022,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="371" @if($symptoms->contains(371)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="371" @if($symptoms->contains(371)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Dysuria 
             </label>
@@ -1017,7 +1033,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="370" @if($symptoms->contains(370)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="370" @if($symptoms->contains(370)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Gross haematuria
             </label>
@@ -1031,7 +1047,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="59" @if($symptoms->contains(59)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="59" @if($symptoms->contains(59)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Haematemesis
@@ -1043,7 +1059,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="337" @if($symptoms->contains(337)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="337" @if($symptoms->contains(337)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Haemorrhage 
             </label>
@@ -1054,7 +1070,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="383" @if($symptoms->contains(383)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="383" @if($symptoms->contains(383)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Keratoconjunctivitis
             </label>
@@ -1067,7 +1083,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="372" @if($symptoms->contains(372)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="372" @if($symptoms->contains(372)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Mucosal erosion 
@@ -1079,7 +1095,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="89" @if($symptoms->contains(89)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="89" @if($symptoms->contains(89)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Nausea 
             </label>
@@ -1090,7 +1106,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="378" @if($symptoms->contains(378)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="378" @if($symptoms->contains(378)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Occult rectal bleeding
             </label>
@@ -1103,7 +1119,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="382" @if($symptoms->contains(382)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="382" @if($symptoms->contains(382)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Periorbital dermatitis
@@ -1115,7 +1131,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="375" @if($symptoms->contains(375)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="375" @if($symptoms->contains(375)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Priapism 
             </label>
@@ -1126,7 +1142,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="381" @if($symptoms->contains(381)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="381" @if($symptoms->contains(381)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Progressive muscle weakness
             </label>
@@ -1139,7 +1155,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="373" @if($symptoms->contains(373)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="373" @if($symptoms->contains(373)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Renal dysfunction
@@ -1151,7 +1167,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="117" @if($symptoms->contains(117)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="117" @if($symptoms->contains(117)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Respiratory failure 
             </label>
@@ -1162,7 +1178,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="377" @if($symptoms->contains(377)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="377" @if($symptoms->contains(377)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Vaginal bleeding 
             </label>
@@ -1187,7 +1203,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="125" @if($symptoms->contains(125)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="125" @if($symptoms->contains(125)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Seizure
             </label>
@@ -1203,7 +1219,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="101" @if($symptoms->contains(101)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="101" @if($symptoms->contains(101)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Pain
@@ -1215,7 +1231,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="117" @if($symptoms->contains(117)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="117" @if($symptoms->contains(117)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Redness 
             </label>
@@ -1226,7 +1242,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="131" @if($symptoms->contains(131)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="131" @if($symptoms->contains(131)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Swelling
             </label>
@@ -1244,7 +1260,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="1" @if($symptoms->contains(101)) checked @endif> 
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="1" @if($symptoms->contains(101)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Abdominal pain
@@ -1256,7 +1272,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="183" @if($symptoms->contains(183)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="183" @if($symptoms->contains(183)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Anaphylactoid 
             </label>
@@ -1267,7 +1283,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="186" @if($symptoms->contains(186)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="186" @if($symptoms->contains(186)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Arthralgia
             </label>
@@ -1280,7 +1296,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="197" @if($symptoms->contains(197)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="197" @if($symptoms->contains(197)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Ataxia
@@ -1292,7 +1308,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="165" @if($symptoms->contains(165)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="165" @if($symptoms->contains(165)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Burning pain 
             </label>
@@ -1303,7 +1319,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="18" @if($symptoms->contains(18)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="18" @if($symptoms->contains(18)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Cardiac arrhythmias 
             </label>
@@ -1315,7 +1331,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="193" @if($symptoms->contains(193)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="193" @if($symptoms->contains(193)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Chills
@@ -1327,7 +1343,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="21" @if($symptoms->contains(21)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="21" @if($symptoms->contains(21)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Coma 
             </label>
@@ -1338,7 +1354,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="29" @if($symptoms->contains(29)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="29" @if($symptoms->contains(29)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Cyanosis
             </label>
@@ -1350,7 +1366,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="192" @if($symptoms->contains(192)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="192" @if($symptoms->contains(192)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Desquamation
@@ -1362,7 +1378,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="34" @if($symptoms->contains(34)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="34" @if($symptoms->contains(34)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Diarrhoea 
             </label>
@@ -1373,7 +1389,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="189" @if($symptoms->contains(189)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="189" @if($symptoms->contains(189)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Erythematous papular lesion 
             </label>
@@ -1385,7 +1401,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="54" @if($symptoms->contains(54)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="54" @if($symptoms->contains(54)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp; Fever
@@ -1397,7 +1413,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="188" @if($symptoms->contains(188)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="188" @if($symptoms->contains(188)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Hemolysis
             </label>
@@ -1408,7 +1424,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="74" @if($symptoms->contains(74)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="74" @if($symptoms->contains(74)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Hypotension 
             </label>
@@ -1420,7 +1436,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="187" @if($symptoms->contains(187)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="187" @if($symptoms->contains(187)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Local oedema
@@ -1432,7 +1448,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="172" @if($symptoms->contains(172)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="172" @if($symptoms->contains(172)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Muscle spasm 
             </label>
@@ -1443,7 +1459,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="185" @if($symptoms->contains(185)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="185" @if($symptoms->contains(185)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Myalgia
             </label>
@@ -1455,7 +1471,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="89" @if($symptoms->contains(89)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="89" @if($symptoms->contains(89)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Nausea 
@@ -1467,7 +1483,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="182" @if($symptoms->contains(182)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="182" @if($symptoms->contains(182)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp; Paraesthesia 
             </label>
@@ -1478,7 +1494,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="113" @if($symptoms->contains(113)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="113" @if($symptoms->contains(113)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Pulmonary oedema 
             </label>
@@ -1490,7 +1506,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="181" @if($symptoms->contains(181)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="181" @if($symptoms->contains(181)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Rash
@@ -1502,7 +1518,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="125" @if($symptoms->contains(125)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="125" @if($symptoms->contains(125)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Seizure
             </label>
@@ -1513,7 +1529,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="180" @if($symptoms->contains(180)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="180" @if($symptoms->contains(180)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Shooting pain
             </label>
@@ -1526,7 +1542,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="178" @if($symptoms->contains(178)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="178" @if($symptoms->contains(178)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Stinging 
@@ -1538,7 +1554,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="179" @if($symptoms->contains(179)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="179" @if($symptoms->contains(179)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Throbbing 
             </label>
@@ -1549,7 +1565,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Vomiting
             </label>
@@ -1566,7 +1582,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="5" @if($symptoms->contains(5)) checked @endif> 
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="5" @if($symptoms->contains(5)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Anaphylaxis 
@@ -1578,7 +1594,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="165" @if($symptoms->contains(165)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="165" @if($symptoms->contains(165)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Burning pain
             </label>
@@ -1589,7 +1605,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="355" @if($symptoms->contains(355)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="355" @if($symptoms->contains(355)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Ecchymoses
             </label>
@@ -1602,7 +1618,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="207" @if($symptoms->contains(207)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="207" @if($symptoms->contains(207)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Lymphangitis 
@@ -1614,7 +1630,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="131" @if($symptoms->contains(131)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="131" @if($symptoms->contains(131)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Swelling
             </label>
@@ -1640,7 +1656,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="1" @if($symptoms->contains(1)) checked @endif> 
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="1" @if($symptoms->contains(1)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Abdominal pain
@@ -1652,7 +1668,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="2" @if($symptoms->contains(2)) checked @endif >
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="2" @if($symptoms->contains(2)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Acute renal failure 
             </label>
@@ -1663,7 +1679,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="208" @if($symptoms->contains(208)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="208" @if($symptoms->contains(208)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Blisters
             </label>
@@ -1676,7 +1692,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="359" @if($symptoms->contains(359)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="359" @if($symptoms->contains(359)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Disseminated intravascular coagulation
@@ -1688,7 +1704,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="248" @if($symptoms->contains(248)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="248" @if($symptoms->contains(248)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Hematuria
             </label>
@@ -1699,7 +1715,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="354" @if($symptoms->contains(354)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="354" @if($symptoms->contains(354)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Hemoglobinuria
             </label>
@@ -1712,7 +1728,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="74" @if($symptoms->contains(74)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="74" @if($symptoms->contains(74)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Hypotension
@@ -1724,7 +1740,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="167" @if($symptoms->contains(167)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="167" @if($symptoms->contains(167)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Local necrosis 
             </label>
@@ -1735,7 +1751,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="98" @if($symptoms->contains(98)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="98" @if($symptoms->contains(98)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Oliguria
             </label>
@@ -1748,7 +1764,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="101" @if($symptoms->contains(101)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="101" @if($symptoms->contains(101)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Pain
@@ -1760,7 +1776,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="336" @if($symptoms->contains(336)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="336" @if($symptoms->contains(336)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Proteinuria
             </label>
@@ -1771,7 +1787,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="121" @if($symptoms->contains(121)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="121" @if($symptoms->contains(121)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Rhabdomyolysis
             </label>
@@ -1786,7 +1802,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="131" @if($symptoms->contains(131)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="131" @if($symptoms->contains(131)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Swelling
@@ -1798,7 +1814,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Vomiting
             </label>
@@ -1823,7 +1839,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="278" @if($symptoms->contains(278)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="278" @if($symptoms->contains(278)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Blood stained vomitus
@@ -1835,7 +1851,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="355" @if($symptoms->contains(355)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="355" @if($symptoms->contains(355)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Ecchymoses
             </label>
@@ -1846,7 +1862,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="330" @if($symptoms->contains(330)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="330" @if($symptoms->contains(330)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Gum bleeding 
             </label>
@@ -1859,7 +1875,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="335" @if($symptoms->contains(335)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="335" @if($symptoms->contains(335)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Intracranial haemorrhages
@@ -1871,7 +1887,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="298" @if($symptoms->contains(298)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="298" @if($symptoms->contains(298)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Melaena
             </label>
@@ -1882,7 +1898,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="324" @if($symptoms->contains(324)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="324" @if($symptoms->contains(324)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Per rectal bleeding 
             </label>
@@ -1895,7 +1911,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="247" @if($symptoms->contains(247)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="247" @if($symptoms->contains(247)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Purpura
@@ -1925,7 +1941,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="210" @if($symptoms->contains(210)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="210" @if($symptoms->contains(210)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Areflexia
@@ -1937,7 +1953,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="213" @if($symptoms->contains(213)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="213" @if($symptoms->contains(213)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Double vision
             </label>
@@ -1948,7 +1964,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="41" @if($symptoms->contains(41)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="41" @if($symptoms->contains(41)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Drowsiness
             </label>
@@ -1960,7 +1976,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="44" @if($symptoms->contains(44)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="44" @if($symptoms->contains(44)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Dysphagia
@@ -1972,7 +1988,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="214" @if($symptoms->contains(214)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="214" @if($symptoms->contains(214)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  External ophthalmoplegia
             </label>
@@ -1983,7 +1999,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="209" @if($symptoms->contains(209)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="209" @if($symptoms->contains(209)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Facial muscle weakness
             </label>
@@ -1996,7 +2012,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="176" @if($symptoms->contains(176)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="176" @if($symptoms->contains(176)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Ptosis
             </label>
@@ -2007,7 +2023,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="211" @if($symptoms->contains(211)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="211" @if($symptoms->contains(211)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Respiratory paralysis
             </label>
@@ -2018,7 +2034,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="212" @if($symptoms->contains(212)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="212" @if($symptoms->contains(212)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Visual disturbances 
             </label>
@@ -2035,7 +2051,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="364" @if($symptoms->contains(364)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="364" @if($symptoms->contains(364)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Burning sensation of lips
             </label>
@@ -2046,7 +2062,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="17" @if($symptoms->contains(17)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="17" @if($symptoms->contains(17)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Burning sensation of mouth
             </label>
@@ -2057,7 +2073,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="349" @if($symptoms->contains(349)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="349" @if($symptoms->contains(349)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Burning sensation of throat 
             </label>
@@ -2071,7 +2087,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="363" @if($symptoms->contains(363)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="363" @if($symptoms->contains(363)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Cold extremities
             </label>
@@ -2082,7 +2098,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="21" @if($symptoms->contains(21)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="21" @if($symptoms->contains(21)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Coma
             </label>
@@ -2093,7 +2109,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="163" @if($symptoms->contains(163)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="163" @if($symptoms->contains(163)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Convulsions 
             </label>
@@ -2107,7 +2123,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="41" @if($symptoms->contains(41)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"  name = "Clinical[]"  value="41" @if($symptoms->contains(41)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Drowsiness
             </label>
@@ -2118,7 +2134,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="47" @if($symptoms->contains(47)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="47" @if($symptoms->contains(47)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Epigastric pain
             </label>
@@ -2129,7 +2145,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="89" @if($symptoms->contains(89)) checked @endif>
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="89" @if($symptoms->contains(89)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Nausea 
             </label>
@@ -2143,7 +2159,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="365" @if($symptoms->contains(365)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="365" @if($symptoms->contains(365)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Pustular papillae
             </label>
@@ -2154,7 +2170,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="117" @if($symptoms->contains(117)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="117" @if($symptoms->contains(117)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Respiratory failure
             </label>
@@ -2165,7 +2181,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="300" @if($symptoms->contains(300)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="300" @if($symptoms->contains(300)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Stomatitis
             </label>
@@ -2179,7 +2195,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="130" @if($symptoms->contains(130)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="130" @if($symptoms->contains(130)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Sweating
             </label>
@@ -2190,7 +2206,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="132" @if($symptoms->contains(132)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="132" @if($symptoms->contains(132)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Tachycardia
             </label>
@@ -2201,7 +2217,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="366" @if($symptoms->contains(366)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="366" @if($symptoms->contains(366)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Ulcerg 
             </label>
@@ -2214,7 +2230,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="360" @if($symptoms->contains(360)) checked @endif>        
+            <input class="form-check-input"  type="checkbox"   name = "Clinical[]" value="360" @if($symptoms->contains(360)) checked @endif>        
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Vertigo
             </label>
@@ -2225,7 +2241,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="144" @if($symptoms->contains(144)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "Clinical[]" value="144" @if($symptoms->contains(144)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Vomiting 
             </label>
@@ -2273,7 +2289,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="2" @if($management->contains(2)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "management[]"   value="2" @if($management->contains(2)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Adrenaline
@@ -2285,7 +2301,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="4" @if($management->contains(4)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "management[]"   value="4" @if($management->contains(4)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Analgesics given
             </label>
@@ -2296,7 +2312,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="41" @if($management->contains(41)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="41" @if($management->contains(41)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Antacids 
             </label>
@@ -2309,7 +2325,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="6" @if($management->contains(6)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "management[]"   value="6" @if($management->contains(6)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Anticonvulsants given  
@@ -2321,7 +2337,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="8" @if($management->contains(8)) checked @endif >
+            <input class="form-check-input" type="checkbox"  name = "management[]"   value="8" @if($management->contains(8)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Antihistamine
             </label>
@@ -2332,7 +2348,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="11" @if($management->contains(11)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="11" @if($management->contains(11)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Calcium gluconate given
             </label>
@@ -2346,7 +2362,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="16" @if($management->contains(16)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "management[]"  value="16" @if($management->contains(16)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Gastric lavage
@@ -2358,7 +2374,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="33" @if($management->contains(33)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="33" @if($management->contains(33)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Hydrocortisone 
             </label>
@@ -2369,7 +2385,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="36" @if($management->contains(36)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="36" @if($management->contains(36)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Hemodialysis
             </label>
@@ -2383,7 +2399,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="17" @if($management->contains(17)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "management[]"  value="17" @if($management->contains(17)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Icepacks Applaid
@@ -2395,7 +2411,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="40" @if($management->contains(40)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="40" @if($management->contains(40)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Inotropic support 
             </label>
@@ -2406,7 +2422,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="34" @if($management->contains(34)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="34" @if($management->contains(34)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Nebulisation
             </label>
@@ -2420,7 +2436,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="35" @if($management->contains(35)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "management[]"  value="35" @if($management->contains(35)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Peritoneal
@@ -2432,7 +2448,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="31" @if($management->contains(31)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="31" @if($management->contains(31)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Rest the area of bite
             </label>
@@ -2443,7 +2459,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="26" @if($management->contains(26)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="26" @if($management->contains(26)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Resuscitation 
             </label>
@@ -2457,7 +2473,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="37" @if($management->contains(37)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"   name = "management[]"  value="37" @if($management->contains(37)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Tetanus prophylaxis 
@@ -2469,7 +2485,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="38" @if($management->contains(38)) checked @endif >
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="38" @if($management->contains(38)) checked @endif >
             <label class="form-check-label" for="gridCheck">
             &nbsp;  Topical steroids 
             </label>
@@ -2480,7 +2496,7 @@
    <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input" type="checkbox"  value="30" @if($management->contains(30)) checked @endif>
+            <input class="form-check-input" type="checkbox"   name = "management[]"  value="30" @if($management->contains(30)) checked @endif>
             <label class="form-check-label" for="gridCheck">
             &nbsp;   Wound cleaning
             </label>
@@ -2491,7 +2507,7 @@
 
 <div class="form-group">
   <label for="comment">Others:</label>
-  <textarea class="form-control" rows="5" id="comment" >{{$incident->management_others}}</textarea>
+  <textarea class="form-control" rows="5" name ="managements_others" >{{$incident->management_others}}</textarea>
 </div> 
 
 
@@ -2506,7 +2522,7 @@
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox"  value="7" @if($management->contains(7)) checked @endif> 
+            <input class="form-check-input"  type="checkbox"  name = "management[]"   value="7" @if($management->contains(7)) checked @endif> 
             
             <label class="form-check-label" for="gridCheck">
                &nbsp;  Anti snake venom serum(AVS) given
@@ -2532,7 +2548,7 @@
 
  <div class="form-group">
    <p class="font-weight-bold">&nbsp;If yes, no of vials :  </p>
-  <input type="number" class="form-control" min ="0" id="comment" value="{{$toxicity->natural->fauna->avs_vials }}" ></input>
+  <input type="number" name= "avs_vials" class="form-control" min ="0" id="comment" value="{{$toxicity->natural->fauna->avs_vials }}" ></input>
 </div> 
  <br><br>
  
@@ -2548,7 +2564,7 @@
  
  <div class="form-group">
  
-  <textarea class="form-control" name="laboratory" rows="5" ></textarea>
+  <textarea class="form-control" name="laboratory" rows="5" >{{$laboratory->comments}} </textarea>
 </div> 
 
 
@@ -2558,7 +2574,7 @@
  
  <div class="form-group">
  
-  <textarea class="form-control" name="comment" rows="5" >{{$incident->comments}}</textarea>
+  <textarea class="form-control" name="comments" rows="5" >{{$incident->comments}}</textarea>
 </div> 
 
 <input type="hidden" name="recordid" value="{{$incident->id}}">
