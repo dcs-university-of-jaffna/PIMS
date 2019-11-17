@@ -14,6 +14,7 @@ use App\Laboratory;
 use Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use DB;
 
 class FloraController extends Controller
 { 
@@ -32,12 +33,26 @@ class FloraController extends Controller
     }
 
     function submitFlora(Request $request){
-       $ray=$request->id;
-       return view('Detail_Forms.flora_update',compact('request','ray'));
+        $ray=$request->id;
+        $symptoms = $request->AththanaClinical;
+        
+         $symptoms1 = $request->CNS;
+         $r=$request->CNS;
+          
+         if(is_null($request-> CNS)){}
+         else{
+             $items = DB::table('symptoms')
+             ->select('name')
+             ->where('id','=', "$symptoms1")->first();
+        
+       foreach ($items as $value) {     
+       $r = $value;
+    }
+         }
+       return view('Detail_Forms.flora_update',compact('request','ray','symptoms','symptoms1','r'));
    }
    
  function updateFlora(Request $request){
-
        $ray = $request->id;
        $patient = new Patient;
        $patient->phn=$request->PHN;	
@@ -155,7 +170,8 @@ class FloraController extends Controller
       
         	
       
-  $symptom = $request->AththanaClinical;
+  $symptom = $request->Clinical;
+
         if (is_null($symptom)){
             
         }
@@ -168,17 +184,7 @@ class FloraController extends Controller
             }
        }
       
-        $symptom1 = $request->CNSeffects;
-        if (is_null($symptom1)){
-            
-        }
-        else{
-            $incidentSymptom=new IncidentSymptom;
-            $incidentSymptom->symptom_id=$symptom1;
-            $incidentSymptom->incident_id = $incident->id;
-            $incidentSymptom->save();
-        }
-       
+        
         $management =$request->management;
         if (is_null($management)){
             
@@ -207,7 +213,11 @@ class FloraController extends Controller
         $incident_user=new IncidentUser ;
         $incident_user->user_id = Auth::id();
         $incident_user->incident_id = $incident->id;
+
+        $incident_user->save();
+
         
+
 
       $back=1;
       

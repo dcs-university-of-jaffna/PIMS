@@ -606,44 +606,65 @@
 		    
             
     <div data-panel="four">
+              <table class="table">
+        <tr>
+            <td>   
 			<h4> Managemnt Detail</h4>
+                        <table><tr><td>
                      <label><input type="checkbox" name = "management[]" value="3"  >  Alkalinization </label> <br>
                      <label><input type="checkbox" name = "management[]" value="4"  >  Analgesics given</label> <br>
                      <label><input type="checkbox" name = "management[]" value="5"  > Antibiotics given </label> <br>
                      <label><input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given </label> <br>  
                      <label><input type="checkbox" name = "management[]" value="9"  >  Atropine given </label> <br>
-                     <label><input type="checkbox" name = "management[]" value="10"  > Blood transfusion/Plasma expanders </label><br>    
+                      </td>
+                      <td></td><td></td> <td></td><td></td><td></td><td></td> <td></td><td></td>
+                      <td>
+                     <label><input type="checkbox" name = "management[]" value="10"  > Blood transfusion </label><br>   
                      <label><input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given </label><br>
                      <label><input type="checkbox" name = "management[]" value="13"   > Dialysis </label> <br>
-
-                        <br>
-                     <label11> 
                             <label><input type="checkbox" name = "management[]" value="14"  >  Dopamine given </label> <br>
-                             <label><input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids </label> <br>
+                             <label><input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone </label> <br></td>
+                           <td></td><td></td> <td></td><td></td><td></td><td></td> <td></td><td></td>  
+                             <td>
                             <label><input type="checkbox" name = "management[]" value="21">  NaCl given </label><br>
                             <label><input type="checkbox" name = "management[]" value="22"  >  NaHCO3 given </label><br>                        
                             <label><input type="checkbox" name = "management[]" value="24"  > Prednisalone given </label><br>      
                             <label><input type="checkbox" name = "management[]" value="26"  > Resuscitation </label><br>
                             <label><input type="checkbox" name = "management[]" value="29"  > Supportive therapy </label><br>
-                   </label11> 
-                        If others : <br> 
-                            <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
-                        <br><br>
+                   </td>
+                 
+                           </td>
+                              </tr>
+                   </table>
+                        </td>
+                        <td></td>
+                        <td>
                         
-                        <label9> <b> Gastrointestinal decontamination : </b></label><br><br>
+                        
+                       <b> Gastrointestinal decontamination : </b></label><br><br>
                          <label><input type="checkbox" name = "management[]" value="15"  > Gastric_aspiration </label><br><br> 
                          <label><input type="checkbox" name = "management[]" value="1"  > Activated chracol</label><br>  
                            
                           If yes, number of doses :  
                             <input type="text" name = "activated_chracol_doses" >
-                         <br><br><br>
-                         
+                          </td>
+                      
+                       
+                         <td>
                          <label> <b> Antidote :</b> </label><br><br>
                             <label><input type="checkbox" name = "management[]" value="7"  > Antidote given </label><br>  
                              If yes, type of antidote :  
                             <input type="text" name = "antidote" >
-                         </label9>
-                         
+                  </td></tr>
+                         </table>
+                            </td>
+                            </td></tr>
+                         </table>
+                        <br>
+                          If others : <br> 
+                            <textarea rows = "4" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
+                       
+                       
     </div>
              
     <div data-panel="five">
@@ -683,7 +704,12 @@
             @elseif($ray==12)     
                   <input type="hidden" name="id" value="12" >
             @endif  
-                           
+                      
+            <input type="hidden"  name = "AththanaClinical[]" value="-1">
+            <input type="hidden"  name = "AththanaClinical[]" value="-2">
+           
+            
+            
             <button  type="reset" value=""  onclick="return confirm(&quot;Reset the data?&quot;)" >Reset</button> 
             <button type="submit" name ="view" >Save</button>  
          

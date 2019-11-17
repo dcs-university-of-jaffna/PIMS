@@ -9,7 +9,6 @@
 </head>
 <body>
     <br>
-
  
  <div class="container">
      
@@ -46,7 +45,7 @@
 <td>
      <h3 style="text-align: center"><b> Category : Natural Toxins - Flora   </b></h3><br>
      <td></tr></table>
- <form  action="/update_flora" method ="post">
+<form  action="/update_flora" method ="post">
   @csrf   
    <h3 class="font-weight-bold">Personal Detail</h3>
  <div class="row"> 
@@ -269,6 +268,91 @@
         </div>
   
  <br><br>
+ 
+ 
+  <div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="30" @if(in_array("30", $symptoms)) checked @endif> 
+            
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;   Cycloplegia
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="42" @if(in_array("42", $symptoms)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp; Dry mouth
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"  value="48" @if(in_array("48", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Erythema
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"  value="54" @if(in_array("54", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Fever
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="86" @if(in_array("86", $symptoms))) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Mydriasis
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="132" @if(in_array("132", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Tachycardia 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+ 
+ <h4 class="font-weight-bold">CNS effects :</h4>
+ <br>
+     <select  name = "Clinical[]" class="form-control" id="" value="">
+                <option value = "{{$symptoms1}}"> {{$r}}</option>
+                 <option value = "22"> Combative  </option>
+                <option value = "3">  Agitation   </option>
+                <option value = "22"> Combative  </option>
+                <option value = "23"> Confusion </option>
+                <option value = "38"> disorientation </option>
+         </select>
+
+ <br><br>
 
  <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)">Save</button>  
  <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
@@ -328,7 +412,7 @@
     
     
     
-    
+    </form>
     
     
     </div>
