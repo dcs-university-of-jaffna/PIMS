@@ -38,6 +38,18 @@ class UpdateController extends Controller
         }
         $data->save();
 
+        //patient update
+      $patientdata = $data->patient;
+      $patientdata->phn = $request->phn;
+      $patientdata->nic  = $request->nic;
+      $patientdata->fname = $request->firstname;
+      $patientdata->lname = $request->lastname;
+      $patientdata->bdate = $request->birthday;
+      $patientdata->address  = $request->address;
+      $patientdata->contact  = $request->contact;
+      $patientdata->gender  = $request->gender;
+      $patientdata->save();
+
      //laboratary details 
       $laboratarydata = $data->laboratory;
       $laboratarydata->comments = $request->laboratory;
@@ -109,7 +121,7 @@ class UpdateController extends Controller
       $patientdata->contact  = $request->contact;
       $patientdata->gender  = $request->gender;
       $patientdata->save();
-      
+
     //fauna table update
         $faunadata = $data->toxicity->natural->Fauna;
         $faunadata->number_of_stings   = $request->number_of_stings;

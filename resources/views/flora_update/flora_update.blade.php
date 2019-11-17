@@ -45,7 +45,6 @@
 
  <form  action="/update_phn_search_flora" method ="post">
   @csrf   
-
 <div class="row"> 
     <div class="col">
         <div class="form-group">
@@ -106,8 +105,24 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Gender : </label>
-        <input type="text"  name = "gender" class="form-control" id="validationCustom01" value="{{$patient->gender}}" >
-      
+        <select name = "gender" class="form-control">
+            @if($patient->gender != null){
+                     <option value = "{{$patient->gender}}"> {{$patient->gender}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+
+                 @if($patient->gender != 'Male'){
+                     <option value = "Male"> Male </option>
+                }
+                @endif
+                @if($patient->gender != 'Female'){
+                     <option value = "Female"> Female  </option>
+                }@endif
+
+         </select>                   
         </div>
    </div>
     
@@ -130,7 +145,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Date : </label>
-        <input type="text" name = "date" class="form-control" value ="{{$incident->date}}"  >
+        <input type="date" name = "date" class="form-control" value ="{{$incident->date}}"  >
          </div>
    </div>
     
@@ -138,7 +153,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Time : </label>
-      <input type="text" name = "time" class="form-control"  value="{{$incident->time}}" >
+      <input type="time" name = "time" class="form-control"  value="{{$incident->time}}" >
    
         </div>
    </div>
