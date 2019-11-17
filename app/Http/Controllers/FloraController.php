@@ -35,6 +35,7 @@ class FloraController extends Controller
     function submitFlora(Request $request){
         $ray=$request->id;
         $symptoms = $request->AththanaClinical;
+        $management =$request->management;
         
          $symptoms1 = $request->CNS;
          $r=$request->CNS;
@@ -49,7 +50,7 @@ class FloraController extends Controller
        $r = $value;
     }
          }
-       return view('Detail_Forms.flora_update',compact('request','ray','symptoms','symptoms1','r'));
+       return view('Detail_Forms.flora_update',compact('request','ray','symptoms','symptoms1','r','management'));
    }
    
  function updateFlora(Request $request){

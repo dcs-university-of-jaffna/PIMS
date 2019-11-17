@@ -353,6 +353,274 @@
          </select>
 
  <br><br>
+ 
+ 
+ 
+ <div class="form-group">
+  <label for="comment">Others:</label>
+  <textarea class="form-control" rows="5" id="comment" name="clinicals_others"   >{{$request->clinicals_others}} </textarea>
+</div>
+ 
+ 
+ <br><br>
+ <h3 class="font-weight-bold">Management</h3>
+ <br>
+ 
+    
+ <div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="3" @if(in_array("3", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Alkalinization
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" id="gridCheck"  value="4" @if(in_array("4", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Analgesics given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="5" @if(in_array("5", $management))checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Antibiotics given 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="6" @if(in_array("6", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Anticonvulsants given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]"  value="9" @if(in_array("9", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Atropine given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="10"@if(in_array("10", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Blood transfusion/Plasma expanders  
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="11" @if(in_array("11", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Calcium gluconate given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="13" @if(in_array("13", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Dialysis
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="14" @if(in_array("14", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;    Dopamine given 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="20" @if(in_array("20", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Methylprednisolone/Corticosteroids
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="21" @if(in_array("21", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  NaCl given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]"  value="22" @if(in_array("22", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  NaHCO3 given
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="24" @if(in_array("24", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Prednisalone given
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="26"@if(in_array("26", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Resuscitation
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]" value="29" @if(in_array("29", $management))  checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Supportive therapy  
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+<br><br>
+
+
+ 
+
+<div class="form-group">
+  <label for="comment">Others:</label>
+  <textarea class="form-control" rows="5" name = "managements_others" id="comment" >{{$request->managements_others}}</textarea>
+</div> 
+
+<h3 class="font-weight-bold">Gastrointestinal decontamination : </h3>
+ <br>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]"  value="15" @if(in_array("15", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Gastric aspiration 
+            </label>
+            </div>
+        </div>
+   </div>
+   <div class="row">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]"  value="1" @if(in_array("1", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Activated chracol      
+            </label>
+           
+            </div>
+        </div>
+   </div>
+
+   <label class="form-check-label" for="gridCheck">
+            &nbsp; &nbsp; If yes, number of doses       
+    </label>
+            <div class="col">                                                                                 
+                <input  class="form-control" type="text" name = "activated_chracol_doses" value="{{$request->activated_chracol_doses}}"> 
+            </div>
+            <br>
+
+   <div class="row">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "management[]"  value="7" @if(in_array("7", $management)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Antidote given
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <label class="form-check-label" for="gridCheck">
+            &nbsp; &nbsp; If yes, type of antidote      
+    </label>
+            <div class="col">      
+                <input  class="form-control" type="text" name = "antidote" value=" {{$request->antidote}}">
+     </div>
+
+
+<br><br>
+  <h3 class="font-weight-bold">laboratory detail</h3>
+<br>
+ 
+ <div class="form-group"> 
+    <textarea class="form-control" rows="5" name="Lab_Comments" >{{$request->Lab_Comments}}</textarea>
+ </div> 
+
+
+<br><br>
+ <h3 class="font-weight-bold">Comment</h3>
+ <br>
+ 
+ <div class="form-group">
+ 
+  <textarea class="form-control" name = "comments" rows="5" >{{$request->comments}}</textarea>
+</div> 
+
 
  <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)">Save</button>  
  <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit"> Save & Submit</button> 
