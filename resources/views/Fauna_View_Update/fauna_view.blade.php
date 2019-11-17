@@ -1837,7 +1837,7 @@
 
 
 
-@elseif($incident->toxicity->name =='Turtle Flesh Poison')
+@elseif($incident->toxicity->name =='Turtle Flesh Poisoning')
 
 <div class="row"> 
     <div class="col">
