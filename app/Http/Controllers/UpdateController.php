@@ -37,13 +37,18 @@ class UpdateController extends Controller
             $data->is_submited = 1;
         }
         $data->save();
+
+     //laboratary details 
+      $laboratarydata = $data->laboratory;
+      $laboratarydata->comments = $request->laboratory;
+      $laboratarydata->save();
       
     //flora table update
         $floradata = $data->toxicity->natural->Flora;
         $floradata->plant_part   = $request->plant_part;
         $floradata->circumstance = $request->circumstance;
         $floradata->poisoning_mode = $request->poisoning_mode;
-        $floradata->amount       = $request->amount;
+        $floradata->amount        = $request->amount;
         $floradata->activated_chracol_doses = $request->activated_chracol_doses;
         $floradata->antidote = $request->antidote; 
 
@@ -70,7 +75,13 @@ class UpdateController extends Controller
         $data = Incident::find($request->recordid);
         $data->date = $request->date;
         $data->time = $request->time;
-        $data->area = $request->region;
+        if($request->region == 'others'){
+          $data->area = $request->area_of_others;
+        }
+        else{
+            $data->area = $request->region;
+        }
+        
         $data->management_others = $request->managements_others;
         $data->comments          = $request->comments;
         $data->symptom_others    = $request->clinicals_others;
@@ -81,12 +92,41 @@ class UpdateController extends Controller
             $data->is_submited = 1;
         }
         $data->save();
+
+     //laboratary details 
+      $laboratarydata = $data->laboratory;
+      $laboratarydata->comments = $request->laboratory;
+      $laboratarydata->save();
+
+      //patient update
+      $patientdata = $data->patient;
+      $patientdata->phn = $request->phn;
+      $patientdata->nic  = $request->nic;
+      $patientdata->fname = $request->firstname;
+      $patientdata->lname = $request->lastname;
+      $patientdata->bdate = $request->birthday;
+      $patientdata->address  = $request->address;
+      $patientdata->contact  = $request->contact;
+      $patientdata->gender  = $request->gender;
+      $patientdata->save();
       
     //fauna table update
         $faunadata = $data->toxicity->natural->Fauna;
         $faunadata->number_of_stings   = $request->number_of_stings;
-        $faunadata->place_of_sting = $request->place_of_sting;
-        $faunadata->sting_site   = $request->sting_site;
+        if($request->place_of_sting == 'others'){
+           $faunadata->place_of_sting = $request->place_of_sting_others;
+        }
+        else{
+            $faunadata->place_of_sting = $request->place_of_sting;
+        }
+        if($request->sting_site == 'others'){
+             $faunadata->sting_site   = $request->sting_site_others;
+        }
+        else{
+            $faunadata->sting_site   = $request->sting_site;
+        }
+        
+       
         $faunadata->circumstance = $request->circumstance;
         $faunadata->avs_vials    = $request->avs_vials;
 
