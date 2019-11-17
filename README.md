@@ -22,9 +22,9 @@
     -> create a database name PIMS
     -> php artisan migrate:fresh
 
-    **If you need test data for testing**
+    **To fill DB with initial values**
     -> composer dump-autoload
-    -> php artisan db:seed
+    -> php artisan db:seed --class=DataSeeder
      
 
     
