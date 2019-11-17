@@ -52,9 +52,10 @@
      <tr>
          <td><h4>New Patient Personal Detail</h4></td><td></td><td></td><td></td>
          <td>
-            <form class="form-inline my-2 my-lg-0"  action="/phnsearch" method="POST">
+            <form class="form-inline my-2 my-lg-0"  action="/Floraphnsearch" method="POST">
          {{csrf_field()}}
-                <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder="Search" aria-label="Search" required>
+         <input type="hidden" name="id" value="{{$ray}}">
+                <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder=" Old Patient" aria-label="Search" required>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
            </form>
                 </td></tr></table>
