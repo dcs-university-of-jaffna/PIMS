@@ -659,7 +659,7 @@
  
  <div class="form-group">
  
-  <textarea class="form-control" rows="5" readonly></textarea>
+  <textarea class="form-control" rows="5" readonly>{{$laboratory->comments}}</textarea>
 </div> 
 
 
