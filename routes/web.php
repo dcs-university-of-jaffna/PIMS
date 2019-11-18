@@ -81,7 +81,9 @@ Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.
 Route::get('/incidents/{incident}/edit', 'IncidentController@edit')->name('incidents.edit');
 Route::patch('/incidents/{incident}', 'IncidentController@update')->name('incidents.update');
 Route::get('/search', 'PatientSearchController@index')->name('patient_search.index');
-Route::get('search/action','PatientSearchController@action')->name('patient_search.action');
+//Route::get('search/action','PatientSearchController@action')->name('patient_search.action');
+Route::get('home/action','FrontController@action')->name('patient_search.action');
+
 
 
 //------------------------------------------chathuranga------------------------------

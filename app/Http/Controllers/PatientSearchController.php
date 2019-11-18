@@ -51,7 +51,7 @@ class PatientSearchController extends Controller
             {
                 $output = '
                        <tr>
-                        <td align="center" colspan="5">No Data Found</td>
+                        <td style="text-align:center;" colspan="5">No Data Found</td>
                        </tr>
                        ';
             }

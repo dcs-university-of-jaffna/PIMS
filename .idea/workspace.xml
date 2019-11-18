@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8555e240-72d1-4923-9b9e-8067c9b5fc20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/searches/patient_search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IncidentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IncidentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
