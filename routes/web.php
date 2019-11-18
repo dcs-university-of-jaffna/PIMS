@@ -44,11 +44,11 @@ Route::post('/submit', 'BeeStringController@submit');
 
 
 //--------------------------------------Rayan--------------------------------------
-Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
+Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 
-Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');        
+Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');
 Route::post('/submitFauna', 'FaunaController@submitFauna');
 Route::post('/submit_fauna_first_page', 'FaunaController@submitFaunaPHN');
 
@@ -72,7 +72,11 @@ Route::get('Chemicals_Details/Submitted','ChemicalController@save');
 
 
 //------------------------------------------chamikara--------------------------------
-
+Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.show');
+Route::get('/incidents/{incident}/edit', 'IncidentController@edit')->name('incidents.edit');
+Route::patch('/incidents/{incident}', 'IncidentController@update')->name('incidents.update');
+Route::get('/search', 'PatientSearchController@index')->name('patient_search.index');
+Route::get('search/action','PatientSearchController@action')->name('patient_search.action');
 
 
 //------------------------------------------chathuranga------------------------------
