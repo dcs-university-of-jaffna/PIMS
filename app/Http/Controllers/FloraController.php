@@ -29,7 +29,11 @@ class FloraController extends Controller
           $phn = $request->phn;
           $ray=$request->id;
            $items = DB::table('patients')
-             ->where('phn','=', "$phn")->get();
+             ->where('phn','=', "$phn")
+             ->orWhere('fname','=', "$phn")
+             ->orWhere('lname','=', "$phn") 
+             ->orWhere('nic','=', "$phn")      
+             ->get();
    
            
            return view('Detail_Forms.record',compact('items','ray'));

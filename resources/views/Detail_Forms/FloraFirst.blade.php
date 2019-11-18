@@ -5,6 +5,7 @@
  
     <link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/index.js"></script>
 </head>
 <body><br>   <table class="table">
         <tr>
@@ -55,7 +56,7 @@
             <form class="form-inline my-2 my-lg-0"  action="/Floraphnsearch" method="POST">
          {{csrf_field()}}
          <input type="hidden" name="id" value="{{$ray}}">
-                <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder=" Old Patient" aria-label="Search" required>
+                <input class="form-control mr-sm-2"  type="text" name = "phn" placeholder=" Old Patient" aria-label="Search" required>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
            </form>
                 </td></tr></table>
