@@ -22,13 +22,14 @@ class update_record_controller_phn_search extends Controller
               
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $laboratory = $incident->laboratory;
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                          
             
                  // dd( $toxicity);
-                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
             }
   
    //Ahthana
@@ -36,12 +37,13 @@ class update_record_controller_phn_search extends Controller
                           
                 $incident = Incident::find($request->incident_id);
                 $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                $laboratory = $incident->laboratory;
                 $patient  = $incident->patient;
                 $toxicity = $incident->toxicity->natural->flora;     
                 $management = $incident->managements()->pluck('managements.id');
                 $user    = $incident->users();                                          
                 //  dd($symptoms);
-                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
             }  
 
    //Diyakaduru
@@ -49,12 +51,13 @@ class update_record_controller_phn_search extends Controller
                                       
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $laboratory = $incident->laboratory;
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                                                                  
               // dd($incident);
-            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
             } 
 
   //Endara
@@ -62,12 +65,13 @@ class update_record_controller_phn_search extends Controller
                                       
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                           
             // dd($incident);
-             return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+             return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
           } 
   
   //Godakaduru
@@ -75,12 +79,13 @@ class update_record_controller_phn_search extends Controller
                                                 
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
             // dd($incident);
-            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
           } 
   
   //Habarala
@@ -88,12 +93,13 @@ class update_record_controller_phn_search extends Controller
                                                       
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
             // dd($incident);
-              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
            } 
 
   //Hondala
@@ -101,12 +107,13 @@ class update_record_controller_phn_search extends Controller
                                                                 
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                            
            //  dd($incident->toxicity->name);
-              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
            } 
 
   //Kaneru 
@@ -114,12 +121,13 @@ class update_record_controller_phn_search extends Controller
                                                                           
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
                 // dd($incident);
-                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
            } 
 
 
@@ -128,12 +136,13 @@ class update_record_controller_phn_search extends Controller
                                                                             
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                            
                 // dd($incident);
-                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
             } 
 
  //Niyagala
@@ -141,12 +150,13 @@ class update_record_controller_phn_search extends Controller
                                                                                       
                 $incident = Incident::find($request->incident_id);
                 $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                $laboratory = $incident->laboratory;
                 $patient  = $incident->patient;
                 $toxicity = $incident->toxicity->natural->flora;     
                 $management = $incident->managements()->pluck('managements.id');
                 $user    = $incident->users();                                           
                 // dd($incident);
-                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
             } 
   //Olinda
 
@@ -154,12 +164,13 @@ class update_record_controller_phn_search extends Controller
                                                                                                 
               $incident = Incident::find($request->incident_id);
               $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+              $laboratory = $incident->laboratory;
               $patient  = $incident->patient;
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
               // dd($incident);
-              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+              return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
              } 
 
   //Unknown plant poisoning
@@ -168,12 +179,13 @@ class update_record_controller_phn_search extends Controller
                                                                                                         
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $laboratory = $incident->laboratory;
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->flora;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                           
             // dd($incident);
-            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user'));
+            return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
         } 
 
 
@@ -182,12 +194,13 @@ class update_record_controller_phn_search extends Controller
              
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+                  $laboratory = $incident->laboratory;
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->natural->fauna;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();  
                    
-                  return view('/Fauna_View_Update/fauna_update',compact('incident','patient','toxicity','symptoms','management','user'));
+                  return view('/Fauna_View_Update/fauna_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
         }
 
 
@@ -199,11 +212,12 @@ class update_record_controller_phn_search extends Controller
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
                   $patient  = $incident->patient;
+                  $laboratory = $incident->laboratory;
                   $toxicity = $incident->toxicity->chemical;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();  
                    //dd($management);
-                  return view('/Chemical_View_Update/Chemical_Update',compact('incident','patient','toxicity','symptoms','management','user'));
+                  return view('/Chemical_View_Update/Chemical_Update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
         }
 
 

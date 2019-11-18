@@ -145,10 +145,12 @@ h4 {
 .form {
 	background: #ffffff;
 	box-shadow: 0 5px px rgba(0, 0, 0, .4);
-	margin: 1em;
-	min-width: 480px;
+	margin: 2em;
+        min-width: 480px;
 	padding: 1em;
-        height: 75%
+        min-height: 560px;
+        
+      
 }
 
 .panels div {
@@ -157,17 +159,13 @@ h4 {
 	padding: 1em 0 0;
 }
 
-input {
+select,textarea,input {
 	box-sizing: border-box;
+	display: block;
 	padding: .4em;
-	
+	width: 50%;
 }
 
-select {
-	box-sizing: border-box;
-	padding: .4em;
-	
-}
 
 .btn {
   background-color: DodgerBlue;
@@ -195,15 +193,45 @@ button {
    
 }
 
-button:next{
-    position: absolute;
-    left :50%; 
-    top:45%;
-} 
+
 
 button:hover {
 	opacity: 0.8;
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.table{
+ table-layout: fixed;
+  width: 100%; 
+}
+
+
 
 label1{
     position: absolute;
@@ -266,18 +294,7 @@ label11{
     top:38%;
 }
 
-h3{
-   position: absolute; 
-    top:-2%;  
-    left :75%; 
-}
 
-h2{
-   position: absolute; 
-    top:1%;  
-    left :30%;
-    color: window
-}
 
 label12{
    position: absolute; 

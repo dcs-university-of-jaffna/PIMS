@@ -19,3 +19,48 @@ function doclick() {
 }
 
 datePickerId.max = new Date().toISOString().split("T")[0];
+
+function checkvalue(val)
+{
+ var element=document.getElementById('poisoning_mode');
+ if(val=='Others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+function checkvalue(val)
+{
+ var element=document.getElementById('poisoning_mode');
+ if(val=='Others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+function checkvalue1(val)
+{
+ var element=document.getElementById('area');
+ if(val=='Others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+function checkvalue2(val)
+{
+ var element=document.getElementById('plant_part');
+ if(val=='Others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+function checkvalue3(val)
+{
+ var element=document.getElementById('circumstance');
+ if(val=='Others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}

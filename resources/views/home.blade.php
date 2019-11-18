@@ -61,15 +61,15 @@
                                      Fauna &nbsp;&nbsp;&nbsp;
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[1])}}">Bee, Wasp, Hornet Stings</a></li>
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[2])}}">Black Widow Spider</a></li>  
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[3])}}">Blister Beetle Ingestion</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[4])}}">Centipede Bite</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[5])}}">Jelly Fish</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[6])}}">Scorpion Bite</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[7])}}">Snake bite</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[8])}}">Turtle Flesh Poison</a></li> 
-                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[9])}}">Unknown Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[13])}}">Bee, Wasp, Hornet Stings</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[14])}}">Black Widow Spider</a></li>  
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[21])}}">Blister Beetle Ingestion</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[15])}}">Centipede Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[16])}}">Jelly Fish</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[17])}}">Scorpion Bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[18])}}">Snake bite</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[19])}}">Turtle Flesh Poison</a></li> 
+                                    <li><a class="dropdown-item" href="{{url('/Fauna_detail_form',[20])}}">Unknown Bite</a></li> 
                                 </ul>
                             </li>
 
@@ -251,14 +251,15 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4"> {{$value->patient->name}}.  </h2>
+                 <h2 class="mr-3 text-black h4"> {{$value->patient->fname}} {{$value->patient->lname}}.  </h2>
                  <div class="badge-wrap">
-                  <span class="bg-primary text-white badge py-2 px-4">{{$value->patient->phn}}</span>
+                  <span class="bg-primary text-white badge py-2 px-4">PHN : {{$value->patient->phn}}</span>
+                  <span class="bg-success text-white badge py-2 px-4">NIC : {{$value->patient->nic}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{$value->toxicity->name}}</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->area}}</span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->patient->address}}</span></div>
                </div>
               </div>
 
@@ -271,18 +272,6 @@
          </div>
         </div>
     
-      
-
-        
-      
-
-
-      
-        
-
-      
-
-     
 
         <div class="row mt-5">
           <div class="col-md-12 text-center">

@@ -2,74 +2,143 @@
 <head>
   <meta charset="UTF-8">
   <title>PIMS</title>
-
-    <link href="{{ asset('css/index1.css') }}" rel="stylesheet" type="text/css"/>
+ 
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body><br>   <table class="table">
+        <tr>
+            <td>
      <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn btn-warning "><i class="fa fa-home" aria-hidden="true"></i>Back</button></a>
 
-    <div class="form">
-        <h2 style="text-align: center">  New Patient Detail </h2>
-             <label><b> Category : Natural Toxins -Flora  </b></label><br>
-             @if($ray==1)
-             <label><b> Poison : Aththana (Datura stramonium) </b></label><br><br>
-             @elseif($ray==2)
-             <label><b> Poison : Divikaduru (Tabernaemantana dichotoma) </b></label><br><br>
-             @elseif($ray==3)
-             <label><b> Poison : DiyaKaduru (Cerebra manghas) </b></label><br><br>
-             @elseif($ray==4)
-             <label><b> Poison : Endaru (Ricinus communis) </b></label><br><br>
-             @elseif($ray==5)
-             <label><b> Poison : GodaKaduru (Stvychnos nuxvomica ) </b></label><br><br>
-             @elseif($ray==6)
-             <label><b> Poison : Habarala (Alocasia macromhiza) </b></label><br><br>
-             @elseif($ray==7)
-             <label><b> Poison : Hondala(Adenia Hondola) </b></label><br><br>
-             @elseif($ray==8)
-             <label><b> Poison : Kaneru (Nerium oleandor/Thevetia peruviana) </b></label><br><br>
-             @elseif($ray==9)
-             <label><b> Poison : Kepunkiriya (Euphorbia hirita) </b></label><br><br>
-             @elseif($ray==10)
-             <label><b> Poison : Niyagala (Gloriosa superba) </b></label><br><br>
-             @elseif($ray==11)
-             <label><b> Poison : Olinda (Abrus precatorius) </b></label><br><br>
-             @elseif($ray==12)
-             <label><b> Poison : Unknown plant poisoning </b></label><br><br>
-             @endif
+      <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn" onclick="return confirm(&quot;Close the form..? unsaved data will be lost&quot;)"><i class="fa fa-close"></i>Close</button></a>
+     </td>
+     <td>
+      @if($ray==1)
+        <h3><b>  Poison : Aththana (Datura stramonium)  </b></h3><br>
+         @elseif($ray==2)
+         <h2 style="text-align: center"><b> Poison : Divikaduru (Tabernaemantana dichotoma)  </b></h2><br>
+         @elseif($ray==3)
+         <h2 style="text-align: center"><b> Poison : DiyaKaduru (Cerebra manghas) </b></h2><br>
+         @elseif($ray==4)
+        <h2 style="text-align: center"><b>  Poison : Endaru (Ricinus communis)  </b></h2><br>
+         @elseif($ray==5)
+        <h2 style="text-align: center"><b>   Poison : GodaKaduru (Stvychnos nuxvomica )  </b></h2><br>
+         @elseif($ray==6)
+        <h2 style="text-align: center"><b>   Poison : Habarala (Alocasia macromhiza)  </b></h2><br>
+         @elseif($ray==7)
+         <h2 style="text-align: center"><b>  Poison : Hondala(Adenia Hondola)  </b></h2><br>
+         @elseif($ray==8)
+         <h2 style="text-align: center"><b> Poison : Kaneru (Nerium oleandor/Thevetia peruviana)  </b></h2><br>
+         @elseif($ray==9)
+        <h2 style="text-align: center"><b> Poison : Kepunkiriya (Euphorbia hirita) </b></h2><br>
+         @elseif($ray==10)
+         <h2 style="text-align: center"><b>  Poison : Niyagala (Gloriosa superba) </b></h2><br> 
+         @elseif($ray==11)
+          <h2 style="text-align: center"><b> Poison : Olinda (Abrus precatorius)  </b></h2><br>
+         @elseif($ray==12)
+         <h2 style="text-align: center"><b>  Poison : Unknown plant poisoning  </b></h2><br>
+         @endif 
+         </td>
+        
+    <td>
+     <h3 style="text-align: center"><b> Category : Natural Toxins - Flora   </b></h3><br>
+     </td>
+     </tr></table>
+<div class="form">
+  
+             <h3 style="text-align: center"> Personal Detail</h3>
+ <table class="table">
+     <tr>
+         <td><h4>New Patient Personal Detail</h4></td><td></td><td></td><td></td>
+         <td>
+            <form class="form-inline my-2 my-lg-0"  action="/Floraphnsearch" method="POST">
+         {{csrf_field()}}
+         <input type="hidden" name="id" value="{{$ray}}">
+                <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder=" Old Patient" aria-label="Search" required>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+           </form>
+                </td></tr></table>
+         <form action="/submit_flora_first_page" method="post">	
+            @csrf
+            @if($ray==1)
+                 <input type="hidden" name="id" value="1" >
+            @elseif($ray==2)     
+                  <input type="hidden" name="id" value="2" >
+            @elseif($ray==3)     
+                  <input type="hidden" name="id" value="3" >
+            @elseif($ray==4)     
+                  <input type="hidden" name="id" value="4" >
+            @elseif($ray==5)     
+                  <input type="hidden" name="id" value="5" >
+            @elseif($ray==6)     
+                  <input type="hidden" name="id" value="6" >
+            @elseif($ray==7)     
+                  <input type="hidden" name="id" value="7" >
+            @elseif($ray==8)     
+                  <input type="hidden" name="id" value="8" >
+            @elseif($ray==9)     
+                  <input type="hidden" name="id" value="9" >
+            @elseif($ray==10)     
+                  <input type="hidden" name="id" value="10" > 
+            @elseif($ray==11)     
+                  <input type="hidden" name="id" value="11" >
+            @elseif($ray==12)     
+                  <input type="hidden" name="id" value="12" >
+            @endif      
+                  
+  
+ <table class="table">
+        <tr>
+            <td>
+             <label> 01) First Name :</label>
+                        <input type="text" name="Fname" required="true"  >       
+                 <br>
+                 <label> 03) NIC Number :</label>
+                        <input type="text" name="nic" >  
+                 <br>
+                 <label> 05) Birth Date :</label>
+                         <input type = "date" name = "Bdate" id="datePickerId"  >
+                 <br>
+                
+              <label> 04) Address :</label>
+                        <input type="text" name="address" >  
+                 <br> 
+                 
+                
+            </td>
+            
+            <td>
+            <label> 02) Second Name :</label>
+                        <input type="text" name="Sname" >          
+                <br>
+                <label> 04) PHN Number :</label>
+                        <input type="text" name="PHN" >  
+                <br>
+                 <label> 06)  Contact Number :</label>
+                         <input type = "text" name = "Cno"  >
+                 <br> 
+                
+                 <label>08) Gender  :<br>
+                    <span class = "select">
+               <select name = "gender" class="form-control">
+           <option value = " "> ..Please choose one option.. </option>
+            <option value = "Male">     Male    </option>
+            <option value = "Female">   Female </option>
+         </select>
+                <br>        
+                
+            </td>
+        </tr>
+     </table>
 
-             <form action="/submit_flora_first_page" method="post">
-                @csrf
-                @if($ray==1)
-                     <input type="hidden" name="id" value="1" >
-                @elseif($ray==2)
-                      <input type="hidden" name="id" value="2" >
-                @elseif($ray==3)
-                      <input type="hidden" name="id" value="3" >
-                @elseif($ray==4)
-                      <input type="hidden" name="id" value="4" >
-                @elseif($ray==5)
-                      <input type="hidden" name="id" value="5" >
-                @elseif($ray==6)
-                      <input type="hidden" name="id" value="6" >
-                @elseif($ray==7)
-                      <input type="hidden" name="id" value="7" >
-                @elseif($ray==8)
-                      <input type="hidden" name="id" value="8" >
-                @elseif($ray==9)
-                      <input type="hidden" name="id" value="9" >
-                @elseif($ray==10)
-                      <input type="hidden" name="id" value="10" >
-                @elseif($ray==11)
-                      <input type="hidden" name="id" value="11" >
-                @elseif($ray==12)
-                      <input type="hidden" name="id" value="12" >
-                @endif
-
-                    <label><b>PHN Number :</b></label>
-                    <input type="text" name="PHN" required="true" required pattern="[0-9]{11}" >
-                    <button >next</button>
-             </form>
-
+             <button >next</button>
+      
+         </form>
+ </div>
+          <!-- partial -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/index.js"></script>             
+            
 </body>
 </html>
