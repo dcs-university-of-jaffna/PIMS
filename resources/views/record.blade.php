@@ -85,6 +85,8 @@
         <h2 class="mb-0">Patient Details</h2>
        
         <p class="mb-0 unit-6"><a>phn</a> <span class="sep">> {{$phn}}</span> <span></span></p>
+
+        
      
       </div>
     </div>
@@ -104,15 +106,15 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">{{$value->toxicity->sub_group}}</h2>
+                 <h2 class="mr-3 text-black h4">{{$value->toxicity->name}}</h2>
                  <div class="badge-wrap">
-                 <span class="bg-success text-white badge py-2 px-4">{{$value->date}} : {{$value->time}}</span>
-                  <span class="bg-info text-white badge py-2 px-4">{{$value->toxicity->name}}</span>
+                 <span class="bg-success text-white badge py-2 px-4"> Incident Date & Time : {{$value->date}} : {{$value->time}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">NIC : {{$value->patient->nic}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> area}}</span></div>
+                 <div class="mr-3"><p> Patient Name : {{$value->patient->fname}} {{$value->patient->lname}}.</p></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>Incident Place : {{$value -> area}}</span></div>
                </div>
               </div>
 
@@ -139,17 +141,17 @@
 
            <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
 
-              <div class="mb-4 mb-md-0 mr-5">
+             <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">{{$value->toxicity->sub_group}}</h2>
+                 <h2 class="mr-3 text-black h4">{{$value->toxicity->name}}</h2>
                  <div class="badge-wrap">
-                 <span class="bg-success text-white badge py-2 px-4">{{$value->date}} : {{$value->time}}</span>
-                  <span class="bg-info text-white badge py-2 px-4">{{$value->toxicity->name}}</span>
+                 <span class="bg-success text-white badge py-2 px-4"> Incident Date & Time : {{$value->date}} : {{$value->time}}</span>
+                  <span class="bg-info text-white badge py-2 px-4">NIC : {{$value->patient->nic}}</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><p>Site.</p></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>{{$value -> area}}</span></div>
+                 <div class="mr-3"><p> Patient Name : {{$value->patient->fname}} {{$value->patient->lname}}.</p></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>Incident Place : {{$value -> area}}</span></div>
                </div>
               </div>
 
