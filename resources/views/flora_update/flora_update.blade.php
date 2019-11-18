@@ -3186,8 +3186,9 @@
 </div> 
 <input type="hidden" name="recordid" value="{{$incident->id}}">
 <br>
-<button class="btn btn-primary" type="submit" name ="save" value="save" >Save</button> 
-<button class="btn btn-success" type="submit"  name ="submit" value="save">Submit</button> 
+
+<button class="btn btn-primary" onclick="return confirm(&quot;Save the data?&quot;)" id="save" type="submit" name ="save" value="save" >Save</button> 
+<button class="btn btn-success" type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="save">Submit</button> 
 </form>
 <br><br>
 
