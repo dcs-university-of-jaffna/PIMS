@@ -24,7 +24,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">First Name : </label>
-        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
+        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}" pattern="[A-Za-z]{1,}" title="Please Enter Alphabet Letter">
         </div>
    </div>
     
@@ -32,7 +32,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Last Name : </label>
-      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}">
+      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}" pattern="[A-Za-z]{1,}" title="Please Enter Alphabet Letter">
    
         </div>
    </div>

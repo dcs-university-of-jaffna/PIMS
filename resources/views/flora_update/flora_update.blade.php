@@ -49,7 +49,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">First Name : </label>
-        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
+        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}" pattern="[A-Za-z]{1,}" title="Please Enter Alphabet Letter">
         </div>
    </div>
     
@@ -57,7 +57,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Last Name : </label>
-      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}">
+      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}" pattern="[A-Za-z]{1,}" title="Please Enter Alphabet Letter">
    
         </div>
    </div>
@@ -67,7 +67,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">PHN : </label>
-        <input type="number" name = "phn"  class="form-control" id="validationCustom01" value="{{$patient->phn}}" >
+        <input type="number" name = "phn"   class="form-control" id="validationCustom01" value="{{$patient->phn}}"  >
       
         </div>
    </div>
@@ -86,7 +86,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">NIC : </label>
-        <input type="number" name = "nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+        <input type="number" name = "nic"   class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
       
         </div>
    </div>
@@ -95,7 +95,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Address : </label>
-      <input type="text"  name = "address" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
+      <input type="text"  name = "address" class="form-control" id="validationCustom02" value="{{$patient->address}}"  >
    
         </div>
    </div>
@@ -130,7 +130,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="number" name = "contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
+      <input type="number" name = "contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}"  >
    
         </div>
    </div>
