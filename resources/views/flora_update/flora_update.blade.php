@@ -38,13 +38,36 @@
     <br><br>
  
 
+
+  
+  <h3 class="font-weight-bold">Personel Detail</h3>
+  <br>
+
  <form  action="/update_phn_search_flora" method ="post">
   @csrf   
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">First Name : </label>
+        <input type="text" name = "firstname" class="form-control" id="validationCustom01" value="{{$patient->fname}}">
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02"> Last Name : </label>
+      <input type="text"  name = "lastname"  class="form-control" id="validationCustom02" value="{{$patient->lname}}">
+   
+        </div>
+   </div>
+</div>
+
  <div class="row"> 
     <div class="col">
         <div class="form-group">
-        <label for="validationCustom01">Name : </label>
-        <input type="text" name ="name" class="form-control" id="validationCustom01" value="{{$patient->name}}" readonly>
+        <label for="validationCustom01">PHN : </label>
+        <input type="number" name = "phn"  class="form-control" id="validationCustom01" value="{{$patient->phn}}" >
       
         </div>
    </div>
@@ -52,8 +75,62 @@
 
    <div class="col">
         <div class="form-group">
-        <label for="validationCustom02">PHN : </label>
-      <input type="text" name ="phn" class="form-control" id="validationCustom02" value="{{$patient->phn}}" readonly>
+        <label for="validationCustom02"> BirthDay : </label>
+      <input type="Date" name = "birthday"  class="form-control" id="validationCustom02" value="{{$patient->bdate}}" >
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">NIC : </label>
+        <input type="number" name = "nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+      
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Address : </label>
+      <input type="text"  name = "address" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
+   
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+        <label for="validationCustom01">Gender : </label>
+        <select name = "gender" class="form-control">
+            @if($patient->gender != null){
+                     <option value = "{{$patient->gender}}"> {{$patient->gender}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+
+                 @if($patient->gender != 'Male'){
+                     <option value = "Male"> Male </option>
+                }
+                @endif
+                @if($patient->gender != 'Female'){
+                     <option value = "Female"> Female  </option>
+                }@endif
+
+         </select>                   
+        </div>
+   </div>
+    
+
+   <div class="col">
+        <div class="form-group">
+        <label for="validationCustom02">Contact : </label>
+      <input type="number" name = "contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
    
         </div>
    </div>
@@ -68,7 +145,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Date : </label>
-        <input type="text" name = "date" class="form-control" value ="{{$incident->date}}" readonly >
+        <input type="date" name = "date" class="form-control" value ="{{$incident->date}}"  >
          </div>
    </div>
     
@@ -76,7 +153,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Time : </label>
-      <input type="text" name = "time" class="form-control"  value="{{$incident->time}}" readonly >
+      <input type="time" name = "time" class="form-control"  value="{{$incident->time}}" >
    
         </div>
    </div>
@@ -87,69 +164,200 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Part of plant : </label>
-       <select  class="form-control" id="" value="">
-            <option  value="{{$toxicity->natural->flora->plant_part}}">{{$toxicity->natural->flora->plant_part}}</option>
-            <option value = "Branches"> Branches </option>
-            <option value = "Bulbs">    Bulbs    </option>
-            <option value = "Flowers">  Flowers  </option>
-            <option value = "Leaves">   Leaves   </option>
-            <option value = "pods">     Pods     </option>
-            <option value = "Roots">    Roots    </option>
-            <option value = "Seeds">    Seeds    </option>
-            <option value = "Stems">    Stems    </option>
-            <option value = "Twigs">    Twigs    </option>
+       <select  class="form-control" id="" value="" name="plant_part" onchange='otherplant_part(this.value)'>
+            @if($toxicity->natural->flora->plant_part != null){
+                     <option value = "{{$toxicity->natural->flora->plant_part}}"> {{$toxicity->natural->flora->plant_part}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+
+                 @if($toxicity->natural->flora->plant_part != 'Branches'){
+                      <option value = "Branches"> Branches </option>
+                 }
+                @endif
+                @if($toxicity->natural->flora->plant_part != 'Bulbs'){
+                     <option value = "Bulbs">    Bulbs   </option>
+                }@endif
+             
+               @if($toxicity->natural->flora->plant_part != 'Flowers'){
+                   <option value = "Flowers">  Flowers  </option>
+                }@endif
+              @if($toxicity->natural->flora->plant_part != 'Leaves'){
+                   <option value = "Leaves">   Leaves   </option>
+               }@endif
+              @if($toxicity->natural->flora->plant_part != 'pods'){
+                   <option value = "pods">     Pods     </option>
+               }@endif
+              @if($toxicity->natural->flora->plant_part != 'Roots'){
+                   <option value = "Roots">    Roots    </option>
+               }@endif
+              @if($toxicity->natural->flora->plant_part != 'Seeds'){
+                   <option value = "Seeds">    Seeds    </option>
+               }@endif
+              @if($toxicity->natural->flora->plant_part != 'Stems'){
+                   <option value = "Stems">    Stems    </option>
+               }@endif
+              @if($toxicity->natural->flora->plant_part != 'Twigs'){
+                   <option value = "Twigs">    Twigs    </option>
+               }@endif
+               <option value = "others"> Others </option>
+               <option value = " "> < Empty  > </option>
+               
          </select>
         
          </div>
+
    </div>
     
+<script>
+  function otherplant_part(val){
+    var element=document.getElementById('other_plant_part');
+    if(val=='others')
+    element.style.display='block';
+    else  
+    element.style.display='none';
+    }
 
-   <div class="col">
+</script>
+
+<div class="col" id="other_plant_part" style='display:none;'>
+        <div class="form-group">
+            <label for="validationCustom04">Part of plant others, specify: </label>
+            <input type="text" class="form-control" name="other_plant_part" value=""  >
+         </div>
+   </div> 
+</div>
+
+
+
+<div class="row"> 
+  <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Region :</label>
-            <select  class="form-control" id="" value="">
-                <option value="{{$incident->area}}">{{$incident->area}}</option>
-                <option value = "Chankanai">      Chankanai       </option>
+        <select name = "region" class="form-control" onchange='otherarea(this.value)' >
+             @if($incident->area != null){
+                     <option value = "{{$incident->area}}"> {{$incident->area}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+
+             
+            @if($incident->area != 'Chankanai')
+                <option value = "Chankanai"> Chankanai </option>
+            @endif
+            @if($incident->area != 'Chavakachcheri')
                 <option value = "Chavakachcheri"> Chavakachcheri  </option>
-                <option value = "Delft">          Delft           </option>
-                <option value = "Jaffna">         Jaffna          </option>
-                <option value = "Karainagar">     Karainagar      </option>
-                <option value = "Karaveddy">      Karaveddy       </option>
-                <option value = "Kayts">          Kayts           </option>
-                <option value = "Kopay">          Kopay           </option>
+            @endif
+            @if($incident->area != 'Delft')
+                <option value = "Delft"> Delft  </option>
+            @endif
+            @if($incident->area != 'Jaffna')
+                <option value = "Jaffna"> Jaffna  </option>
+            @endif
+            @if($incident->area != 'Karainagar')
+                <option value = "Karainagar"> Karainagar  </option>
+            @endif
+            @if($incident->area != 'Karaveddy')
+                <option value = "Karaveddy"> Karaveddy  </option>
+            @endif
+            @if($incident->area != 'Kayts')
+                <option value = "Kayts"> Kayts  </option>
+            @endif
+            @if($incident->area != 'Kopay')
+                <option value = "Kopay"> Kopay  </option>
+            @endif
+            @if($incident->area != 'Maruthankerney')
                 <option value = "Maruthankerney"> Maruthankerney  </option>
-                <option value = "Nallur">         Nallur          </option>
-                <option value = "Point Pedro">    Point Pedro     </option>
-                <option value = "Sandilipay">     Sandilipay      </option>
-                <option value = "Tellippalai">    Tellippalail    </option>
-                <option value = "Uduvil">         Uduvil          </option>
-                <option value = "Velanai">        Velanai         </option>
+            @endif
+            @if($incident->area != 'Nallur')
+                <option value = "Nallur"> Nallur  </option>
+            @endif
+            @if($incident->area != 'Point Pedro')
+                <option value = "Point Pedro"> Point Pedro  </option>
+            @endif
+            @if($incident->area != 'Sandilipay')
+                <option value = "Sandilipay"> Sandilipay  </option>
+            @endif
+            @if($incident->area != 'Tellippalai')
+                <option value = "Tellippalai"> Tellippalail  </option>
+            @endif
+            @if($incident->area != 'Uduvil')
+                <option value = "Uduvil"> Uduvil  </option>
+            @endif
+            @if($incident->area != 'Velanai')
+                <option value = "Velanai"> Velanai  </option>
+            @endif
+            @if($incident->area != 'Outside Jaffna District')
                 <option value = "Outside Jaffna District"> Outside Jaffna District </option>
-         </select>
+            @endif
+           
+            <option value = "others"> Others </option>
+            <option value = " "> < Empty  > </option>
+        </select>
+       
         </div>
    </div>
+
+   <div class="col" id="area" style='display:none;'>
+        <div class="form-group">
+            <label for="validationCustom04">Area  others, specify: </label>
+            <input type="text" class="form-control" name="area_of_others" value=""  >
+         </div>
+   </div>
 </div>
+
+<script>
+  function otherarea(val){
+    var element=document.getElementById('area');
+    if(val=='others')
+    element.style.display='block';
+    else  
+    element.style.display='none';
+}
+
+</script>
+
+
 
 <div class="row"> 
 <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
-      <input type="number" name="Amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
-   
+         <input type="text"  name="amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
         </div>
    </div>
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
-         <select  class="form-control"  id="" value="">
-                <option value="{{$toxicity->natural->flora->circumstance}}">{{$toxicity->natural->flora->circumstance}}</option>
+         <select  class="form-control"  id="" value="" name="circumstance">
+           @if($toxicity->natural->flora->circumstance != null){
+                     <option value = "{{$toxicity->natural->flora->circumstance}}"> {{$toxicity->natural->flora->circumstance}} </option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+                
+            @if($incident->area != 'Accidental')
                 <option value = "Accidental">   Accidental   </option>
+            @endif
+            @if($incident->area != 'Homicidal')
                 <option value = "Homicidal">    Homicidal    </option>
+            @endif
+            @if($incident->area != 'Occupational')
                 <option value = "Occupational"> Occupational </option>
+            @endif
+            @if($incident->area != 'Sucidal')
                 <option value = "Sucidal">      Suicidal     </option>
+            @endif
+             <option value = " "> < Empty  > </option>
          </select>
-        </div>
+       </div>
    </div>
 
 </div>
@@ -158,16 +366,52 @@
      <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Mode of poisoning :</label>
-         <select  class="form-control" id="" value="">
-                <option value = "{{$toxicity->natural->flora->poisoning_mode}}" >{{$toxicity->natural->flora->poisoning_mode }}</option>
-                <option value = "Contact">    Contact   </option>
-                <option value = "Ingestion">  Ingestion  </option>
-                <option value = "Inhalation"> Inhalation </option>
-                <option value = "Others">     Others </option>
-         </select>
+         <select  class="form-control" id="" value="" name="poisoning_mode" onchange='otherpoisoning_mode(this.value)'>
+             @if($toxicity->natural->flora->poisoning_mode != null){
+                  <option value = "{{$toxicity->natural->flora->poisoning_mode}}" >{{$toxicity->natural->flora->poisoning_mode }}</option>
+                }
+                @else{
+                     <option value = " "> ..Please choose one option.. </option>
+                }
+                @endif
+                
+                 @if($incident->area != 'Contact')
+                     <option value = "Contact">    Contact   </option>
+                     @endif
+
+                 @if($incident->area != 'Ingestion')
+                     <option value = "Ingestion">  Ingestion  </option>
+                   @endif  
+                 @if($incident->area != 'Inhalation')
+                     <option value = "Inhalation"> Inhalation </option>
+                   @endif  
+                   <option value = "others"> Others </option>
+                   <option value = " "> < Empty  > </option>
+                
+          </select>
         </div>
     </div>
-    </div>
+
+ <div class="col" id="poisoning_mode" style='display:none;'>
+        <div class="form-group">
+            <label for="validationCustom04">Mode of poisoning  others, specify: </label>
+            <input type="text" class="form-control" name="area_of_others" value=""  >
+         </div>
+   </div>
+</div>
+
+<script>
+  function otherpoisoning_mode(val){
+    var element=document.getElementById('poisoning_mode');
+    if(val=='others')
+    element.style.display='block';
+    else  
+    element.style.display='none';
+}
+
+</script>
+
+   
  <br><br>
 
  <h3 class="font-weight-bold">Clinical Features</h3>
@@ -250,7 +494,7 @@
 
  <h4 class="font-weight-bold">CNS effects :</h4>
  <br>
-     <select  class="form-control" id="" value="">
+     <select  class="form-control" id="" value="" name="CNS_effects">
                 <option value = "@if($symptoms->contains(3)) 3 @elseif($symptoms->contains(22)) 22  
                 @elseif($symptoms->contains(23)) 23 @else 38 @endif" >  @if($symptoms->contains(3)) Agitation @elseif($symptoms->contains(22)) Combative  
                 @elseif($symptoms->contains(23)) Confusion @else disorientation @endif  </option>
@@ -2927,9 +3171,9 @@
   <h3 class="font-weight-bold">laboratory detail</h3>
 <br>
  
- <div class="form-group"> 
-    <textarea class="form-control" rows="5" name="Lab_Comments" ></textarea>
- </div> 
+<div class="form-group">
+  <textarea class="form-control" name="laboratory" rows="5" >{{$laboratory->comments}} </textarea>
+</div> 
 
 
 <br><br>

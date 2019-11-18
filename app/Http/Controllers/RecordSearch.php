@@ -20,7 +20,7 @@ class RecordSearch extends Controller
             ->where('patients.phn','=', $phn)
             ->where('incidents.is_submited','=',0)
             ->get();
-   // dd($data);
+    //dd($savedata);
    //search submit data using phn
    $submitdata = Incident::
               leftJoin('patients','patients.id','=','incidents.patient_id')

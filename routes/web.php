@@ -47,10 +47,15 @@ Route::post('/submit', 'BeeStringController@submit');
 Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');        
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
+Route::post('/update_flora', 'FloraController@updateFlora');
+Route::post('/Floraphnsearch','FloraController@phnsearch');
+
 
 Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');        
 Route::post('/submitFauna', 'FaunaController@submitFauna');
 Route::post('/submit_fauna_first_page', 'FaunaController@submitFaunaPHN');
+
+
 
 //--------------------------------------Thushangi-----------------------------------
 

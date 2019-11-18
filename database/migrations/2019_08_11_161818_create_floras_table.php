@@ -43,11 +43,11 @@ class CreateFlorasTable extends Migration
             function ( Blueprint $table ) {
                 $table->bigIncrements('id');
                 $table->string('plant_part')->nullable();
-                $table->unsignedInteger('amount')->nullable();
+                $table->string('amount')->nullable();
                 $table->string('circumstance')->nullable();
                 $table->string('poisoning_mode')->nullable();
                 $table->string('antidote')->nullable();
-                $table->tinyInteger('activated_chracol_doses')->nullable();
+                $table->string('activated_chracol_doses')->nullable();
                 $table->timestamps();
 
                 $table->foreign('id')

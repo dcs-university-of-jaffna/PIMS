@@ -14,6 +14,7 @@ use App\Laboratory;
 use Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use DB;
 
 class FloraController extends Controller
 { 
@@ -24,16 +25,48 @@ class FloraController extends Controller
         
     }
     
-    function submitFloraPHN(Request $request){
+     public function phnsearch(Request $request){
+          $phn = $request->phn;
           $ray=$request->id;
-          $back=0;
+           $items = DB::table('patients')
+             ->where('phn','=', "$phn")->get();
+   
+           
+           return view('Detail_Forms.record',compact('items','ray'));
+     }
+    
+    function submitFloraPHN(Request $request){ 
+        $ray=$request->id;
+        $back=0;
  
        return view('Detail_Forms.FloraForm',compact('request','back','ray'));
     }
 
     function submitFlora(Request $request){
-       $ray=$request->id;
        
+        $ray=$request->id;
+        $symptoms = $request->AththanaClinical;
+        $management =$request->management;
+        
+        
+         $symptoms1 = $request->CNS;
+         $r=$request->CNS;
+          
+         if(is_null($request-> CNS)){}
+         else{
+             $items = DB::table('symptoms')
+             ->select('name')
+             ->where('id','=', "$symptoms1")->first();
+        
+       foreach ($items as $value) {     
+       $r = $value;
+    }
+         }
+       return view('Detail_Forms.flora_update',compact('request','ray','symptoms','symptoms1','r','management'));
+   }
+   
+ function updateFlora(Request $request){
+       $ray = $request->id;
        $patient = new Patient;
        $patient->phn=$request->PHN;	
        $patient->nic=$request->nic ;	
@@ -90,13 +123,29 @@ class FloraController extends Controller
        $natural->save(); 
        
        
-       
        $flora = new Flora;
-       $flora->id=$natural->id;   
+       $flora->id=$natural->id;
        $flora->plant_part = $request-> plant_part;
-       $flora->amount = $request-> amount;
        $flora->circumstance = $request-> circumstance;
-       $flora->poisoning_mode  = $request-> poisoning_mode;     
+       $flora->poisoning_mode  = $request-> poisoning_mode; 
+       $flora->amount  = $request-> amount; 
+       
+       if(is_null($request-> Oplant_part)){}
+       else{
+           $flora->plant_part = $request-> Oplant_part; 
+       }
+      
+       if(is_null($request-> Ocircumstance)){}
+       else{
+           $flora->circumstance = $request-> Ocircumstance;
+       }
+    
+       if(is_null($request->Opoisoning_mode )){}
+       else{    
+          $flora->poisoning_mode  = $request-> Opoisoning_mode; 
+       }
+    
+               
        $flora->antidote = $request->antidote; 
        $flora->activated_chracol_doses = $request->activated_chracol_doses; 
        $flora->save();
@@ -104,11 +153,16 @@ class FloraController extends Controller
       
        
        $incident=new Incident;
+         $incident->area=$request->area; 
+          if(is_null($request->Oarea)){}
+           else{   
+         $incident->area=$request->Oarea; 
+       }
+      
        $incident->patient_id= $patient->id;
        $incident->toxicity_id=$toxicity->id;
        $incident->date=$request->date;
        $incident->time=$request->time;
-       $incident->area=$request->area; 
        $incident->symptom_others=$request->clinicals_others;
        $incident->management_others=$request->managements_others;
        $incident->comments=$request->comments;
@@ -129,9 +183,10 @@ class FloraController extends Controller
       
         	
       
-  $symptom = $request->AththanaClinical;
-        if (is_null($symptom)){
-            
+  $symptom = $request->Clinical;
+  if (is_null($symptom))
+ {
+           
         }
         else{
             foreach ($symptom as $value){
@@ -142,17 +197,7 @@ class FloraController extends Controller
             }
        }
       
-        $symptom1 = $request->CNSeffects;
-        if (is_null($symptom1)){
-            
-        }
-        else{
-            $incidentSymptom=new IncidentSymptom;
-            $incidentSymptom->symptom_id=$symptom1;
-            $incidentSymptom->incident_id = $incident->id;
-            $incidentSymptom->save();
-        }
-       
+        
         $management =$request->management;
         if (is_null($management)){
             
@@ -182,12 +227,15 @@ class FloraController extends Controller
         $incident_user->user_id = Auth::id();
         $incident_user->incident_id = $incident->id;
 
-      $back=1;
+        $incident_user->save();
 
-      return view('Detail_Forms.saveForm');
-   }
-   
- 
+        
+
+
+      $back=1;
+      
+       return view('Detail_Forms.saveForm');
+ }
    
 }  
 

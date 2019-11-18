@@ -40,16 +40,18 @@ class update extends Controller
        // $incidentSymptom = $incident->IncidentSymptom->pluck('IncidentSymptom.id');
        //get clinicle details 
         $symptoms = $incident->symptoms;
-        $managements = $incident->managements()->pluck('managements.id');
-       // dd($managements);
+        $management = $incident->managements()->pluck('managements.id');
+        //$managements = $incident->ManagementGroup;
+        $patient = $incident->patient;
+        $laboratory = $incident->laboratory->details;
+        //dd($laboratory);
+        //dd($patient);
+        //($managements);
         //dd($flora);
-        //dd($toxicity);
+        //dd($toxicity->name);
         //dd($symptoms);
 
-        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity','symptoms'));
-
-        return view('update.FloraUpdateForm',compact('incident','managements','flora','toxicity'));
-
+        return view('update.FloraUpdateForm',compact('incident','management','flora','toxicity','symptoms','patient','laboratory'));
     }
     public function update(Request $request,$id)
     {
@@ -57,6 +59,8 @@ class update extends Controller
         $data->date = $request->date;
         $data->time = $request->time;
         $data->area = $request->area;
+        $data->symptom_others = $request->symptom_others;
+        $data->comments =$request->comments;
         $data->management_others=$request->managements_others;
 
         $data->save();
@@ -70,16 +74,37 @@ class update extends Controller
         $data1->antidote= $request->antidote; 
 
         $data1->save();
+        $patient = $data->patient;
+        //dd($patient);
+        $patient->fname = $request->fname;
+        $patient->lname = $request->lname;
+        $patient->phn = $request->phn;
+        $patient->bdate = $request->bdate;
+        $patient->nic = $request->nic;
+        $patient->address = $request->address;
+        $patient->gender = $request->gender;
+        $patient->contact = $request->contact;
+        //dd($patient);
+        $patient->save();
 
+        $laboratory= $data->laboratory;
+        $laboratory->details=$request->details;
+        $laboratory->save();
+        /*$symptoms = $data->symptoms;
+        //dd($request->CNS_effects);
+        $symptoms->id = $request->CNS_effects;
+        $symptoms->save();*/
 
-        $user = auth()->user()->id;
-        $management= $request->management;
+        //$user = auth()->user()->id;
+        //$management= $request->management;
         //dd($management);
-        $d = array_fill_keys($management,['doctor_id'=>$user]);
-        $data->managements()->sync($d);
+        //$d = array_fill_keys($management);
+
+        //$data->managements()->sync($d);
 
         //$AththanaClinical= $request->AththanaClinical;
-        $data->symptoms()->sync($request->AththanaClinical);
+        $data->managements()->sync($request->management);
+        $data->symptoms()->sync($request->Clinical);
         //dd($AththanaClinical);
          return redirect('home');
     }
