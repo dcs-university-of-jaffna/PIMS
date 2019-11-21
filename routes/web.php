@@ -148,6 +148,8 @@ Route::get('/flora_view/Unknown_plant_poisoning', 'view_record_controller_phn_se
 
 
 
+
+
 //----------------flora update----------------------
 
 //Divi kaduru update show search phn
@@ -193,6 +195,7 @@ Route::post('/update_phn_search_flora', 'UpdateController@submitFlora');
 
 //submit fauna update deails
 Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
+
 
 
 //----------------------- chemical ------------------------------------------------
