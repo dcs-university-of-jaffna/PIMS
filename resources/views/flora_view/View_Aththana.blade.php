@@ -589,6 +589,25 @@
 
 </form>
 
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($user as $data)
+    <tr>
+      <th scope="row"></th>
+      <td>{{$data->users->name}}</td>
+      <td></td>
+    </tr>
+  @endforeach
+  </tbody>
+</table>
+
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
