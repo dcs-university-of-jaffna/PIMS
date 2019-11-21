@@ -35,6 +35,27 @@ class ToxinsTableSeeder extends Seeder
                 ['id' => 19, 'name' => 'sea snake bite'],
                 ['id' => 20, 'name' => 'turtle fish poisoning'],
                 ['id' => 21, 'name' => 'blister Beetle'],
+                ['id' => 22, 'name' => 'carbamate insecticides'],
+                ['id' => 23, 'name' => 'chlorophenoxy compounds'],
+                ['id' => 24, 'name' => 'coumarins'],
+                ['id' => 25, 'name' => 'dithiocarbamate'],
+                ['id' => 26, 'name' => 'diuron'],
+                ['id' => 27, 'name' => 'fipronil'],
+                ['id' => 28, 'name' => 'glyphosate'],
+                ['id' => 29, 'name' => 'imidacloprid'],
+                ['id' => 30, 'name' => 'metaldehyde'],
+                ['id' => 31, 'name' => 'methyl bromide'],
+                ['id' => 32, 'name' => 'nitrophends and nitro cresols'],
+                ['id' => 33, 'name' => 'organochlorines'],
+                ['id' => 34, 'name' => 'organophosphates'],
+                ['id' => 35, 'name' => 'phosphides'],
+                ['id' => 36, 'name' => 'propanil'],
+                ['id' => 37, 'name' => 'pyrethrum and related compounds'],
+                ['id' => 38, 'name' => 'thallium'],
+                ['id' => 39, 'name' => 'thiocarbamates'],
+                ['id' => 40, 'name' => 'triazenes and triazoles'],
+                ['id' => 41, 'name' => 'other pesticide poisoning'],
+
             ]
         );
     }

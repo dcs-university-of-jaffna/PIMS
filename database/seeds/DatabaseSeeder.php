@@ -19,7 +19,6 @@ use App\Incident;
 use App\IncidentSymptom;
 use App\Natural;
 use App\Patient;
-use App\Prescription;
 use App\Symptom;
 use App\Toxicity;
 use App\User;
@@ -55,7 +54,6 @@ class DatabaseSeeder extends Seeder
         Patient::unguard();
         Incident::unguard();
         IncidentSymptom::unguard();
-        Prescription::unguard();
         Toxicity::unguard();
         Natural::unguard();
         Flora::unguard();
@@ -71,7 +69,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FaunasTableSeeder::class);
         $this->call(IncidentsTableSeeder::class);
         $this->call(IncidentSymptomTableSeeder::class);
-        $this->call(PrescriptionTableSeeder::class);
 
         Management::reguard();
         Symptom::reguard();
@@ -79,7 +76,6 @@ class DatabaseSeeder extends Seeder
         Patient::reguard();
         Incident::reguard();
         IncidentSymptom::reguard();
-        Prescription::reguard();
         Toxicity::reguard();
         Natural::reguard();
         Flora::reguard();

@@ -25,17 +25,33 @@ class FloraController extends Controller
         
     }
     
-    function submitFloraPHN(Request $request){
+     public function phnsearch(Request $request){
+          $phn = $request->phn;
           $ray=$request->id;
-          $back=0;
+           $items = DB::table('patients')
+             ->where('phn','=', "$phn")
+             ->orWhere('fname','=', "$phn")
+             ->orWhere('lname','=', "$phn") 
+             ->orWhere('nic','=', "$phn")      
+             ->get();
+   
+           
+           return view('Detail_Forms.record',compact('items','ray'));
+     }
+    
+    function submitFloraPHN(Request $request){ 
+        $ray=$request->id;
+        $back=0;
  
        return view('Detail_Forms.FloraForm',compact('request','back','ray'));
     }
 
     function submitFlora(Request $request){
+       
         $ray=$request->id;
         $symptoms = $request->AththanaClinical;
         $management =$request->management;
+        
         
          $symptoms1 = $request->CNS;
          $r=$request->CNS;
@@ -172,9 +188,9 @@ class FloraController extends Controller
         	
       
   $symptom = $request->Clinical;
-
-        if (is_null($symptom)){
-            
+  if (is_null($symptom))
+ {
+           
         }
         else{
             foreach ($symptom as $value){
