@@ -890,7 +890,6 @@
                                                 
                                                 <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='save' value='Save' />
                                                 <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Submit' onclick="return confirm('Are you sure you want to submit &#128519');"/>
-                                                
                                             </div>
         
                                             <div class="pull-left">

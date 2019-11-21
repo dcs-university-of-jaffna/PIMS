@@ -27,11 +27,19 @@ class ChemicalController extends Controller
     
     public function phnStore(Request $request)
     {
+          return  $request;
         $id = $request->id;
 
         //save phn in patient table
         $phn = new Patient();
         $phn->phn = $request->phn;
+        $phn->fname = $request->fname;
+        $phn->lname = $request->lname;
+        $phn->nic = $request->nic;
+        $phn->bdate = $request->dob;
+        $phn->address = $request->address;
+        $phn->contact = $request->phno;
+        $phn->gender = $request->gender;
         $phn->save();
 
         //get management features from management table
