@@ -77,7 +77,7 @@
 
    <div class="col">
         <div class="form-group">
-        <label for="validationCustom02"> BirthDay : </label>
+        <label for="validationCustom02"> Date of Birth : </label>
       <input type="Date" name ="bdate"  class="form-control" id="validationCustom02" value="{{$patient->bdate}}" >
    
         </div>
@@ -116,7 +116,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="number" name ="contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
+      <input type="tel" name ="contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required >
    
         </div>
    </div>

@@ -32,14 +32,14 @@
                 font-family:"Serif+";
                 font-weight: bold;;
                 font-variant: small-caps;
-                color: rgb(100, 100, 100);
+                color: rgb(85, 107, 47);
             }
             p.ppp{
                 font-size: 1.3em; /* 14px/16=0.875em */
                 font-family:"Serif";
                 font-weight: bold;
                 font-variant: small-caps;
-                color: rgb(100, 100, 100);
+                color: rgb(85, 107, 47);
             }
             .saveForm {
                 position: static;
