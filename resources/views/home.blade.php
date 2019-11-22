@@ -242,12 +242,13 @@
 
     </div>
 
-    <div class="pr-1 col-sm-3">
-       <label for="search" >Enter Name, NIC, Contact or PHN</label>
-        <input type="search" name="search" id="search_box" class="form-control" aria-label="search" placeholder="Search Patient" />
-    </div>
+    <form class="form-inline my-2 my-lg-0"  action="/phnsearch" method="POST">
+        {{csrf_field()}}
+        <input class="form-control mr-sm-2"  type="number" min="0" name = "phn" placeholder="Search" aria-label="Search" required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
     <ul class="nav navbar-nav navbar-right">
@@ -268,7 +269,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </nav>
 
-<br><br><br><br>
+<br><br>
+
+<br><br>
 <!------ start record ----------->
 
 
@@ -317,17 +320,7 @@
 
         <div class="row mt-5">
             <div class="col-md-12 text-center">
-                <div class="site-block-27">
-                    <ul>
-                        <li><a href="#"><i class="icon-keyboard_arrow_left h5"></i></a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><i class="icon-keyboard_arrow_right h5"></i></a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>

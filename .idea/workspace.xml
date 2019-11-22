@@ -4,14 +4,9 @@
     <list default="true" id="df879128-bee7-411b-a3c0-d750b0248db2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FloraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FloraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraFirst.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraFirst.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/flora_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/flora_update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/record.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/record.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/flora_update/flora_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/flora_update/flora_update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,6 +146,8 @@
       <workItem from="1574233301434" duration="4211000" />
       <workItem from="1574344372400" duration="19851000" />
       <workItem from="1574391901767" duration="515000" />
+      <workItem from="1574393005409" duration="398000" />
+      <workItem from="1574397358377" duration="7801000" />
     </task>
     <servers />
   </component>
@@ -201,5 +198,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="RELOAD_CONTEXT" value="false" />
   </component>
 </project>

@@ -70,10 +70,21 @@ class FloraController extends Controller
 
     function submitFlora(Request $request)
     {
+        /*$incident = Incident::find($request->incident_id);
+        $symptoms  = $incident->symptoms()->pluck('symptoms.id');
+        $laboratory = $incident->laboratory;
+        $patient  = $incident->patient;
+        $toxicity = $incident->toxicity->natural->flora;
+        $management = $incident->managements()->pluck('managements.id');
+        $user    = $incident->users();
+
+        // dd( $toxicity);
+        return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));*/
+
         $ray=$request->id;
         $symptoms = $request->AththanaClinical;
         $management =$request->management;
-        return view('Detail_Forms.flora_update',compact('request','ray','symptoms','management'));
+        return view('/home');
     }
 
     function updateFlora(Request $request)
@@ -187,20 +198,23 @@ class FloraController extends Controller
         $laboratory->save();
 
 
-        $symptom = $request->AththanaClinical;
-        if ($symptom){
-            $incident->symptoms()->attach($symptom);
+        $symptoms = $request->AththanaClinical;
+        if ($symptoms){
+            $incident->symptoms()->attach($symptoms);
         }
+        $symptoms = $incident->symptoms;
 
         $management = $request->management;
         if ($management) {
             $incident->managements()->attach($management);
         }
+        $management = $incident->managements;
 
-        $incident->users()->attach([Auth::id()]);
+        $user = auth()->user()->id;
+        $incident->users()->attach($user);
         $back = 1;
 
-        return view('Detail_Forms.saveForm');
+        return view('/flora_update/flora_update',compact('incident','patient','toxicity','symptoms','management','user','laboratory'));
     }
 
 }

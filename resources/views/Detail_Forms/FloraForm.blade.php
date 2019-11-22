@@ -88,7 +88,7 @@
 
     <span class="progress"><span></span></span>
     <div class="panels">
-        <form action="/submitFlora" method="post">
+        <form action="/update_flora" method="post">
             @csrf
             <div data-panel="one">
 
