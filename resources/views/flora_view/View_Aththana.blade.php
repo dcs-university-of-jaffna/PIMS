@@ -558,15 +558,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <br><br>
  <h3 class="font-weight-bold">laboratory detail</h3>
  <br>
@@ -589,6 +580,11 @@
 
 </form>
 
+
+<br><br>
+ <h3 class="font-weight-bold">Record Update Doctors Details</h3>
+ <br>
+
 <table class="table table-hover table-dark">
   <thead>
     <tr>
@@ -598,10 +594,13 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($user as $data)
+   
+  @foreach($username as $data)
     <tr>
       <th scope="row"></th>
-      <td>{{$data->users->name}}</td>
+      <td>{{$data->name}}</td>
+      <td>{{$data->created_at}}</td>
+      <td>{{$data->updated_at}}</td>
       <td></td>
     </tr>
   @endforeach

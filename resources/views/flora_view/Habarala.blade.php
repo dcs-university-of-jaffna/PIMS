@@ -877,6 +877,31 @@
 
 
 </form>
+<br><br>
+ <h3 class="font-weight-bold">Record Update Doctors Details</h3>
+ <br>
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+  @foreach($username as $data)
+    <tr>
+      <th scope="row"></th>
+      <td>{{$data->name}}</td>
+      <td>{{$data->created_at}}</td>
+      <td>{{$data->updated_at}}</td>
+      <td></td>
+    </tr>
+  @endforeach
+  </tbody>
+</table>
 
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields

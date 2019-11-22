@@ -31,8 +31,11 @@ class view_record_controller_phn_search extends Controller
                   $toxicity = $incident->toxicity->natural->flora;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                          
-                  $username    = $user->pluck('name'); 
-                  //dd( $username);
+                    $username    =  DB::table('incident_user')
+                    -> join('users','users.id','=','incident_user.user_id')
+                    ->where('incident_user.incident_id','=',$request->incident_id)
+                    ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                    ->get();
                 return view('/flora_view/View_Divi_kaduru',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             }
   
@@ -47,9 +50,14 @@ class view_record_controller_phn_search extends Controller
                 $patient  = $incident->patient;
                 $toxicity = $incident->toxicity->natural->flora;     
                 $management = $incident->managements()->pluck('managements.id');
-                $user    = $incident->users()->pluck('name');                                          
-                $username    = $user->pluck('name'); 
-                // dd( $user);
+               $user    = $incident->users();                                           
+              $username    =  DB::table('incident_user')
+                              -> join('users','users.id','=','incident_user.user_id')
+                              ->where('incident_user.incident_id','=',$request->incident_id)
+                              ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                              ->get();
+
+                // dd( $username);
                 return view('/flora_view/View_Aththana',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             }  
 
@@ -64,8 +72,11 @@ class view_record_controller_phn_search extends Controller
                   $management = $incident->managements()->pluck('managements.id');
                                                           
                   $user    = $incident->users();                                          
-                  $username    = $user->pluck('name'); 
-                 //dd( $username);
+                  $username    =  DB::table('incident_user')
+                    -> join('users','users.id','=','incident_user.user_id')
+                    ->where('incident_user.incident_id','=',$request->incident_id)
+                    ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                    ->get();
             return view('/flora_view/View_Diya_Kaduru',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             } 
 
@@ -79,8 +90,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+              $username    =  DB::table('incident_user')
+                  -> join('users','users.id','=','incident_user.user_id')
+                  ->where('incident_user.incident_id','=',$request->incident_id)
+                  ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                  ->get();
              return view('/flora_view/Endaru',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
           } 
   
@@ -94,8 +108,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+              $username    =  DB::table('incident_user')
+                -> join('users','users.id','=','incident_user.user_id')
+                ->where('incident_user.incident_id','=',$request->incident_id)
+                ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                ->get();
             return view('/flora_view/Godakaduru',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
           } 
   
@@ -109,8 +126,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                $username    =  DB::table('incident_user')
+                      -> join('users','users.id','=','incident_user.user_id')
+                      ->where('incident_user.incident_id','=',$request->incident_id)
+                      ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                      ->get();
               return view('/flora_view/Habarala',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
            } 
 
@@ -124,8 +144,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+            $username    =  DB::table('incident_user')
+                  -> join('users','users.id','=','incident_user.user_id')
+                  ->where('incident_user.incident_id','=',$request->incident_id)
+                  ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                  ->get();
               return view('/flora_view/Hondala',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
            } 
 
@@ -139,8 +162,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+              $username    =  DB::table('incident_user')
+                  -> join('users','users.id','=','incident_user.user_id')
+                  ->where('incident_user.incident_id','=',$request->incident_id)
+                  ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                  ->get();
                 return view('/flora_view/Kaneru',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
            } 
 
@@ -155,8 +181,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                $username    =  DB::table('incident_user')
+                    -> join('users','users.id','=','incident_user.user_id')
+                    ->where('incident_user.incident_id','=',$request->incident_id)
+                    ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                    ->get();
                 return view('/flora_view/Kepunkiriya',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             } 
 
@@ -170,8 +199,11 @@ class view_record_controller_phn_search extends Controller
                 $toxicity = $incident->toxicity->natural->flora;     
                 $management = $incident->managements()->pluck('managements.id');
                $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                $username    =  DB::table('incident_user')
+                  -> join('users','users.id','=','incident_user.user_id')
+                  ->where('incident_user.incident_id','=',$request->incident_id)
+                  ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                  ->get();
                 return view('/flora_view/Niyagala',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             } 
   //Olinda
@@ -185,8 +217,11 @@ class view_record_controller_phn_search extends Controller
               $toxicity = $incident->toxicity->natural->flora;     
               $management = $incident->managements()->pluck('managements.id');
               $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+              $username    =  DB::table('incident_user')
+                  -> join('users','users.id','=','incident_user.user_id')
+                  ->where('incident_user.incident_id','=',$request->incident_id)
+                  ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                  ->get();
               return view('/flora_view/Olinda',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
              } 
 
@@ -201,8 +236,11 @@ class view_record_controller_phn_search extends Controller
                   $toxicity = $incident->toxicity->natural->flora;     
                   $management = $incident->managements()->pluck('managements.id');
                  $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                  $username    =  DB::table('incident_user')
+                      -> join('users','users.id','=','incident_user.user_id')
+                      ->where('incident_user.incident_id','=',$request->incident_id)
+                      ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                      ->get();
             return view('/flora_view/Unknown_plant_poisoning',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
         } 
 
@@ -217,8 +255,11 @@ class view_record_controller_phn_search extends Controller
                   $toxicity = $incident->toxicity->natural->fauna;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                  $username    =  DB::table('incident_user')
+                      -> join('users','users.id','=','incident_user.user_id')
+                      ->where('incident_user.incident_id','=',$request->incident_id)
+                      ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                      ->get();
                   return view('/Fauna_View_Update/fauna_view',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
         }
 
@@ -235,8 +276,11 @@ class view_record_controller_phn_search extends Controller
                   $toxicity = $incident->toxicity->chemical;     
                   $management = $incident->managements()->pluck('managements.id');
                   $user    = $incident->users();                                          
-                $username    = $user->pluck('name'); 
-                 //dd( $username);
+                  $username    =  DB::table('incident_user')
+                        -> join('users','users.id','=','incident_user.user_id')
+                        ->where('incident_user.incident_id','=',$request->incident_id)
+                        ->select('incident_user.created_at','incident_user.updated_at','users.name')
+                        ->get();
                   return view('/Chemical_View_Update/Chemical_View',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
         }
     }
