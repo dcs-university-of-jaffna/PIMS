@@ -217,7 +217,7 @@ iframe {
 
 .wrap-contact11 {
   width: 965px;
-  background: #fff;
+  background: white;
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -228,6 +228,7 @@ iframe {
   align-items: stretch;
   flex-direction: row-reverse;
   background-image: url('../images/Capture1.PNG');
+  border: 0.5px solid #00ad5f;
 }
 
 /*==================================================================
@@ -240,6 +241,7 @@ iframe {
   position: relative;
   z-index: 1;
   padding: 30px 15px 0px 15px;
+  border: 1px solid #00ad5f;
 }
 
 .contact11-more::before {
@@ -251,7 +253,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.3);
 }
 
 
@@ -268,6 +270,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   padding: 56px 55px 63px 55px;
+  background: rgba(0,0,0,0.5)
 }
 
 .contact11-form-title {
@@ -287,6 +290,11 @@ iframe {
 [ Input ]*/
 
 .wrap-input11 {
+  width: 50%;
+  position: relative;
+  border: 1px solid black;
+}
+.phn-wrap-input11 {
   width: 100%;
   position: relative;
   border: 1px solid black;
@@ -303,8 +311,30 @@ iframe {
 
 .label-input11 {
   font-family: Poppins-Regular;
+  font-size: 10px;
+  color: lightcyan;
+  line-height: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  min-height: 35px;
+  border-bottom: none; 
+  padding: 2px 5px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.phn-label-input11 {
+  font-family: Poppins-Regular;
   font-size: 12px;
-  color: white;
+  color:white;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -317,7 +347,7 @@ iframe {
   align-items: center;
   width: 100%;
   min-height: 55px;
-  border: 1px solid black;
+  border: 1px solid #e6e6e6;
   border-bottom: none; 
   padding: 10px 25px;
   margin-top: 15px;
@@ -329,13 +359,39 @@ iframe {
   width: 100%;
   background: transparent;
   font-family: Poppins-Regular;
+  font-size: 14px;
+  color: white;
+  line-height: 1.2;
+  padding: 0 25px;
+}
+
+.phn-input11 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Poppins-Regular;
   font-size: 18px;
-  color: black;
+  color: white;
+  line-height: 1.2;
+  padding: 0 25px;
+}
+
+.radio-input11 {
+  display: inline;
+  margin-left: 25px;
+  margin-right: 25px;
+  background: transparent;
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  color: white;
   line-height: 1.2;
   padding: 0 25px;
 }
 
 input.input11 {
+  height: 25px;
+}
+input.phn-input11 {
   height: 55px;
 }
 

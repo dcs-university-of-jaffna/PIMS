@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="/record_details/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="/record_details/css/bootstrap.min.css">
@@ -16,19 +16,34 @@
     <link rel="stylesheet" href="/record_details/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/record_details/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="/record_details/css/animate.css">
-    
-    
+
+
     <link rel="stylesheet" href="/record_details/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="/record_details/css/fl-bigmug-line.css">
-  
+
     <link rel="stylesheet" href="/record_details/css/aos.css">
 
     <link rel="stylesheet" href="/record_details/css/style.css">
-    
+
+  <script src="/record_details/js/jquery-3.3.1.min.js"></script>
+  <script src="/record_details/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/record_details/js/jquery-ui.js"></script>
+  <script src="/record_details/js/popper.min.js"></script>
+  <script src="/record_details/js/bootstrap.min.js"></script>
+  <script src="/record_details/js/owl.carousel.min.js"></script>
+  <script src="/record_details/js/jquery.stellar.min.js"></script>
+  <script src="/record_details/js/jquery.countdown.min.js"></script>
+  <script src="/record_details/js/jquery.magnific-popup.min.js"></script>
+  <script src="/record_details/js/bootstrap-datepicker.min.js"></script>
+  <script src="/record_details/js/aos.js"></script>
+
+
+  <script src="/record_details/js/main.js"></script>
+
   </head>
   <body>
-  
-      
+
+
     <div class="site-section bg-light">
       <div class="container">
           <br>
@@ -53,9 +68,9 @@
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{$item -> address}}</span></div>
                </div>
               </div>
-           
+
               <div class="ml-auto">
-                  
+
                    <form action="/submit_flora_first_page" method="post">
                         @csrf
                         <input type="hidden" name="Fname" value="{{$item->fname}}">
@@ -71,27 +86,14 @@
  </form>
          </div>
         </div>
- 
+
             @endforeach
 </div></div>
-   
 
 
-  <script src="/record_details/js/jquery-3.3.1.min.js"></script>
-  <script src="/record_details/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="/record_details/js/jquery-ui.js"></script>
-  <script src="/record_details/js/popper.min.js"></script>
-  <script src="/record_details/js/bootstrap.min.js"></script>
-  <script src="/record_details/js/owl.carousel.min.js"></script>
-  <script src="/record_details/js/jquery.stellar.min.js"></script>
-  <script src="/record_details/js/jquery.countdown.min.js"></script>
-  <script src="/record_details/js/jquery.magnific-popup.min.js"></script>
-  <script src="/record_details/js/bootstrap-datepicker.min.js"></script>
-  <script src="/record_details/js/aos.js"></script>
-  
 
-  <script src="/record_details/js/main.js"></script>
-    
+
+
   </body>
 
 

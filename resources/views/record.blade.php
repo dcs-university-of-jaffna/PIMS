@@ -84,7 +84,7 @@
       <div class="container text-center">
         <h2 class="mb-0">Patient Details</h2>
        
-        <p class="mb-0 unit-6"><a>phn</a> <span class="sep">> {{$phn}}</span> <span></span></p>
+        <p class="mb-0 unit-6"><a>phn</a> <span class="mb-0 unit-6"> > {{$phn}}</span> <span></span></p>
 
         
      

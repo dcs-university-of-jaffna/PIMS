@@ -88,9 +88,9 @@
 					@endif
 				</span>
 
-				<label class="label-input11" for="phn">Enter Patient's PHN Number</label>
-				<div class="wrap-input11">
-					<input id="phn" class="input11" type="text" name="phn" pattern="[0-9]{11}" title = "Please enter only number" maxlength="11">
+				<label class="phn-label-input11" for="phn">PHN Number</label>
+				<div class="phn-wrap-input11">
+					<input id="phn" class="phn-input11" type="text" name="phn" pattern="[0-9]{11}" title = "Please enter only number" maxlength="11">
 					<span class="focus-input11"></span>
 				</div>
 				  
@@ -143,53 +143,45 @@
 				</div>
 			</form>
 
-			<div class="contact11-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
-				<div class="flex-w size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-map-marker"></span>
-					</div>
-
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							Address
-						</span>
-
-						<span class="txt2">
-							Hospital St, Jaffna, Sri Lanka
-						</span>
-					</div>
+			<form action="{{URL('Chemicals_Details/submitted_phn')}}" method = "get" class="contact11-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+				<label class="label-input11" for="fname">First Name</label>
+				<div class="wrap-input11">
+					<input id="fname" class="input11" type="text" name="fname">
+					<span class="focus-input11"></span>
 				</div>
 
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-phone-handset"></span>
-					</div>
-
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							Lets Talk
-						</span>
-
-						<span class="txt3">
-							+94 212 223 348
-						</span>
-					</div>
+				<label class="label-input11" for="lname">Last Name</label>
+				<div class="wrap-input11">
+					<input id="lname" class="input11" type="text" name="lname">
+					<span class="focus-input11"></span>
 				</div>
 
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-envelope"></span>
-					</div>
+				<label class="label-input11" for="nic">NIC Number</label>
+				<div class="wrap-input11">
+					<input id="nic" class="input11" type="text" name="nic" pattern="[0-9]{9}V" maxlength="10">
+					<span class="focus-input11"></span>
+				</div>
 
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							Website
-						</span>
-
-						<span class="txt3">
-							http://thjaffna.lk/
-						</span>
-					</div>
+				<label class="label-input11" for="phno">Phone NO</label>
+				<div class="wrap-input11">
+					<input id="phno" class="input11" type="number" name="phno" pattern="[0-9]{10}"  maxlength="10">
+					<span class="focus-input11"></span>
+				</div>
+				<label class="label-input11" for="dob">Date of Birth</label>
+				<div class="wrap-input11">
+					<input id="dob" class="input11" type="date" name="dob">
+					<span class="focus-input11"></span>
+				</div>
+				<label class="label-input11" for="address">Address</label>
+				<div class="wrap-input11">
+					<input id="address" class="input11" type="text" name="address">
+					<span class="focus-input11"></span>
+				</div>
+				<label class="label-input11" for="gender">Gender</label>
+				<div class="wrap-input11">
+					<input id="male" class="radio-input11" type="radio" name="gender" value="Male">Male
+					<input id="female" class="radio-input11" type="radio" name="gender" value="Female">Female
+					<span class="focus-input11"></span>
 				</div>
 			</div>
 		</div>
