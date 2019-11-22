@@ -88,7 +88,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">NIC : </label>
-        <input type="number" name ="nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+        <input type="text" name ="nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
       
         </div>
    </div>
@@ -116,7 +116,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="tel" name ="contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required >
+      <input type="tel" id ="phone" name ="contact" placeholder="Enter phone number" minlength ="10" maxlength="10" pattern="" required="required" class="form-control" id="validationCustom02" value="{{$patient->contact}}"  >
    
         </div>
    </div>

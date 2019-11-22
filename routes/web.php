@@ -85,6 +85,7 @@ Route::get('/update/{id}/edit','update@edit')->name('incident.edit');
 Route::patch('/update/{id}','update@update')->name('incident.update');
 
 
+
 //------------------------------------------Dilshan ---------------------------------
 
 //show is_submit = 0 details in /home page

@@ -32,14 +32,14 @@
                 font-family:"Serif+";
                 font-weight: bold;;
                 font-variant: small-caps;
-                color: rgb(85, 107, 47);
+                
             }
             p.ppp{
                 font-size: 1.3em; /* 14px/16=0.875em */
                 font-family:"Serif";
                 font-weight: bold;
                 font-variant: small-caps;
-                color: rgb(85, 107, 47);
+                
             }
             .saveForm {
                 position: static;
@@ -98,6 +98,7 @@
             <div class="container-fluid">
             <div class="flex-center position-ref full-height">   
                 <div class="content">
+
                     <br>
                     <br>
                     <br>
@@ -105,10 +106,10 @@
                     <br>
                     <br>
                         <div class="title m-b-md ">
-                            <p class ="pp">Poison Information Management System</p>
+                            <p class ="pp text-primary">Poison Information Management System</p>
                         </div>
                         <div class="title m-b-md ">
-                            <p class ="ppp">(PIMS)</p>
+                            <p class ="ppp text-primary">(PIMS)</p>
                         </div>           
                     
                     @if (Route::has('login'))
