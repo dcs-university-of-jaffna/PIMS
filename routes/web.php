@@ -48,7 +48,7 @@ Route::get('/Flora_detail_form/{id}','FloraController@FirstPage');
 Route::post('/submitFlora', 'FloraController@submitFlora');
 Route::post('/submit_flora_first_page', 'FloraController@submitFloraPHN');
 Route::post('/update_flora', 'FloraController@updateFlora');
-Route::post('/Floraphnsearch','FloraController@phnsearch');
+Route::post('/flora_phn_search','FloraController@phnsearch');
 
 
 Route::get('/Fauna_detail_form/{id}','FaunaController@FirstPage');
@@ -81,8 +81,8 @@ Route::get('/incidents/{incident}', 'IncidentController@show')->name('incidents.
 Route::get('/incidents/{incident}/edit', 'IncidentController@edit')->name('incidents.edit');
 Route::patch('/incidents/{incident}', 'IncidentController@update')->name('incidents.update');
 Route::get('/search', 'PatientSearchController@index')->name('patient_search.index');
-//Route::get('search/action','PatientSearchController@action')->name('patient_search.action');
-Route::get('home/action','FrontController@action')->name('patient_search.action');
+Route::get('/patient_search/action','PatientSearchController@action')->name('patient_search.action');
+Route::get('/home/action','FrontController@action')->name('incident_search.action');
 
 
 

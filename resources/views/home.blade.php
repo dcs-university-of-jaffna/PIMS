@@ -242,9 +242,9 @@
 
     </div>
 
-    <div class="pt-1 pr-2 col-sm-3">
-        <div ><label for="search" >Enter Name, NIC, Contact or PHN</label></div>
-        <div><input type="text" name="search" id="search_box" class="form-control" placeholder="Search Patient" /></div>
+    <div class="pr-1 col-sm-3">
+       <label for="search" >Enter Name, NIC, Contact or PHN</label>
+        <input type="search" name="search" id="search_box" class="form-control" aria-label="search" placeholder="Search Patient" />
     </div>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -275,10 +275,8 @@
 <div class="site-section bg-light">
     <div class="container">
         <div class="row justify-content-start text-left mb-5">
-            <div class="col-md-9" data-aos="fade">
-                <h2 class="font-weight-bold text-black">Recent Records</h2>
+            <div class="col-md-9" data-aos="fade" id="table_head">
             </div>
-
         </div>
 
         <div id="record_list"></div>
@@ -291,13 +289,15 @@
                 function fetch_customer_data(query = '')
                 {
                     $.ajax({
-                        url:"{{ route('patient_search.action') }}",
+                        url:"{{ route('incident_search.action') }}",
                         method:'GET',
                         data:{query:query},
                         dataType:'json',
                         success:function(data)
                         {
                             $('#record_list').html(data.table_data);
+                            $('#table_head').html(data.table_heading);
+
                         }
                     })
                 }
@@ -315,89 +315,6 @@
             }
         </script>
 
-        {{-- @foreach($data as $value)
-                <div class="row" data-aos="fade">
-                    <div class="col-md-12">
-
-                        <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
-
-                            <div class="mb-4 mb-md-0 mr-5">
-                                <div class="job-post-item-header d-flex align-items-center">
-                                    <h2 class="mr-3 text-black h4"> {{$value->patient->fname}} {{$value->patient->lname}}
-                                        . </h2>
-                                    <div class="badge-wrap">
-                                    <span
-                                        class="bg-primary text-white badge py-2 px-4">PHN : {{$value->patient->phn}}</span>
-                                        <span
-                                            class="bg-success text-white badge py-2 px-4">NIC : {{$value->patient->nic}}</span>
-                                    </div>
-                                </div>
-                                <div class="job-post-item-body d-block d-md-flex">
-                                    <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a
-                                            href="#">{{$value->toxicity->name}}</a></div>
-                                    <div><span class="fl-bigmug-line-big104"></span>
-                                        <span>{{$value->patient->address}}</span></div>
-                                </div>
-                            </div>
-
-                            <div class="ml-auto">
-                                <span> last update:{{$value->updated_at}}  </span>
-                                <a href="/update/{{$value->id}}/edit" class="btn btn-dark py-2">Update</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach--}}
-
-        {{-- <script>
-            function loadRecords() {
-                let record = '';
-                let n =  '{{ count($data) }}';
-                //for(i = 0; i < n; i++){
-                let i = 0;
-                    record +=       '<div class="row" data-aos="fade">' +
-                        '                <div class="col-md-12">' +
-                        '' +
-                        '                    <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">' +
-                        '' +
-                        '                        <div class="mb-4 mb-md-0 mr-5">' +
-                        '                            <div class="job-post-item-header d-flex align-items-center">' +
-                        '                                <h2 class="mr-3 text-black h4">' + '{{$data[1]->patient->fname}}' + ' {{$data[1]->patient->lname}}' +
-                        '                                    . </h2>' +
-                        '                                <div class="badge-wrap">' +
-                        '                                    <span' +
-                        '                                        class="bg-primary text-white badge py-2 px-4">PHN :' + '{{$data[1]->patient->phn}}' + '</span>' +
-                        '                                    <span  class="bg-success text-white badge py-2 px-4">NIC :' + '{{$data[1]->patient->nic}}' + '</span>' +
-                        '                                </div>' +
-                        '                            </div>' +
-                        '                            <div class="job-post-item-body d-block d-md-flex">' +
-                        '                                <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">' + '{{$data[1]->toxicity->name}}' + '</a></div>' +
-                        '                                <div><span class="fl-bigmug-line-big104"></span>' +
-                        '                                    <span> ' + '{{$data[1]->patient->address}}' + '</span></div>' +
-                        '                            </div>' +
-                        '                        </div>' +
-                        '' +
-                        '                        <div class="ml-auto">' +
-                        '                            <span> last update:' + '{{$data[1]->updated_at}}' + ' </span>' +
-                        '                            <a href="/update/' + '{{$data[1]->id}}' + '/edit" class="btn btn-dark py-2">Update</a>' +
-                        '                        </div>' +
-                        '                    </div>' +
-                        '                </div>' +
-                        '            </div>';
-               // }
-
-                document.getElementById("record_list").innerHTML = record;
-            }
-
-            loadRecords();
-
-        </script>
-        --}}
-
-
-
-
-
         <div class="row mt-5">
             <div class="col-md-12 text-center">
                 <div class="site-block-27">
@@ -413,8 +330,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 

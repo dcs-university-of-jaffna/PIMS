@@ -31,21 +31,40 @@ class PatientSearchController extends Controller
 
             if($total_row > 0)
             {
+                $output .= '<div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>PHN</th>
+                                            <th>Fist name</th>
+                                            <th>Last name</th>
+                                            <th>NIC</th>
+                                            <th>Gender</th>
+                                            <th>DoB</th>
+                                            <th>Contact</th>
+                                            <th>Address</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>';
                 foreach($data as $row)
                 {
-                    $output .= '
-                            <tr onclick=patient_selected()>
-                                <td>'.$row->phn.'</td>
-                                 <td>'.$row->fname.'</td>
-                                 <td>'.$row->lname.'</td>
-                                 <td>'.$row->nic.'</td>
-                                 <td>'.$row->gender.'</td>
-                                 <td>'.$row->bdate.'</td>
-                                 <td>'.$row->contact.'</td>
-                                 <td>'.$row->address.'</td>
-                             </tr>
+
+                    $output .= '<tr onclick=patient_selected(' . $row->id . ')>
+                                    <td>'.$row->phn.'</td>
+                                     <td>'.$row->fname.'</td>
+                                     <td>'.$row->lname.'</td>
+                                     <td>'.$row->nic.'</td>
+                                     <td>'.$row->gender.'</td>
+                                     <td>'.$row->bdate.'</td>
+                                     <td>'.$row->contact.'</td>
+                                     <td>'.$row->address.'</td>
+                                 </tr>
                             ';
                 }
+
+                $output .= '        </tbody>
+                                </table>
+                            </div>';
             }
             else
             {
@@ -55,6 +74,7 @@ class PatientSearchController extends Controller
                        </tr>
                        ';
             }
+
             $data = array(
                 'table_data'  => $output
             );

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8555e240-72d1-4923-9b9e-8067c9b5fc20" name="Default Changelist" comment="">
+    <list default="true" id="df879128-bee7-411b-a3c0-d750b0248db2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FloraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FloraController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PatientSearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraFirst.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraFirst.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/FloraForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/flora_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/flora_update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Detail_Forms/record.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detail_Forms/record.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -21,13 +26,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="db_branch6" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -116,19 +115,15 @@
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1TO4L3M1hFzjEI1eRll6u8s4E8k" />
+  <component name="ProjectId" id="1Tq5yLbOf0zLwEkuNR5we3KUrkj" />
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,26 +137,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8555e240-72d1-4923-9b9e-8067c9b5fc20" name="Default Changelist" comment="" />
-      <created>1573317748876</created>
+      <changelist id="df879128-bee7-411b-a3c0-d750b0248db2" name="Default Changelist" comment="" />
+      <created>1574175044403</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573317748876</updated>
-      <workItem from="1573317751363" duration="2521000" />
-      <workItem from="1573797585008" duration="2553000" />
-      <workItem from="1573911126452" duration="1627000" />
-      <workItem from="1573991981387" duration="18171000" />
+      <updated>1574175044403</updated>
+      <workItem from="1574175071821" duration="1205000" />
+      <workItem from="1574233301434" duration="4211000" />
+      <workItem from="1574344372400" duration="19851000" />
+      <workItem from="1574391901767" duration="515000" />
     </task>
     <servers />
   </component>
@@ -174,14 +163,43 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="me" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="197" />
+                  <entry key="3" value="209" />
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="RELOAD_CONTEXT" value="false" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="me" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

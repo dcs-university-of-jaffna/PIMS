@@ -34,7 +34,7 @@ class FrontController extends Controller
                     ->orWhere('phn', 'like', '%'.$query.'%')
                     ->orWhere('contact', 'like', '%'.$query.'%')
                     ->orderBy('id', 'asc')
-                    ->get();
+                    ->paginate(4);
 
 
                 $total_row = $data->count();
@@ -73,6 +73,7 @@ class FrontController extends Controller
                                 </div>
                             </div>';
                     }
+
                 }
                 else
                 {
@@ -82,6 +83,7 @@ class FrontController extends Controller
                        </tr>
                        ';
                 }
+                $data_type = '<h2 class="font-weight-bold text-black" >Search results</h2>';
             }
             else{
                 $data = incident::with('Patient')
@@ -127,6 +129,7 @@ class FrontController extends Controller
                                 </div>
                             </div>';
                     }
+
                 }
                 else
                 {
@@ -136,11 +139,12 @@ class FrontController extends Controller
                        </tr>
                        ';
                 }
+                $data_type = '<h2 class="font-weight-bold text-black" >Recent Records</h2>';
             }
 
-
             $data = array(
-                'table_data'  => $output
+                'table_data'  => $output,
+                'table_heading' => $data_type
             );
 
             echo json_encode($data);

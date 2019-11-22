@@ -9,9 +9,9 @@
 </head>
 <body>
     <br>
- 
+
  <div class="container">
-     
+
        <table class="table">
         <tr>
             <td>
@@ -46,78 +46,78 @@
      <h3 style="text-align: center"><b> Category : Natural Toxins - Flora   </b></h3><br>
      <td></tr></table>
 <form  action="/update_flora" method ="post">
-  @csrf   
+  @csrf
    <h3 class="font-weight-bold">Personal Detail</h3>
- <div class="row"> 
+ <div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01"> First Name : </label>
-        <input type="text" name ="Fname" class="form-control"  value="{{$request->Fname}}">
-      
+        <input type="text" name ="fname" class="form-control"  value="{{$request->fname}}">
+
         </div>
    </div>
-    
+
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Second Name : </label>
-      <input type="text" name ="Sname" class="form-control"  value="{{$request->Sname}}">
-   
+      <input type="text" name ="lname" class="form-control"  value="{{$request->lname}}">
+
         </div>
    </div>
 </div>
 
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01"> NIC Number : </label>
         <input type="text" name ="nic" class="form-control"  value="{{$request->nic}}">
-      
+
         </div>
    </div>
- 
+
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> PHN Number : </label>
-      <input type="text" name ="PHN" class="form-control" value="{{$request->PHN}}">
-   
+      <input type="text" name ="phn" class="form-control" value="{{$request->phn}}">
+
         </div>
    </div>
 </div>
 
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Birth Date : </label>
-        <input type="date" name ="Bdate" class="form-control"  value="{{$request->Bdate}}">
-      
+        <input type="date" name ="bdate" class="form-control"  value="{{$request->bdate}}">
+
         </div>
    </div>
 
-    
+
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact Number : </label>
-      <input type="text" name ="Cno" class="form-control" value="{{$request->Cno}}">
-   
+      <input type="text" name ="contact" class="form-control" value="{{$request->contact}}">
+
         </div>
    </div>
 </div>
 
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">Address : </label>
         <input type="text" name ="address" class="form-control"  value="{{$request->address}}">
-      
+
         </div>
    </div>
-  
+
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Gender  : </label>
@@ -126,46 +126,48 @@
             <option value = "Male">     Male    </option>
             <option value = "Female">   Female </option>
          </select>
-        
+
          </div>
    </div>
 </div>
-    
+
+    <input type="hidden" name="pid" value="{{$request->pid}}" id="pid">
+
 <br><br>
 
  <h3 class="font-weight-bold">Poison Detail</h3>
   <br>
-     
- <div class="row"> 
+
+ <div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Date : </label>
         <input type="date" name = "date" class="form-control" value ="{{$request->date}}"  >
          </div>
    </div>
-    
+
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Time : </label>
       <input type="time" name = "time" class="form-control"  value="{{$request->time}}" >
-   
+
         </div>
    </div>
 </div>
 
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
         <label for="validationCustom04">Part of plant : </label>
        <select name = "plant_part" class="form-control" onchange='checkvalue2(this.value)'>
     @if($request->plant_part=='Others')
-                <option  value="{{$request->Oplant_part}}">{{$request->Oplant_part}}</option>
+                <option  value="{{$request->Oplant_part}}">{{$request->plant_part}}</option>
     @else
                  <option  value="{{$request->plant_part}}">{{$request->plant_part}}</option>
-    @endif 
-           
+    @endif
+
             <option value = "Branches"> Branches </option>
             <option value = "Bulbs">    Bulbs    </option>
             <option value = "Flowers">  Flowers  </option>
@@ -175,23 +177,23 @@
             <option value = "Seeds">    Seeds    </option>
             <option value = "Stems">    Stems    </option>
             <option value = "Twigs">    Twigs    </option>
-            <option value = "Others">     Others </option>
+            <option value = "Others">   Others   </option>
          </select>
-       <input type="text" name="Oplant_part" id="plant_part" style='display:none;'/>  
+       <input type="text" name="Oplant_part" id="plant_part" style='display:none;'/>
          </div>
    </div>
-    
+
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02"> Region :</label>
             <select name = "area" class="form-control" onchange='checkvalue1(this.value)'>
                 @if($request->area=='Others')
-                <option value="{{$request->Oarea}}">{{$request->Oarea}}</option>
+                <option value="{{$request->Oarea}}">{{$request->area}}</option>
             @else
                  <option value="{{$request->area}}">{{$request->area}}</option>
-            @endif 
-               
+            @endif
+
                 <option value = "Chankanai">      Chankanai       </option>
                 <option value = "Chavakachcheri"> Chavakachcheri  </option>
                 <option value = "Delft">          Delft           </option>
@@ -214,18 +216,18 @@
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
 
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
         <select name = "circumstance" class="form-control" onchange='checkvalue3(this.value)' >
             @if($request->circumstance=='Others')
-                <option value = "{{$request->Ocircumstance}}">{{$request->Ocircumstance}}</option>
+                <option value = "{{$request->circumstance}}">{{$request->circumstance}}</option>
             @else
                <option value="{{$request->circumstance}}">{{$request->circumstance}}</option>
-            @endif 
-            
+            @endif
+
                 <option value = "Accidental">   Accidental   </option>
                 <option value = "Homicidal">    Homicidal    </option>
                 <option value = "Occupational"> Occupational </option>
@@ -242,47 +244,47 @@
         <label for="validationCustom02">Mode of poisoning :</label>
         <select name = "poisoning_mode" class="form-control" onchange='checkvalue(this.value)'>
             @if($request->poisoning_mode=='Others')
-                <option value = "{{$request->Opoisoning_mode}}">{{$request->Opoisoning_mode}}</option>
+                <option value = "{{$request->poisoning_mode}}">{{$request->poisoning_mode}}</option>
             @else
                 <option value = "{{$request->poisoning_mode}}">{{$request->poisoning_mode}}</option>
-            @endif    
-                
+            @endif
+
                 <option value = "Contact">    Contact   </option>
                 <option value = "Ingestion">  Ingestion  </option>
                 <option value = "Inhalation"> Inhalation </option>
                 <option value = "Others">     Others </option>
          </select>
-           <input type="text" name="Opoisoning_mode" id="poisoning_mode" style='display:none;'/>
+           <input type="text" name="poisoning_mode" id="poisoning_mode" style='display:none;'/>
         </div>
     </div>
     </div>
-  
+
     <div class="row">
   <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
       <input type="text" name="amount" class="form-control"  value="{{$request->amount}}">
-   
+
         </div>
    </div>
         </div>
-  
+
  <br><br>
- 
- 
-  <div class="row"> 
+
+
+  <div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
-            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="30" @if(in_array("30", $symptoms)) checked @endif> 
-            
+            <input class="form-check-input"  type="checkbox" name = "Clinical[]"   value="30" @if(in_array("30", $symptoms)) checked @endif>
+
             <label class="form-check-label" for="gridCheck">
                &nbsp;   Cycloplegia
             </label>
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -306,7 +308,7 @@
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -317,7 +319,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -334,28 +336,28 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="132" @if(in_array("132", $symptoms)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;     Tachycardia 
+            &nbsp;     Tachycardia
             </label>
             </div>
         </div>
    </div>
 </div>
 
- 
- 
- 
+
+
+
  <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" name="clinicals_others"   >{{$request->clinicals_others}} </textarea>
 </div>
- 
- 
+
+
  <br><br>
  <h3 class="font-weight-bold">Management</h3>
  <br>
- 
-    
- <div class="row"> 
+
+
+ <div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -366,7 +368,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -383,14 +385,14 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]" value="5" @if(in_array("5", $management))checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Antibiotics given 
+            &nbsp;  Antibiotics given
             </label>
             </div>
         </div>
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -401,7 +403,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -418,14 +420,14 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]" value="10"@if(in_array("10", $management))  checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Blood transfusion/Plasma expanders  
+            &nbsp;   Blood transfusion/Plasma expanders
             </label>
             </div>
         </div>
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -436,7 +438,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -453,14 +455,14 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]" value="14" @if(in_array("14", $management))  checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;    Dopamine given 
+            &nbsp;    Dopamine given
             </label>
             </div>
         </div>
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -471,7 +473,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -495,7 +497,7 @@
    </div>
 </div>
 
-<div class="row"> 
+<div class="row">
     <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -506,7 +508,7 @@
             </div>
         </div>
    </div>
-    
+
    <div class="col">
         <div class="form-group">
             <div class="form-check">
@@ -523,7 +525,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]" value="29" @if(in_array("29", $management))  checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Supportive therapy  
+            &nbsp;  Supportive therapy
             </label>
             </div>
         </div>
@@ -532,12 +534,12 @@
 <br><br>
 
 
- 
+
 
 <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" name = "managements_others" id="comment" >{{$request->managements_others}}</textarea>
-</div> 
+</div>
 
 <h3 class="font-weight-bold">Gastrointestinal decontamination : </h3>
  <br>
@@ -547,7 +549,7 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]"  value="15" @if(in_array("15", $management)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;   Gastric aspiration 
+            &nbsp;   Gastric aspiration
             </label>
             </div>
         </div>
@@ -557,18 +559,18 @@
             <div class="form-check">
             <input class="form-check-input" type="checkbox" name = "management[]"  value="1" @if(in_array("1", $management)) checked @endif>
             <label class="form-check-label" for="gridCheck">
-            &nbsp;  Activated chracol      
+            &nbsp;  Activated chracol
             </label>
-           
+
             </div>
         </div>
    </div>
 
    <label class="form-check-label" for="gridCheck">
-            &nbsp; &nbsp; If yes, number of doses       
+            &nbsp; &nbsp; If yes, number of doses
     </label>
-            <div class="col">                                                                                 
-                <input  class="form-control" type="text" name = "activated_chracol_doses" value="{{$request->activated_chracol_doses}}"> 
+            <div class="col">
+                <input  class="form-control" type="text" name = "activated_chracol_doses" value="{{$request->activated_chracol_doses}}">
             </div>
             <br>
 
@@ -584,9 +586,9 @@
    </div>
 
    <label class="form-check-label" for="gridCheck">
-            &nbsp; &nbsp; If yes, type of antidote      
+            &nbsp; &nbsp; If yes, type of antidote
     </label>
-            <div class="col">      
+            <div class="col">
                 <input  class="form-control" type="text" name = "antidote" value=" {{$request->antidote}}">
      </div>
 
@@ -594,52 +596,52 @@
 <br><br>
   <h3 class="font-weight-bold">laboratory detail</h3>
 <br>
- 
- <div class="form-group"> 
+
+ <div class="form-group">
     <textarea class="form-control" rows="5" name="Lab_Comments" >{{$request->Lab_Comments}}</textarea>
- </div> 
+ </div>
 
 
 <br><br>
  <h3 class="font-weight-bold">Comment</h3>
  <br>
- 
+
  <div class="form-group">
- 
+
   <textarea class="form-control" name = "comments" rows="5" >{{$request->comments}}</textarea>
-</div> 
+</div>
 
- <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)" class="btn btn-primary">Save</button>  
- <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit" class="btn btn-success" > Save & Submit</button> 
+ <button type="submit" name ="save" value="save"  onclick="return confirm(&quot;Save the data?&quot;)" class="btn btn-primary">Save</button>
+ <button type="submit" onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="submit" class="btn btn-success" > Save & Submit</button>
 
-  
+
   <br><br><br>
 
  @if($ray==1)
                  <input type="hidden" name="id" value="1" >
-            @elseif($ray==2)     
+            @elseif($ray==2)
                   <input type="hidden" name="id" value="2" >
-            @elseif($ray==3)     
+            @elseif($ray==3)
                   <input type="hidden" name="id" value="3" >
-            @elseif($ray==4)     
+            @elseif($ray==4)
                   <input type="hidden" name="id" value="4" >
-            @elseif($ray==5)     
+            @elseif($ray==5)
                   <input type="hidden" name="id" value="5" >
-            @elseif($ray==6)     
+            @elseif($ray==6)
                   <input type="hidden" name="id" value="6" >
-            @elseif($ray==7)     
+            @elseif($ray==7)
                   <input type="hidden" name="id" value="7" >
-            @elseif($ray==8)     
+            @elseif($ray==8)
                   <input type="hidden" name="id" value="8" >
-            @elseif($ray==9)     
+            @elseif($ray==9)
                   <input type="hidden" name="id" value="9" >
-            @elseif($ray==10)     
-                  <input type="hidden" name="id" value="10" > 
-            @elseif($ray==11)     
+            @elseif($ray==10)
+                  <input type="hidden" name="id" value="10" >
+            @elseif($ray==11)
                   <input type="hidden" name="id" value="11" >
-            @elseif($ray==12)     
+            @elseif($ray==12)
                   <input type="hidden" name="id" value="12" >
-            @endif      
+            @endif
 
 <script>
 
@@ -662,14 +664,14 @@
   }, false);
 })();
 </script>
-    
-    
-    
-    
-    
+
+
+
+
+
     </form>
-    
-    
+
+
     </div>
 
 <script src="js/index.js"></script>
