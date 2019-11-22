@@ -42,53 +42,55 @@
 
 	<div class="container-contact11">
 		<div class="wrap-contact11">
-			<form class="contact11-form validate-form" action="{{URL('Chemicals_Details/submitted_phn')}}" method = "get">
-				<span class="contact11-form-title">
-					Verify Patient for 
-					@if($id==1) 
-						<label> Carbamate Insecticides </label> 
-					@elseif($id==2) 
-						<label> Chlorophenoxy Compounds </label>
-					@elseif($id==3) 
-						<label> Coumarins </label>
-					@elseif($id==4) 
-						<label> Dithiocarbamate </label>
-					@elseif($id==5) 
-						<label> Diuron </label>
-					@elseif($id==6) 
-						<label> Fipronil </label>
-					@elseif($id==7) 
-						<label> Glyphosate </label>
-					@elseif($id==8) 
-						<label> Imidacloprid </label>
-					@elseif($id==9) 
-						<label> Metaldehyde </label>
-					@elseif($id==10) 
-						<label> Methyl Bromide </label>
-					@elseif($id==11) 
-						<label> Nitrophends and Nitro Cresols </label>
-					@elseif($id==12) 
-						<label> Organochlorines </label>
-					@elseif($id==13) 
-						<label> Organophosphates </label>
-					@elseif($id==14) 
-						<label> Phosphides </label>
-					@elseif($id==15) 
-						<label> Propanil </label>
-					@elseif($id==16) 
-						<label> Pyrethrum and related compounds </label>
-					@elseif($id==17) 
-						<label> Thallium </label>
-					@elseif($id==18) 
-						<label> Thiocarbamates </label>
-					@elseif($id==19) 
-						<label> Triazenes and Triazoles </label>
-					@elseif($id==20) 
-						<label> Other pesticide poisoning </label>
-					@endif
-				</span>
+			<form action="{{URL('Chemicals_Details/submitted_phn')}}" method = "get">
+				<span class="contact11-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+					<span class="contact11-form validate-form">
+							<span class="contact11-form-title">
+								Patient Details for 
+								@if($id==1) 
+									<label> Carbamate Insecticides </label> 
+								@elseif($id==2) 
+									<label> Chlorophenoxy Compounds </label>
+								@elseif($id==3) 
+									<label> Coumarins </label>
+								@elseif($id==4) 
+									<label> Dithiocarbamate </label>
+								@elseif($id==5) 
+									<label> Diuron </label>
+								@elseif($id==6) 
+									<label> Fipronil </label>
+								@elseif($id==7) 
+									<label> Glyphosate </label>
+								@elseif($id==8) 
+									<label> Imidacloprid </label>
+								@elseif($id==9) 
+									<label> Metaldehyde </label>
+								@elseif($id==10) 
+									<label> Methyl Bromide </label>
+								@elseif($id==11) 
+									<label> Nitrophends and Nitro Cresols </label>
+								@elseif($id==12) 
+									<label> Organochlorines </label>
+								@elseif($id==13) 
+									<label> Organophosphates </label>
+								@elseif($id==14) 
+									<label> Phosphides </label>
+								@elseif($id==15) 
+									<label> Propanil </label>
+								@elseif($id==16) 
+									<label> Pyrethrum and related compounds </label>
+								@elseif($id==17) 
+									<label> Thallium </label>
+								@elseif($id==18) 
+									<label> Thiocarbamates </label>
+								@elseif($id==19) 
+									<label> Triazenes and Triazoles </label>
+								@elseif($id==20) 
+									<label> Other pesticide poisoning </label>
+								@endif
+							</span>
 
-				<label class="phn-label-input11" for="phn">PHN Number</label>
+							<label class="phn-label-input11" for="phn">PHN Number</label>
 				<div class="phn-wrap-input11">
 					<input id="phn" class="phn-input11" type="text" name="phn" pattern="[0-9]{11}" title = "Please enter only number" maxlength="11">
 					<span class="focus-input11"></span>
@@ -135,55 +137,58 @@
 				@elseif($id==20)     
 					<input type="hidden" name="id" value="20" >
 				@endif 
+					<label class="label-input11" for="fname">First Name</label>
+					<div class="wrap-input11">
+						<input id="fname" class="input11" type="text" name="fname">
+						<span class="focus-input11"></span>
+					</div>
+	
+					<label class="label-input11" for="lname">Last Name</label>
+					<div class="wrap-input11">
+						<input id="lname" class="input11" type="text" name="lname">
+						<span class="focus-input11"></span>
+					</div>
+	
+					<label class="label-input11" for="nic">NIC Number</label>
+					<div class="wrap-input11">
+						<input id="nic" class="input11" type="nic" name="nic" pattern="[0-9]{9}[vV]" >
+						<span class="focus-input11"></span>
+					</div>
+	
+					<label class="label-input11" for="phno">Phone NO</label>
+					<div class="wrap-input11">
+						<input id="phno" class="input11" type="tel" name="phno" maxlength="10">
+						<span class="focus-input11"></span>
+					</div>
+					<label class="label-input11" for="dob">Date of Birth</label>
+					<div class="wrap-input11">
+						<input id="dob" class="input11" type="date" name="dob">
+						<span class="focus-input11"></span>
+					</div>
+					<label class="label-input11" for="address">Address</label>
+					<div class="wrap-input11">
+						<textarea id="address" class="address-input11" type="text" name="address" rows="2"></textarea>
+						<span class="focus-input11"></span>
+					</div>
+					<label class="label-input11" for="gender">Gender</label>
+					<div class="wrap-input11">
+						<input id="male" class="radio-input11" type="radio" name="gender" value="Male">Male
+						<input id="female" class="radio-input11" type="radio" name="gender" value="Female">Female
+						<span class="focus-input11"></span>
+					</div>
+				</span>
+				
+
+				
 
 				<div class="container-contact11-form-btn">
 					<button class="contact11-form-btn">
-						Verify
+						Continue
 					</button>
 				</div>
-			</form>
-
-			<form action="{{URL('Chemicals_Details/submitted_phn')}}" method = "get" class="contact11-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
-				<label class="label-input11" for="fname">First Name</label>
-				<div class="wrap-input11">
-					<input id="fname" class="input11" type="text" name="fname">
-					<span class="focus-input11"></span>
-				</div>
-
-				<label class="label-input11" for="lname">Last Name</label>
-				<div class="wrap-input11">
-					<input id="lname" class="input11" type="text" name="lname">
-					<span class="focus-input11"></span>
-				</div>
-
-				<label class="label-input11" for="nic">NIC Number</label>
-				<div class="wrap-input11">
-					<input id="nic" class="input11" type="text" name="nic" pattern="[0-9]{9}V" maxlength="10">
-					<span class="focus-input11"></span>
-				</div>
-
-				<label class="label-input11" for="phno">Phone NO</label>
-				<div class="wrap-input11">
-					<input id="phno" class="input11" type="number" name="phno" pattern="[0-9]{10}"  maxlength="10">
-					<span class="focus-input11"></span>
-				</div>
-				<label class="label-input11" for="dob">Date of Birth</label>
-				<div class="wrap-input11">
-					<input id="dob" class="input11" type="date" name="dob">
-					<span class="focus-input11"></span>
-				</div>
-				<label class="label-input11" for="address">Address</label>
-				<div class="wrap-input11">
-					<input id="address" class="input11" type="text" name="address">
-					<span class="focus-input11"></span>
-				</div>
-				<label class="label-input11" for="gender">Gender</label>
-				<div class="wrap-input11">
-					<input id="male" class="radio-input11" type="radio" name="gender" value="Male">Male
-					<input id="female" class="radio-input11" type="radio" name="gender" value="Female">Female
-					<span class="focus-input11"></span>
-				</div>
-			</div>
+			</span>
+		</span>
+		</form>
 		</div>
 	</div>
 

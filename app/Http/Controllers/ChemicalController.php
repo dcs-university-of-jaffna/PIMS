@@ -27,7 +27,6 @@ class ChemicalController extends Controller
     
     public function phnStore(Request $request)
     {
-          return  $request;
         $id = $request->id;
 
         //save phn in patient table
