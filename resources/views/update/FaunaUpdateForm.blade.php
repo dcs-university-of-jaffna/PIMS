@@ -62,7 +62,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">NIC : </label>
-        <input type="number" name = "nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+        <input type="text" name = "nic"  class="form-control" maxlength="10"id="validationCustom01" value="{{$patient->nic}}" >
       
         </div>
    </div>
@@ -72,7 +72,7 @@
         <div class="form-group">
         <label for="validationCustom02">Address : </label>
       <input type="text"  name = "address" class="form-control" id="validationCustom02" value="{{$patient->address}}" >
-   
+    
         </div>
    </div>
 </div>
@@ -106,7 +106,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="number" name = "contact"  class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
+      <input type="tel" name = "contact" placeholder="Enter phone number" maxlength ="10" maxlength="10" pattern="" class="form-control" id="validationCustom02" value="{{$patient->contact}}" >
    
         </div>
    </div>
@@ -2581,7 +2581,7 @@
 <input type="hidden" name="recordid" value="{{$incident->id}}">
 <br>
 <button class="btn btn-primary" type="submit" onclick="return confirm(&quot;Save the data?&quot;)" name ="save" value="save" >Save</button> 
-<button class="btn btn-success" type="submit"  onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="save">Submit</button> 
+<!--button class="btn btn-success" type="submit"  onclick="return confirm(&quot;Submit the data?&quot;)" name ="submit" value="save">Submit</button--> 
 <br><br>
 </form>
 

@@ -116,7 +116,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Contact : </label>
-      <input type="tel" id ="phone" name ="contact" placeholder="Enter phone number" minlength ="10" maxlength="10" pattern="" required="required" class="form-control" id="validationCustom02" value="{{$patient->contact}}"  >
+      <input type="tel" id ="phone" name ="contact" placeholder="Enter phone number" minlength ="10" pattern="" class="form-control" id="validationCustom02" value="{{$patient->contact}}"  >
    
         </div>
    </div>
@@ -3006,7 +3006,7 @@
 <input type="hidden" name="recordid" value="{{$incident->id}}">
 <br>
 <button class="btn btn-primary" type="submit" name ="save" value="save" >Save</button> 
-<button class="btn btn-success" type="submit"  name ="submit" value="save">Submit</button> 
+<!--button class="btn btn-success" type="submit"  name ="submit" value="save">Submit</button--> 
 </form>
 <br><br>
 
