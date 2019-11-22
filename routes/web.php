@@ -201,7 +201,7 @@ Route::post('/update_phn_search_fauna', 'UpdateController@submitFauna');
 Route::get('/Chemical_View_Update/Chemical_Update', 'update_record_controller_phn_search@view_record');
 //Carbamate Insecticides show details
 Route::get('/Chemical_View_Update/Chemical_View', 'update_record_controller_phn_search@view_record');
-<?php
+
 
 
 Route::get('/', function () {
