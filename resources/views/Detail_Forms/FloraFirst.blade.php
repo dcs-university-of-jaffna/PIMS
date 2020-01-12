@@ -32,27 +32,27 @@
         </td>
         <td>
             @if($ray==1)
-                <h3><b> Poison : Aththana (Datura stramonium) </b></h3><br>
+                <h3><b> Poison : Aththana  </b></h3><br>
             @elseif($ray==2)
-                <h2 style="text-align: center"><b> Poison : Divikaduru (Tabernaemantana dichotoma) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Divikaduru  </b></h2><br>
             @elseif($ray==3)
-                <h2 style="text-align: center"><b> Poison : DiyaKaduru (Cerebra manghas) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : DiyaKaduru  </b></h2><br>
             @elseif($ray==4)
-                <h2 style="text-align: center"><b> Poison : Endaru (Ricinus communis) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Endaru  </b></h2><br>
             @elseif($ray==5)
-                <h2 style="text-align: center"><b> Poison : GodaKaduru (Stvychnos nuxvomica ) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : GodaKaduru  </b></h2><br>
             @elseif($ray==6)
-                <h2 style="text-align: center"><b> Poison : Habarala (Alocasia macromhiza) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Habarala </b></h2><br>
             @elseif($ray==7)
-                <h2 style="text-align: center"><b> Poison : Hondala(Adenia Hondola) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Hondala </b></h2><br>
             @elseif($ray==8)
-                <h2 style="text-align: center"><b> Poison : Kaneru (Nerium oleandor/Thevetia peruviana) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Kaneru  </b></h2><br>
             @elseif($ray==9)
-                <h2 style="text-align: center"><b> Poison : Kepunkiriya (Euphorbia hirita) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Kepunkiriya  </b></h2><br>
             @elseif($ray==10)
-                <h2 style="text-align: center"><b> Poison : Niyagala (Gloriosa superba) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Niyagala  </b></h2><br>
             @elseif($ray==11)
-                <h2 style="text-align: center"><b> Poison : Olinda (Abrus precatorius) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Olinda  </b></h2><br>
             @elseif($ray==12)
                 <h2 style="text-align: center"><b> Poison : Unknown plant poisoning </b></h2><br>
             @endif
@@ -65,11 +65,10 @@
 </table>
 <div class="form">
 
-    <h3 style="text-align: center"> Personal Detail</h3>
 
     <table class="table pb-4">
         <tr>
-            <td><h3>New Patient Personal Detail</h3></td>
+            <td><h3>Patient Personal Detail</h3></td>
             <td>
                 <div class="form-group">
                     <label for="search" >Enter Name, NIC, Contact or PHN</label>
