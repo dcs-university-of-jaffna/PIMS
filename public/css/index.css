@@ -134,6 +134,13 @@ body {
 	padding: 0 2em;
 }
 
+input[type="checkbox"]{
+        vertical-align: middle;
+        width: 7%;
+        display: inline
+}
+
+
 a {
 	color: #0cc39f;
 }
@@ -159,7 +166,7 @@ h4 {
 	padding: 1em 0 0;
 }
 
-select,textarea,input {
+select,textarea,input{
 	box-sizing: border-box;
 	display: block;
 	padding: .4em;
@@ -204,38 +211,19 @@ button:hover {
   box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
 
 .table{
  table-layout: fixed;
   width: 100%; 
+  
 }
 
 
 
 label1{
     position: absolute;
-    top:38%
+    top:32%
 }
 
 
@@ -291,7 +279,7 @@ label0{
 label11{
     position: absolute; 
     left :33%;
-    top:38%;
+    top:32%;
 }
 
 
