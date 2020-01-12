@@ -35,27 +35,27 @@
         <td>
 
             @if($ray==1)
-                <h3><b> Poison : Aththana (Datura stramonium) </b></h3><br>
+                <h3><b> Poison : Aththana </b></h3><br>
             @elseif($ray==2)
-                <h2 style="text-align: center"><b> Poison : Divikaduru (Tabernaemantana dichotoma) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Divikaduru  </b></h2><br>
             @elseif($ray==3)
-                <h2 style="text-align: center"><b> Poison : DiyaKaduru (Cerebra manghas) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : DiyaKaduru  </b></h2><br>
             @elseif($ray==4)
-                <h2 style="text-align: center"><b> Poison : Endaru (Ricinus communis) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Endaru ) </b></h2><br>
             @elseif($ray==5)
-                <h2 style="text-align: center"><b> Poison : GodaKaduru (Stvychnos nuxvomica ) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : GodaKaduru  </b></h2><br>
             @elseif($ray==6)
-                <h2 style="text-align: center"><b> Poison : Habarala (Alocasia macromhiza) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Habarala </b></h2><br>
             @elseif($ray==7)
-                <h2 style="text-align: center"><b> Poison : Hondala(Adenia Hondola) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Hondala </b></h2><br>
             @elseif($ray==8)
-                <h2 style="text-align: center"><b> Poison : Kaneru (Nerium oleandor/Thevetia peruviana) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Kaneru  </b></h2><br>
             @elseif($ray==9)
-                <h2 style="text-align: center"><b> Poison : Kepunkiriya (Euphorbia hirita) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Kepunkiriya  </b></h2><br>
             @elseif($ray==10)
-                <h2 style="text-align: center"><b> Poison : Niyagala (Gloriosa superba) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Niyagala </b></h2><br>
             @elseif($ray==11)
-                <h2 style="text-align: center"><b> Poison : Olinda (Abrus precatorius) </b></h2><br>
+                <h2 style="text-align: center"><b> Poison : Olinda </b></h2><br>
             @elseif($ray==12)
                 <h2 style="text-align: center"><b> Poison : Unknown plant poisoning </b></h2><br>
             @endif
@@ -252,42 +252,13 @@
             <div data-panel="three">
                 <h4>Clinical Feature</h4>
                 @if($ray==1)
-                    <table>
-                        <tr>
-                            <td>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="30"> Cycloplegia </label>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="42"> Dry mouth </label>
-
-                            </td>
-
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="48"> Erythema </label>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="54"> Fever </label>
-                            </td>
-
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="86"> Mydriasis </label>
-                                <label><input type="checkbox" name="AththanaClinical[]" value="132"> Tachycardia
-                                </label>
-                            </td>
-                        <tr>
-                    </table>
+                <label><input type="checkbox" name = "AththanaClinical[]"  value="30" >  Cycloplegia </label><br>
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="42" > Dry mouth </label> <br>          
+                        <label><input type="checkbox" name ="AththanaClinical[]" value="48"  >  Erythema </label> <br>
+                        <label><input type="checkbox" name = "AththanaClinical[]" value="54"  >  Fever </label> <br>
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis </label>   <br>       
+                        <label><input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </label> <br>
+                       
                     <br><br>
 
                     CNS effects :
@@ -307,7 +278,7 @@
                     If others :<br>
                     <textarea rows="4" cols="150" name="clinicals_others"
                               placeholder="Enter other Clinical Features here"></textarea>
-                    <br><br>
+                    <br>
 
                 @elseif($ray==2)
                     <label><input type="checkbox" name="AththanaClinical[]" value="30"> Cycloplegia </label><br>
@@ -702,72 +673,35 @@
 
 
             <div data-panel="four">
-                <table class="table">
-                    <tr>
-                        <td>
+               
                             <h4> Managemnt Detail</h4>
                             <table>
-                                <tr>
-                                    <td>
-                                        <label><input type="checkbox" name="management[]" value="3"> Alkalinization
-                                        </label> <br>
-                                        <label><input type="checkbox" name="management[]" value="4"> Analgesics
-                                            given</label> <br>
-                                        <label><input type="checkbox" name="management[]" value="5"> Antibiotics given
-                                        </label> <br>
-                                        <label><input type="checkbox" name="management[]" value="6"> Anticonvulsants
-                                            given </label> <br>
-                                        <label><input type="checkbox" name="management[]" value="9"> Atropine given
-                                        </label> <br>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <label><input type="checkbox" name="management[]" value="10"> Blood transfusion
-                                        </label><br>
-                                        <label><input type="checkbox" name="management[]" value="11"> Calcium gluconate
-                                            given </label><br>
-                                        <label><input type="checkbox" name="management[]" value="13"> Dialysis </label>
-                                        <br>
-                                        <label><input type="checkbox" name="management[]" value="14"> Dopamine given
-                                        </label> <br>
-                                        <label><input type="checkbox" name="management[]" value="20"> Methylprednisolone
-                                        </label> <br></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <label><input type="checkbox" name="management[]" value="21"> NaCl given
-                                        </label><br>
-                                        <label><input type="checkbox" name="management[]" value="22"> NaHCO3 given
-                                        </label><br>
-                                        <label><input type="checkbox" name="management[]" value="24"> Prednisalone given
-                                        </label><br>
-                                        <label><input type="checkbox" name="management[]" value="26"> Resuscitation
-                                        </label><br>
-                                        <label><input type="checkbox" name="management[]" value="29"> Supportive therapy
-                                        </label><br>
-                                    </td>
+                           <td>       
+                        <label><input type="checkbox" name = "management[]" value="3"  >  Alkalinization </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="4"  >  Analgesics given</label> <br>
+                     <label><input type="checkbox" name = "management[]" value="5"  > Antibiotics given </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given </label> <br>  
+                     <label><input type="checkbox" name = "management[]" value="9"  >  Atropine given </label> <br>
+                     <label><input type="checkbox" name = "management[]" value="10"  > Blood transfusion/Plasma expanders </label><br>    
+                     <label><input type="checkbox" name = "management[]" value="11"   > Calcium gluconate given </label><br>
+                     <label><input type="checkbox" name = "management[]" value="13"   > Dialysis </label> <br>
+                   
 
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td></td>
+                     
+                            <label><input type="checkbox" name = "management[]" value="14"  >  Dopamine given </label> <br>
+                             <label><input type="checkbox" name = "management[]" value="20"  >  Methylprednisolone/Corticosteroids </label> <br>
+                            <label><input type="checkbox" name = "management[]" value="21">  NaCl given </label><br>
+                            <label><input type="checkbox" name = "management[]" value="22"  >  NaHCO3 given </label><br>                        
+                            <label><input type="checkbox" name = "management[]" value="24"  > Prednisalone given </label><br>      
+                            <label><input type="checkbox" name = "management[]" value="26"  > Resuscitation </label><br>
+                            <label><input type="checkbox" name = "management[]" value="29"  > Supportive therapy </label><br>
+               
+                        <br>
+                           </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           
                         <td>
-
-
                             <b> Gastrointestinal decontamination : </b></label><br><br>
                             <label><input type="checkbox" name="management[]" value="15"> Gastric_aspiration
                             </label><br><br>
@@ -775,26 +709,27 @@
 
                             If yes, number of doses :
                             <input type="text" name="activated_chracol_doses">
-                        </td>
+                        
+                            <br><br>
 
-
-                        <td>
                             <label> <b> Antidote :</b> </label><br><br>
                             <label><input type="checkbox" name="management[]" value="7"> Antidote given </label><br>
                             If yes, type of antidote :
                             <input type="text" name="antidote">
                         </td>
-                    </tr>
-                </table>
-                </td>
-                </td></tr>
-                </table>
+                 
+              
                 <br>
-                If others : <br>
+                 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                             <td>
+                <br><br><br><br><br><br><br><br><br><br><br>If others : <br>
                 <textarea rows="4" cols="120" name="managements_others"
                           placeholder="Enter other management detail here"></textarea>
+                </td>
 
-
+  </table>
             </div>
 
             <div data-panel="five">
