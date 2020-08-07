@@ -88,7 +88,7 @@
     <div class="col">
         <div class="form-group">
         <label for="validationCustom01">NIC : </label>
-        <input type="number" name ="nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
+        <input type="text" name ="nic"  class="form-control" id="validationCustom01" value="{{$patient->nic}}" >
       
         </div>
    </div>
