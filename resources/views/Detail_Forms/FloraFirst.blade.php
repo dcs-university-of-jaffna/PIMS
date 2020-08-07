@@ -150,14 +150,14 @@
         let form_table = '<table class="table">' +
             '            <tr>' +
             '                <td>' +
-            '                    <label> 01) First Name :</label>' +
+            '                    <label> 01) PHN Number :</label>' +
+            '                    <input type="text" name="phn">' +
+            '                    <br>' +
+            '                    <label> 02) First Name :</label>' +
             '                    <input type="text" name="fname" required="true">' +
             '                    <br>' +
-            '                    <label> 03) NIC Number :</label>' +
-            '                    <input type="text" name="nic">' +
-            '                    <br>' +
-            '                    <label> 05) Birth Date :</label>' +
-            '                    <input type="date" name="bdate" id="datePickerId">' +
+            '                    <label> 03) Second Name :</label>' +
+            '                    <input type="text" name="lname">' +
             '                    <br>' +
             '' +
             '                    <label> 04) Address :</label>' +
@@ -166,13 +166,14 @@
             '                </td>' +
             '' +
             '                <td>' +
-            '                    <label> 02) Second Name :</label>' +
-            '                    <input type="text" name="lname">' +
+            
+            '                    <label> 05) NIC Number :</label>' +
+            '                    <input type="text" name="nic">' +
             '                    <br>' +
-            '                    <label> 04) PHN Number :</label>' +
-            '                    <input type="text" name="phn">' +
+            '                    <label> 06) Birth Date :</label>' +
+            '                    <input type="date" name="bdate" id="datePickerId">' +
             '                    <br>' +
-            '                    <label> 06) Contact Number :</label>' +
+                       '                    <label> 07) Contact Number :</label>' +
             '                    <input type="text" name="contact">' +
             '                    <br>' +
             '' +
