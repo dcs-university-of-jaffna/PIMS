@@ -40,7 +40,7 @@ class update extends Controller
        // $incidentSymptom = $incident->IncidentSymptom->pluck('IncidentSymptom.id');
        //get clinicle details 
         $symptoms = $incident->symptoms;
-        $management = $incident->managements()->pluck('managements.id');
+        $management = $incident->managements()->pluck('management.id');
         //$managements = $incident->ManagementGroup;
         $patient = $incident->patient;
         $laboratory = $incident->laboratory->details;
