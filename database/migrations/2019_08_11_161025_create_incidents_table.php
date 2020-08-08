@@ -1,44 +1,17 @@
-
 <?php
 
 /**
  * Migration file for creating incidents table
- *
- * PHP version 7.2.19
- *
- * You may add fields to incidents table here
- *
- * @category Incidents_Migration_Class
- * @package  Migrations
- * @author   Group7s <dcs@jfn.ac.lk>
- * @license  GNU General Public License (GPL)
- * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
  */
-
+ 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * Class for creating incidents table
- *
- * PHP version 7.2.19
- *
- * You may add fields to incidents table here
- *
- * @category Incidents_Migration_Class
- * @package  Migrations
- * @author   Group7s <dcs@jfn.ac.lk>
- * @license  GNU General Public License (GPL)
- * @link     https://github.com/dcs-university-of-jaffna/PIMS.git
- */
-
 class CreateIncidentsTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
+     * Run the migrations.    
      */
     public function up()
     {

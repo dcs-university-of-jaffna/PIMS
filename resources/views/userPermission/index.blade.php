@@ -43,11 +43,11 @@
                                 <tbody>
                                 @foreach($user as $item)
                                     <tr>
-                                        <td>{{$loop->iteration }}</td>
-                                        <td>{{$item->name }}</td>
-                                        <td>{{$item->userType }}</td>
-                                        <td>{{$item->email }}</td>
-                                        <td>{{$item->isConfirmed}}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->userType }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->isConfirmed }}</td>
                                         <td>
                                             @if(!$item->isConfirmed)
                                                 <a href = '/Active/{{$item->id}}' class="btn btn-warning" >Active</a>
@@ -60,13 +60,13 @@
                                             @else
                                                 <a href = '/Doctor/{{$item->id}}' class="btn btn-success">Doctor</a>
                                             @endif
-                                            
+
                                             <form method="POST" action="{{ url('userPermission' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn" title="Delete User" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                             </form>
-                                        </td>   
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

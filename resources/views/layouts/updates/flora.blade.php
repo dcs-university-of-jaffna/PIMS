@@ -84,7 +84,7 @@
                     id="gas_asp"
                     name="managements[]"
                     value="15"
-                    @if ( $managements->contains(15) )
+                @if ( $managements->contains(15) )
                     checked
                 @endif
             >
@@ -97,9 +97,9 @@
                         id="act_chr"
                         name="managements[]"
                         value="1"
-                        @if ( $managements->contains(1) )
+                    @if ( $managements->contains(1) )
                         checked
-                        @endif
+                    @endif
                         onChange=toggleActDos()
                 >
                 <label for="act_chr"> Activated chracol </label>
