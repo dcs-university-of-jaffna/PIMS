@@ -151,13 +151,13 @@
             '            <tr>' +
             '                <td>' +
             '                    <label> 01) PHN Number :</label>' +
-            '                    <input type="text" name="phn">' +
+            '                    <input type="text" name="phn" required pattern="[0-9]{11}">' +
             '                    <br>' +
             '                    <label> 02) First Name :</label>' +
-            '                    <input type="text" name="fname" required="true">' +
+            '                    <input type="text" name="fname" required pattern="[A-Za-z]+">' +
             '                    <br>' +
             '                    <label> 03) Second Name :</label>' +
-            '                    <input type="text" name="lname">' +
+            '                    <input type="text" name="lname"  pattern="[A-Za-z]+">' +
             '                    <br>' +
             '' +
             '                    <label> 04) Address :</label>' +
@@ -171,10 +171,10 @@
             '                    <input type="text" name="nic">' +
             '                    <br>' +
             '                    <label> 06) Birth Date :</label>' +
-            '                    <input type="date" name="bdate" id="datePickerId">' +
+            '                    <input type="date" name="bdate" max=<?php echo date('Y-m-d');?>>' +
             '                    <br>' +
                        '                    <label> 07) Contact Number :</label>' +
-            '                    <input type="text" name="contact">' +
+            '                    <input type="text" name="contact" pattern="[0-9]{10}">' +
             '                    <br>' +
             '' +
             '                    <label>08) Gender :<br>' +
