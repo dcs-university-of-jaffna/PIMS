@@ -25,14 +25,11 @@ class update extends Controller
         //get incident value ,for given id number
         $incident = Incident::find($incident);
 
-        //dd($incident);
-
         $toxicity = Toxicity::find($incident->toxicity_id);
         //$natural = Natural::find($toxicity->id);
-
+       
         $flora = $incident->toxicity->natural->flora;
         //$incidentSymptom = IncidentSymptom::find($incident->id );
-
         //$tempPrescription = Prescription::find($incident->id);
         //$Prescription = $incident->natural->id;
         //dd($Prescription);

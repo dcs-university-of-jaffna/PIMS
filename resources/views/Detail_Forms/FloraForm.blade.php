@@ -104,7 +104,7 @@
                             <input type="text" name="nic" value="{{$patient->nic}}">
                             <br>
                             <label> 05) Birth Date :</label>
-                            <input type="date" name="bdate" id="datePickerId" value="{{$patient->bdate}}">
+                            <input type="date" name="bdate" id="datePickerId" value="{{$patient->bdate}}" max=<?php echo date('Y-m-d');?>>
                             <br>
 
                             <label> 07) Address:</label><br>
@@ -149,13 +149,15 @@
                     <tr>
                         <td>
                             <label> 01) Date :
-                                <input type="date" name="date" id="datePickerId">
+                                <input type="date" name="date" max=<?php echo date('Y-m-d');?>>
                             </label>
                             <br>
-
+                            
+                          
                             <label>03) Region :<br>
                                 <span class="select">
-                                    <select name="area" onchange='checkvalue1(this.value)'>
+                                    
+                                    <select name="area" onchange='checkvalue1(this.value)' class="form-control">
                                         <option value=" "> ..Please choose one option.. </option>
                                         <option value="Chankanai"> Chankanai </option>
                                         <option value="Chavakachcheri"> Chavakachcheri  </option>
@@ -198,7 +200,7 @@
                                 </span>
                             </label>
 
-                            <input type="text" name="plant_part" id="plant_part" style='display:none;'/>
+                            <input type="text" name="plant_part0" id="plant_part" style='display:none;'/>
 
                             <br>
 
@@ -211,7 +213,7 @@
                             <option value="Inhalation"> Inhalation </option>
                              <option value="Others"> Others </option>
                         </select>
-                       <input type="text" name="poisoning_mode" id="poisoning_mode" style='display:none;'/>
+                       <input type="text" name="poisoning_mode0" id="poisoning_mode" style='display:none;'/>
                     </span>
                             </label>
                         </td>
@@ -231,7 +233,7 @@
                             <option value="Sucidal"> Suicidal  </option>
                             <option value="Others"> Others  </option>
                         </select>
-                       <input type="text" name="circumstance" id="circumstance" style='display:none;'/>
+                       <input type="text" name="circumstance0" id="circumstance" style='display:none;'/>
                     </span>
                             </label>
                             <br>
@@ -259,24 +261,11 @@
                         <label><input type="checkbox" name = "AththanaClinical[]"  value="86" > Mydriasis </label>   <br>       
                         <label><input type="checkbox" name = "AththanaClinical[]"  value="132" >  Tachycardia </label> <br>
                        
-                    <br><br>
-
-                    CNS effects :
-                    <span class="select">
-                        <select name="AththanaClinical[]">
-
-                            <option value=" "> ..Please choose one option.. </option>
-                            <option value="3">  Agitation   </option>
-                            <option value="22"> Combative  </option>
-                            <option value="23"> Confusion </option>
-                            <option value="38"> disorientation </option>
-                        </select>
-                    </span>
-                    <br><br>
+                    <br>
 
 
                     If others :<br>
-                    <textarea rows="4" cols="150" name="clinicals_others"
+                    <textarea rows="3" cols="150" name="clinicals_others"
                               placeholder="Enter other Clinical Features here"></textarea>
                     <br>
 
@@ -846,7 +835,7 @@
 
 
                 <button type="reset" value="" onclick="return confirm(&quot;Reset the data?&quot;)">Reset</button>
-                <button type="submit" name="view">Save</button>
+                <button type="submit" name="view">Review</button>
 
             </div>
         </form>

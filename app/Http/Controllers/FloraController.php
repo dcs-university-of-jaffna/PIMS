@@ -78,6 +78,7 @@ class FloraController extends Controller
 
     function updateFlora(Request $request)
     {
+       
         $ray = $request->id;
 
         $patient = Patient::find($request->pid);

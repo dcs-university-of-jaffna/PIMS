@@ -221,7 +221,7 @@
    <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Circumstance :</label>
-        <select name = "circumstance" class="form-control" onchange='checkvalue3(this.value)' >
+        <select name = "circumstance" class="form-control"  >
             @if($request->circumstance=='Others')
                 <option value = "{{$request->circumstance}}">{{$request->circumstance}}</option>
             @else
@@ -259,6 +259,8 @@
     </div>
     </div>
 
+  
+  
     <div class="row">
   <div class="col">
         <div class="form-group">
@@ -268,9 +270,12 @@
         </div>
    </div>
         </div>
-
+ 
  <br><br>
 
+ <h3 class="font-weight-bold">Clinical Features</h3>
+ <br>
+@if($ray ==1)
 
   <div class="row">
     <div class="col">
@@ -341,15 +346,182 @@
             </div>
         </div>
    </div>
+   </div> 
+    
+    
+  @elseif($ray ==2)
+    <div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" name = "Clinical[]"   type="checkbox"  value="30" @if(in_array("30", $symptoms)) checked @endif> 
+            
+            <label class="form-check-label" for="gridCheck">
+               &nbsp;  Cycloplegia
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="25" @if(in_array("25", $symptoms)) checked @endif >
+            <label class="form-check-label" for="gridCheck">
+            &nbsp; Convulsion 
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"  value="32" @if(in_array("32", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Delirium
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="37" @if(in_array("37", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Dilation of pupils
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="39" @if(in_array("39", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Disturbance of consciousnessvalue  
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="43" @if(in_array("43", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Dryness of mucous membrane 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"  value="51" @if(in_array("51", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp; Eye inflammation 
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="55" @if(in_array("55", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Fits 
+            </label>
+            </div>
+        </div>
+   </div>
+
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"  value="56" @if(in_array("56", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;      Fits of crying  
+            </label>
+            </div>
+        </div>
+   </div>
 </div>
 
 
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="57" @if(in_array("57", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;  Flushing of face 
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="63" @if(in_array("63", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Hallucinogenic_effects     
+            </label>
+            </div>
+        </div>
+   </div>
 
+   <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="111" @if(in_array("111", $symptoms))checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Psychomotor_disturbances 
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+        <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name = "Clinical[]"   value="133" @if(in_array("133", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;   Talkativeness 
+            </label>
+            </div>
+        </div>
+   </div>
+    
+   <div class="col">
+   <div class="form-group">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox"  name = "Clinical[]"  value="136" @if(in_array("136", $symptoms)) checked @endif>
+            <label class="form-check-label" for="gridCheck">
+            &nbsp;     Thirst
+            </label>
+            </div>
+        </div>
+   </div>
+</div>
+    @endif
 
  <div class="form-group">
   <label for="comment">Others:</label>
   <textarea class="form-control" rows="5" id="comment" name="clinicals_others"   >{{$request->clinicals_others}} </textarea>
 </div>
+
 
 
  <br><br>

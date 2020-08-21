@@ -197,7 +197,7 @@
 <div class="col">
         <div class="form-group">
         <label for="validationCustom02">Amount :</label>
-      <input type="number" name="amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
+      <input type="text" name="amount" class="form-control"  value="{{$toxicity->natural->flora->amount}}">
    
         </div>
    </div>
@@ -308,20 +308,6 @@
         </div>
    </div>
 </div>
-
- <br><br>
-
- <h4 class="font-weight-bold">CNS effects :</h4>
- <br>
-     <select  class="form-control" id="" value="" name="Clinical[]">
-                <option value = "@if($symptoms->contains(3)) 3 @elseif($symptoms->contains(22)) 22  
-                @elseif($symptoms->contains(23)) 23 @else 38 @endif" >  @if($symptoms->contains(3)) Agitation @elseif($symptoms->contains(22)) Combative  
-                @elseif($symptoms->contains(23)) Confusion @else disorientation @endif  </option>
-                <option value = "3">  Agitation   </option>
-                <option value = "22"> Combative  </option>
-                <option value = "23"> Confusion </option>
-                <option value = "38"> disorientation </option>
-         </select>
 
 
 
