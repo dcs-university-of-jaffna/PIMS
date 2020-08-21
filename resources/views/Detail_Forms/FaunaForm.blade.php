@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body><br>
+    <table class="table">
+    <tr>
+        <td>
+
     @if($back==0)
         <button onclick="myFunction()" class="btn"><i class="fa fa-home"></i>Back</button>        
             <script>
@@ -22,7 +26,9 @@
     @endif 
     
     <a href="{{ url('/home') }}" title="Go back to main menu"><button class="btn" onclick="return confirm(&quot;Close the form..? unsaved data will be lost&quot;)"><i class="fa fa-close"></i>Close</button></a>
-     @if($ray==13)
+   <td> 
+    
+    @if($ray==13)
         <h2 style="text-align: center"><b>  Poison : Bee, Wasp, Hornet Stings </b></h2><br>
          @elseif($ray==14)
          <h2 style="text-align: center"><b> Poison : Black Widow Spider  </b></h2><br>
@@ -41,11 +47,15 @@
          @elseif($ray==20)
         <h2 style="text-align: center"><b> Poison : Unknown Bite </b></h2><br>
          @endif 
-         
-    
+      </td>
+      
+    <td>
      <h3 style="text-align: center"><b> Category : Natural Toxins - Fauna   </b></h3><br>
-    <!-- partial:index.partial.html -->
-
+    </td>
+</tr>
+    </table>
+     <!-- partial:index.partial.html -->
+    
     <div class="form">
     
         <input id="one" type="radio" name="stage" checked="checked" />
@@ -69,58 +79,63 @@
 	<div class="panels">
       
             <div data-panel="one">
-		           
- <label_A1>   
-            <label> 01) First Name :</label>
+	<h4>Personal Detail</h4>
+
+                <table class="table">
+                    <tr>
+                        <td>
+                            <label> 01) First Name :</label>
                         <input type="text" name="Fname" required="true"  value ="{{$request->Fname}}"  >       
-                 <br><br>
+                 <br>
                  <label> 03) NIC Number :</label>
                         <input type="text" name="nic" value ="{{$request->nic}}" >  
-                 <br><br>
+                 <br>
                  <label> 05) Birth Date :</label>
                          <input type = "date" name = "Bdate" id="datePickerId"  value ="{{$request->Bdate}}" >
-                 <br><br>
+                 <br>
                  
                
                           <label> 07) Address:</label><br>
-                          <textarea rows = "3" cols = "50" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
-      <br>
-
-               </label_A1>
-            
-                 <label_B1>
+                          <textarea rows = "1" cols = "50" placeholder="Enter address here" name = "address" >{{$request->address}}</textarea>
+       </td>
+       <td>
+             
                     <label> 02) Second Name :</label>
                         <input type="text" name="Sname"  value ="{{$request->Sname}}" >          
-                <br><br>
+                <br>
                 <label> 04) PHN Number :</label>
                         <input type="text" name="PHN" value ="{{$request->PHN}}">  
-                <br><br>
+                <br>
                  <label> 06) Contact Number :</label>
                          <input type = "text" name = "Cno" value ="{{$request->Cno}}"  >
-                 <br> <br>
+                 <br> 
                 
                 <label> 08) Gender :</label>
                  <input type="text" name="gender" value ="{{$request->gender}}">  
                         
-               <br><br> 
-                  </label_B1> 
+               <br> 
+                </td>
+                    </tr>
+                </table>
             </div>
-
       
          <form action="/submitFauna" method="post">	
      @csrf      
         <div data-panel="two">
 	        <h4>Poison Detail</h4>
+                <table class="table">
+                    <tr>
+                        <td>
                              
-                <label1> 01) Date : 
+                <label> 01) Date : 
                    <input type = "date" name = "date" id="datePickerId"  >
-                </label1>  
+                </label>  <br>
                               
-                <label2> 02) Time  : 
+                <label> 02) Time  : 
                    <input type = "time" name = "time" >
-                </label2>
+                </label>  <br>
                
-                <label3>03) Region :
+                <label>03) Region :
                     <span class = "select">
                         <select name = "area">
                             <option value = " "> ..Please choose one option.. </option>
@@ -142,9 +157,10 @@
                              <option value = "Outside Jaffna District"> Outside Jaffna District </option>
                         </select>
                     </span>
-               </label3>  
+               </label>   <br>
+                          
             
-               <label4> 04) Place of bite/sting :
+               <label> 04) Place of bite/sting :
                       <span class = "select">
                         <select name = "place_of_sting">
                             <option value = " "> ..Please choose one option.. </option>
@@ -157,13 +173,11 @@
                             <option value = "Unutilized land"> Unutilized land </option>
                         </select>
                 
-                    <br><br> If others, specify :  
-                            <input type="text" name = "place_of_sting1" >
-                            </label4>
-                        <br><br>
            
-                        
-              <label7>05) Circumstances of stings/bite : 
+                          </td>
+
+                        <td>
+              <label>05) Circumstances of stings/bite : 
                    <span class = "select">
                         <select name = "circumstance">
                             <option value = " "> ..Please choose one option.. </option>
@@ -171,11 +185,11 @@
                             <option value = "Unprovoked"> Unprovoked </option>
                         </select>
                     </span>
-               </label7>
-            <br><br>
-        <br>        
+               </label>
+            <br>
+        <br>     
          
-                 <label5>06) Bite site/Sting site : 
+                 <label>06) Bite site/Sting site : 
                    <span class = "select">
                         <select name = "sting_site">
                             <option value = " "> ..Please choose one option.. </option>
@@ -187,23 +201,26 @@
                         </select>
                     </span>
               
- <br><br>If others, specify :  
-                            <input type="text" name = "sting_site1" >
-                              </label5> 
-      
+ <br>
         
        
-                <label6> 07) Number of sting :
+                <label> 07) Number of sting :
                    <input type="number" min="0" name="number_of_stings" />
-                </label6>
-        <br><br>
+                </label>
+        <br>
          
+                        </td>
+
+                    </tr>
+                </table>
    </div>
      
      
     <div data-panel="three">
           <h4>Clinical Feature</h4>
-                @if($ray==13)<br>
+                @if($ray==13)
+  <table>
+  <td>                 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="14"  >  Bronchospasm </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"    value="165" >  Burning pain  </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="53" >  Facial oedema  </label><br>
@@ -213,8 +230,10 @@
  <label><input type="checkbox" name ="AththanaClinical[]"   value="82"  >  Malaise </label><br>    
  <label><input type="checkbox" name ="AththanaClinical[]"   value="89" >  Nausea  </label><br>
  <label><input type="checkbox" name ="AththanaClinical[]"   value="98" >  	Oliguria </label><br> 
- 
-<label11> 
+ </td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                      <td>
  <label><input type="checkbox" name ="AththanaClinical[]"    value="110" >  Pruritus </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="114"  >  Renal failure </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="121" >   Rhabdomyolysis </label><br> 
@@ -224,11 +243,12 @@
  <label><input type="checkbox" name ="AththanaClinical[]"   value="137" >  Tightness of chest  </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"    value="140" >  Urticaria  </label><br> 
  <label><input type="checkbox" name ="AththanaClinical[]"   value="144"  >  Vomiting </label><br>   
- </label11> 
-  <br><br>
-  If others :<br>
- <textarea rows = "4" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+</td>
+                    </table>
   <br>
+  If others :<br>
+ <textarea rows = "2" cols = "150" name = "clinicals_others"  placeholder="Enter other Clinical Features here"></textarea>
+  
 
 
 @elseif($ray==14)
@@ -454,8 +474,9 @@
             
     <div data-panel="four">
 			<h4> Managemnt Detail</h4>
-                        
-                    <br> <label><input type="checkbox" name = "management[]" value="2"  > Adrenaline </label> <br>
+                                        <table>
+                           <td>         
+                    <label><input type="checkbox" name = "management[]" value="2"  > Adrenaline </label> <br>
                      <label><input type="checkbox" name = "management[]" value="4"  >  Analgesics given </label> <br>
                      <label><input type="checkbox" name = "management[]" value="41" > Antacids </label> <br>
                      <label><input type="checkbox" name = "management[]" value="6"  > Anticonvulsants given </label> <br>  
@@ -464,11 +485,17 @@
 		     <label><input type="checkbox" name = "management[]" value="16" > Gastric lavage </label> <br>  
                      <label><input type="checkbox" name = "management[]" value="33" > Hydrocortisone </label> <br>
 		     <label><input type="checkbox" name = "management[]" value="36" > Hemodialysis </label> <br>
-					 
-
-                     <label11>
-                            <label><input type="checkbox" name = "management[]" value="17" > Icepacks Applaid </label><br>   
+                          <label><input type="checkbox" name = "management[]" value="17" > Icepacks Applaid </label><br>   
                             <label><input type="checkbox" name = "management[]" value="40"  > Inotropic support </label> <br>
+                       
+					 
+                   </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+
+                     <td>
+
+                    
                             <label><input type="checkbox" name = "management[]" value="34"  > Nebulisation </label><br>
                             <label><input type="checkbox" name = "management[]" value="35"  > Peritoneal </label><br>                        
                             <label><input type="checkbox" name = "management[]" value="31"  > Rest the area of bite </label><br>      
@@ -476,17 +503,28 @@
                             <label><input type="checkbox" name = "management[]" value="37"  > Tetanus prophylaxis </label> <br>
 			    <label><input type="checkbox" name = "management[]" value="38"  > Topical steroids </label> <br>
 			    <label><input type="checkbox" name = "management[]" value="30"  > Wound cleaning </label> <br>     
-                     </label11> 
-                        <br><br>
-                        If others : <br> 
-                            <textarea rows = "3" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
-                        <br><br>
+                                             <br>
+                           </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                           
+                        <td>
+
                         
-                         <label9> <b> AVS :</b> </label><br><br>
+                         <label> <b> AVS :</b> </label><br><br>
                             <label><input type="checkbox" name = "management[]" value="7"  > Anti snake venom serum(AVS) given </label><br>  
                              If yes, no of vials :  
                             <input type="number" name = "AVS" >
-                         </label9>
+                         </label>
+                                                 </td>
+                 </table>
+
+                        
+                        <br>
+                        If others : <br> 
+                            <textarea rows = "2" cols = "120" name = "managements others"  placeholder="Enter other management detail here"></textarea>
+                      
+                        
                      
     </div>
              
@@ -531,8 +569,8 @@
 </form> 
               
 	</div>
-        
-	<button onclick="doclick()" name="next" id="btn_hide" style="position: absolute ; top:80%" >next</button>
+     
+	<button onclick="doclick()" name="next" >next</button>
 
 </div>
 <!-- partial -->
