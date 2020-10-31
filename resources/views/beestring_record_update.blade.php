@@ -319,6 +319,11 @@
                         
 			<input type="text" placeholder="Comment" />
                          <button type="submit">Save</button>  
+                          <button type="submit">Save</button>  
+                           <button type="submit">Save</button>  
+                            <button type="submit">Save</button>  
+
+                             <button type="submit">Save</button>  
 		</div>
 </form>
 	</div>
