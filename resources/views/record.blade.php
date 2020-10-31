@@ -82,7 +82,7 @@
     
     <div class="unit-5 overlay" style="">
       <div class="container text-center">
-        <h2 class="mb-0">Patient Details</h2>
+        <h2 class="mb-0">Patient  Details</h2>
        
         <p class="mb-0 unit-6"><a>phn</a> <span class="mb-0 unit-6"> > {{$phn}}</span> <span></span></p>
 

@@ -74,8 +74,7 @@
                 </label>
             <br><br>
 <br>        
-
-  
+#bee string page remove us 
              <label>05)Region of sting :
                         <input type="text" name="instance_area" />
              </label>  

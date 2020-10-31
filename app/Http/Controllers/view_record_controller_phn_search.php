@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Incident;
 use App\Symptom;
 use App\IncidentUser;
-
+use App\SymptomToxin;
+use APP\Toxin;
 use DB;
 
 class view_record_controller_phn_search extends Controller
@@ -56,7 +57,7 @@ class view_record_controller_phn_search extends Controller
                               ->where('incident_user.incident_id','=',$request->incident_id)
                               ->select('incident_user.created_at','incident_user.updated_at','users.name')
                               ->get();
-
+               
                 // dd( $username);
                 return view('/flora_view/View_Aththana',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
             }  
@@ -271,7 +272,7 @@ class view_record_controller_phn_search extends Controller
              
                   $incident = Incident::find($request->incident_id);
                   $symptoms  = $incident->symptoms()->pluck('symptoms.id');
-                   $laboratory = $incident->laboratory;
+                  $laboratory = $incident->laboratory;
                   $patient  = $incident->patient;
                   $toxicity = $incident->toxicity->chemical;     
                   $management = $incident->managements()->pluck('managements.id');
@@ -281,6 +282,7 @@ class view_record_controller_phn_search extends Controller
                         ->where('incident_user.incident_id','=',$request->incident_id)
                         ->select('incident_user.created_at','incident_user.updated_at','users.name')
                         ->get();
+            
                   return view('/Chemical_View_Update/Chemical_View',compact('incident','patient','toxicity','symptoms','management','user','laboratory','username'));
         }
     }
